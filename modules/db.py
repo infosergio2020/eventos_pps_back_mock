@@ -248,7 +248,7 @@ class DBConnection:
    #FALTA COLOCAR ESTAS TABLAS: area_has_foto, area_has_video, evento_has_foto y evento_has_video
 
       #///////////////
-    #///CRUD TABLA area_has_fotos///
+    #///CRUD TABLA area_has_foto///
     #///////////////
 
     def get_area_has_fotos(self):
@@ -278,4 +278,106 @@ class DBConnection:
         """ del_area_has_foto_by_id(self,idarea_has_foto) -> elimina un area_has_foto """
         cur = self.mysql.connection.cursor()
         cur.execute(self.query_delete.format('area_has_foto',idarea_has_foto))
+        self.mysql.connection.commit()
+
+
+  #///////////////
+    #///CRUD TABLA area_has_video///
+    #///////////////
+
+    def get_area_has_videos(self):
+        """get_area_has_videos(self) -> area_has_videos"""
+        cur = self.mysql.connection.cursor()
+        cur.execute(self.query_select.format('area_has_video'))
+        return cur.fetchall()
+
+        
+    def add_area_has_video(self,area_idArea,video_idVideo):
+        """add_area_has_video(self,area_idArea,video_idVideo) -> añade un area_has_video"""
+        cur = self.mysql.connection.cursor()
+        query = '''
+                    INSERT INTO area_has_video (area_idArea,video_idVideo) 
+                    VALUES (%s,%s)
+                '''
+        data = (area_idArea,video_idVideo)
+        cur.execute(query,data)
+        self.mysql.connection.commit()
+
+#
+#
+#    El eliminar de la tabla area_has_video no tiene un id propio como para eliminarlo
+#   Discutir como eliminariamos esta tabla.
+#
+    def del_area_has_video_by_id(self,idarea_has_video):
+        """ del_area_has_video_by_id(self,idarea_has_video) -> elimina un area_has_video """
+        cur = self.mysql.connection.cursor()
+        cur.execute(self.query_delete.format('area_has_video',idarea_has_video))
+        self.mysql.connection.commit()
+
+
+#///////////////
+    #///CRUD TABLA evento_has_foto///
+    #///////////////
+
+    def get_evento_has_fotos(self):
+        """get_evento_has_fotos(self) -> evento_has_fotos"""
+        cur = self.mysql.connection.cursor()
+        cur.execute(self.query_select.format('evento_has_foto'))
+        return cur.fetchall()
+
+        
+    def add_evento_has_foto(self,evento_idEvento,foto_idFoto):
+        """add_evento_has_foto(self,evento_idEvento,foto_idFoto) -> añade un evento_has_foto"""
+        cur = self.mysql.connection.cursor()
+        query = '''
+                    INSERT INTO evento_has_foto (evento_idEvento,foto_idFoto) 
+                    VALUES (%s,%s)
+                '''
+        data = (evento_idEvento,foto_idFoto)
+        cur.execute(query,data)
+        self.mysql.connection.commit()
+
+#
+#
+#    El eliminar de la tabla evento_has_foto no tiene un id propio como para eliminarlo
+#   Discutir como eliminariamos esta tabla.
+#
+    def del_evento_has_foto_by_id(self,idevento_has_foto):
+        """ del_evento_has_foto_by_id(self,idevento_has_foto) -> elimina un evento_has_foto """
+        cur = self.mysql.connection.cursor()
+        cur.execute(self.query_delete.format('evento_has_foto',idevento_has_foto))
+        self.mysql.connection.commit()
+
+
+#///////////////
+    #///CRUD TABLA evento_has_video ///
+    #///////////////
+
+    def get_evento_has_videos(self):
+        """get_evento_has_videos(self) -> evento_has_videos"""
+        cur = self.mysql.connection.cursor()
+        cur.execute(self.query_select.format('evento_has_video'))
+        return cur.fetchall()
+
+        
+    def add_evento_has_video(self,evento_idEvento,video_idVideo):
+        """add_evento_has_video(self,evento_idEvento,video_idVideo) -> añade un evento_has_video"""
+        cur = self.mysql.connection.cursor()
+        query = '''
+                    INSERT INTO evento_has_video (evento_idEvento,video_idVideo) 
+                    VALUES (%s,%s)
+                '''
+        data = (evento_idEvento,video_idVideo)
+        cur.execute(query,data)
+        self.mysql.connection.commit()
+
+#
+#
+#    El eliminar de la tabla evento_has_video no tiene un id propio como para eliminarlo
+#   Discutir como eliminariamos esta tabla.
+#
+    def del_evento_has_video_by_id(self,idevento_has_video):
+        """ del_evento_has_video_by_id(self,idevento_has_video) -> elimina un evento_has_video """
+        cur = self.mysql.connection.cursor()
+        cur.execute(self.query_delete.format('evento_has_video',idevento_has_video))
         self.mysql.connection.commit()
