@@ -159,4 +159,123 @@ class DBConnection:
         self.mysql.connection.commit()
 
 
+   #///////////////
+    #///CRUD ENVIVO///
+    #///////////////
+
+    def get_envivos(self):
+        """get_envivos(self) -> envivos"""
+        cur = self.mysql.connection.cursor()
+        cur.execute(self.query_select.format('envivo'))
+        return cur.fetchall()
+
+        
+    def add_envivo(self,nomEnvivo,urlEnvivo,descEnvivo,fechaEnvivo,horaEnvivo, evento_idEvento):
+        """add_envivo(self,nomEnvivo,urlEnvivo,descEnvivo,fechaEnvivo,horaEnvivo, evento_idEvento) -> añade un envivo"""
+        cur = self.mysql.connection.cursor()
+        query = '''
+                    INSERT INTO envivo (nomEnvivo,urlEnvivo,descEnvivo,fechaEnvivo,horaEnvivo, evento_idEvento) 
+                    VALUES (%s,%s,%s,%s,%s,%s)
+                '''
+        data = (nomEnvivo,urlEnvivo,descEnvivo,fechaEnvivo,horaEnvivo, evento_idEvento)
+        cur.execute(query,data)
+        self.mysql.connection.commit()
+
+    def del_envivo_by_id(self,idEnvivo):
+        """ del_envivo_by_id(self,idEnvivo) -> elimina un envivo """
+        cur = self.mysql.connection.cursor()
+        cur.execute(self.query_delete.format('envivo',idEnvivo))
+        self.mysql.connection.commit()
+
    
+
+   #///////////////
+    #///CRUD VIDEO///
+    #///////////////
+
+    def get_videos(self):
+        """get_videos(self) -> videos"""
+        cur = self.mysql.connection.cursor()
+        cur.execute(self.query_select.format('video'))
+        return cur.fetchall()
+
+        
+    def add_video(self,tituloV,urlV,descV):
+        """add_video(self,tituloV,urlV,descV) -> añade un video"""
+        cur = self.mysql.connection.cursor()
+        query = '''
+                    INSERT INTO video (tituloV,urlV,descV) 
+                    VALUES (%s,%s,%s)
+                '''
+        data = (tituloV,urlV,descV)
+        cur.execute(query,data)
+        self.mysql.connection.commit()
+
+    def del_video_by_id(self,idVideo):
+        """ del_video_by_id(self,idVideo) -> elimina un video """
+        cur = self.mysql.connection.cursor()
+        cur.execute(self.query_delete.format('video',idVideo))
+        self.mysql.connection.commit()
+
+   #///////////////
+    #///CRUD JUEGO///
+    #///////////////
+
+    def get_juegos(self):
+        """get_juegos(self) -> juegos"""
+        cur = self.mysql.connection.cursor()
+        cur.execute(self.query_select.format('juego'))
+        return cur.fetchall()
+
+        
+    def add_juego(self,nomJuego,urlJuego,descJuego,urlImgJuego,area_idArea):
+        """add_juego(self,nomJuego,urlJuego,descJuego,urlImgJuego,area_idArea) -> añade un juego"""
+        cur = self.mysql.connection.cursor()
+        query = '''
+                    INSERT INTO juego (nomJuego,urlJuego,descJuego,urlImgJuego,area_idArea) 
+                    VALUES (%s,%s,%s,%s,%s)
+                '''
+        data = (nomJuego,urlJuego,descJuego,urlImgJuego,area_idArea)
+        cur.execute(query,data)
+        self.mysql.connection.commit()
+
+    def del_juego_by_id(self,idJuego):
+        """ del_juego_by_id(self,idJuego) -> elimina un juego """
+        cur = self.mysql.connection.cursor()
+        cur.execute(self.query_delete.format('juego',idJuego))
+        self.mysql.connection.commit()
+
+   #FALTA COLOCAR ESTAS TABLAS: area_has_foto, area_has_video, evento_has_foto y evento_has_video
+
+      #///////////////
+    #///CRUD TABLA area_has_fotos///
+    #///////////////
+
+    def get_area_has_fotos(self):
+        """get_area_has_fotos(self) -> area_has_fotos"""
+        cur = self.mysql.connection.cursor()
+        cur.execute(self.query_select.format('area_has_foto'))
+        return cur.fetchall()
+
+        
+    def add_area_has_foto(self,area_idArea,foto_idFoto):
+        """add_area_has_foto(self,area_idArea,foto_idFoto) -> añade un area_has_foto"""
+        cur = self.mysql.connection.cursor()
+        query = '''
+                    INSERT INTO area_has_foto (area_idArea,foto_idFoto) 
+                    VALUES (%s,%s)
+                '''
+        data = (area_idArea,foto_idFoto)
+        cur.execute(query,data)
+        self.mysql.connection.commit()
+
+#
+#
+#    El eliminar de la tabla area_has_foto no tiene un id propio como para eliminarlo
+#   Discutir como eliminariamos esta tabla.
+#
+    def del_area_has_foto_by_id(self,idarea_has_foto):
+        """ del_area_has_foto_by_id(self,idarea_has_foto) -> elimina un area_has_foto """
+        cur = self.mysql.connection.cursor()
+        cur.execute(self.query_delete.format('area_has_foto',idarea_has_foto))
+        self.mysql.connection.commit()
