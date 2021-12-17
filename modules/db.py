@@ -58,10 +58,10 @@ class DBConnection:
         cur.execute(query,data)
         self.mysql.connection.commit()
 
-    def del_area_by_id(self,idarea):
+    def del_area_by_id(self,idArea):
         """ del_area_by_id(self,idarea) -> elimina un area """
         cur = self.mysql.connection.cursor()
-        cur.execute(self.query_delete.format('area',idarea))
+        cur.execute(self.query_delete.format('area',idArea))
         self.mysql.connection.commit()
 
 
