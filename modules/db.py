@@ -5,7 +5,7 @@ class DBConnection:
     def __init__(self,app_aux):
         self.mysql = MySQL(app_aux)
         self.query_select = ''' select * from {0}'''
-        self.query_delete = ''' delete from {0} where {0}.iduser = {1}'''
+        self.query_delete = ''' delete from {0} where {2} = {1}'''
 
 # OPERACIONES DE LA BASE DE DATOS
     #///////////////
@@ -35,6 +35,17 @@ class DBConnection:
         cur = self.mysql.connection.cursor()
         cur.execute(self.query_delete.format('user',iduser))
         self.mysql.connection.commit()
+
+    def up_user(self,iduser,name,pwd,email):
+        query = '''
+            UPDATE user
+            SET name = {0},pass = {1},email = {2},
+            WHERE iduser = {3}
+        '''
+        cur = self.mysql.connection.cursor()
+        cur.execute(query.format(name,pwd,email,iduser))
+        self.mysql.connection.commit()
+        
 
     #///////////////
 #     Nota: Juego con el area, nosotros debemos contemplar el caso de que el usuario no agregue un mismo juego otra vez. DESDE EL BACKEND
@@ -69,9 +80,21 @@ class DBConnection:
     def del_evento_by_id(self,idEvento):
         """ del_evento_by_id(self,idEvento) -> elimina un evento """
         cur = self.mysql.connection.cursor()
-        cur.execute(self.query_delete.format('evento',idEvento))
+        cur.execute(self.query_delete.format('evento_has_foto',idEvento,'evento_has_video.evento_idEvento'))
+        cur.execute(self.query_delete.format('evento_has_video',idEvento,'evento_has_video.evento_idEvento'))
+        cur.execute(self.query_delete.format('evento',idEvento,'evento.idEvento'))
         self.mysql.connection.commit()
 
+
+    def up_evento(self,idEvento,nombre,lugar,descripcion,fecha,hora):
+        query = '''
+            UPDATE evento
+            SET nomEvento = {0},lugarEvento = {1},descEvento = {2}, fechaEvento = {3}, horaEvento = {4}
+            WHERE idEvento = {5}
+        '''
+        cur = self.mysql.connection.cursor()
+        cur.execute(query.format(nombre,lugar,descripcion,fecha,hora,idEvento))
+        self.mysql.connection.commit()
 
     #///////////////
     #///CRUD REDSOCIAL///
@@ -98,7 +121,18 @@ class DBConnection:
     def del_redsocial_by_id(self,idRedsocial):
         """ del_redsocial_by_id(self,idRedsocial) -> elimina una redsocial """
         cur = self.mysql.connection.cursor()
-        cur.execute(self.query_delete.format('redsocial',idRedsocial))
+        cur.execute(self.query_delete.format('redsocial',idRedsocial,'redsocial.idRedsocial'))
+        self.mysql.connection.commit()
+
+    
+    def up_evento(self,nombre,idRedsocial):
+        query = '''
+            UPDATE redsocial
+            SET nombreRed = {0},
+            WHERE idRedsocial = {1}
+        '''
+        cur = self.mysql.connection.cursor()
+        cur.execute(query.format(nombre,idRedsocial))
         self.mysql.connection.commit()
 
     #///////////////
@@ -123,12 +157,23 @@ class DBConnection:
         cur.execute(query,data)
         self.mysql.connection.commit()
 
-    def del_area_by_id(self,idArea):
-        """ del_area_by_id(self,idArea) -> elimina un area """
+    def del_area_by_id(self,idEvento):
+        """ del_evento_by_id(self,idEvento) -> elimina un evento """
         cur = self.mysql.connection.cursor()
-        cur.execute(self.query_delete.format('area',idArea))
+        cur.execute(self.query_delete.format('area_has_foto',idEvento,'area_has_video.area_idArea'))
+        cur.execute(self.query_delete.format('area_has_video',idEvento,'area_has_video.area_idArea'))
+        cur.execute(self.query_delete.format('area',idEvento,'area.idArea'))
         self.mysql.connection.commit()
 
+    def up_area(self,nombre,descripcion,lng,lat,idRedsocial):
+        query = '''
+            UPDATE area
+            SET nomArea = {0},descArea = {1},lngArea = {2},latArea = {3}
+            WHERE idArea = {4}
+        '''
+        cur = self.mysql.connection.cursor()
+        cur.execute(query.format(nombre,descripcion,lng,lat,idRedsocial))
+        self.mysql.connection.commit()
 
    #///////////////
     #///CRUD FOTO///
@@ -155,9 +200,23 @@ class DBConnection:
     def del_foto_by_id(self,idFoto):
         """ del_foto_by_id(self,idFoto) -> elimina una foto """
         cur = self.mysql.connection.cursor()
+
+        cur.execute(self.query_delete.format('evento_has_foto',idEvento,'evento_has_foto.foto_idFoto'))
+        cur.execute(self.query_delete.format('area_has_foto',idEvento,'area_has_foto.foto_idFoto'))
+
         cur.execute(self.query_delete.format('foto',idFoto))
         self.mysql.connection.commit()
 
+
+    def up_foto(self,titulo,url,descripcion,idFoto):
+        query = '''
+            UPDATE foto
+            SET tituloF = {0},urlF = {1},descF = {2}
+            WHERE idFoto = {3}
+        '''
+        cur = self.mysql.connection.cursor()
+        cur.execute(query.format(titulo,url,descripcion,idFoto))
+        self.mysql.connection.commit()
 
    #///////////////
     #///CRUD ENVIVO///
@@ -187,7 +246,15 @@ class DBConnection:
         cur.execute(self.query_delete.format('envivo',idEnvivo))
         self.mysql.connection.commit()
 
-   
+    def up_envivo(self,nombre,url,descripcion,fecha,hora,idEnvivo):
+        query = '''
+            UPDATE envivo
+            SET nomEnvivo = {0},urlEnvivo = {1},descEnvivo = {2},fechaEnvivo = {3},horaEnvivo = {4}
+            WHERE idEnvivo = {5}
+        '''
+        cur = self.mysql.connection.cursor()
+        cur.execute(query.format(nombre,url,descripcion,fecha,hora,idEnvivo))
+        self.mysql.connection.commit()
 
    #///////////////
     #///CRUD VIDEO///
