@@ -252,7 +252,7 @@ class DBConnection:
     def del_envivo_by_id(self,idEnvivo):
         """ del_envivo_by_id(self,idEnvivo) -> elimina un envivo """
         cur = self.mysql.connection.cursor()
-        cur.execute(self.query_delete.format('envivo',idEnvivo))
+        cur.execute(self.query_delete.format('envivo',idEnvivo,"envivo.idEnvivo"))
         self.mysql.connection.commit()
 
     def up_envivo(self,nombre,url,descripcion,fecha,hora,idEnvivo):
@@ -332,7 +332,7 @@ class DBConnection:
     def del_juego_by_id(self,idJuego):
         """ del_juego_by_id(self,idJuego) -> elimina un juego """
         cur = self.mysql.connection.cursor()
-        cur.execute(self.query_delete.format('juego',idJuego))
+        cur.execute(self.query_delete.format('juego',idJuego,"juego.idJuego"))
         self.mysql.connection.commit()
 
 def up_juego(self,nomJuego,urlJuego,urlImgJuego,descJuego,area_idArea,idJuego):
