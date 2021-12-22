@@ -33,7 +33,7 @@ class DBConnection:
     def del_user_by_id(self,iduser):
         """ del_user_by_id(self,iduser) -> elimina un usuario """
         cur = self.mysql.connection.cursor()
-        cur.execute(self.query_delete.format('user',iduser))
+        cur.execute(self.query_delete.format('user',iduser,"user.iduser"))
         self.mysql.connection.commit()
 
     def up_user(self,iduser,name,pwd,email):

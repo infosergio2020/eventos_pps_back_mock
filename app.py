@@ -20,12 +20,8 @@ def index():
     
 
     return jsonify({'result': aux})
-# OPERACIONES DE LA BASE DE DATOS
-    #///////////////
-    #///CRUD USER///
-    #///////////////
 
-# @app.route('/login', methods=['GET', 'POST'])
+# @app.route('/user', methods=['GET', 'POST'])
 # def login():
 #     if request.method == 'POST':
 #         return do_the_login()
