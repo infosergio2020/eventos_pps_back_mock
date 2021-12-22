@@ -36,11 +36,11 @@ class DBConnection:
         cur.execute(self.query_delete.format('user',iduser,"user.iduser"))
         self.mysql.connection.commit()
 
-    def up_user(self,iduser,name,pwd,email):
+    def up_user(self,name,pwd,email,iduser):
         query = '''
             UPDATE user
-            SET name = {0},pass = {1},email = {2},
-            WHERE iduser = {3}
+            SET user.name = {0}, user.pass = {1}, user.email = {2}
+            WHERE user.iduser = {3}
         '''
         cur = self.mysql.connection.cursor()
         cur.execute(query.format(name,pwd,email,iduser))
