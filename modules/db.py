@@ -76,7 +76,7 @@ class DBConnection:
         """add_evento(self,nomEvento,lugarEvento,descEvento,fechaEvento,horaEvento) -> añade un evento"""
         cur = self.mysql.connection.cursor()
         query = '''
-                    INSERT INTO evento (nomEvento,lugarEvento,descEvento,fechaEvento,TIME_FORMAT(horaEvento, "%H %i %s")) 
+                    INSERT INTO evento (nomEvento,lugarEvento,descEvento,fechaEvento,horaEvento) 
                     VALUES (%s,%s,%s,%s,%s)
                 '''
         data = (nomEvento,lugarEvento,descEvento,fechaEvento,horaEvento)
