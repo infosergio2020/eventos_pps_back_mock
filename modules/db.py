@@ -163,12 +163,12 @@ class DBConnection:
         cur.execute(query,data)
         self.mysql.connection.commit()
 
-    def del_area_by_id(self,idEvento):
+    def del_area_by_id(self,idArea):
         """ del_evento_by_id(self,idEvento) -> elimina un evento """
         cur = self.mysql.connection.cursor()
-        cur.execute(self.query_delete.format('area_has_foto',idEvento,'area_has_video.area_idArea'))
-        cur.execute(self.query_delete.format('area_has_video',idEvento,'area_has_video.area_idArea'))
-        cur.execute(self.query_delete.format('area',idEvento,'area.idArea'))
+        cur.execute(self.query_delete.format('area_has_foto',idArea,'area_has_foto.area_idArea'))
+        cur.execute(self.query_delete.format('area_has_video',idArea,'area_has_video.area_idArea'))
+        cur.execute(self.query_delete.format('area',idArea,'area.idArea'))
         self.mysql.connection.commit()
 
     def up_area(self,nombre,descripcion,lng,lat,idRedsocial):
