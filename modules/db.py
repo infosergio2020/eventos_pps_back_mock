@@ -219,7 +219,7 @@ class DBConnection:
         query = '''
             UPDATE foto
             SET tituloF = %s,urlF = %s,descF = %s
-            WHERE idFoto = %s
+            WHERE idFoto = %s 
         '''
         cur = self.mysql.connection.cursor()
         cur.execute(query,(titulo,url,descripcion,idFoto))
@@ -336,12 +336,13 @@ class DBConnection:
         cur.execute(self.query_delete.format('juego',idJuego,"juego.idJuego"))
         self.mysql.connection.commit()
 
-def up_juego(self,nomJuego,urlJuego,urlImgJuego,descJuego,area_idArea,idJuego):
+    def up_juego(self,nomJuego,urlJuego,urlImgJuego,descJuego,idJuego):
         query = '''
             UPDATE juego
-            SET nomJuego=%s, urlJuego=%s, urlImgJuego,= %s,descJuego = %s, area_idArea=%s
-            WHERE idJuego = %s
-        '''
+            SET nomJuego= %s, urlJuego= %s, urlImgJuego= %s,descJuego = %s
+            WHERE idJuego = %s 
+            '''
         cur = self.mysql.connection.cursor()
-        cur.execute(query,(nomJuego,urlJuego,urlImgJuego,descJuego,area_idArea,idJuego))
-        self.mysql.connection.commit()
+        cur.execute(query,(nomJuego,urlJuego,urlImgJuego,descJuego,idJuego))
+        self.mysql.connection.commit()  
+
