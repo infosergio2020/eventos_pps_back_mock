@@ -17,7 +17,7 @@ def index():
     # aux = dbms.add_envivo("soy un envivo super","https://www.youtube.com/watch?v=Hy7Qf5myfX0","descEnvivo super","12/11/12","12:04:12","1")
     # aux = dbms.add_juego("soy un juego super","https://www.youtube.com/watch?v=Hy7Qf5myfX0","descjuego super","https://www.youtube.com/watch?v=Hy7Qf5myfX0",1)
     
-    aux = dbms.up_user("juancito3","123gregve3","juan@gmail.com",1)
+    aux = dbms.up_user(5,'juancito3','admin123','juan@gmail.com')
     
 
     return jsonify({'result': aux})

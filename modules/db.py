@@ -36,14 +36,14 @@ class DBConnection:
         cur.execute(self.query_delete.format('user',iduser,"user.iduser"))
         self.mysql.connection.commit()
 
-    def up_user(self,name,pwd,email,iduser):
+    def up_user(self,iduser,name,pwd,email):
         query = '''
             UPDATE user
-            SET user.name = {0}, user.pass = {1}, user.email = {2}
-            WHERE user.iduser = {3}
+            SET name = %s , pass = %s , email = %s
+            WHERE iduser = %s
         '''
         cur = self.mysql.connection.cursor()
-        cur.execute(query.format(name,pwd,email,iduser))
+        cur.execute(query,(name,pwd,email,iduser))
         self.mysql.connection.commit()
         
 
@@ -90,7 +90,6 @@ class DBConnection:
         cur.execute(self.query_delete.format('evento_has_video',idEvento,'evento_has_video.evento_idEvento'))
         cur.execute(self.query_delete.format('evento',idEvento,'evento.idEvento'))
         self.mysql.connection.commit()
-
 
     def up_evento(self,idEvento,nombre,lugar,descripcion,fecha,hora):
         query = '''
