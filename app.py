@@ -16,8 +16,8 @@ def index():
     # aux = dbms.add_area("soyAreaSuper4","descAreaSUper4","12434","425434",4)
     # aux = dbms.add_envivo("soy un envivo super","https://www.youtube.com/watch?v=Hy7Qf5myfX0","descEnvivo super","12/11/12","12:04:12","1")
     # aux = dbms.add_juego("soy un juego super","https://www.youtube.com/watch?v=Hy7Qf5myfX0","descjuego super","https://www.youtube.com/watch?v=Hy7Qf5myfX0",1)
-    aux = dbms.del_evento_by_id(12)
-
+    aux = dbms.del_user_by_id(1)
+    
 
     return jsonify({'result': aux})
 # OPERACIONES DE LA BASE DE DATOS
