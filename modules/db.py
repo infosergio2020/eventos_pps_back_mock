@@ -39,11 +39,11 @@ class DBConnection:
     def up_user(self,name,pwd,email,iduser):
         query = '''
             UPDATE user
-            SET user.name = {0}, user.pass = {1}, user.email = {2}
-            WHERE user.iduser = {3}
+            SET name = %s , pass = %s , email = %s
+            WHERE iduser = %s
         '''
         cur = self.mysql.connection.cursor()
-        cur.execute(query.format(name,pwd,email,iduser))
+        cur.execute(query,(name,pwd,email,iduser))
         self.mysql.connection.commit()
         
 
@@ -92,14 +92,14 @@ class DBConnection:
         self.mysql.connection.commit()
 
 
-    def up_evento(self,idEvento,nombre,lugar,descripcion,fecha,hora):
+    def up_evento(self,nombre,lugar,descripcion,fecha,hora,idEvento):
         query = '''
             UPDATE evento
-            SET nomEvento = {0},lugarEvento = {1},descEvento = {2}, fechaEvento = {3}, horaEvento = {4}
-            WHERE idEvento = {5}
+            SET nomEvento = %s,lugarEvento = %s,descEvento = %s, fechaEvento = %s, horaEvento = %s
+            WHERE idEvento = %s
         '''
         cur = self.mysql.connection.cursor()
-        cur.execute(query.format(nombre,lugar,descripcion,fecha,hora,idEvento))
+        cur.execute(query,(nombre,lugar,descripcion,fecha,hora,idEvento))
         self.mysql.connection.commit()
 
     #///////////////
@@ -131,15 +131,16 @@ class DBConnection:
         self.mysql.connection.commit()
 
     
-    def up_redsocial(self,nombre,idRedsocial):
+    def up_redsocial(self,nombreRed,idRedsocial):
         query = '''
             UPDATE redsocial
-            SET nombreRed = {0},
-            WHERE idRedsocial = {1}
+            SET nombreRed = %s
+            WHERE idRedsocial = %s
         '''
         cur = self.mysql.connection.cursor()
-        cur.execute(query.format(nombre,idRedsocial))
+        cur.execute(query,(nombreRed,idRedsocial))
         self.mysql.connection.commit()
+
 
     #///////////////
     #///CRUD AREA///
@@ -174,11 +175,11 @@ class DBConnection:
     def up_area(self,nombre,descripcion,lng,lat,idRedsocial):
         query = '''
             UPDATE area
-            SET nomArea = {0},descArea = {1},lngArea = {2},latArea = {3}
-            WHERE idArea = {4}
+            SET nomArea = %s,descArea = %s,lngArea = %s,latArea = %s
+            WHERE idArea = %s
         '''
         cur = self.mysql.connection.cursor()
-        cur.execute(query.format(nombre,descripcion,lng,lat,idRedsocial))
+        cur.execute(query,(nombre,descripcion,lng,lat,idRedsocial))
         self.mysql.connection.commit()
 
    #///////////////
@@ -217,11 +218,11 @@ class DBConnection:
     def up_foto(self,titulo,url,descripcion,idFoto):
         query = '''
             UPDATE foto
-            SET tituloF = {0},urlF = {1},descF = {2}
-            WHERE idFoto = {3}
+            SET tituloF = %s,urlF = %s,descF = %s
+            WHERE idFoto = %s
         '''
         cur = self.mysql.connection.cursor()
-        cur.execute(query.format(titulo,url,descripcion,idFoto))
+        cur.execute(query,(titulo,url,descripcion,idFoto))
         self.mysql.connection.commit()
 
    #///////////////
@@ -258,11 +259,11 @@ class DBConnection:
     def up_envivo(self,nombre,url,descripcion,fecha,hora,idEnvivo):
         query = '''
             UPDATE envivo
-            SET nomEnvivo = {0},urlEnvivo = {1},descEnvivo = {2},fechaEnvivo = {3},horaEnvivo = {4}
-            WHERE idEnvivo = {5}
+            SET nomEnvivo = %s,urlEnvivo = %s,descEnvivo = %s,fechaEnvivo = %s,horaEnvivo = %s
+            WHERE idEnvivo = %s
         '''
         cur = self.mysql.connection.cursor()
-        cur.execute(query.format(nombre,url,descripcion,fecha,hora,idEnvivo))
+        cur.execute(query,(nombre,url,descripcion,fecha,hora,idEnvivo))
         self.mysql.connection.commit()
 
    #///////////////
@@ -299,11 +300,11 @@ class DBConnection:
     def up_video(self,tituloV,urlV,descV,idVideo):
         query = '''
             UPDATE video
-            SET tituloV={0}, urlV = {1},descV = {2}
-            WHERE idVideo = {3}
+            SET tituloV=%s, urlV = %s,descV = %s
+            WHERE idVideo = %s
         '''
         cur = self.mysql.connection.cursor()
-        cur.execute(query.format(urlV,descV,idVideo))
+        cur.execute(query,(tituloV,urlV,descV,idVideo))
         self.mysql.connection.commit()
 
 
@@ -338,9 +339,9 @@ class DBConnection:
 def up_juego(self,nomJuego,urlJuego,urlImgJuego,descJuego,area_idArea,idJuego):
         query = '''
             UPDATE juego
-            SET nomJuego={0}, urlJuego={1}, urlImgJuego,= {2},descJuego = {3}, area_idArea={4}
-            WHERE idJuego = {5}
+            SET nomJuego=%s, urlJuego=%s, urlImgJuego,= %s,descJuego = %s, area_idArea=%s
+            WHERE idJuego = %s
         '''
         cur = self.mysql.connection.cursor()
-        cur.execute(query.format(nomJuego,urlJuego,urlImgJuego,descJuego,idJuego))
+        cur.execute(query,(nomJuego,urlJuego,urlImgJuego,descJuego,area_idArea,idJuego))
         self.mysql.connection.commit()
