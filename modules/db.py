@@ -53,7 +53,9 @@ class DBConnection:
 # 1) Primero se debe agregar un evento.
 # 2) Luego se pueden crear redSocial, Area, Foto, enVivo y Video
 # 3) Si se tiene Area creado anteriormente se puede crear Juego.
-# 4) Por ultimo, se pueden crear las tablas que tienen relacion con area (video,foto) y evento (video,foto): area_has_foto, area_has_video, evento_has_foto y evento_has_video . (editado)
+# 4) Por ultimo, se pueden crear las tablas que tienen relacion con area 
+# (video,foto) y evento (video,foto):
+#  area_has_foto, area_has_video, evento_has_foto y evento_has_video . (editado)
 # [19:23]
     #///////////////
     #///CRUD EVENTO///
@@ -62,7 +64,11 @@ class DBConnection:
     def get_eventos(self):
         """get_eventos(self) -> eventos"""
         cur = self.mysql.connection.cursor()
-        cur.execute(self.query_select.format('evento'))
+        query = '''
+                    SELECT nomEvento,lugarEvento,descEvento,fechaEvento,TIME_FORMAT(horaEvento, "%H %i %s") FROM evento
+                    
+                '''
+        cur.execute(query)
         return cur.fetchall()
 
         
@@ -70,7 +76,7 @@ class DBConnection:
         """add_evento(self,nomEvento,lugarEvento,descEvento,fechaEvento,horaEvento) -> añade un evento"""
         cur = self.mysql.connection.cursor()
         query = '''
-                    INSERT INTO evento (nomEvento,lugarEvento,descEvento,fechaEvento,horaEvento) 
+                    INSERT INTO evento (nomEvento,lugarEvento,descEvento,fechaEvento,TIME_FORMAT(horaEvento, "%H %i %s")) 
                     VALUES (%s,%s,%s,%s,%s)
                 '''
         data = (nomEvento,lugarEvento,descEvento,fechaEvento,horaEvento)
@@ -125,7 +131,7 @@ class DBConnection:
         self.mysql.connection.commit()
 
     
-    def up_evento(self,nombre,idRedsocial):
+    def up_redsocial(self,nombre,idRedsocial):
         query = '''
             UPDATE redsocial
             SET nombreRed = {0},
@@ -225,7 +231,10 @@ class DBConnection:
     def get_envivos(self):
         """get_envivos(self) -> envivos"""
         cur = self.mysql.connection.cursor()
-        cur.execute(self.query_select.format('envivo'))
+        query = '''
+                    SELECT nomEnvivo ,urlEnvivo,descEnvivo,fechaEnvivo, TIME_FORMAT(horaEnvivo, "%H %i %s") FROM envivo
+                '''
+        cur.execute(query)
         return cur.fetchall()
 
         
