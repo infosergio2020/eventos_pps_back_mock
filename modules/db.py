@@ -82,11 +82,11 @@ class DBConnection:
         data = (nomEvento,lugarEvento,descEvento,fechaEvento,horaEvento)
         cur.execute(query,data)
         self.mysql.connection.commit()
-
+    #Primero eliminar las relaciondes del evento y a lo ultimo se puede eliminar el evento#
     def del_evento_by_id(self,idEvento):
         """ del_evento_by_id(self,idEvento) -> elimina un evento """
         cur = self.mysql.connection.cursor()
-        cur.execute(self.query_delete.format('evento_has_foto',idEvento,'evento_has_video.evento_idEvento'))
+        cur.execute(self.query_delete.format('evento_has_foto',idEvento,'evento_has_foto.evento_idEvento'))
         cur.execute(self.query_delete.format('evento_has_video',idEvento,'evento_has_video.evento_idEvento'))
         cur.execute(self.query_delete.format('evento',idEvento,'evento.idEvento'))
         self.mysql.connection.commit()
@@ -207,10 +207,10 @@ class DBConnection:
         """ del_foto_by_id(self,idFoto) -> elimina una foto """
         cur = self.mysql.connection.cursor()
 
-        cur.execute(self.query_delete.format('evento_has_foto',idEvento,'evento_has_foto.foto_idFoto'))
-        cur.execute(self.query_delete.format('area_has_foto',idEvento,'area_has_foto.foto_idFoto'))
+        cur.execute(self.query_delete.format('evento_has_foto',idFoto,'evento_has_foto.foto_idFoto'))
+        cur.execute(self.query_delete.format('area_has_foto',idFoto,'area_has_foto.foto_idFoto'))
 
-        cur.execute(self.query_delete.format('foto',idFoto))
+        cur.execute(self.query_delete.format('foto',idFoto,"foto.idFoto"))
         self.mysql.connection.commit()
 
 
@@ -289,8 +289,11 @@ class DBConnection:
 
     def del_video_by_id(self,idVideo):
         """ del_video_by_id(self,idVideo) -> elimina un video """
-        cur = self.mysql.connection.cursor()
-        cur.execute(self.query_delete.format('video',idVideo))
+        cur = self.mysql.connection.cursor()        
+        cur.execute(self.query_delete.format('evento_has_video',idVideo,'evento_has_video.video_idVideo'))
+        cur.execute(self.query_delete.format('area_has_video',idVideo,'area_has_video.video_idVideo'))
+
+        cur.execute(self.query_delete.format('video',idVideo,"video.idVideo"))
         self.mysql.connection.commit()
 
     def up_video(self,tituloV,urlV,descV,idVideo):
