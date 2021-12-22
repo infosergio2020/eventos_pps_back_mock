@@ -65,7 +65,7 @@ class DBConnection:
         """get_eventos(self) -> eventos"""
         cur = self.mysql.connection.cursor()
         query = '''
-                    SELECT nomEvento,lugarEvento,descEvento,fechaEvento,TIME_FORMAT(horaEvento, "%H %i %s") FROM evento
+                    SELECT nomEvento,lugarEvento,descEvento,DATE_FORMAT(fechaEvento, "%d/%m/%Y"),TIME_FORMAT(horaEvento, "%H:%i %p") FROM evento
                     
                 '''
         cur.execute(query)
@@ -76,7 +76,7 @@ class DBConnection:
         """add_evento(self,nomEvento,lugarEvento,descEvento,fechaEvento,horaEvento) -> añade un evento"""
         cur = self.mysql.connection.cursor()
         query = '''
-                    INSERT INTO evento (nomEvento,lugarEvento,descEvento,fechaEvento,TIME_FORMAT(horaEvento, "%H %i %s")) 
+                    INSERT INTO evento (nomEvento,lugarEvento,descEvento,fechaEvento,horaEvento) 
                     VALUES (%s,%s,%s,%s,%s)
                 '''
         data = (nomEvento,lugarEvento,descEvento,fechaEvento,horaEvento)
@@ -232,7 +232,7 @@ class DBConnection:
         """get_envivos(self) -> envivos"""
         cur = self.mysql.connection.cursor()
         query = '''
-                    SELECT nomEnvivo ,urlEnvivo,descEnvivo,fechaEnvivo, TIME_FORMAT(horaEnvivo, "%H %i %s") FROM envivo
+                    SELECT nomEnvivo ,urlEnvivo,descEnvivo,DATE_FORMAT(fechaEnvivo, "%d/%m/%Y"),TIME_FORMAT(horaEnvivo, "%H:%i %p") FROM envivo
                 '''
         cur.execute(query)
         return cur.fetchall()

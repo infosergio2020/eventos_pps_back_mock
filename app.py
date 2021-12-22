@@ -11,7 +11,7 @@ dbms = db.DBConnection(app)
 
 @app.route('/')
 def index():
-    aux = dbms.get_envivos()
+    aux = dbms.get_eventos()
 
     return jsonify({'result': aux})
 # OPERACIONES DE LA BASE DE DATOS
