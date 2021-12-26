@@ -35,6 +35,7 @@ class DBConnection:
         cur = self.mysql.connection.cursor()
         cur.execute(self.query_delete.format('user',iduser,"user.iduser"))
         self.mysql.connection.commit()
+        
 
     def up_user(self,iduser,name,pwd,email):
         query = '''
