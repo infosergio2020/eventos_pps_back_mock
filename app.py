@@ -9,7 +9,7 @@ app= Flask(__name__)
 # from flask_marshmallow import Marshmallow
 # from werkzeug.exceptions import MethodNotAllowed
 
-app.config['SQL_ALCHEMY_DATABASE_URI']='mysql://root:admin123@localhost/eventos'
+app.config['SQLALCHEMY_DATABASE_URI']='mysql://root:admin123@localhost/eventos'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
 SQLAlchemy(app) #le paso al ORM la configuracion que posee el app
 #Configuracion del app
