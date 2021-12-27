@@ -1,17 +1,43 @@
-from flask import Flask,jsonify
-from modules import db
+# comienzo
+from flask import Flask
+from routes.user import user #quiero probar la ruta de usuario
+from routes.evento import evento
+from flask_sqlalchemy import SQLAlchemy #para la configuracion de la app
 
-app = Flask(__name__)
-app.config['MYSQL_HOST']='localhost'
-app.config['MYSQL_USER']='root'
-app.config['MYSQL_PASSWORD']='admin123'
-app.config['MYSQL_DB']='gestion_eventos'
+##Configuracion del app
+app= Flask(__name__)
+# from flask_marshmallow import Marshmallow
+# from werkzeug.exceptions import MethodNotAllowed
 
-dbms = db.DBConnection(app)
+app.config['SQL_ALCHEMY_DATABASE_URI']='mysql://root:admin123@localhost/eventos'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
+SQLAlchemy(app) #le paso al ORM la configuracion que posee el app
+#Configuracion del app
 
-@app.route('/')
-def index():
-    aux = dbms.add_user("ko4255kkk","ko24k55kk","no@gm455ail.ckkom2")
-    
-    return jsonify({'result': aux})
+app.register_blueprint(user) #invoco las rutas del usuario
+app.register_blueprint(evento)
+
+
+
+
+
+# ma=Marshmallow(app) #instanciar un esquema
+
+
+# db.create_all() #crea las tablas
+
+# #esquema para interactuar
+# class UserSchema(ma.Schema):
+#     class Meta:
+#         fields=('id','name','password','email')
+# user_schema= UserSchema() #esquema user instanciado
+# users_schema= UserSchema(many=True) #esquema devarios usuarios instanciadps
+
+# #Defino la ruta para crear el user
+# @app.route('/users',methods=['POST'])
+# def create_user():
+#     print(request.json)
+#     return 'received'
+
+
 
