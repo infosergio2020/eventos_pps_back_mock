@@ -1,5 +1,7 @@
-from app import app
+from app import MyApp
 from utils.db import db 
+
+app = MyApp().get_app()
 
 with app.app_context():
     db.create_all() ## crear todas las tablas 
