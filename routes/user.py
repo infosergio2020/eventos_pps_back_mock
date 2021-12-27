@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, request
-from models.user import user #para añadir los datos a la tabla
+from models.user import User #para añadir los datos a la tabla
 from utils.db import db #para guardarme la tabla en la base de datos
 
 
@@ -16,7 +16,7 @@ def add_user():
     nom=request.form['name']
     password=request.form['pasword']
     email=request.form['email']
-    new_user=user(nom,password,email) #agrego datos a la tabla user
+    new_user=User(nom,password,email) #agrego datos a la tabla user
     db.session.add(new_user) #agrego la tabla en la base de datos
     db.session.commit() # cierro la conexion con la base de datos
     return "usuario guardado"
