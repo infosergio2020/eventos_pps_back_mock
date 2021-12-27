@@ -4,23 +4,15 @@ from routes.user import user #quiero probar la ruta de usuario
 from routes.evento import evento
 from flask_sqlalchemy import SQLAlchemy
 
-class MyApp:
-    def __init__(self, ):
-        ##Configuracion del app
-        self._app= Flask(__name__)
-        # from flask_marshmallow import Marshmallow
-        # from werkzeug.exceptions import MethodNotAllowed
-        self._app.config['SQLALCHEMY_DATABASE_URI']='mysql://root:admin123@127.0.0.1:3306/eventos'
-        self._app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
-        SQLAlchemy(self._app) #le paso al ORM la configuracion que posee el self._app
-        #Configuracion del self._app
+##Configuracion del app
+app= Flask(__name__)
 
-        self._app.register_blueprint(user) #invoco las rutas del usuario
-        self._app.register_blueprint(evento)
+app.config['SQLALCHEMY_DATABASE_URI']='mysql://root:admin123@127.0.0.1:3306/eventos'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
+SQLAlchemy(app) #le paso al ORM la configuracion que posee el app  #Configuracion del app
+app.register_blueprint(user) #invoco las rutas del usuario
+app.register_blueprint(evento)
     
-    def get_app(self):
-        return self._app
-
 
 
 

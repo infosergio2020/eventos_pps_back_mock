@@ -6,3 +6,17 @@
     <input type="email" name="email" placeholder="WACRIBE TU email" />
     <button>save</button>
 </form>
+<!-- listar usuarios: los atributos son los de la BD -->
+<div>
+    {% for user in users%}
+    <div>
+        <h5>{{user.name}}</h5>
+        <div>
+            <a href="{{url_for('user.update')}}">Update</a>
+            <a href="{{url_for('user.delete',iduser=user.iduser)}}">Delete</a>
+        </div>
+
+    </div>
+    {%endfor%}
+
+</div>
