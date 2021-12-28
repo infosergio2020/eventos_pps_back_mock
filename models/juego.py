@@ -12,3 +12,66 @@ class Juego(db.Model):
         self.urljuego = urljuego
         self.urlimgjuego = urlimgjuego
         self.descjuego = descjuego
+
+    def save(self):
+        """ se agrega a la base de datos"""
+        if not self.idjuego:
+            db.session.add(self)
+        db.session.commit()
+
+    def remove(self):
+        """ se elimina de la base de datos"""
+        if self.idjuego:
+            db.session.delete(self)
+            db.session.commit()
+
+    def __repr__(self):
+        """ retorna un string que describe el objeto """
+        return f'<redSocial {self.nomjuego}>'
+
+    #  METODOS STATICOS NO REQUIEREN INSTANCIA PARA USARLOS
+
+    @staticmethod
+    def update(id, nombre,urljuego,urlimagen,descripcion):
+        """ permite actualizar este objeto en la bd , retorna el usuario que actualizó sino retorna None"""
+        juego = Juego.query.get(id) #buscar en la bd
+        if juego:
+            juego.nomjuego = nombre
+            juego.urljuego = urljuego
+            juego.urlimgjuego = urlimagen
+            juego.descjuego = descripcion
+            juego.save()
+            return juego
+        return None
+
+    @staticmethod
+    def delete(id):
+        """ dado un id los busca y si existe lo eliminar, retorna el usuario que eliminó sino retorna None"""
+        juego = Juego.query.get(id)
+        if juego:
+            juego.remove()
+            return juego
+        return None
+
+    @staticmethod
+    def search(search_query, page, per_page):
+        """ busca un usuario por name"""
+        query = Juego.query
+        if (search_query):
+            query = query.filter(Juego.name.like(f"%{search_query}%"))
+        return query.paginate(page=page, per_page=per_page, error_out=False)
+
+    @staticmethod
+    def all():
+        """trae a todos los usuarios"""
+        return Juego.query.all()
+
+    @staticmethod
+    def get_by_id(id):
+        """ busca usuario por id"""
+        return Juego.query.get(id)
+
+    @staticmethod
+    def find_by_email(nombre):
+        """ busca un usuario por email """
+        return Juego.query.filter_by(nombrered = nombre).first()
