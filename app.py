@@ -6,7 +6,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 ##Configuracion del app
 app= Flask(__name__)
-
+app.secret_key="secret key"
 app.config['SQLALCHEMY_DATABASE_URI']='mysql://root:admin123@127.0.0.1:3306/eventos'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
 SQLAlchemy(app) #le paso al ORM la configuracion que posee el app  #Configuracion del app
