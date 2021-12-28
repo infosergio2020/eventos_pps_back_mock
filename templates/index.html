@@ -1,30 +1,52 @@
-{% with messages = get_flashed_messages() %}
-    {% if messages %}
-        {% for message in messages %}
-            {{message}}
-        {% endfor %}
-    {% endif %}
-{% endwith %}
+<!-- El index es el primero que esta en el layout -->
+{% extends 'layout.html' %}
+{% block body %}
+    <!-- FILA/COL Al form y al div los coloco en filas y columnas -->
+    <div class="row">
+        <div class="col md-5">
+            <!-- mensajes del CRUD -->
+            {% include ('partials/_message.html') %}        
 
-<h1>Crear usuario</h1>
-<form action="/user" method="POST">
-
-    <input type="text" name="name" placeholder="WACRIBE TU NOMBRE" />
-    <input type="text" name="pasword" placeholder="WACRIBE TU pasword" />
-    <input type="email" name="email" placeholder="WACRIBE TU email" />
-    <button>save</button>
-</form>
-<!-- listar usuarios: los atributos son los de la BD -->
-<div>
-    {% for user in users%}
-    <div>
-        <h5>{{user.name}}</h5>
-        <div>
-            <a href="{{url_for('user.update',id=user.iduser)}}">Update</a>
-            <a href="{{url_for('user.delete',id=user.iduser)}}">Delete</a>
+            <h3> Crear usuario</h3>
+            <!-- formulario del usuario -->
+            {% include ('partials/_form.html') %}
         </div>
+        <div class="col md-7">
+            <!-- listar usuarios: los atributos son los de la BD -->
+            <div>
+                <h3>Lista de Usuarios</h3>
+                {% for user in users %}
+                <div class="card mb-1">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-start">
+                            <label for="name" class="fw-bold">Nombre: </label>
+                            <p> {{user.name}}</p>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <label for="pass" class="fw-bold">Contraseña: </label>
+                            <p>{{user.password}}</p>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <label for="email" class="fw-bold">Email: </label>
+                            <p> {{user.email}}</p>
+                        </div>
 
+
+                        <div>
+                            <a class="btn btn-warning btn-sm" href="{{url_for('user.update',id=user.iduser)}}">Update</a>
+                            <a class="btn btn-danger btn-sm" href="{{url_for('user.delete',id=user.iduser)}}">Delete</a>
+                        </div>
+
+                    </div>
+                    
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
     </div>
-    {%endfor%}
+    <!-- FILA/COL Al form y al div los coloco en filas y columnas -->
 
-</div>
+
+{% endblock %}
+

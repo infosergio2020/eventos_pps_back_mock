@@ -1,8 +1,31 @@
-<h1>Update user</h1>
-<form action="/update/{{users.iduser}}" method="POST">
+ {% extends 'layout.html'%}
+    {% block body %}
+        <h3>Actualizar Usuario</h3>
+        <!-- <form action="/update/{{users.iduser}}" method="POST">
 
-    <input type="text" name="name" placeholder="WACRIBE TU NOMBRE" value="{{users.name}}" />
-    <input type="text" name="pasword" placeholder="WACRIBE TU pasword" value="{{users.password}}" />
-    <input type="email" name="email" placeholder="WACRIBE TU email" value="{{users.email}}" />
-    <button>save</button>
-</form>
+            <input type="text" name="name" placeholder="WACRIBE TU NOMBRE" value="{{users.name}}" />
+            <input type="text" name="pasword" placeholder="WACRIBE TU pasword" value="{{users.password}}" />
+            <input type="email" name="email" placeholder="WACRIBE TU email" value="{{users.email}}" />
+            <button>save</button>
+        </form> -->
+        <form action="/update/{{users.iduser}}" method="POST" class="card">
+            <div class="card-body p4">
+                <div class="mb-3">
+                    <label for="name">Nombre</label>
+                    <input class="form-control" type="text" name="name" placeholder="Escribe tu nombre" value="{{users.name}}"/>       
+                </div>
+                <div class="mb-3">
+                    <label for="pasword">Contraseña</label>
+                    <input class="form-control" type="text" name="pasword" placeholder="Escribe tu contraseña" value="{{users.password}}" />
+                </div>
+                <div class="mb-3">
+                    <label for="email">Email</label>
+                    <input class="form-control" type="email" name="email" placeholder="Escribe tu email" value="{{users.email}}" />
+                </div>
+            </div>
+            <div class="d-grid gap-2 col-3 mx-auto"> 
+                <button class="btn btn-primary btn-sm">save</button>
+            </div>
+        </form>
+
+    {% endblock %}

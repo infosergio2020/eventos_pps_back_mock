@@ -6,7 +6,12 @@ from utils.db import db #para guardarme la tabla en la base de datos
 
 user= Blueprint('user',__name__)
 
-#Defino la ruta para mostrar la impresion
+#Defino la ruta para mostrar about.html
+@user.route('/about')
+def about():
+    return render_template('about.html')
+
+#Defino la ruta para mostrar el index
 @user.route('/')
 def index():
     aux_users=User.query.all()
