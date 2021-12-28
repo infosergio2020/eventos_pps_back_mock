@@ -9,7 +9,7 @@ class User(db.Model):
 
     def __init__(self,name,password,email):
         self.name=name
-        self.password=password
+        self.set_password(password)
         self.email=email
 
     def set_password(self, password):
