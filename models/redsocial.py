@@ -66,3 +66,11 @@ class Redsocial(db.Model):
     def find_by_email(nombre):
         """ busca un usuario por email """
         return Redsocial.query.filter_by(nombrered = nombre).first()
+
+    @property
+    def serialize(self):
+       """Return object data in easily serializable format"""
+       return {
+           "id":self.idevento,
+           "nombre": self.nombrered,
+       }

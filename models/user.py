@@ -82,3 +82,13 @@ class User(db.Model):
     def find_by_email(email):
         """ busca un usuario por email """
         return User.query.filter_by(email = email).first()
+
+    @property
+    def serialize(self):
+       """Return object data in easily serializable format"""
+       return {
+           "id":self.iduser,
+           "nombre": self.name,
+           "email":self.email,
+           "contraseña":self.password
+       }

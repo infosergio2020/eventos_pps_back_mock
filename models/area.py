@@ -8,3 +8,69 @@ class Area(db.Model):
     def __init__(self,nomarea,descarea):
         self.nomarea = nomarea
         self.descarea = descarea
+
+    def save(self):
+        """ se agrega a la base de datos"""
+        if not self.idarea:
+            db.session.add(self)
+        db.session.commit()
+
+    def remove(self):
+        """ se elimina de la base de datos"""
+        if self.idarea:
+            db.session.delete(self)
+            db.session.commit()
+
+    #  METODOS STATICOS NO REQUIEREN INSTANCIA PARA USARLOS
+
+    @staticmethod
+    def update(id, nombre, descripcion ):
+        """ permite actualizar este objeto en la bd , retorna el usuario que actualizó sino retorna None"""
+        area = Area.query.get(id) #buscar en la bd
+        if area:
+            area.nomarea = nombre
+            area.descarea = descripcion
+            area.save()
+            return area
+        return None
+
+    @staticmethod
+    def delete(id):
+        """ dado un id los busca y si existe lo eliminar, retorna el usuario que eliminó sino retorna None"""
+        area = Area.query.get(id)
+        if area:
+            area.remove()
+            return area
+        return None
+
+    @staticmethod
+    def search(search_query, page, per_page):
+        """ busca un usuario por name"""
+        query = Area.query
+        if (search_query):
+            query = query.filter(Area.name.like(f"%{search_query}%"))
+        return query.paginate(page=page, per_page=per_page, error_out=False)
+
+    @staticmethod
+    def all():
+        """trae a todos los usuarios"""
+        return Area.query.all()
+
+    @staticmethod
+    def get_by_id(id):
+        """ busca usuario por id"""
+        return Area.query.get(id)
+
+    @staticmethod
+    def find_by_name(nombre):
+        """ busca un usuario por email """
+        return Area.query.filter_by(nomarea = nombre).first()
+
+    @property
+    def serialize(self):
+       """Return object data in easily serializable format"""
+       return {
+           "id":self.idarea,
+           "nombre": self.nomarea,
+           "descripcion": self.descarea
+       }

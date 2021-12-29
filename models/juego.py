@@ -72,6 +72,17 @@ class Juego(db.Model):
         return Juego.query.get(id)
 
     @staticmethod
-    def find_by_email(nombre):
+    def find_by_name(nombre):
         """ busca un usuario por email """
-        return Juego.query.filter_by(nombrered = nombre).first()
+        return Juego.query.filter_by(nomjuego = nombre).first()
+
+    @property
+    def serialize(self):
+       """Return object data in easily serializable format"""
+       return {
+           "id":self.idjuego,
+           "nombre": self.nomjuego,
+           "url_juego": self.urljuego,
+           "url_img_juego": self.urlimgjuego,
+           "descripcion": self.descjuego
+       }
