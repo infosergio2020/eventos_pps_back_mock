@@ -1,3 +1,4 @@
+from sqlalchemy.orm import backref
 from werkzeug.security import generate_password_hash, check_password_hash
 from utils.db import db
 
@@ -6,6 +7,9 @@ class User(db.Model):
     name= db.Column(db.String(45))
     password= db.Column(db.String(125))
     email= db.Column(db.String(125), unique=True)
+
+
+
 
     def __init__(self,name,password,email):
         self.name=name
