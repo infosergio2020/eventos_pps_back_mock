@@ -10,7 +10,7 @@ user= Blueprint('user',__name__)
 @user.route('/')
 def index():
     aux_users=User.query.all()
-    return render_template('index.html',users=aux_users)
+    return render_template('user.html',users=aux_users)
 
 #Defino la ruta para crear un contacto
 @user.route('/user', methods=['POST'])
@@ -39,7 +39,7 @@ def update(id):
         return redirect(url_for('user.index'))
     
     # flash("se añadio un usuario correctamente")
-    return render_template('update.html',users=aux_user)
+    return render_template('user_update.html',users=aux_user)
 
 #Defino la ruta para eliminar un contacto
 @user.route('/delete/<id>')

@@ -1,0 +1,30 @@
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            {{message}}
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+<h1>Crear area</h1>
+<form action="/area" method="POST">
+
+    <input type="text" name="name" placeholder="WACRIBE TU NOMBRE" />
+    <!-- <input type="text" name="pasword" placeholder="WACRIBE TU pasword" />
+    <input type="email" name="email" placeholder="WACRIBE TU email" /> -->
+    <button>save</button>
+</form>
+<!-- listar usuarios: los atributos son los de la BD -->
+<div>
+    {% for area in areas%}
+    <div>
+        <h5>{{area.name}}</h5>
+        <div>
+            <a href="{{url_for('area.update',id=area.id)}}">Update</a>
+            <a href="{{url_for('area.delete',id=area.id)}}">Delete</a>
+        </div>
+
+    </div>
+    {%endfor%}
+
+</div>

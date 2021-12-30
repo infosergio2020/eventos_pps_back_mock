@@ -1,7 +1,7 @@
 # comienzo
 from flask import Flask
 from routes.user import user #quiero probar la ruta de usuario
-from routes.evento import evento
+from routes.area import area
 from flask_sqlalchemy import SQLAlchemy
 from entorno import config
 
@@ -11,5 +11,5 @@ app.secret_key="secret key" # configuro un valor para que se genere una sesion
 app.config.from_object(config)
 SQLAlchemy(app) #le paso al ORM la configuracion que posee el app  #Configuracion del app
 app.register_blueprint(user) #invoco las rutas del usuario
-app.register_blueprint(evento)
+app.register_blueprint(area) #invoco las rutas del area
     

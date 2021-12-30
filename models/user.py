@@ -1,12 +1,19 @@
-from sqlalchemy.orm import backref
 from werkzeug.security import generate_password_hash, check_password_hash
 from utils.db import db
+
+from sqlalchemy.orm import relationship, backref
+from sqlalchemy import Column, Integer, String, DateTime, Boolean, TIMESTAMP, func
+from sqlalchemy import ForeignKey
+
 
 class User(db.Model):
     iduser= db.Column(db.Integer, primary_key=True)
     name= db.Column(db.String(45))
     password= db.Column(db.String(125))
     email= db.Column(db.String(125), unique=True)
+    #ver esta info::     https://programmerclick.com/article/9595776150/
+    # areas = relationship('Area', backref='user')
+
 
 
 
