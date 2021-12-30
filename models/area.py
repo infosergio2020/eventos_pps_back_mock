@@ -27,5 +27,9 @@ class Area(db.Model):
     
     def __init__(self,name):
         self.name=name
-        
+    
+    @staticmethod
+    def all():
+        """trae a todas las areas"""
+        return Area.query.all()
     
