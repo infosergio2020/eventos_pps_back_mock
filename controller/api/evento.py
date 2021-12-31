@@ -35,21 +35,8 @@ def evento_json_byname(name):
     else:
         return jsonify(user = "nothing")
 # /add        only evento
+# el JSON de postman debe tener areas = [] o sino se rompe en la linea 53
 def evento_create():
-    try:
-        data = request.get_json()
-        evento = Evento(
-        data["nombre"],
-        data["lugar"],
-        data["descripcion"],
-        cast(data["fecha"],Date),
-        cast(data["hora"],Time)).save() #guardar los datos en la tabla
-        return jsonify(result = "OK")
-    except exc.SQLAlchemyError as e:
-        error = str(e.__dict__['orig'])
-        return jsonify(result = error)
-# /add-with-area
-def evento_create_with_area():
     try:
         data = request.get_json()
         
@@ -63,7 +50,7 @@ def evento_create_with_area():
         evento_guardado.save()
 
         # solo si el formulario agregar areas 
-        if data["areas"] :
+        if len(data["areas"]) != 0:
             areas = data["areas"]
             for area in areas:
                 evento_guardado.agregar_area(area['nombre'],area['descripcion'])

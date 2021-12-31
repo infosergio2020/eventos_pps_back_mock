@@ -35,10 +35,6 @@ def evento_json_byname():
 def evento_create():
     return e.evento_create()
 
-@evento.route('/evento/add-with-area', methods=['POST'])
-def evento_create_with_area():
-    return e.evento_create_with_area()
-
 #Defino la ruta para actualizar un contacto
 @evento.route('/evento/update/<id>',methods=['PUT'])
 def evento_update(id):
