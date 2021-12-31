@@ -1,13 +1,13 @@
-from utils.db import db
+
+from config.db import db
 
 class Area(db.Model):
     idarea = db.Column(db.Integer, primary_key=True)
     nomarea = db.Column(db.String(45),nullable=False,unique=True)
     descarea = db.Column(db.String(250),nullable=False)
+    evento = db.relationship("Evento",back_populates='areas')
+    evento_id = db.Column(db.Integer, db.ForeignKey('evento.idevento'), comment="evento del area i", nullable=True)
 
-    def __init__(self,nomarea,descarea):
-        self.nomarea = nomarea
-        self.descarea = descarea
 
     def save(self):
         """ se agrega a la base de datos"""
@@ -65,6 +65,11 @@ class Area(db.Model):
     def find_by_name(nombre):
         """ busca un usuario por email """
         return Area.query.filter_by(nomarea = nombre).first()
+
+    @staticmethod
+    def all_areas(evento_id):
+        """ devuelve todas las areas relacionadas a un evento """
+        return Area.query.filter(Area.evento_id == evento_id).all()
 
     @property
     def serialize(self):

@@ -1,4 +1,7 @@
-from utils.db import db
+import datetime
+from config.db import db
+from datetime import datetime
+from models.area import Area
 
 class Evento(db.Model):
     idevento = db.Column(db.Integer, primary_key=True)
@@ -7,6 +10,8 @@ class Evento(db.Model):
     descevento = db.Column(db.String(250),nullable=False)
     fechaevento = db.Column(db.Date,nullable=False)
     horaevento = db.Column(db.Time,nullable=False)
+    # implementacion de relacion 1 a muchos
+    areas = db.relationship("Area", back_populates="evento")
 
     def __init__(self,nomevento,lugarevento,descevento, fechaevento, horaevento):
         self.nomevento = nomevento
@@ -14,6 +19,7 @@ class Evento(db.Model):
         self.descevento = descevento
         self.fechaevento = fechaevento
         self.horaevento = horaevento
+        self.areas = []
 
     def save(self):
         """ se agrega a la base de datos"""
@@ -27,8 +33,13 @@ class Evento(db.Model):
             db.session.delete(self)
             db.session.commit()
 
-    #  METODOS STATICOS NO REQUIEREN INSTANCIA PARA USARLOS
+    def agregar_area(self,nombre,descripcion):
+        """ agrega un area al evento"""
+        Area(   nomarea = nombre,
+                descarea = descripcion, 
+                evento = self ).save()
 
+    #  METODOS STATICOS NO REQUIEREN INSTANCIA PARA USARLOS
     @staticmethod
     def update(id, nombre, lugar, descripcion, fecha, hora ):
         """ permite actualizar este objeto en la bd , retorna el usuario que actualizó sino retorna None"""
@@ -48,6 +59,7 @@ class Evento(db.Model):
         """ dado un id los busca y si existe lo eliminar, retorna el usuario que eliminó sino retorna None"""
         evento = Evento.query.get(id)
         if evento:
+            evento.areas.do(lambda each: each.remove())
             evento.remove()
             return evento
         return None
@@ -78,11 +90,13 @@ class Evento(db.Model):
     @property
     def serialize(self):
        """Return object data in easily serializable format"""
+       combinado = datetime.combine(self.fechaevento,self.horaevento)
        return {
            "id":self.idevento,
            "nombre": self.nomevento,
            "lugar": self.lugarevento,
            "descripcion": self.descevento,
-           "fecha": self.fechaevento,
-           "hora": self.horaevento
+           "fecha": combinado.strftime("%Y/%m/%d"),
+           "hora": combinado.strftime("%H:%M:%S"),
+           "cantidad_areas": len(self.areas)
        }

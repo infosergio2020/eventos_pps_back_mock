@@ -1,4 +1,4 @@
-from utils.db import db
+from config.db import db
 from sqlalchemy import Date,Time
 
 class Envivo(db.Model):

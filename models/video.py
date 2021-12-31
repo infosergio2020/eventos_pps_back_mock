@@ -1,4 +1,4 @@
-from utils.db import db
+from config.db import db
 
 class Video(db.Model):
     idvideo= db.Column(db.Integer, primary_key=True)

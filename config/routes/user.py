@@ -2,7 +2,7 @@ from flask import Blueprint, request, jsonify
 from models.user import User #para añadir los datos a la tabla
 user= Blueprint('user',__name__)
 #Defino la ruta para mostrar la impresion
-@user.route('/')
+@user.route('/user')
 def index():
     return jsonify(result = { 
         "listar_usuarios":"/users_json",

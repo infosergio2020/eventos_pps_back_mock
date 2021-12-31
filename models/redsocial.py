@@ -1,4 +1,4 @@
-from utils.db import db
+from config.db import db
 
 class Redsocial(db.Model):
     idredsocial = db.Column(db.Integer, primary_key=True)
