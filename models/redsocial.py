@@ -3,9 +3,8 @@ from config.db import db
 class Redsocial(db.Model):
     idredsocial = db.Column(db.Integer, primary_key=True)
     nombrered = db.Column(db.String(45), nullable=False,unique=True)
-
-    def __init__(self,nombrered):
-        self.nombrered = nombrered
+    
+    evento_id = db.Column(db.Integer, db.ForeignKey('evento.idevento'), comment="evento de la red i", nullable=True)
 
     def save(self):
         """ se agrega a la base de datos"""
@@ -66,6 +65,11 @@ class Redsocial(db.Model):
     def find_by_email(nombre):
         """ busca un usuario por email """
         return Redsocial.query.filter_by(nombrered = nombre).first()
+
+    @staticmethod
+    def all_areas(evento_id):
+        """ devuelve todas las areas relacionadas a un evento """
+        return Redsocial.query.filter(Redsocial.evento_id == evento_id).all()
 
     @property
     def serialize(self):

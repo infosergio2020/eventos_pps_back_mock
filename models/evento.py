@@ -2,6 +2,7 @@ import datetime
 from config.db import db
 from datetime import datetime
 from models.area import Area
+from models.redsocial import Redsocial
 
 class Evento(db.Model):
     idevento = db.Column(db.Integer, primary_key=True)
@@ -11,7 +12,8 @@ class Evento(db.Model):
     fechaevento = db.Column(db.Date,nullable=False)
     horaevento = db.Column(db.Time,nullable=False)
     # implementacion de relacion 1 a muchos
-    areas = db.relationship("Area", back_populates="evento")
+    areas = db.relationship("Area", back_populates="evento" , cascade="all, delete")
+    redes = db.relationship("Redsocial", back_populates="evento" , cascade="all, delete")
 
     def __init__(self,nomevento,lugarevento,descevento, fechaevento, horaevento):
         self.nomevento = nomevento
@@ -20,6 +22,7 @@ class Evento(db.Model):
         self.fechaevento = fechaevento
         self.horaevento = horaevento
         self.areas = []
+        self.redes = []
 
     def save(self):
         """ se agrega a la base de datos"""
@@ -30,6 +33,7 @@ class Evento(db.Model):
     def remove(self):
         """ se elimina de la base de datos"""
         if self.idevento:
+            # self.areas.do(lambda each: each.remove())
             db.session.delete(self)
             db.session.commit()
 
@@ -37,6 +41,11 @@ class Evento(db.Model):
         """ agrega un area al evento"""
         Area(   nomarea = nombre,
                 descarea = descripcion, 
+                evento = self ).save()
+                
+    def agregar_red(self,nombre,descripcion):
+        """ agrega un area al evento"""
+        Redsocial(   nombrered = nombre,
                 evento = self ).save()
 
     #  METODOS STATICOS NO REQUIEREN INSTANCIA PARA USARLOS
@@ -59,7 +68,6 @@ class Evento(db.Model):
         """ dado un id los busca y si existe lo eliminar, retorna el usuario que eliminó sino retorna None"""
         evento = Evento.query.get(id)
         if evento:
-            evento.areas.do(lambda each: each.remove())
             evento.remove()
             return evento
         return None
