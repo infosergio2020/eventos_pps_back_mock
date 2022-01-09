@@ -23,7 +23,42 @@ class Programador(db.model):
             # self.areas.do(lambda each: each.remove())
             db.session.delete(self)
             db.session.commit()
-
+    @staticmethod
+    def update(id, nombre = None, edad = None ):
+        """ permite actualizar este objeto en la bd , retorna el usuario que actualizó sino retorna None"""
+        programador = Programador.query.get(id) #buscar en la bd
+        if programador:
+            if nombre:
+                programador.nombre = nombre
+            if edad:
+                programador.edad = edad
+            programador.save()
+            return programador
+        return None
+    @staticmethod
+    def delete(id):
+        """ dado un id los busca y si existe lo eliminar, retorna el usuario que eliminó sino retorna None"""
+        programador = Programador.query.get(id)
+        if programador:
+            programador.remove()
+            return programador
+        return None
+    @staticmethod
+    def all():
+        """trae a todos los usuarios"""
+        return Programador.query.all()
+    @staticmethod
+    def get_by_id(id):
+        """ busca usuario por id"""
+        return Programador.query.get(id)
+    @property
+    def serialize(self):
+       """Return object data in easily serializable format"""   
+       return {
+           "id":self.idevento,
+           "nombre": self.nombre,
+           "edad": self.edad
+       }
 
     def __repr__(self):
         return f'{self.nombre}'
