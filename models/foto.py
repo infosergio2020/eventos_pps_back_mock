@@ -6,11 +6,13 @@ class Foto(db.Model):
     urlf= db.Column(db.String(150),nullable=False,unique=True)
     descf= db.Column(db.String(250),nullable=False)
 
+    # RELACION ONETOMANY CHILD (con evento)
+    evento_id = db.Column(db.Integer, db.ForeignKey('evento.idevento'), comment="foto del evento i", nullable=True)
+    # RELACION ONETOMANY CHILD (con area)
+    area_id = db.Column(db.Integer, db.ForeignKey('area.idarea'), comment="foto del area i", nullable=True)
+    # RELACION ONETOMANY CHILD (con juego)
+    juego_id = db.Column(db.Integer, db.ForeignKey('juego.idjuego'), comment="foto del juego i", nullable=True)
 
-    def __init__(self,titulof, urlf, descf):
-        self.titulof = titulof
-        self.urlf = urlf
-        self.descf = descf
 
     def save(self):
         """ se agrega a la base de datos"""

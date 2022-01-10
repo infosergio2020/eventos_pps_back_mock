@@ -3,6 +3,8 @@ from config.db import db
 from datetime import datetime
 from models.area import Area
 from models.redsocial import Redsocial
+from models.foto import Foto
+from models.video import Video
 
 class Evento(db.Model):
     idevento = db.Column(db.Integer, primary_key=True)
@@ -12,8 +14,13 @@ class Evento(db.Model):
     fechaevento = db.Column(db.Date,nullable=False)
     horaevento = db.Column(db.Time,nullable=False)
     # implementacion de relacion 1 a muchos
-    areas = db.relationship("Area", back_populates="evento" , cascade="all, delete")
-    redes = db.relationship("Redsocial", back_populates="evento" , cascade="all, delete")
+    
+    # ONETOMANY PARENT (con area)
+    areas = db.relationship("Area", cascade="all, delete")
+    # ONETOMANY PARENT (con red_social)
+    redes = db.relationship("Redsocial", cascade="all, delete")
+    # ONETOMANY PARENT (con foto)
+    fotos = db.relationship("Foto", cascade="all, delete")
 
     def __init__(self,nomevento,lugarevento,descevento, fechaevento, horaevento):
         self.nomevento = nomevento
@@ -23,6 +30,7 @@ class Evento(db.Model):
         self.horaevento = horaevento
         self.areas = []
         self.redes = []
+        self.fotos = []
 
     def save(self):
         """ se agrega a la base de datos"""
@@ -47,6 +55,26 @@ class Evento(db.Model):
         """ agrega un area al evento"""
         Redsocial(   nombrered = nombre,
                 evento = self ).save()
+
+    def agregar_foto(self,nombre,descripcion):
+        """ agrega un area al evento"""
+        Foto(  
+                titulof= ,
+                urlf= ,
+                descf= ,
+                evento = ,self ).save()
+
+    
+    
+    
+    
+
+    def agregar_video(self,nombre,descripcion):
+        """ agrega un area al evento"""
+        Video(   nombrered = nombre,
+                evento = self ).save()
+
+
 
     #  METODOS STATICOS NO REQUIEREN INSTANCIA PARA USARLOS
     @staticmethod

@@ -5,9 +5,11 @@ class Area(db.Model):
     idarea = db.Column(db.Integer, primary_key=True)
     nomarea = db.Column(db.String(45),nullable=False,unique=True)
     descarea = db.Column(db.String(250),nullable=False)
-    evento = db.relationship("Evento",back_populates='areas')
-    evento_id = db.Column(db.Integer, db.ForeignKey('evento.idevento'), comment="evento del area i", nullable=True)
 
+    # RELACION ONETOMANY CHILD (con evento)
+    evento_id = db.Column(db.Integer, db.ForeignKey('evento.idevento'), comment="evento del area i", nullable=True)
+    # RELACION ONETOMANY PARENT (con foto)
+    fotos = db.relationship("Foto", cascade="all, delete")
 
     def save(self):
         """ se agrega a la base de datos"""

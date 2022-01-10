@@ -4,6 +4,7 @@ class Redsocial(db.Model):
     idredsocial = db.Column(db.Integer, primary_key=True)
     nombrered = db.Column(db.String(45), nullable=False,unique=True)
     
+    # RELACION ONETOMANY CHILD (con evento)
     evento_id = db.Column(db.Integer, db.ForeignKey('evento.idevento'), comment="evento de la red i", nullable=True)
 
     def save(self):
