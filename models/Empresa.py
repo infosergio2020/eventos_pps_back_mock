@@ -1,6 +1,6 @@
 from config.db import db
 
-class Empresa(db.model):
+class Empresa(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     nombre = db.Column(db.String(20))
@@ -56,3 +56,6 @@ class Empresa(db.model):
            "nombre": self.nombre,
            "fundacion": self.fundacion
        }
+
+    def __str__(self):
+        return f"ID= {self.id}, nombre= {self.nombre}, fundacion= {self.fundacion}"

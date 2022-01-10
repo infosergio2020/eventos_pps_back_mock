@@ -1,15 +1,15 @@
 from config.db import db
-from leng_develop import lenguajes_programador
+from models.leng_develop import lenguajes_programador
 
-class Programador(db.model):
+class Programador(db.Model):
     id = db.Column(db.Integer, primary_key= True)
-    nombre = db.column(db.String(30))
-    edad = db.Colimn(db.Integer)
+    nombre = db.Column(db.String(30))
+    edad = db.Column(db.Integer)
     empresa_id = db.Column(db.Integer, db.ForeignKey('empresa.id'))
 
     # RELACION
-    empresa = db.Relationship('Empresa', backref = db.backref('programador', lazy=True))
-    lenguajes = db.Relationship('Lenguaje', secondary = lenguajes_programador, backref = db.backref('programadores', lazy=True) )
+    empresa = db.relationship('Empresa', backref = db.backref('programador', lazy=True))
+    lenguajes = db.relationship('Lenguaje', secondary = lenguajes_programador, backref = db.backref('programadores', lazy=True) )
 
 # METODOS PARA AUTOMATIZAR BORRADO/ESCRITURA DE LA CLASE 
     def save(self):

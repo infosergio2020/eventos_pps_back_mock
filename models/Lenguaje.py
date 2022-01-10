@@ -1,9 +1,9 @@
-  from config.db import db
+from config.db import db
 
 
-class Lenguaje(db.model):
+class Lenguaje(db.Model):
     id = db.Column(db.Integer, primary_key= True)
-    nombre = db.column(db.String(30))
+    nombre = db.Column(db.String(30))
     creador = db.Column(db.String(30))
 
     # METODOS PARA AUTOMATIZAR BORRADO/ESCRITURA DE LA CLASE 
