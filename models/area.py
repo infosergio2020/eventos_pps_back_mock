@@ -1,5 +1,6 @@
 
 from config.db import db
+from models.foto import Foto
 
 class Area(db.Model):
     idarea = db.Column(db.Integer, primary_key=True)
@@ -22,6 +23,15 @@ class Area(db.Model):
         if self.idarea:
             db.session.delete(self)
             db.session.commit()
+
+    def agregar_foto(self,titulo,url,descripcion):
+        """ agrega un area al evento"""
+        Foto(  
+                titulof= titulo,
+                urlf= url,
+                descf= descripcion,
+                evento = self.idarea ).save()
+
 
     #  METODOS STATICOS NO REQUIEREN INSTANCIA PARA USARLOS
 

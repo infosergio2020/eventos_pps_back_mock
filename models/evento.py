@@ -49,32 +49,21 @@ class Evento(db.Model):
         """ agrega un area al evento"""
         Area(   nomarea = nombre,
                 descarea = descripcion, 
-                evento = self ).save()
+                evento_id = self.idevento).save()
                 
-    def agregar_red(self,nombre,descripcion):
+    def agregar_red(self,nombre):
         """ agrega un area al evento"""
-        Redsocial(   nombrered = nombre,
-                evento = self ).save()
+        Redsocial(  nombrered = nombre,
+                    evento_id = self.idevento ).save()
 
-    def agregar_foto(self,nombre,descripcion):
+    def agregar_foto(self,titulo,url,descripcion):
         """ agrega un area al evento"""
         Foto(  
-                titulof= ,
-                urlf= ,
-                descf= ,
-                evento = ,self ).save()
-
+                titulof= titulo,
+                urlf= url,
+                descf= descripcion,
+                evento_id = self.idevento ).save() 
     
-    
-    
-    
-
-    def agregar_video(self,nombre,descripcion):
-        """ agrega un area al evento"""
-        Video(   nombrered = nombre,
-                evento = self ).save()
-
-
 
     #  METODOS STATICOS NO REQUIEREN INSTANCIA PARA USARLOS
     @staticmethod

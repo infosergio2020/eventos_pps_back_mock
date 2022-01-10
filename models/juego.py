@@ -1,4 +1,5 @@
 from config.db import db
+from models.foto import Foto
 
 class Juego(db.Model):
     idjuego = db.Column(db.Integer, primary_key=True)
@@ -27,6 +28,14 @@ class Juego(db.Model):
         if self.idjuego:
             db.session.delete(self)
             db.session.commit()
+
+    def agregar_foto(self,titulo,url,descripcion):
+        """ agrega un area al evento"""
+        Foto(  
+                titulof= titulo,
+                urlf= url,
+                descf= descripcion,
+                evento = self.idjuego ).save()
 
     def __repr__(self):
         """ retorna un string que describe el objeto """
