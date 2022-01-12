@@ -38,11 +38,12 @@ def juego_json_byname(name):
 def juego_create():
     try:
         data = request.get_json()
+
         Juego(
-        data["nombre"],
-        data["url_juego"],
-        data["url_imagen"],
-        data["descripcion"]).save() #guardar los datos en la tabla
+        nomjuego = data["nombre"],
+        urljuego = data["url_juego"],
+        urlimgjuego = data["url_imagen"],
+        descjuego = data["descripcion"]).save() #guardar los datos en la tabla
         return jsonify(result = "OK")
     except Exception:
         return jsonify(result = "error")

@@ -1,6 +1,7 @@
 
 from config.db import db
 from models.foto import Foto
+from models.video import Video
 
 class Area(db.Model):
     idarea = db.Column(db.Integer, primary_key=True)
@@ -8,9 +9,13 @@ class Area(db.Model):
     descarea = db.Column(db.String(250),nullable=False)
 
     # RELACION ONETOMANY CHILD (con evento)
+    evento = db.relationship( "Evento", back_populates="areas")
     evento_id = db.Column(db.Integer, db.ForeignKey('evento.idevento'), comment="evento del area i", nullable=True)
-    # RELACION ONETOMANY PARENT (con foto)
-    fotos = db.relationship("Foto", cascade="all, delete")
+    
+    # ONETOMANY PARENT (con foto)
+    fotos = db.relationship("Foto", back_populates="area", cascade="all, delete")
+    # ONETOMANY PARENT (con foto)
+    videos = db.relationship("Video", back_populates="area", cascade="all, delete")
 
     def save(self):
         """ se agrega a la base de datos"""
@@ -30,7 +35,15 @@ class Area(db.Model):
                 titulof= titulo,
                 urlf= url,
                 descf= descripcion,
-                evento = self.idarea ).save()
+                area = self ).save()
+
+    def agregar_video(self,titulo,url,descripcion):
+        """ agrega un area al evento"""
+        Video(  
+                titulov= titulo,
+                urlv= url,
+                descv= descripcion,
+                area = self ).save()
 
 
     #  METODOS STATICOS NO REQUIEREN INSTANCIA PARA USARLOS

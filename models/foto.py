@@ -1,17 +1,21 @@
 from config.db import db
 
 class Foto(db.Model):
+    
     idfoto= db.Column(db.Integer, primary_key=True)
     titulof= db.Column(db.String(45),nullable=False,unique=True)
     urlf= db.Column(db.String(150),nullable=False,unique=True)
     descf= db.Column(db.String(250),nullable=False)
 
     # RELACION ONETOMANY CHILD (con evento)
+    evento = db.relationship( "Evento", back_populates="fotos")
     evento_id = db.Column(db.Integer, db.ForeignKey('evento.idevento'), comment="foto del evento i", nullable=True)
     # RELACION ONETOMANY CHILD (con area)
+    area = db.relationship( "Area", back_populates="fotos")
     area_id = db.Column(db.Integer, db.ForeignKey('area.idarea'), comment="foto del area i", nullable=True)
     # RELACION ONETOMANY CHILD (con juego)
-    juego_id = db.Column(db.Integer, db.ForeignKey('juego.idjuego'), comment="foto del juego i", nullable=True)
+    # juego = db.relationship( "Juego", back_populates="fotos")
+    # juego_id = db.Column(db.Integer, db.ForeignKey('juego.idjuego'), comment="foto del juego i", nullable=True)
 
 
     def save(self):

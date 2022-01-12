@@ -50,10 +50,24 @@ def evento_create():
         evento_guardado.save()
 
         # solo si el formulario agregar areas 
-        if len(data["areas"]) != 0:
+        if 'areas' in data:
             areas = data["areas"]
             for area in areas:
                 evento_guardado.agregar_area(area['nombre'],area['descripcion'])
+        
+        # solo si el formulario agregar areas 
+        if 'fotos' in data:
+            fotos = data["fotos"]
+            for foto in fotos:
+                print(foto)
+                evento_guardado.agregar_foto(foto['titulo'],foto['url'],foto['descripcion'])
+
+        # solo si el formulario agregar areas 
+        if 'videos' in data:
+            videos = data["videos"]
+            for video in videos:
+                print(video)
+                evento_guardado.agregar_video(video['titulo'],video['url'],video['descripcion'])
             
         return jsonify(result = "OK")
     except exc.SQLAlchemyError as e:

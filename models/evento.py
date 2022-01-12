@@ -16,11 +16,13 @@ class Evento(db.Model):
     # implementacion de relacion 1 a muchos
     
     # ONETOMANY PARENT (con area)
-    areas = db.relationship("Area", cascade="all, delete")
+    areas = db.relationship("Area", back_populates="evento", cascade="all, delete")
     # ONETOMANY PARENT (con red_social)
-    redes = db.relationship("Redsocial", cascade="all, delete")
+    redes = db.relationship("Redsocial", back_populates="evento", cascade="all, delete")
     # ONETOMANY PARENT (con foto)
-    fotos = db.relationship("Foto", cascade="all, delete")
+    fotos = db.relationship("Foto", back_populates="evento", cascade="all, delete")
+    # ONETOMANY PARENT (con foto)
+    videos = db.relationship("Video", back_populates="evento", cascade="all, delete")
 
     def __init__(self,nomevento,lugarevento,descevento, fechaevento, horaevento):
         self.nomevento = nomevento
@@ -31,6 +33,7 @@ class Evento(db.Model):
         self.areas = []
         self.redes = []
         self.fotos = []
+        self.videos = []
 
     def save(self):
         """ se agrega a la base de datos"""
@@ -49,12 +52,12 @@ class Evento(db.Model):
         """ agrega un area al evento"""
         Area(   nomarea = nombre,
                 descarea = descripcion, 
-                evento_id = self.idevento).save()
+                evento = self).save()
                 
     def agregar_red(self,nombre):
         """ agrega un area al evento"""
         Redsocial(  nombrered = nombre,
-                    evento_id = self.idevento ).save()
+                    evento = self ).save()
 
     def agregar_foto(self,titulo,url,descripcion):
         """ agrega un area al evento"""
@@ -62,7 +65,15 @@ class Evento(db.Model):
                 titulof= titulo,
                 urlf= url,
                 descf= descripcion,
-                evento_id = self.idevento ).save() 
+                evento = self ).save() 
+
+    def agregar_video(self,titulo,url,descripcion):
+        """ agrega un area al evento"""
+        Video(  
+                titulov= titulo,
+                urlv= url,
+                descv= descripcion,
+                evento = self ).save()
     
 
     #  METODOS STATICOS NO REQUIEREN INSTANCIA PARA USARLOS

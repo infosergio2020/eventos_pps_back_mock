@@ -1,21 +1,18 @@
 from config.db import db
 from models.foto import Foto
+from models.video import Video
 
 class Juego(db.Model):
+
     idjuego = db.Column(db.Integer, primary_key=True)
     nomjuego = db.Column(db.String(45),nullable=False,unique=True)
     urljuego = db.Column(db.String(150),nullable=False,unique=True)
     urlimgjuego = db.Column(db.String(150),nullable=False,unique=True)
     descjuego = db.Column(db.String(250),nullable=False)
 
-    # RELACION ONETOMANY PARENT (con foto)
-    fotos = db.relationship("Foto", cascade="all, delete")
+    # ONETOMANY PARENT (con foto)
+    fotos = db.relationship("Foto", back_populates="juego", cascade="all, delete")
 
-    def __init__(self,nomjuego,urljuego,urlimgjuego,descjuego):
-        self.nomjuego = nomjuego
-        self.urljuego = urljuego
-        self.urlimgjuego = urlimgjuego
-        self.descjuego = descjuego
 
     def save(self):
         """ se agrega a la base de datos"""
@@ -35,7 +32,8 @@ class Juego(db.Model):
                 titulof= titulo,
                 urlf= url,
                 descf= descripcion,
-                evento = self.idjuego ).save()
+                juego = self ).save()
+
 
     def __repr__(self):
         """ retorna un string que describe el objeto """

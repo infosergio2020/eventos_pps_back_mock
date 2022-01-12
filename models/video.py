@@ -1,18 +1,20 @@
 from config.db import db
 
 class Video(db.Model):
+    
     idvideo= db.Column(db.Integer, primary_key=True)
     titulov= db.Column(db.String(45),nullable=False,unique=True)
     urlv= db.Column(db.String(150),nullable=False,unique=True)
     descv= db.Column(db.String(250),nullable=False)
 
-   # RELACION ONETOMANY CHILD (con evento)
+
+    # RELACION ONETOMANY CHILD (con evento)
+    evento = db.relationship( "Evento", back_populates="videos")
     evento_id = db.Column(db.Integer, db.ForeignKey('evento.idevento'), comment="video del evento i", nullable=True)
     # RELACION ONETOMANY CHILD (con area)
+    area = db.relationship( "Area", back_populates="videos")
     area_id = db.Column(db.Integer, db.ForeignKey('area.idarea'), comment="video del area i", nullable=True)
-    # RELACION ONETOMANY CHILD (con juego)
-    juego_id = db.Column(db.Integer, db.ForeignKey('juego.idjuego'), comment="video del juego i", nullable=True)
-
+   
     
     def save(self):
         """ se agrega a la base de datos"""
