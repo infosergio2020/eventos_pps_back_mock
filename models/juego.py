@@ -13,6 +13,9 @@ class Juego(db.Model):
     # ONETOMANY PARENT (con foto)
     fotos = db.relationship("Foto", back_populates="juego", cascade="all, delete")
 
+    # RELACION ONETOMANY CHILD (con area)
+    area = db.relationship( "Area", back_populates="juegos")
+    area_id = db.Column(db.Integer, db.ForeignKey('area.idarea'), comment="foto del area i", nullable=True)
 
     def save(self):
         """ se agrega a la base de datos"""

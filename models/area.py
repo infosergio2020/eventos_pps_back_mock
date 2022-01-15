@@ -2,6 +2,7 @@
 from config.db import db
 from models.foto import Foto
 from models.video import Video
+from models.juego import Juego
 
 class Area(db.Model):
     idarea = db.Column(db.Integer, primary_key=True)
@@ -14,8 +15,11 @@ class Area(db.Model):
     
     # ONETOMANY PARENT (con foto)
     fotos = db.relationship("Foto", back_populates="area", cascade="all, delete")
-    # ONETOMANY PARENT (con foto)
+    # ONETOMANY PARENT (con video)
     videos = db.relationship("Video", back_populates="area", cascade="all, delete")
+
+    # ONETOMANY PARENT (con juego)
+    juegos = db.relationship("Juego", back_populates="area", cascade="all, delete")
 
     def save(self):
         """ se agrega a la base de datos"""
@@ -43,6 +47,15 @@ class Area(db.Model):
                 titulov= titulo,
                 urlv= url,
                 descv= descripcion,
+                area = self ).save()
+
+    def agregar_juego(self,nombre,urlj,urlf,desc):
+        """ agrega un area al evento"""
+        Juego(  
+                nomjuego=nombre,
+                urljuego=urlj,
+                urlimgjuego=urlf,
+                descjuego=desc,
                 area = self ).save()
 
 
