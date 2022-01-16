@@ -32,27 +32,33 @@ def envivo_json_byname(name):
     else:
         return jsonify(envivo = "nothing")
 
+
+
+
 def envivo_create():
     try:
         data = request.get_json()
         Envivo(
-        data["nombre"],
-        data["url_juego"],
-        data["url_imagen"],
-        data["descripcion"]).save() #guardar los datos en la tabla
+            nomenvivo = data["nombre"],
+            urlenvivo = data["url"],
+            descenvivo = data["descripcion"],
+            fechaenvivo = data["fecha"],
+            horaenvivo = data["hora"]).save() #guardar los datos en la tabla
         return jsonify(result = "OK")
     except Exception:
         return jsonify(result = "error")
 
 def envivo_update(id):
         data = request.get_json()
-        result = Envivo.update(id,
-        data["nombre"],
-        data["url_juego"],
-        data["url_imagen"],
-        data["descripcion"])
-        if  result != None:
-            return jsonify(result = result.serialize)
+        if(data != None):
+            result = Envivo.update(id,
+                nomenvivo = data["nombre"],
+                urlenvivo = data["url"],
+                descenvivo = data["descripcion"],
+                fechaenvivo = data["fecha"],
+                horaenvivo = data["hora"])
+            if  result != None:
+                return jsonify(result = result.serialize)
         # si es un GET o no se actualizo me voy al form para actualizar
         return jsonify(result = "nothing")
 

@@ -9,14 +9,6 @@ class Envivo(db.Model):
     fechaenvivo = db.Column(db.Date,nullable=False)
     horaenvivo = db.Column(db.Time,nullable=False)
 
-    def __init__(self, nombre, url, descripcion, fecha, hora):
-        self.nomenvivo = nombre
-        self.urlenvivo = url
-        self.descenvivo = descripcion
-        self.fechaenvivo = fecha
-        self.horaenvivo = hora
-
-
     def save(self):
         """ se agrega a la base de datos"""
         if not self.idenvivo:
@@ -32,15 +24,20 @@ class Envivo(db.Model):
     #  METODOS STATICOS NO REQUIEREN INSTANCIA PARA USARLOS
 
     @staticmethod
-    def update(id, nombre, url, descripcion, fecha, hora ):
+    def update(id, nombre=None, url=None, descripcion=None, fecha=None, hora=None ):
         """ permite actualizar este objeto en la bd , retorna el usuario que actualizó sino retorna None"""
         envivo = Envivo.query.get(id) #buscar en la bd
         if envivo:
-            envivo.nomenvivo = nombre
-            envivo.urlenvivo = url
-            envivo.descenvivo = descripcion
-            envivo.fechaenvivo = fecha
-            envivo.horaenvivo = hora
+            if (nombre != None):
+                envivo.nomenvivo = nombre
+            if (url != None):
+                envivo.urlenvivo = url
+            if (descripcion != None):
+                envivo.descenvivo = descripcion
+            if (fecha != None):
+                envivo.fechaenvivo = fecha
+            if (hora != None):
+                envivo.horaenvivo = hora
             envivo.save()
             return envivo
         return None

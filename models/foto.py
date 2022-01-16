@@ -14,8 +14,8 @@ class Foto(db.Model):
     area = db.relationship( "Area", back_populates="fotos")
     area_id = db.Column(db.Integer, db.ForeignKey('area.idarea'), comment="foto del area i", nullable=True)
     # RELACION ONETOMANY CHILD (con juego)
-    # juego = db.relationship( "Juego", back_populates="fotos")
-    # juego_id = db.Column(db.Integer, db.ForeignKey('juego.idjuego'), comment="foto del juego i", nullable=True)
+    juego = db.relationship( "Juego", back_populates="fotos")
+    juego_id = db.Column(db.Integer, db.ForeignKey('juego.idjuego'), comment="foto del juego i", nullable=True)
 
 
     def save(self):
