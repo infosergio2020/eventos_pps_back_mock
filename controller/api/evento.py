@@ -40,39 +40,50 @@ def evento_create():
     try:
         data = request.get_json()
         
-        evento_guardado = Evento(
-        data["nombre"],
-        data["lugar"],
-        data["descripcion"],
-        cast(data["fecha"],Date),
-        cast(data["hora"],Time))
+        if 'nombre' in data:
+            if 'lugar' in data:
+                if 'descripcion' in data:
+                    if 'fecha' in data:
+                        if 'hora' in data:
+                            evento_guardado = Evento(
+                            data["nombre"],
+                            data["lugar"],
+                            data["descripcion"],
+                            cast(data["fecha"],Date),
+                            cast(data["hora"],Time))
+                            evento_guardado.save()
+                            # solo si el formulario agregar areas 
+                            if 'areas' in data:
+                                areas = data["areas"]
+                                for area in areas:
+                                    evento_guardado.agregar_area(area['nombre'],area['descripcion'])                         
+                            # solo si el formulario agregar areas 
+                            if 'fotos' in data:
+                                fotos = data["fotos"]
+                                for foto in fotos:
+                                    print(foto)
+                                    evento_guardado.agregar_foto(foto['titulo'],foto['url'],foto['descripcion'])
+                            # solo si el formulario agregar areas 
+                            if 'videos' in data:
+                                videos = data["videos"]
+                                for video in videos:
+                                    print(video)
+                                    evento_guardado.agregar_video(video['titulo'],video['url'],video['descripcion'])    
+                            return jsonify(result = "OK")
+                        else:
+                            return jsonify(result = {"res":"error","msj":'falta el campo hora'})
+                    else:
+                        return jsonify(result = {"res":"error","msj":'falta el campo fecha'})
+                else:
+                    return jsonify(result = {"res":"error","msj":'falta el campo descripcion'})
+            else:
+                return jsonify(result = {"res":"error","msj":'falta el campo lugar'})
+        else:
+            return jsonify(result = {"res":"error","msj":'falta el campo nombre'})
 
-        evento_guardado.save()
-
-        # solo si el formulario agregar areas 
-        if 'areas' in data:
-            areas = data["areas"]
-            for area in areas:
-                evento_guardado.agregar_area(area['nombre'],area['descripcion'])
-        
-        # solo si el formulario agregar areas 
-        if 'fotos' in data:
-            fotos = data["fotos"]
-            for foto in fotos:
-                print(foto)
-                evento_guardado.agregar_foto(foto['titulo'],foto['url'],foto['descripcion'])
-
-        # solo si el formulario agregar areas 
-        if 'videos' in data:
-            videos = data["videos"]
-            for video in videos:
-                print(video)
-                evento_guardado.agregar_video(video['titulo'],video['url'],video['descripcion'])
-            
-        return jsonify(result = "OK")
     except exc.SQLAlchemyError as e:
         error = str(e.__dict__['orig'])
-        return jsonify(result = error)
+        return jsonify(result = {"msj":"error SQLAlchemy","codigo":error})
 
 # /update
 def evento_update(id):
