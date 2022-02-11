@@ -8,13 +8,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- color e icono IOS -->
   <meta name="theme-color" content="#317EFB"/>
-  <link rel="apple-touch-icon" href="img/general/flooded-house.png">
+  <link rel="apple-touch-icon" href="{{url_for('static', filename = 'img/general/flooded-house.png')}}">
   <meta
   name="descripción"
   content="Informarte sobre los desastres naturales en Polonia, Alemania, Republica Dominicana, Chile y Argentina. Descubre que pasó antes, durante y después de la inundación de la Plata en 2013.">
   
   <!--Responsive Meta Tag-->
-  <link rel="shortcut icon" href="./img/general/otros/tree.webp" type="image/x-icon">
+  <link rel="shortcut icon" href="{{url_for('static', filename = './img/general/otros/tree.webp')}}" type="image/x-icon">
   <!--Import Google Icon Font-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -53,7 +53,7 @@
           <div class="header__img__h1">
             <a tabindex="0" role="menuitem" href="index.html" aria-label="Presione enter para ir a la pagina principal.">
               <div role="img" class="item__img__h1 txt_white">
-                <img class="wh-88" src="img/general/flooded-house.png" alt="Logo de citadine.">
+                <img class="wh-88" src="{{url_for('static', filename = './img/general/flooded-house.png')}}" alt="Logo de citadine.">
                 <h1>Generar <span>con</span>ciencia</h1>
               </div>
             </a>
@@ -67,7 +67,7 @@
           <!-- barra de secciones y boton -->
           <div class="header__nav__menu">
             <button role="menu" tabindex="0" class="boton__2 verde-4" aria-label="Presione enter para obtener mas informacion." id="logo">
-              <img src="img/general/menu.svg" alt="Citadine brand">
+              <img src="{{url_for('static', filename = 'img/general/menu.svg')}}" alt="Citadine brand">
             </button>
             <nav  class="header-container-nav-row" id="nav-id" aria-label="Barra de navegacion.">
     
@@ -76,7 +76,7 @@
                 <li role="none">
                   <a tabindex="0" class="navegacion__enlace" role="menuitem" aria-label="Presione enter para conocer las opciones."
                     aria-haspopup="true" aria-expanded="false" href="#academics">
-                    <img class="wh-30" src="img/general/secciones/1.webp" alt="seccion">
+                    <img class="wh-30" src="{{url_for('static', filename = 'img/general/secciones/1.webp')}}" alt="seccion">
                     <div class="navegacion__enlace--info">
                       <p>seccion 1</p>
                       <svg id="campo" xmlns="http://www.w3.org/2000/svg" class="down wh-12-9">
@@ -102,7 +102,7 @@
                   <a tabindex="0" class="navegacion__enlace" role="menuitem" aria-label="Presione enter para conocer las opciones."
                     aria-haspopup="true" aria-expanded="false" href="#academics">
     
-                    <img class="wh-30" src="img/general/secciones/2.webp" alt="seccion">
+                    <img class="wh-30" src="{{url_for('static', filename = 'img/general/secciones/2.webp')}}" alt="seccion">
     
     
                     <div class="navegacion__enlace--info">
@@ -130,7 +130,7 @@
                   <a class="navegacion__enlace" role="menuitem" aria-label="Presione enter para conocer las opciones."
                     aria-haspopup="true" aria-expanded="false" href="#academics">
     
-                    <img class="wh-30" src="img/general/secciones/3.webp" alt="seccion">
+                    <img class="wh-30" src="{{url_for('static', filename = 'img/general/secciones/3.webp')}}" alt="seccion">
     
     
                     <div class="navegacion__enlace--info">
@@ -167,7 +167,7 @@
                   <a class="navegacion__enlace" role="menuitem" aria-label="Presione enter para conocer las opciones."
                     aria-haspopup="true" aria-expanded="false" href="#academics">
     
-                    <img class="wh-30" src="img/general/secciones/4.webp" alt="seccion">
+                    <img class="wh-30" src="{{url_for('static', filename = 'img/general/secciones/4.webp')}}" alt="seccion">
     
     
                     <div class="navegacion__enlace--info">
@@ -199,7 +199,7 @@
                   <a class="navegacion__enlace" role="menuitem" aria-label="Presione enter para conocer las opciones."
                     aria-haspopup="true" aria-expanded="false" href="#academics">
     
-                    <img class="wh-30" src="img/general/secciones/5.webp" alt="seccion">
+                    <img class="wh-30" src="{{url_for('static', filename = 'img/general/secciones/5.webp')}}" alt="seccion">
     
                     <div class="navegacion__enlace--info">
                       <p>seccion 5</p>
@@ -236,7 +236,7 @@
                   <a class="navegacion__enlace" role="menuitem" aria-label="Presione enter para conocer las opciones."
                     aria-haspopup="true" aria-expanded="false" href="#academics">
     
-                    <img class="wh-30" src="img/general/secciones/6.webp" alt="seccion">
+                    <img class="wh-30" src="{{url_for('static', filename = 'img/general/secciones/6.webp')}}" alt="seccion">
     
                     <div class="navegacion__enlace--info">
                       <p>seccion 6</p>
@@ -279,9 +279,9 @@
       <div class="menu-deslizante-realtivo">
         <div id="menuIcono" class="sideBar">
           <div class="sideBar-header">
-            <img class="boton-close "  id="close-sideBar" src="./img/general/circle-x.svg" alt="haga click, o presione enter para cerrar el sidebar.">
+            <img class="boton-close "  id="close-sideBar" src="{{url_for('static', filename = './img/general/circle-x.svg')}}" alt="haga click, o presione enter para cerrar el sidebar.">
             <div role="img" class="sideBar-img" aria-labelledby="posts-heading">
-              <img src="../../img/general/flooded-house.png" alt="expo citadine logo">
+              <img src="{{url_for('static', filename = './img/general/flooded-house.png')}}" alt="expo citadine logo">
               <!-- <a href="/"><img src="./img/general/menu-deslizante/technical-support.png" alt="expo citadine logo"></a> -->
               <!-- <a href="/"><img src="./img/general/menu-deslizante/options.png" alt="expo citadine logo"></a> -->
               <!-- <a href="/"><img src="./img/general/menu-deslizante/choose.png" alt="expo citadine logo"></a> -->
@@ -298,41 +298,41 @@
                 <a tabindex="-1" id="tab-secciones" href="./menu-deslizante/sections.html">
                   <li class="sidebar-link" role="menuitem"
                     aria-label="Estas dentro del menu deslizante. Haga click si decea entrar a las secciones">
-                    <img class="wh-42" src="./img/general/menu-deslizante/secciones.png" alt="calendario-image">
+                    <img class="wh-42" src="{{url_for('static', filename = './img/general/menu-deslizante/secciones.png')}}" alt="calendario-image">
                     <p class="no-margin">sections</p>
-                    <img class="wh-42" src="./img/general/menu-deslizante/arrow.png" alt="flecha-image">
+                    <img class="wh-42" src="{{url_for('static', filename = './img/general/menu-deslizante/arrow.png')}}"alt="flecha-image">
                   </li>
                 </a>
                 <a tabindex="-1" id="tab-novedades" href="./menu-deslizante/anounce.html">
                   <li  class="sidebar-link" role="menuitem"
                     aria-label="haga click si decea entrar a Announcements">
-                    <img class="wh-42" src="./img/general/menu-deslizante/calendar.webp" alt="calendario-image">
+                    <img class="wh-42" src="{{url_for('static', filename = './img/general/menu-deslizante/calendar.webp')}}" alt="calendario-image">
                     <p class="no-margin">Announcements</p>
-                    <img class="wh-42" src="./img/general/menu-deslizante/arrow.png" alt="flecha-image">
+                    <img class="wh-42" src="{{url_for('static', filename = './img/general/menu-deslizante/arrow.png')}}" alt="flecha-image">
                   </li>
                 </a>
-                <a tabindex="-1" id="tab-covid" href="./menu-deslizante/covid.html">
+                <a tabindex="-1" id="tab-covid" href="{{url_for('static', filename = './menu-deslizante/covid.html')}}">
                   <li  class="sidebar-link" role="menuitem"
                     aria-label="haga click si decea entrar a COVID protocols">
-                    <img class="wh-42" src="./img/general/menu-deslizante/virus.webp" alt="virus-image">
+                    <img class="wh-42" src="{{url_for('static', filename = './img/general/menu-deslizante/virus.webp')}}" alt="virus-image">
                     <p class="no-margin">COVID protocols </p>
-                    <img class="wh-42" src="./img/general/menu-deslizante/arrow.png" alt="flecha-image">
+                    <img class="wh-42" src="{{url_for('static', filename = './img/general/menu-deslizante/arrow.png')}}" alt="flecha-image">
                   </li>
                 </a>
                 <a tabindex="-1" href="./menu-deslizante/about.html">
                   <li  class="sidebar-link" role="menuitem"
                     aria-label="haga click si decea entrar a hacerca de citadine">
-                    <img class="wh-42" src="./img/general/menu-deslizante/Citadine.webp" alt="informacion-image">
+                    <img class="wh-42" src="{{url_for('static', filename = './img/general/menu-deslizante/Citadine.webp')}}" alt="informacion-image">
                     <p class="no-margin">About Citadine </p>
-                    <img class="wh-42" src="./img/general/menu-deslizante/arrow.png" alt="flecha-image">
+                    <img class="wh-42" src="{{url_for('static', filename = './img/general/menu-deslizante/arrow.png')}}" alt="flecha-image">
                   </li>
                 </a>
                 <a tabindex="-1" href="./menu-deslizante/languaje.html">
                   <li  class="sidebar-link" role="menuitem"
                     aria-label="haga click si decea entrar a hacerca de citadine">
-                    <img class="wh-42" src="./img/general/menu-deslizante/languages.webp" alt="lenguajes-image">
+                    <img class="wh-42" src="{{url_for('static', filename = './img/general/menu-deslizante/languages.webp')}}" alt="lenguajes-image">
                     <p class="no-margin">Languajes </p>
-                    <img class="wh-42" src="./img/general/menu-deslizante/arrow.png" alt="flecha-image">
+                    <img class="wh-42" src="{{url_for('static', filename = './img/general/menu-deslizante/arrow.png')}}" alt="flecha-image">
                   </li>
                 </a>
               </ul>
