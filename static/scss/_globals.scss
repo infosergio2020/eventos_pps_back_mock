@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap');
+@import url('./../scss/generics/_funciones.scss');
+
+ 
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* Now 10px = 1rem! */
+    scroll-behavior: smooth;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+body{
+    @include background-template('../img/general/cruce_de_inundacion_2.webp');
+    font-family: 'Source Sans Pro', sans-serif;
+    // font-size: 1.8rem;
+    font-size: calc(.84em + 1vw);  //font responsive
+    color: #ffffff;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+p{
+  color: #ffffff;
+}
+
+
+h1,h2,h3,h4{
+  margin: 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+h1{
+  font-size: calc(1.8em + 1vw);
+}
+h2{
+  font-size: calc(1.4em + 1vw)
+}
+h3{
+  font-size: calc(1em + 1vw);
+}
+h4{
+  font-size: calc(.8em + 1vw);
+}
+
+
+
+
+nav ul a {
+  font-size: calc(.8em + 1vw);
+}
+
+small, .text_small {
+  font-size: calc(.6em + 1vw);
+}
+
+@media (min-width: 720px) {
+  nav ul a {
+    font-size: calc(.08em + 1vw);
+  }
+  
+  small, .text_small {
+    font-size: calc(.06em + 1vw);
+  }
+}
+
+
+img{
+  max-width: 100%;
+}
+
+nav {
+  background-color: #003D33;
+}
+.verde__oscuro{
+  background-color: #05241E;
+}
+
+// utilidades
+
+.m-cero-auto{
+  margin: 0 auto;
+}
+
+.no-margin{
+  margin: 0;
+}
+
+.no-padding{
+  padding: 0;
+}
+
+.overflow-y{
+  overflow-y: scroll;
+}
+
+.line-down{
+  padding-bottom: 2rem;
+  border-bottom: 1px double #000f05;
+}
+
+// utilidades de texto
+
+.txt_center{
+  text-align: center!important;
+}
+
+.txt_justify{
+  text-align: justify!important;
+}
+
+.txt_left{
+  text-align: left!important;
+}
+
+.txt_white{
+  color: #ffffff!important;
+}
+
+// utilidad de altura
+
+.h-460{
+  height: 460px;
+}
+
+// utilidades de imagen
+
+.wh-42{
+  width: 42px; 
+  height: 42px;
+}
+
+.wh-12-9{
+  width: 12px;
+  height: 9px;
+}
+
+.wh-30{
+  width: calc(2.5em + 1vw);
+  height: calc(2.5em + 1vw);
+}
+
+.wh-88{
+  width: calc(4em + 1vw);
+  height: calc(4em + 1vw);
+}
+
+.contenedor__text{
+  word-wrap: break-word;
+
+}

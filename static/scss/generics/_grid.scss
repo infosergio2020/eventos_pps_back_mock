@@ -1,0 +1,106 @@
+.afiche__head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    // background-color: #001813d2;
+//     background: rgb(69,91,252);
+// background: linear-gradient(153deg, rgba(69,91,252,1) 8%, rgba(255,255,255,1) 18%, rgba(254,196,196,1) 31%, rgba(254,138,138,1) 46%, rgba(253,33,33,1) 55%, rgba(253,29,29,1) 74%);
+    background-color:  #05241E;;
+    border-top-left-radius: 2.8rem;
+    border-top-right-radius: 2.8rem;
+    height: 10rem;
+}
+
+.afiche__head h3{
+    margin: 0;
+}
+
+.grid__container{
+    display: block;
+    padding: 1rem 4rem;
+}
+
+@media (min-width: 680px) {
+    .grid__container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 7rem;
+    }
+}
+
+.grid__image{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.grid__image small{
+    
+    padding: 0 1rem;
+    background-color: #000000d0;
+    color: #ffffff;
+    position: absolute;
+    bottom: 0;
+    left: auto;
+    z-index: 1;
+    width: 100%;
+    border-bottom-left-radius: 1.3rem;
+    border-bottom-right-radius: 1.3rem;
+}
+
+.grid__image img{
+    object-fit: cover;
+    border-radius: 1.5rem;
+    border: 1.5px solid #bbbbbbc7;
+    -webkit-box-shadow: -6px 6px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -6px 6px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: -6px 6px 5px 0px rgba(0,0,0,0.75);
+}
+
+
+.grid__texto{
+    color: #ffffff;
+    text-align: justify;
+}
+.grid__columna{
+    align-items: center;
+}
+
+.grid__columna h4{
+    text-shadow: 3px 0 0 #202020;
+}
+
+.text-shadow{
+    text-shadow: 3px 0 0 #202020;
+}
+.grid__container__4{
+    display: block;
+    padding: 1rem 4rem;
+  }
+  @media (min-width: 680px) {
+    .grid__container__4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 7rem;
+    }
+  }
+
+
+
+
+.grid__container__3{
+    display: block;
+    padding: 1rem 4rem;
+  }
+  @media (min-width: 680px) {
+    .grid__container__3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 7rem;
+    }
+  }
+.mg-bottom{
+    margin-bottom: 4rem;
+}

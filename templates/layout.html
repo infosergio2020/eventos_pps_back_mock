@@ -12,27 +12,30 @@
   <meta
   name="descripción"
   content="Informarte sobre los desastres naturales en Polonia, Alemania, Republica Dominicana, Chile y Argentina. Descubre que pasó antes, durante y después de la inundación de la Plata en 2013.">
-  <!-- watson asistant -->
-  <link rel="stylesheet" href="./css/chat.css">
+  
   <!--Responsive Meta Tag-->
   <link rel="shortcut icon" href="./img/general/otros/tree.webp" type="image/x-icon">
   <!--Import Google Icon Font-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-  <link rel="preload" href="./css/normalize.css" as="style">
-  <link rel="stylesheet" href="./css/normalize.css">
+  <!-- watson asistant -->
+  <link rel="stylesheet" href="{{url_for('static', filename = '/css/chat.css')}}">
+  <!-- demas stilos -->
+  <link rel="preload" href="{{url_for('static', filename = '/css/normalize.css')}}" as="style">
+  
+  <link rel="stylesheet" href="{{url_for('static', filename = '/css/normalize.css')}}">
 
-  <link rel="preload" href="./css/main.css" as="style">
-  <link rel="stylesheet" href="./css/main.css">
-
-  <link rel="preload" href="./css/lixtbox.css" as="style">
-  <link rel="stylesheet" href="./css/lixtbox.css">
+  <link rel="preload" href="{{url_for('static', filename = '/css/main.css')}}" as="style">
+  <link rel="stylesheet" href="{{url_for('static', filename = '/css/main.css')}}">
+  
+  <link rel="preload" href="{{url_for('static', filename = '/css/lixtbox.css')}}" as="style">
+  <link rel="stylesheet" href="{{url_for('static', filename = '/css/lixtbox.css')}}">
 
 
   <!--Import jQuery Library-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-  <script src="./js/index.js"></script>
+  <script src="{{url_for('static', filename = '/js/index.js')}}"></script>
 
   <title>Mock</title>
 </head>
@@ -353,7 +356,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
     <!-- script -->
-    <script src="./js/lixtbox.js"></script>
+
+    <script src="{{url_for('static', filename = '/js/lixtbox.js')}}"></script>
 </body>
 
 </html>

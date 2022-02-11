@@ -1,0 +1,191 @@
+@charset "utf-8";
+
+.navegacion__enlace{
+  padding: 0 .5rem 0 0;
+  border: none!important;
+}
+
+.navegacion__enlace--info{
+  display: flex;
+  align-items: center; 
+}
+
+.navegacion__enlace--info p {
+  margin: 0;
+  padding: 0;
+}
+
+.menubar-navigation {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 43px;
+}
+
+
+@media (min-width: 768px){
+  .menubar-navigation {
+    display: flex;
+    margin: 0!important;
+    padding: 0;
+  }
+}
+
+.menubar-navigation li {
+  margin: 0;
+  padding: 0;
+  border: 0 solid black;
+  list-style: none;
+}
+
+.menubar-navigation > li {
+  display: inline-block;
+  position: relative;
+}
+
+.menubar-navigation > li li {
+  display: block;
+}
+
+/* SE ENCARGA DE MANIPULAR EL CONTENEDOR DEL ICONO Y EL PARRAFO CON EL SVG */
+.menubar-navigation > li > [role="menuitem"] {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+    
+  background-color: #479949;
+  
+  box-shadow: 10px 6px 5px -2px rgba(0,0,0,0.75);
+  color: #ffffff;
+}
+
+.menubar-navigation [role="separator"] {
+  padding-top: 3px;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cline x1='0' y1='6' x2='12' y2='6' style='stroke:black;stroke-width:1' /%3E%3C/svg%3E%0A");
+  background-size: 10px 10px;
+  background-position: center;
+  background-repeat: repeat-x;
+}
+
+.menubar-navigation [role="menu"] [role="menuitem"],
+.menubar-navigation [role="menu"] [role="separator"] {
+  display: block;
+  width: 12em;
+  margin: 2px;
+  padding: 4px;
+  padding-left: 8px;
+  background-color: #eee;
+  border: 0 solid #eee;
+  color: black;
+}
+
+.menubar-navigation [role="menuitem"] svg {
+  fill: currentColor;
+  stroke: currentColor;
+}
+
+.menubar-navigation [role="menuitem"] svg.down {
+  padding-left: 0.125em;
+}
+
+.menubar-navigation [role="menuitem"] svg.right {
+  position: absolute;
+  padding-top: 0.35em;
+  right: 0.75em;
+}
+
+.menubar-navigation [role="menuitem"][aria-expanded="true"] svg.down {
+  transform: rotate(180deg);
+}
+
+.menubar-navigation [role="menuitem"][aria-expanded="true"] svg.right {
+  transform: rotate(90deg) translate(5px, -5px);
+}
+
+.menubar-navigation [role="menu"] {
+  display: none;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  padding: 7px 4px;
+  border: 2px solid #034575;
+  background-color: #eee;
+}
+
+.menubar-navigation [role="group"] {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* aria-current styling */
+
+.menubar-navigation > li > [role="menuitem"][aria-current],
+.menubar-navigation > li > [role="menuitem"].aria-current-path {
+  padding-bottom: 2px;
+  border-bottom: 4px solid #034575;
+}
+
+.menubar-navigation [role="menu"] [role="menuitem"].aria-current-path,
+.menubar-navigation [role="menu"] [role="menuitem"][aria-current] {
+  padding-left: 4px;
+  border-left: 4px solid #034575;
+}
+
+/* focus styling */
+
+.menubar-navigation.focus {
+  padding: 0;
+  border: #034575 solid 3px;
+}
+
+/* CAMBIA EL COLOR DE LOS CUANDO SE HACE HOVER  O SE ENFOCA EN EL LI*/
+.menubar-navigation li [aria-expanded="true"],
+.menubar-navigation li [role="menuitem"]:focus,
+.menubar-navigation li [role="menuitem"]:hover {
+  outline: none;
+  background-color: #003D33;
+  color: #fff;
+}
+
+
+.menubar-navigation [role="menu"] [aria-expanded="true"],
+.menubar-navigation [role="menu"] [role="menuitem"]:focus,
+.menubar-navigation [role="menu"] [role="menuitem"]:hover {
+  outline: none;
+  background-color: #003D33;
+}
+
+.menubar-navigation [role="menu"] [role="menuitem"]:focus,
+.menubar-navigation [role="menu"] [role="menuitem"]:hover {
+  padding: 2px;
+  padding-left: 6px;
+  border: 2px solid #034575;
+}
+
+.menubar-navigation > li > [aria-expanded="true"].aria-current-path,
+.menubar-navigation > li > [role="menuitem"].aria-current-path:focus,
+.menubar-navigation > li > [role="menuitem"].aria-current-path:hover,
+.menubar-navigation > li > [role="menuitem"][aria-current]:focus,
+.menubar-navigation > li > [role="menuitem"][aria-current]:hover {
+  padding-bottom: 2px;
+  border-bottom: 4px solid #034575;
+}
+
+.menubar-navigation [role="menu"] [aria-expanded="true"].aria-current-path,
+.menubar-navigation [role="menu"] [role="menuitem"].aria-current-path:focus,
+.menubar-navigation [role="menu"] [role="menuitem"].aria-current-path:hover,
+.menubar-navigation [role="menu"] [role="menuitem"][aria-current]:focus,
+.menubar-navigation [role="menu"] [role="menuitem"][aria-current]:hover {
+  padding-left: 4px;
+  border-left: 4px solid #034575;
+}
+
+
+/* nav id */
+
+#nav-id{
+  /* border: 2px solid red; */
+  padding: .5rem;
+  height: fit-content;
+  margin: 0 auto;
+}

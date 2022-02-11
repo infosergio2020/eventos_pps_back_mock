@@ -1,0 +1,296 @@
+.Carousel{
+    width: 100%;
+    margin: 0px 60px;
+}
+
+.Carousel h2{
+    /* font-size: 26px; */
+    /* line-height: 38px; */
+    padding-bottom: 24px;
+    opacity: .9;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    text-align: center;
+}
+
+/*  images */
+.photo-not-border{
+    border-radius: 0rem !important;
+    max-width: 100%;
+    object-fit: cover;
+}
+.slick-list{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: 304px;
+    padding: 10px 0px;
+    margin: 0px auto;
+    max-width: 90vw;
+    overflow: hidden;
+}
+
+.slick-track{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    transition: .5s ease-in-out;
+}
+
+.slick{
+    position: relative;
+    width: 275px;
+    padding: 0 18px;
+    float: left;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+}
+
+.slick h4{
+    position: absolute;
+    z-index: 1;
+    /* font-size: 22px; */
+    /* line-height: 23px; */
+    color: #fff;
+    padding: 15px;
+}
+
+.slick h4 small{
+    /* font-size: 15px; */
+    display: block;
+}
+
+.slick a img{
+    object-fit: cover;
+    height: 300px;
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 px 5px 0 rgba(0,0,0,.5);
+    transition: .3 ease-in-out;
+}
+
+
+.slick a img:focus{
+    opacity: .85;
+}
+
+
+/*img{width: 100%;} si lo descomento el boton Go back se hace mas grande*/
+
+/*buttons*/
+
+.slick-arrow{
+    border-radius: 30px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 4;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.15);
+    border: 0;
+    cursor: pointer;
+}
+
+.slick-arrow:focus{
+    outline: 0;
+}
+
+.slick-arrow svg{
+    width: 12px;
+    height: 100%;
+    color: rgba(0,0,0,.7);
+}
+
+.slick-prev{
+    left: 0px;
+}
+.slick-next{
+    right: 0px;
+}
+
+/* comienzo de las tarjetas */
+.card-libro {
+	color: #013243;
+	 /* position: absolute; */
+	top: 50%;
+	left: 50%; 
+	background: #e0e1dc;
+	transform-style: preserve-3d;
+	transform: translate(-50%,-50%) perspective(2000px);
+	box-shadow: inset 300px 0 50px rgba(0,0,0,.5), 20px 0 60px rgba(0,0,0,.5);
+	transition: 1s;
+    line-height: 0;
+}
+
+.card-libro .imgBox {
+	transform-origin: left;
+	transition: .7s;
+}
+
+.card-libro .bark {
+    /* este cambia el color de fondo cuando se abre el libro */
+	position: absolute;
+	background: #e0e1dc;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: .7s;
+}
+
+.card-libro:hover .imgBox,
+.card-libro:focus-within .imgBox,
+.card-libro:active .imgBox,
+.card-libro:focus .imgBox {
+	transform: rotateY(-135deg);
+    
+}
+
+.card-libro:hover .bark,
+.card-libro:focus-within .bark,
+.card-libro:active .bark,
+.card-libro:focus .bark  {
+	opacity: 1;
+	transition: .6s;
+    box-shadow: 300px 200px 100pxrgb(0 0 0 / 40%) inset;
+    
+}
+
+.card-libro:hover,
+.card-libro:focus-within,
+.card-libro:active, 
+.card-libro:focus{
+	transform: translate(-50%,-50%) perspective(2000px) rotate(15deg) scale(1.2);
+	box-shadow: inset 20px 0 50px rgba(0,0,0,.5), 0 10px 100px rgba(0,0,0,.5);
+}
+
+/* detalles del contenido del libro */
+.card-libro .details {
+	position: absolute;
+	top: 0;
+	box-sizing: border-box;
+	padding: 0 0 0 10px;
+	z-index: -1;
+    margin-left: 20px;
+	margin-top: 30px;
+    margin-right: 20px;
+}
+
+.card-libro .details p {
+	/* font-size: 15px; */
+	/* line-height: 5px; */
+	transform: rotate(-10deg);
+	padding: 0 0 0 20px;
+}
+
+.card-libro .details h4 {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+ .margenes{
+     margin-left: 0rem;
+ }
+/* smartphone */
+@media screen and (max-width: 767px) {
+    .margenes{
+        margin-left: 30rem;
+    }
+    .libro-container{
+        display: grid;
+        grid-template-columns: 20rem;
+        column-gap: 12rem;
+        row-gap: 12rem;
+        margin-top: 20rem; 
+        justify-content: center;
+    }
+    .card-libro:hover,
+    .card-libro:focus-within,
+    .card-libro:active, 
+    .card-libro:focus{
+        transform: translate(-50%,-20%) perspective(900px) rotate(4deg) scale(1.2);
+        box-shadow: inset 20px 0 50px rgba(0,0,0,.5), 0 10px 100px rgba(0,0,0,.5);
+        
+    }
+    .card-libro {
+        color: #013243;
+         /* position: absolute; */
+        top: 50%;
+        left: 50%;
+        background: #e0e1dc;
+        transform-style: preserve-3d;
+        transform: translate(-50%,-30%) perspective(2000px);
+        box-shadow: inset 300px 0 50px rgba(0,0,0,.5), 20px 0 60px rgba(0,0,0,.5);
+        transition: 1s;
+        line-height: 0;
+    }
+}
+/* table */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .margenes{
+        margin-left: 30rem;
+    }
+    .libro-container{
+        display: grid;
+        grid-template-columns: 25rem;
+        column-gap: 12rem;
+        row-gap: 12rem;
+        margin-top: 20rem; 
+        justify-content: center;
+    }
+    .card-libro:hover,
+    .card-libro:focus-within,
+    .card-libro:active, 
+    .card-libro:focus{
+        transform: translate(-50%,-20%) perspective(900px) rotate(10deg) scale(1.2);
+        box-shadow: inset 20px 0 50px rgba(0,0,0,.5), 0 10px 100px rgba(0,0,0,.5);
+        
+    }
+    .card-libro {
+        color: #013243;
+         /* position: absolute; */
+        top: 50%;
+        left: 50%; 
+        background: #e0e1dc;
+        transform-style: preserve-3d;
+        transform: translate(-50%,-30%) perspective(2000px);
+        box-shadow: inset 300px 0 50px rgba(0,0,0,.5), 20px 0 60px rgba(0,0,0,.5);
+        transition: 1s;
+        line-height: 0;    
+    }
+}
+/* desktop */
+@media screen and (min-width: 1024px) {
+    .margenes{
+        margin-right: 30rem;
+    }
+    .libro-container{
+        display: grid;
+        grid-template-columns: 25rem; /*0rem 20rem 20rem*/
+        column-gap: 12rem;
+        row-gap: 12rem;
+        margin-top: 25rem; 
+        justify-content: flex-end;
+    }
+}
+
+/* imagen de los libros */
+.achicar-img{
+	width: 10px;	
+	height: 10px;
+    cursor: pointer;
+    visibility: hidden;
+}
+.agrandar-img:hover{
+	width: 100%;	
+	height: 100%;
+    justify-content: center;
+    cursor: pointer;
+}
