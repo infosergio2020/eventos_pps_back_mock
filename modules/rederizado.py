@@ -3,69 +3,69 @@ from flask import render_template,request
 class CustomRouter:
 
     # index
-    def render_index():
+    def render_index(self):
         return render_template('index.html');
 
     # secciones del sidebar
-    def render_sections():
+    def render_sections(self):
         return render_template('sidebar/sections.html');
 
-    def render_announcements():
+    def render_announcements(self):
         return render_template('sidebar/announcements.html');
 
-    def render_covid():
+    def render_covid(self):
         return render_template('sidebar/covid.html');
 
-    def render_about():
+    def render_about(self):
         return render_template('sidebar/about.html');
 
-    def render_languaje():
+    def render_languaje(self):
         return render_template('sidebar/languaje.html');
 
 
     # secciones
 
     # seccion-1
-    def render_section_1():
+    def render_section_1(self):
         return render_template('sections/section-1.html');
 
     # subseccion-1
-    def render_before_flood():
+    def render_before_flood(self):
         return render_template('');
 
-    def render_noticias_dia():
+    def render_noticias_dia(self):
         return render_template('');
 
 
 
 
     # seccion-2
-    def render_section_2():
+    def render_section_2(self):
         return render_template('sections/section-2.html');
     # subseccion-2
-    def render_entrevista_map():
+    def render_entrevista_map(self):
         return render_template('');
 
-    def render_agua_simulador():
+    def render_agua_simulador(self):
         return render_template('');
 
 
 
 
     # seccion-3
-    def render_section_3():
+    def render_section_3(self):
         return render_template('sections/section-3.html');
     # subseccion-3
-    def render_diarios():
+    def render_diarios(self):
         return render_template('');
 
-    def render_shocking_photos():
+    def render_shocking_photos(self):
         return render_template('');
 
-    def render_during_flood():
+    def render_during_flood(self):
         return render_template('');
 
-    def render_photo_album():
+    def render_photo_album(self):
         return render_template('');
 
 
@@ -73,16 +73,16 @@ class CustomRouter:
 
 
     # seccion-4
-    def render_section_4():
+    def render_section_4(self):
         return render_template('sections/section-4.html');
     # subseccion-4
-    def render_after_flood():
+    def render_after_flood(self):
         return render_template('');
 
-    def render_sandbox():
+    def render_sandbox(self):
         return render_template('');
 
-    def render_why_do_we_flood():
+    def render_why_do_we_flood(self):
         return render_template('');
 
 
