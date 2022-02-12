@@ -12,7 +12,6 @@ app.config.from_object(config)
 #colocar las rutas antes de correr el servidor
 @app.route('/')
 def Index():
-<<<<<<< HEAD
     
     return render_template('index.html')
 
@@ -26,7 +25,3 @@ def Testimonio1():
 # app.register_blueprint(user) #invoco las rutas del usuario
 # app.register_blueprint(evento)
     
-=======
-    # return render_template('index.html')
-    return rutas.render_index()
->>>>>>> 3eea3c35e5dc5f0155d4ba965193f6bc79a7c941
