@@ -1,7 +1,5 @@
-{% include 'partials/_head.html' %}
-
-<body>
-  {% include 'partials/_header.html' %}
+{% extends 'partials/_layout.html' %}
+{% block body %}
 
   <!-- Info del testimonio 1-->
   <main>
@@ -317,7 +315,4 @@
     {% include 'partials/_button.html' %}
 
   </main>
-  {% include 'partials/_footer.html' %}
-</body>
-
-</html>
+  {% endblock %}
