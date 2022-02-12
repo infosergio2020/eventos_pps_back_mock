@@ -1,98 +1,84 @@
-  <!-- Contenedor del testimonio -->
-  {% extends 'partials/_layout.html' %}
-  {% block body %}
-  <!-- Info de diarios-->
+<!-- Contenedor del testimonio -->
+{% extends 'partials/_layout.html' %}
+{% block body %}
+<!-- Info de diarios-->
 <main>
-        <div class="main-card">
-            <div class="main-card-body">
-
-                
-                <div id="afiche-header" class="afiche__head">
-                    <h3 tabindex="1" class="centrar-texto">Noticias del día de la inundación</h3>
-                </div>
-                <div class="main-card-info">    
-                    <div class="card-container">
-                        <div class="card blue__grad-1" tabindex="2" aria-labelledby="diario el dia" alt="Tapa del diario El Dia.">
-                            <!-- <img src="./img/diarios/tapas/EL-DIA.png" alt=""> -->
-                            <!-- <div class="card__info">
-                                <h3>Diario - 1</h3>
-                            </div> -->
-                            <div class="button__container hide__only720">
-                                <button onclick="window.location.href='https://www.eldia.com/nota/2013-4-3--el-agua-ya-esta-en-un-metro-y-medio-por-favor-que-alguien-nos-mande-botes'" class="button__custom--fit verde-1"> El Día</button>
-                            </div>
-                        </div>
-                        <div class="card blue__grad-2" tabindex="4" aria-labelledby="diario hoy" alt="Tapa del diario Hoy.">
-                            <!-- <img src="./img/diarios/Hoy_logo.png" alt="">
-                            <div class="card__info">
-                                <h3>Diario - 1</h3>
-                                <p>The Egyptian pyramids are ancient pyramid-shaped masonry structures located in Egypt.
-                                    As of
-                                    November
-                                    2008,
-                                    sources cite either 118 or 138 as the number of identified Egyptian pyramids.</p>
-                            </div> -->
-                            <div class="button__container hide__only720">
-                                <button onclick="window.location.href='https://diariohoy.net/adjuntos/archivos/000/024/0000024100.pdf'" class="button__custom--fit verde-1"> Hoy</button>
-                            </div>
-                        </div>
-                        <div class="card blue__grad-3" tabindex="6" aria-labelledby="diario Clarín" alt="Tapa del diario Clarin.">
-                            <!-- <img src="./img/diarios/Diagoanles_logo.png" alt="">
-                            <div class="card__info">
-                                <h3>Diario - 1</h3>
-                                <p>The Egyptian pyramids are ancient pyramid-shaped masonry structures located in Egypt.
-                                    As of
-                                    November
-                                    2008,
-                                    sources cite either 118 or 138 as the number of identified Egyptian pyramids.</p>
-                            </div> -->
-                            <div class="button__container hide__only720">
-                                <button onclick="window.location.href='https://www.clarin.com/ciudades/critica-situacion-plata-cientos-evacuados_0_S19zAYFiDXg.html'" class="button__custom--fit verde-1"> Clarín</button>
-                            </div>
-                        </div>
-                        <div class="card blue__grad-4" tabindex="8" aria-labelledby="diario La Nación" alt="Tapa del diario La Nación.">
-                            <!-- <img src="./img/diarios/pregon_logo.jpg" alt="">
-                            <div class="card__info">
-                                <h3>Diario - 1</h3>
-                                <p>The Egyptian pyramids are ancient pyramid-shaped masonry structures located in Egypt.
-                                    As of
-                                    November
-                                    2008,
-                                    sources cite either 118 or 138 as the number of identified Egyptian pyramids.</p>
-                            </div> -->
-                            <div class="button__container hide__only720">
-                                <button onclick="window.location.href='https://es.kiosko.net/ar/2013-04-03/np/nacion.html'" class="button__custom--fit verde-1">La Nación</button>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="card-container hide_btn">
-                        <div class="button__container">
-                            <button role="button" aria-label="Presione enter si desea acceder al diario El Dia." onclick="window.location.href='https://www.eldia.com/nota/2013-4-3--el-agua-ya-esta-en-un-metro-y-medio-por-favor-que-alguien-nos-mande-botes'" tabindex="3" class="button__custom--fit verde-1" id="diario-1"> El Día </button>
-                        </div>
-                        <div class="button__container">
-                            <button role="button" aria-label="Presione enter si desea acceder al diario Hoy." onclick="window.location.href='https://diariohoy.net/adjuntos/archivos/000/024/0000024100.pdf'" tabindex="5" class="button__custom--fit verde-1" id="diario-2"> Hoy </button>
-                        </div>
-                        <div class="button__container">
-                            <button role="button" aria-label="Presione enter si desea acceder al diario Clarin." onclick="window.location.href='https://www.clarin.com/ciudades/critica-situacion-plata-cientos-evacuados_0_S19zAYFiDXg.html'" tabindex="7" class="button__custom--fit verde-1" id="diario-3"> Clarín </button>
-                        </div>
-                        <div class="button__container">
-                            <button role="button" aria-label="Presione enter si desea acceder al diario La Nación." onclick="window.location.href='https://es.kiosko.net/ar/2013-04-03/np/nacion.html'" tabindex="9" class="button__custom--fit verde-1" id="diario-4"> La Nación </button>
+    <div class="main-card">
+        <div class="main-card-body">
+            <div id="afiche-header" class="afiche__head">
+                <h3 tabindex="1" class="centrar-texto">Noticias del día de la inundación</h3>
+            </div>
+            <div class="main-card-info">
+                <div class="card-container">
+                    <div class="card blue__grad-1" tabindex="2" aria-labelledby="diario el dia"
+                        alt="Tapa del diario El Dia.">
+                        <div class="button__container hide__only720">
+                            <button
+                                onclick=`window.location.href="https://www.eldia.com/nota/2013-4-3--el-agua-ya-esta-en-un-metro-y-medio-por-favor-que-alguien-nos-mande-botes"
+                                `
+                                class="button__custom--fit verde-1"> El Día</button>
                         </div>
                     </div>
-                </div>
+                    <div class="card blue__grad-2" tabindex="4" aria-labelledby="diario hoy" alt="Tapa del diario Hoy.">
+                        <div class="button__container hide__only720">
+                            <button
+                                onclick=`window.location.href="https://diariohoy.net/adjuntos/archivos/000/024/0000024100.pdf"`
+                                class="button__custom--fit verde-1"> Hoy</button>
+                        </div>
+                    </div>
+                    <div class="card blue__grad-3" tabindex="6" aria-labelledby="diario Clarín"
+                        alt="Tapa del diario Clarin.">
+                        <div class="button__container hide__only720">
+                            <button
+                                onclick=`window.location.href="https://www.clarin.com/ciudades/critica-situacion-plata-cientos-evacuados_0_S19zAYFiDXg.html"`
+                                class="button__custom--fit verde-1"> Clarín</button>
+                        </div>
+                    </div>
+                    <div class="card blue__grad-4" tabindex="8" aria-labelledby="diario La Nación"
+                        alt="Tapa del diario La Nación.">
+                        <div class="button__container hide__only720">
+                            <button onclick="window.location.href='https://es.kiosko.net/ar/2013-04-03/np/nacion.html'"
+                                class="button__custom--fit verde-1">La Nación</button>
+                        </div>
+                    </div>
 
-      </div>
+                </div>
+                <div class="card-container hide_btn">
+                    <div class="button__container">
+                        <button role="button" aria-label="Presione enter si desea acceder al diario El Dia."
+                            onclick="window.location.href='https://www.eldia.com/nota/2013-4-3--el-agua-ya-esta-en-un-metro-y-medio-por-favor-que-alguien-nos-mande-botes'"
+                            tabindex="3" class="button__custom--fit verde-1" id="diario-1"> El Día </button>
+                    </div>
+                    <div class="button__container">
+                        <button role="button" aria-label="Presione enter si desea acceder al diario Hoy."
+                            onclick="window.location.href='https://diariohoy.net/adjuntos/archivos/000/024/0000024100.pdf'"
+                            tabindex="5" class="button__custom--fit verde-1" id="diario-2"> Hoy </button>
+                    </div>
+                    <div class="button__container">
+                        <button role="button" aria-label="Presione enter si desea acceder al diario Clarin."
+                            onclick="window.location.href='https://www.clarin.com/ciudades/critica-situacion-plata-cientos-evacuados_0_S19zAYFiDXg.html'"
+                            tabindex="7" class="button__custom--fit verde-1" id="diario-3"> Clarín </button>
+                    </div>
+                    <div class="button__container">
+                        <button role="button" aria-label="Presione enter si desea acceder al diario La Nación."
+                            onclick="window.location.href='https://es.kiosko.net/ar/2013-04-03/np/nacion.html'"
+                            tabindex="9" class="button__custom--fit verde-1" id="diario-4"> La Nación </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
 
     </div>
-    <!-- boton para ir arriba --> 
-    {% include ('partials/_button.html') %}  
-  
+    <!-- boton para ir arriba -->
+    {% include ('partials/_button.html') %}
+
 </main>
 
 <!-- script -->
-<!-- barra de secciones -->
-<script src="./js/lixtbox.js"></script>
-<!-- menu de barra deslizante -->
-<script src="./js/index.js"></script>
+  <!-- barra de secciones -->
+  <script src="{{url_for('static', filename = './js/lixtbox.js')}}"></script>
+  <!-- menu de barra deslizante -->
+  <script src="{{url_for('static', filename = './js/index.js')}}"></script> 
 <!-- FIN Info de diarios-->
 {% endblock %}

@@ -113,22 +113,22 @@
 /* colores gradientes */
 
 .blue__grad-1{
-  background-image: url("/img/diarios/tapas/EL-DIA.png");
+  background-image: url("./../img/diarios/tapas/EL-DIA.png");
   background-size: cover;
 }
 
 .blue__grad-2{
-  background-image: url("/img/diarios/tapas/Diario-HOY.jpg");
+  background-image: url("./../img/diarios/tapas/Diario-HOY.jpg");
   background-size: cover;
 }
 
 .blue__grad-3{
-  background-image: url("/img/diarios/tapas/El-Clarin.jpg");
+  background-image: url("./../img/diarios/tapas/El-Clarin.jpg");
   background-size: cover;
 }
 
 .blue__grad-4{
-  background-image: url("/img/diarios/tapas/la-nacion.jpg");
+  background-image: url("./../img/diarios/tapas/la-nacion.jpg");
   background-size: cover;
 }
 

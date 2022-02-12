@@ -158,10 +158,7 @@ class MenubarNavigation {
     closePopupAll(e) {
         "object" != typeof e && (e = !1);
         for (var t = 0; t < this.popups.length; t++) {
-            var i = this.popups[t];
-            console.log("holaa")
-            console.log(i)
-     
+            var i = this.popups[t];     
             if (this.doesNotContain(i, e) && this.isOpen(i)) {
                 var s = i.nextElementSibling;
                 s && (i.setAttribute("aria-expanded", "false"), s.style.display = "none")

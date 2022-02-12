@@ -12,170 +12,158 @@ app.config.from_object(config)
 #colocar las rutas antes de correr el servidor
 @app.route('/')
 def Index():
-    
-    return render_template('index.html')
+    return rutas.render_index()
 
 @app.route('/testimonio1')
 def Testimonio1():
-    
-    return render_template('/testimonio1.html')    
+    return rutas.render_before_flood()
 
-@app.route('/testimonio2.html')
+@app.route('/testimonio2')
 def Testimonio2():
-    
-    return render_template('/testimonio2.html')  
+    return rutas.render_during_flood()
 
-
-@app.route('/testimonio3.html')
+@app.route('/testimonio3')
 def Testimonio3():
-    
-    return render_template('/testimonio3.html')   
+    return rutas.render_after_flood()
 
-@app.route('/water-level-simulator.html')
+
+@app.route('/water-level-simulator')
 def Waterlevelsimulator():
-    
-    return render_template('/water-level-simulator.html')   
+    return rutas.render_agua_simulador()
 
-
-@app.route('/the-news-of-the-day.html')
+@app.route('/the-news-of-the-day')
 def Thenewsoftheday():
-    
-    return render_template('/the-news-of-the-day.html')   
+    return rutas.render_noticias_dia()
 
-
-@app.route('/Why-do-we-flood.html')
+@app.route('/Why-do-we-flood')
 def Whydoweflood():
-    
-    return render_template('/Why-do-we-flood.html')         
+    return rutas.render_why_do_we_flood()
 
-@app.route('/recomendacion-como-actuar.html')
+@app.route('/recomendacion-como-actuar')
 def Recomendacioncomoactuar():
-    
-    return render_template('/recomendacion-como-actuar.html')         
+    return rutas.render_recomendacion()
 
 
-@app.route('/sandbox.html')
+@app.route('/sandbox')
 def Sandbox():
-    
-    return render_template('/sandbox.html')         
+    return rutas.render_sandbox()
 
 
-@app.route('/shocking-photos.html')
+@app.route('/shocking-photos')
 def Shockingphotos():
-    
-    return render_template('/shocking-photos.html')   
+    return rutas.render_shocking_photos()
 
 
-@app.route('/Conclusiones-del-evento.html')
+@app.route('/Conclusiones-del-evento')
 def Conclusionesdelevento():
-    
-    return render_template('/Conclusiones-del-evento.html')   
+    return rutas.render_conclusiones()
 
-@app.route('/diarios.html')
+@app.route('/diarios')
 def Diarios():
-    
-    return render_template('/diarios.html')   
+    return rutas.render_diarios()
 
-@app.route('/Inundaciones-en-el-exterior.html')
+@app.route('/Inundaciones-en-el-exterior')
 def Inundacionesenelexterior():
-    
-    return render_template('/Inundaciones-en-el-exterior.html')     
+    return rutas.render_inundacion_exterior()
 
-@app.route('/photo-album.html')
+@app.route('/photo-album')
 def Photoalbum():
-    
-    return render_template('/photo-album.html')   
+    return rutas.render_photo_album()
 
 ######################
 # carpeta sections
 #####################                       
-@app.route('/sections/section-1.html')
+@app.route('/sections/section-1')
 def Section1():  
-    return render_template('/sections/section-1.html')   
+    return rutas.render_section_1()
 
-@app.route('/sections/section-2.html')
+@app.route('/sections/section-2')
 def Section2():  
-    return render_template('/sections/section-2.html')   
+    return rutas.render_section_2()
 
-@app.route('/sections/section-3.html')
+@app.route('/sections/section-3')
 def Section3():  
-    return render_template('/sections/section-3.html')   
+    return rutas.render_section_3()
 
-@app.route('/sections/section-4.html')
+@app.route('/sections/section-4')
 def Section4():  
-    return render_template('/sections/section-4.html')  
+    return rutas.render_section_4()
 
-@app.route('/sections/section-5.html')
+@app.route('/sections/section-5')
 def Section5():  
-    return render_template('/sections/section-5.html')   
+    return rutas.render_section_5()
 
-@app.route('/sections/section-6.html')
+@app.route('/sections/section-6')
 def Section6():  
-    return render_template('/sections/section-6.html')  
+    return rutas.render_section_6()
 
 
 ######################
 # carpeta menu-deslizante
 #####################                       
-@app.route('/about.html')
+@app.route('/about')
 def About():  
-    return render_template('/about.html')   
+    return rutas.render_about()
 
-@app.route('/anounce.html')
+@app.route('/anounce')
 def Anounce():  
-    return render_template('/anounce.html')   
+    return rutas.render_announcements()
 
-@app.route('/covid.html')
+@app.route('/covid')
 def Covid():  
-    return render_template('/covid.html')   
+    return rutas.render_covid()
 
-@app.route('/languaje.html')
+@app.route('/languaje')
 def Languaje():  
-    return render_template('/languaje.html')  
+    return rutas.render_languaje()
 
-@app.route('/menu-deslizante/sections.html')
+@app.route('/sections')
 def Sections():  
-    return render_template('/menu-deslizante/sections.html')  
+    return rutas.render_sections()
 
 
 
 ######################
 # carpeta inundacion-exterior
-#####################                       
-@app.route('/inundacion-exterior/alemania.html')
-def Alemania():  
-    return render_template('/inundacion-exterior/alemania.html')   
+#####################
 
-@app.route('/inundacion-exterior/chile.html')
-def Chile():  
-    return render_template('/inundacion-exterior/chile.html')   
+@app.route('/inundacion-exterior')
+def inundacion_exterior():  
+    return rutas.render_inundacion_exterior()
 
-@app.route('/inundacion-exterior/polonia.html')
-def Polonia():  
-    return render_template('/inundacion-exterior/polonia.html')  
+@app.route('/inundacion-exterior/alemania')
+def alemania():  
+    return rutas.render_alemania()
+
+@app.route('/inundacion-exterior/chile')
+def chile():  
+    return rutas.render_chile()
+
+@app.route('/inundacion-exterior/polonia')
+def polonia():  
+    return rutas.render_polonia()
 
 
 ######################
 # carpeta conclusion del evento
-#####################                       
-@app.route('/conclusion-del-evento/la-ayuda-de-la-radio.html')
+#####################       
+
+@app.route('/conclusion-del-evento')
+def conclusion():  
+    return rutas.render_conclusiones()
+
+@app.route('/conclusion-del-evento/la-ayuda-de-la-radio')
 def Radio():  
-    return render_template('/conclusion-del-evento/la-ayuda-de-la-radio.html')   
+    return rutas.render_conclusiones_radio()
 
-@app.route('/conclusion-del-evento/la-importancia-de-la-solidaridad.html')
+@app.route('/conclusion-del-evento/la-importancia-de-la-solidaridad')
 def Soliradidad():  
-    return render_template('/conclusion-del-evento/la-importancia-de-la-solidaridad.html')   
+    return rutas.render_conclusiones_solidaridad()
 
-@app.route('/conclusion-del-evento/legado-memoria.html')
+@app.route('/conclusion-del-evento/legado-memoria')
 def Legadomemoria():  
-    return render_template('/conclusion-del-evento/legado-memoria.html')   
+    return rutas.render_conclusiones_legado_memoria()
 
-@app.route('/conclusion-del-evento/reflexiones-de-los-entrevistados.html')
+@app.route('/conclusion-del-evento/reflexiones-de-los-entrevistados')
 def Reflexiones():  
-    return render_template('/conclusion-del-evento/reflexiones-de-los-entrevistados.html')                                    
-# app.secret_key="secret key" # configuro un valor para que se genere una sesion
-# 
-# SQLAlchemy(app) #le paso al ORM la configuracion que posee el app  #Configuracion del app
-# app.register_blueprint(user) #invoco las rutas del usuario
-# app.register_blueprint(evento)
-    
+    return rutas.render_conclusiones_reflexiones()

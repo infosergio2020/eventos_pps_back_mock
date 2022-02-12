@@ -51,16 +51,14 @@
         {% include ('partials/_button.html') %}  
     </main>
     
-                      
+                  
     <!-- script -->
     <!-- barra de secciones -->
-    <script src="./js/lixtbox.js"></script>
+    <script src="{{url_for('static', filename = 'js/lixtbox.js')}}"></script>
     <!-- galería de imagenes -->
-    <script src="./js/lightgallery.min.js"></script>
-    <script src="./js/lg-zoom.min.js"></script>
-    <script src="./js/lg-thumbnail.min.js"></script>
-    <script src="./js/lg-video.min.js"></script>
-    <!-- menu de barra deslizante -->
-    <script src="./js/index.js"></script>
+    <script src="{{url_for('static', filename = 'js/lightgallery.min.js')}}"></script>
+    <script src="{{url_for('static', filename = 'js/lg-zoom.min.js')}}"></script>
+    <script src="{{url_for('static', filename = 'js/lg-thumbnail.min.js')}}"></script>
+    <script src="{{url_for('static', filename = 'js/lg-video.min.js')}} "></script>
  <!-- FIN Info de la galeria de fotos -->
  {% endblock %}
