@@ -1,280 +1,323 @@
-  <!-- Contenedor del testimonio -->
-  {% extends 'layout.html' %}
-  {% block body %}
+{% include 'partials/_head.html' %}
+
+<body>
+  {% include 'partials/_header.html' %}
+
   <!-- Info del testimonio 1-->
   <main>
-    <div class="contenedor-testimonio">   
-            
-                <div id="afiche-header" class="afiche__head">
-                  <h3 tabindex="0" class="centrar-texto text-shadow"> Known our testimonies: Before the flood.</h3>
-                </div>
-                <div class="curso">
-                    <div tabindex="0" class="curso__imagen">
-                        <img role="img" aria-label="Imagen de Amina Suarez." class="img-testimonio"  src="{{url_for('static', filename = 'img/section1/secciones/parte 1/1.webp')}}" alt="Imagen de Amina Suarez">
-                    </div>
-                    <div tabindex="0" class="curso__informacion">
-                        <h4 class="no-margin">Amina Suarez</h4>
-                        <p class="curso__label">Edad: 
-                            <span class="curso__info">En la inundación tenía 12 años.</span>
-                        </p>
-                        <p class="curso__label">Testimonio: 
-                            <span class="curso__info">Desde la mirada de una persona menor de edad.</span>
-                        </p>
-                        <p class="curso__descripcion">
-                          “Era un fin de semana largo por lo tanto mis papás y yo habíamos ido de viaje. No sé por qué se nos ocurrió volver a antes”. 
-                          “Justo ese día fue el de la inundación. <strong><em>Estaba mi hermana sola en casa, así que menos mal que volvimos”.</em></strong>
-                          <strong><em>“Fue bastante intenso todo, yo agradezco no haber estado sola</em></strong>. Estaba con mi papá, mis dos hermanas y el novio de una de mis hermanas”. 
-                          “Mi mamá no estaba, se había ido a trabajar…” </p>
-                          <!-- leer mas -->
-                          
+    <div class="contenedor-testimonio">
+      <div id="afiche-header" class="afiche__head">
+        <h3 tabindex="0" class="centrar-texto text-shadow"> Known our testimonies: Before the flood.</h3>
+      </div>
+      <div class="curso">
+        <div tabindex="0" class="curso__imagen">
+          <img role="img" aria-label="Imagen de Amina Suarez." class="img-testimonio"
+            src="{{url_for('static', filename = 'img/section1/secciones/parte 1/1.webp')}}"
+            alt="Imagen de Amina Suarez">
+        </div>
+        <div tabindex="0" class="curso__informacion">
+          <h4 class="no-margin">Amina Suarez</h4>
+          <p class="curso__label">Edad:
+            <span class="curso__info">En la inundación tenía 12 años.</span>
+          </p>
+          <p class="curso__label">Testimonio:
+            <span class="curso__info">Desde la mirada de una persona menor de edad.</span>
+          </p>
+          <p class="curso__descripcion">
+            “Era un fin de semana largo por lo tanto mis papás y yo habíamos ido de viaje. No sé por qué se nos ocurrió
+            volver a antes”.
+            “Justo ese día fue el de la inundación. <strong><em>Estaba mi hermana sola en casa, así que menos mal que
+                volvimos”.</em></strong>
+            <strong><em>“Fue bastante intenso todo, yo agradezco no haber estado sola</em></strong>. Estaba con mi papá,
+            mis dos hermanas y el novio de una de mis hermanas”.
+            “Mi mamá no estaba, se había ido a trabajar…”
+          </p>
+          <!-- leer mas -->
 
-                          <div  class="accordion">
-                            
-                              <button role="button" tabindex="0" type="button" aria-label="Presiona enter si desea conocer mas sobre el testimonio de Amina Suarez." aria-expanded="false" class="accordion-trigger boton-acordeon" aria-controls="sect1" aria-labelledby="accordion1id">
-                                <span class="accordion-title">
-                                  Conocer más sobre el testimonio de Amina Suarez
-                                  <svg id="campo" xmlns="http://www.w3.org/2000/svg" class="down" width="12" height="9" viewBox="0 0 12 9">
-                                    <polygon points="1 0, 11 0, 6 8"></polygon>
-                                  </svg>
-                                </span>
-                              </button>
-<!--                             
+
+          <div class="accordion">
+
+            <button role="button" tabindex="0" type="button"
+              aria-label="Presiona enter si desea conocer mas sobre el testimonio de Amina Suarez."
+              aria-expanded="false" class="accordion-trigger boton-acordeon" aria-controls="sect1"
+              aria-labelledby="accordion1id">
+              <span class="accordion-title">
+                Conocer más sobre el testimonio de Amina Suarez
+                <svg id="campo" xmlns="http://www.w3.org/2000/svg" class="down" width="12" height="9"
+                  viewBox="0 0 12 9">
+                  <polygon points="1 0, 11 0, 6 8"></polygon>
+                </svg>
+              </span>
+            </button>
+            <!--                             
                             <div id="sect1" role="region" aria-labelledby="accordion1id" class="accordion-panel" aria-label="boton expandido." hidden> -->
-                            <div id="sect1" role="region" id="accordion1id" class="accordion-panel" aria-label="boton expandido." hidden>
-                              <div>
-                                <!-- Variable content within section, may include any type of markup or interactive widgets. -->
-                                <fieldset>
-                                  <div tabindex="0">
-                                  <p class="curso__descripcion"> “Los animales trataban de esconderse. No había mucho movimiento, ni de pájaros, ni de perros en la calle, ni nada”. 
-                                    “Era como… si estuviera desolado, cuando en mi barrio es normal que hayan pajaritos, perros en la calle o gatos”.
-                                   </p>
-                                   <p class="curso__descripcion">
-                                  “Era más o menos normal que llueva bastante y que llegue por ejemplo hasta el segundo o tercer escalón del garaje”.
-                                <b><em>“Pero, esta vez ,empezó a subir y no paró más”</em>. 
-                                  </p>
-                                  <p class="curso__descripcion"> “Tuvimos que subir varias cosas, medio arrancar cables, bajar la térmica”. <strong><em>“En un momento pasó que se cayó la heladera, ¡empezó a flotar!”<em></strong>.
-                                    “Varios vidrios de ventanales se rompieron por la presión del agua”. “Pusimos compuertas, un pedazo de madera para bloquear el agua. <strong><em>El agua pasó esa parte de la madera. Y, ¡volvío a entrar a la casa!”</em></strong>.                          
-                                 </p>    
-                                </div>                            
-                                </fieldset>
-                              </div>
-                            </div>
-                            
-                          </div>
-                          
-                         
-                    </div> <!--.curso-informacion-->
-                </div> <!--.curso -->
+            <div id="sect1" role="region" id="accordion1id" class="accordion-panel" aria-label="boton expandido."
+              hidden>
+              <div>
+                <!-- Variable content within section, may include any type of markup or interactive widgets. -->
+                <fieldset>
+                  <div tabindex="0">
+                    <p class="curso__descripcion"> “Los animales trataban de esconderse. No había mucho movimiento, ni
+                      de pájaros, ni de perros en la calle, ni nada”.
+                      “Era como… si estuviera desolado, cuando en mi barrio es normal que hayan pajaritos, perros en la
+                      calle o gatos”.
+                    </p>
+                    <p class="curso__descripcion">
+                      “Era más o menos normal que llueva bastante y que llegue por ejemplo hasta el segundo o tercer
+                      escalón del garaje”.
+                      <b><em>“Pero, esta vez ,empezó a subir y no paró más”</em>.
+                    </p>
+                    <p class="curso__descripcion"> “Tuvimos que subir varias cosas, medio arrancar cables, bajar la
+                      térmica”. <strong><em>“En un momento pasó que se cayó la heladera, ¡empezó a
+                          flotar!”<em></strong>.
+                      “Varios vidrios de ventanales se rompieron por la presión del agua”. “Pusimos compuertas, un
+                      pedazo de madera para bloquear el agua. <strong><em>El agua pasó esa parte de la madera. Y,
+                          ¡volvío a entrar a la casa!”</em></strong>.
+                    </p>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
 
-                <div class="curso">
-                    <div tabindex="0" class="curso__imagen">
-                        <img role="img" aria-label="Imagen de Alejandro Fernandez."class="img-testimonio" src="{{url_for('static', filename = 'img/section1/secciones/parte 1/2.png')}}" alt="Imagen de Alejandro Fernandez">
-                    </div>
-                    <div tabindex="0" class="curso__informacion">
-                        <h4 class="no-margin">Alejandro Fernandez</h4>
-                        <p class="curso__label">Edad: 
-                            <span class="curso__info">26 años.</span>
-                        </p>
-                        <p class="curso__label">Testimonio: 
-                            <span class="curso__info">Convirtiéndose en un rescatista que salvó a más de <b>100</b> vecinos de Tolosa.</span>
-                        </p>
-                        <p class="curso__descripcion">
-                          <strong><em>“Todos me conocen como Alef. Todos”.</em></strong> 
-                          “En la tarde del 2 de abril de 2013,  regresaba de trabajar para cenar en casa. Venía observando de qué manera crecía el agua. Alrededor de las 20 horas de la noche miro que había autos que ya estaban tapados por el agua.” 
-                          “No me inundé pero sí a 2 cuadras tuvieron un 1,90 y 2 metros de agua.”
-                        </p>
-                        <p class="curso__descripcion">
-                          “Así que dejé de cenar y decidí sacar mi bote y salir a la calle a ayudar”.
-                          “Es una lancha bote semi rígido, de 5 metros de largo, llamada Guajiro”. 
-                          “Mi  mujer me decía que la gente iba a pensar mal, que quizás piensen
+          </div>
 
-                          </p>
-                         <!-- leer mas -->
-                          
 
-                         <div  class="accordion">
-                            
-                          <button role="button" type="button" aria-label="Presiona enter si desea conocer mas sobre el testimonio de Alejandro Fernandez." aria-expanded="false" class="accordion-trigger boton-acordeon" aria-controls="sect2" aria-labelledby="accordion1id2">
-                            <span class="accordion-title">
-                              Conocer más sobre el testimonio de Alejandro Fernandez
-                              <svg id="campo" xmlns="http://www.w3.org/2000/svg" class="down" width="12" height="9" viewBox="0 0 12 9">
-                                <polygon points="1 0, 11 0, 6 8"></polygon>
-                              </svg>
-                            </span>
-                          </button>
-                        
-                        <div id="sect2" role="region" id="accordion1id2" class="accordion-panel" aria-label="boton expandido." hidden>
-                          <div>
-                            <!-- Variable content within section, may include any type of markup or interactive widgets. -->
-                            <fieldset>
-                            <div tabindex="0">
-                              <p class="curso__descripcion">
-                                que «salía a pasear»”.
-                                “Ni bien encendí la lancha, rápidamente un hombre me pidió que lo llevara a su casa, quería volver con sus hijos y su mujer, y no podía llegar”. 
-                                “¡Me preguntó cuánto le cobraba!. Le dije que ¡no!,  que estaba para darle una mano”. 
-                                “Lo trasladé y al arribo, el hombre comenzó a llorar, emocionado”.   
-                              </p>
-                              <p class="curso__descripcion">
-                                “Otros vecinos empezaron a pedir ayuda. Por momentos fue un caos”. 
-                                “Y ahí empezó la travesía de salir a rescatar gente y traerla a casa, que no paró hasta las  8  horas de la mañana del día siguiente”.  
-                              </p>  
-                            </div>                            
-                            </fieldset>
-                          </div>
-                        </div>
-                        
-                      </div> 
-                        
-                        
+        </div>
+        <!--.curso-informacion-->
+      </div>
+      <!--.curso -->
 
-                    </div> <!--.curso-informacion-->
-                </div> <!--.curso -->
+      <div class="curso">
+        <div tabindex="0" class="curso__imagen">
+          <img role="img" aria-label="Imagen de Alejandro Fernandez." class="img-testimonio"
+            src="{{url_for('static', filename = 'img/section1/secciones/parte 1/2.png')}}"
+            alt="Imagen de Alejandro Fernandez">
+        </div>
+        <div tabindex="0" class="curso__informacion">
+          <h4 class="no-margin">Alejandro Fernandez</h4>
+          <p class="curso__label">Edad:
+            <span class="curso__info">26 años.</span>
+          </p>
+          <p class="curso__label">Testimonio:
+            <span class="curso__info">Convirtiéndose en un rescatista que salvó a más de <b>100</b> vecinos de
+              Tolosa.</span>
+          </p>
+          <p class="curso__descripcion">
+            <strong><em>“Todos me conocen como Alef. Todos”.</em></strong>
+            “En la tarde del 2 de abril de 2013, regresaba de trabajar para cenar en casa. Venía observando de qué
+            manera crecía el agua. Alrededor de las 20 horas de la noche miro que había autos que ya estaban tapados por
+            el agua.”
+            “No me inundé pero sí a 2 cuadras tuvieron un 1,90 y 2 metros de agua.”
+          </p>
+          <p class="curso__descripcion">
+            “Así que dejé de cenar y decidí sacar mi bote y salir a la calle a ayudar”.
+            “Es una lancha bote semi rígido, de 5 metros de largo, llamada Guajiro”.
+            “Mi mujer me decía que la gente iba a pensar mal, que quizás piensen
 
-                <div class="curso">
-                    <div tabindex="0" class="curso__imagen">
-                        <img role="img" aria-label="Imagen de Romina Carrozas." class="img-testimonio" src="{{url_for('static', filename = 'img/section1/secciones/parte 1/3.png')}}" alt="Imagen de Romina Carrozas">
-                    </div>
-                    <div tabindex="0" class="curso__informacion">
-                        <h4 class="no-margin">Romina Carrozas</h4>
-                        <p class="curso__label">Edad: 
-                            <span class="curso__info">En la inundación tenía 25 años.</span>
-                        </p>
-                        <p class="curso__label">Testimonio: 
-                            <span class="curso__info">Una mujer que en la inundación cursaba 8 meses de embarazo…</span>
-                        </p>
-                        <p class="curso__descripcion">
-                          <strong><em>“Yo estaba embarazada, me faltaba un mes para tener al bebé”.</em></strong>
-                          “Empezó a llover temprano. El primero que se empezó a inundar fue el vecino de al lado”. 
-                          “Yo no pensé que me iba a inundar porque yo estaba alto. Pero, para las 7 horas de la tarde yo ya tenía el agua por arriba de las rodillas...”
-                           
-                        </p>
-                        <p class="curso__descripcion">
-                          “Mi marido hacía un mes que había tenido un accidente con la moto y tenía el pie quebrado”. 
-                          “Él alcanzó a salir a caballo por un amigo que nos ayudaba a trabajar, y trajo la yegua”. 
-                        </p>
-                          <!-- leer mas -->
-                          
+          </p>
+          <!-- leer mas -->
 
-                          <div  class="accordion">
-                            
-                            <button role="button" type="button" aria-label="Presiona enter si desea conocer mas sobre el testimonio de Romina Carrozas." aria-expanded="false" class="accordion-trigger boton-acordeon" aria-controls="sect3" aria-labelledby="accordion1id3">
-                              <span class="accordion-title">
-                                Conocer más sobre el testimonio de Romina Carrozas
-                                <svg id="campo" xmlns="http://www.w3.org/2000/svg" class="down" width="12" height="9" viewBox="0 0 12 9">
-                                  <polygon points="1 0, 11 0, 6 8"></polygon>
-                                </svg>
-                              </span>
-                            </button>
-                          
-                          <div id="sect3" role="region" id="accordion1id3" class="accordion-panel" aria-label="boton expandido." hidden>
-                            <div>
-                              <!-- Variable content within section, may include any type of markup or interactive widgets. -->
-                              <fieldset>
-                                <div tabindex="0">
-                                <p class="curso__descripcion">
-                                  “Se pudo llevar a las nenas y a la yegua de tiro”. 
-                                  “La yegua se asustaba por tanta correntada”. 
-        
-                                  “Empecé a juntar ropa y los documentos de los chicos. Ponía las cosas lo más alto que podía… <strong><em>pero ya no se podía más”</em></strong>.
-                                </p>
-                                <p class="curso__descripcion">
-                                  “Venía mucha correntada por el zanjón del arroyo Maldonado. Cuando mi marido quiso volver a buscarme a mí, ya no pudo”. 
-                                  “Ahí salgo a mirar y veo que ¡el agua se lleva la casa de al lado completa!”.
-                                </p>    
-                              </div>                       
-                              </fieldset>
-                            </div>
-                          </div>
-                          
-                        </div> 
-                        
-                    </div> <!--.curso-informacion-->
-                </div> <!--.curso -->
-                <div class="curso">
-                    <div tabindex="0" class="curso__imagen">
-                        <img role="img" aria-label="Silvia Rivas." class="img-testimonio" src="{{url_for('static', filename = 'img/section1/secciones/parte 1/4.png')}}" alt="Imagen de Silvia Rivas">
-                    </div>
-                    <div tabindex="0" class="curso__informacion">
-                        <h4 class="no-margin">Silvia Rivas</h4>
-                        <p class="curso__label">Edad: 
-                            <span class="curso__info">En la inundación tenía 58 años.</span>
-                        </p>
-                        <p class="curso__label">Testimonio: 
-                            <span class="curso__info">Una mujer que quedó atrapada por horas en la cocina, con el agua al hombro.</span>
-                        </p>
-                        <p class="curso__descripcion">
-                          “Soy diseñadora de moda y vivía en calle 22 entre 33 y 34. 
-                          El taller lo tenía cerca, en calle 21 entre 33 y 34”.
-                          
-                          “A raíz de la inundación perdí las dos cosas, el hogar y el trabajo”.
-                          
-                          “Aparte de perder lo material del hogar, perdí lo de mi empleo como máquinas, telas, todo”.
-                          
-                        </p>
-                        <!-- leer mas -->
-                          
 
-                        <div  class="accordion">
-                            
-                          <button role="button" type="button" aria-label="Presiona enter si desea conocer mas sobre el testimonio de Silvia Rivas." aria-expanded="false" class="accordion-trigger boton-acordeon" aria-controls="sect4" aria-labelledby="accordion1id4">
-                            <span class="accordion-title">
-                              Conocer más sobre el testimonio de Silvia Rivas
-                              <svg id="campo" xmlns="http://www.w3.org/2000/svg" class="down" width="12" height="9" viewBox="0 0 12 9">
-                                <polygon points="1 0, 11 0, 6 8"></polygon>
-                              </svg>
-                            </span>
-                           </button>
-                        
-                        <div id="sect4" role="region" id="accordion1id4" class="accordion-panel" aria-label="boton expandido." hidden>
-                          <div>
-                            <!-- Variable content within section, may include any type of markup or interactive widgets. -->
-                            <fieldset>
-                              <div tabindex="0">
-                              <p class="curso__descripcion">
-                                “Yo vivía sola con mi hijo”.
-                                “Ese día era un feriado. Yo estaba haciendo una torta y empezó a subir el agua”. 
-                                “Pusimos unas compuertas que ya teníamos porque una vez entró agua desde la calle”.
-                                “Pero, llegó un momento en que el agua pasó las compuertas, pasó las ventanas y siguió entrando”.
-                              </p>
-                              <p class="curso__descripcion">                         
-                                “Lo primero que atinamos fue a cortar la luz y a tapar… para que no entrara, pero fue imposible”.
-                              </p>
-                              <p class="curso__descripcion">
-                                “Yo me fui para el lado de mi cocina, donde tengo una puerta que separa cocina y comedor”, comenta Silvia.
-                                “Resulta ser que subió el nivel del agua y la heladera, se subió y se acostó contra la puerta de salida de la cocina. 
-                                ¡Quedó trabada!
-                                Para colmo tengo rejas para el fondo”.
-                              </p>  
-                            </div>                         
-                            </fieldset>
-                          </div>
-                        </div>
-                        
-                      </div> 
-                        
-                    </div> <!--.curso-informacion-->
-                </div> <!--.curso -->
+          <div class="accordion">
+
+            <button role="button" type="button"
+              aria-label="Presiona enter si desea conocer mas sobre el testimonio de Alejandro Fernandez."
+              aria-expanded="false" class="accordion-trigger boton-acordeon" aria-controls="sect2"
+              aria-labelledby="accordion1id2">
+              <span class="accordion-title">
+                Conocer más sobre el testimonio de Alejandro Fernandez
+                <svg id="campo" xmlns="http://www.w3.org/2000/svg" class="down" width="12" height="9"
+                  viewBox="0 0 12 9">
+                  <polygon points="1 0, 11 0, 6 8"></polygon>
+                </svg>
+              </span>
+            </button>
+
+            <div id="sect2" role="region" id="accordion1id2" class="accordion-panel" aria-label="boton expandido."
+              hidden>
+              <div>
+                <!-- Variable content within section, may include any type of markup or interactive widgets. -->
+                <fieldset>
+                  <div tabindex="0">
+                    <p class="curso__descripcion">
+                      que «salía a pasear»”.
+                      “Ni bien encendí la lancha, rápidamente un hombre me pidió que lo llevara a su casa, quería volver
+                      con sus hijos y su mujer, y no podía llegar”.
+                      “¡Me preguntó cuánto le cobraba!. Le dije que ¡no!, que estaba para darle una mano”.
+                      “Lo trasladé y al arribo, el hombre comenzó a llorar, emocionado”.
+                    </p>
+                    <p class="curso__descripcion">
+                      “Otros vecinos empezaron a pedir ayuda. Por momentos fue un caos”.
+                      “Y ahí empezó la travesía de salir a rescatar gente y traerla a casa, que no paró hasta las 8
+                      horas de la mañana del día siguiente”.
+                    </p>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+
+          </div>
+
+
+
+        </div>
+        <!--.curso-informacion-->
+      </div>
+      <!--.curso -->
+
+      <div class="curso">
+        <div tabindex="0" class="curso__imagen">
+          <img role="img" aria-label="Imagen de Romina Carrozas." class="img-testimonio"
+            src="{{url_for('static', filename = 'img/section1/secciones/parte 1/3.png')}}"
+            alt="Imagen de Romina Carrozas">
+        </div>
+        <div tabindex="0" class="curso__informacion">
+          <h4 class="no-margin">Romina Carrozas</h4>
+          <p class="curso__label">Edad:
+            <span class="curso__info">En la inundación tenía 25 años.</span>
+          </p>
+          <p class="curso__label">Testimonio:
+            <span class="curso__info">Una mujer que en la inundación cursaba 8 meses de embarazo…</span>
+          </p>
+          <p class="curso__descripcion">
+            <strong><em>“Yo estaba embarazada, me faltaba un mes para tener al bebé”.</em></strong>
+            “Empezó a llover temprano. El primero que se empezó a inundar fue el vecino de al lado”.
+            “Yo no pensé que me iba a inundar porque yo estaba alto. Pero, para las 7 horas de la tarde yo ya tenía el
+            agua por arriba de las rodillas...”
+
+          </p>
+          <p class="curso__descripcion">
+            “Mi marido hacía un mes que había tenido un accidente con la moto y tenía el pie quebrado”.
+            “Él alcanzó a salir a caballo por un amigo que nos ayudaba a trabajar, y trajo la yegua”.
+          </p>
+          <!-- leer mas -->
+
+
+          <div class="accordion">
+
+            <button role="button" type="button"
+              aria-label="Presiona enter si desea conocer mas sobre el testimonio de Romina Carrozas."
+              aria-expanded="false" class="accordion-trigger boton-acordeon" aria-controls="sect3"
+              aria-labelledby="accordion1id3">
+              <span class="accordion-title">
+                Conocer más sobre el testimonio de Romina Carrozas
+                <svg id="campo" xmlns="http://www.w3.org/2000/svg" class="down" width="12" height="9"
+                  viewBox="0 0 12 9">
+                  <polygon points="1 0, 11 0, 6 8"></polygon>
+                </svg>
+              </span>
+            </button>
+
+            <div id="sect3" role="region" id="accordion1id3" class="accordion-panel" aria-label="boton expandido."
+              hidden>
+              <div>
+                <!-- Variable content within section, may include any type of markup or interactive widgets. -->
+                <fieldset>
+                  <div tabindex="0">
+                    <p class="curso__descripcion">
+                      “Se pudo llevar a las nenas y a la yegua de tiro”.
+                      “La yegua se asustaba por tanta correntada”.
+
+                      “Empecé a juntar ropa y los documentos de los chicos. Ponía las cosas lo más alto que podía…
+                      <strong><em>pero ya no se podía más”</em></strong>.
+                    </p>
+                    <p class="curso__descripcion">
+                      “Venía mucha correntada por el zanjón del arroyo Maldonado. Cuando mi marido quiso volver a
+                      buscarme a mí, ya no pudo”.
+                      “Ahí salgo a mirar y veo que ¡el agua se lleva la casa de al lado completa!”.
+                    </p>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <!--.curso-informacion-->
+      </div>
+      <!--.curso -->
+      <div class="curso">
+        <div tabindex="0" class="curso__imagen">
+          <img role="img" aria-label="Silvia Rivas." class="img-testimonio"
+            src="{{url_for('static', filename = 'img/section1/secciones/parte 1/4.png')}}" alt="Imagen de Silvia Rivas">
+        </div>
+        <div tabindex="0" class="curso__informacion">
+          <h4 class="no-margin">Silvia Rivas</h4>
+          <p class="curso__label">Edad:
+            <span class="curso__info">En la inundación tenía 58 años.</span>
+          </p>
+          <p class="curso__label">Testimonio:
+            <span class="curso__info">Una mujer que quedó atrapada por horas en la cocina, con el agua al hombro.</span>
+          </p>
+          <p class="curso__descripcion">
+            “Soy diseñadora de moda y vivía en calle 22 entre 33 y 34.
+            El taller lo tenía cerca, en calle 21 entre 33 y 34”.
+
+            “A raíz de la inundación perdí las dos cosas, el hogar y el trabajo”.
+
+            “Aparte de perder lo material del hogar, perdí lo de mi empleo como máquinas, telas, todo”.
+
+          </p>
+          <!-- leer mas -->
+
+
+          <div class="accordion">
+
+            <button role="button" type="button"
+              aria-label="Presiona enter si desea conocer mas sobre el testimonio de Silvia Rivas."
+              aria-expanded="false" class="accordion-trigger boton-acordeon" aria-controls="sect4"
+              aria-labelledby="accordion1id4">
+              <span class="accordion-title">
+                Conocer más sobre el testimonio de Silvia Rivas
+                <svg id="campo" xmlns="http://www.w3.org/2000/svg" class="down" width="12" height="9"
+                  viewBox="0 0 12 9">
+                  <polygon points="1 0, 11 0, 6 8"></polygon>
+                </svg>
+              </span>
+            </button>
+
+            <div id="sect4" role="region" id="accordion1id4" class="accordion-panel" aria-label="boton expandido."
+              hidden>
+              <div>
+                <!-- Variable content within section, may include any type of markup or interactive widgets. -->
+                <fieldset>
+                  <div tabindex="0">
+                    <p class="curso__descripcion">
+                      “Yo vivía sola con mi hijo”.
+                      “Ese día era un feriado. Yo estaba haciendo una torta y empezó a subir el agua”.
+                      “Pusimos unas compuertas que ya teníamos porque una vez entró agua desde la calle”.
+                      “Pero, llegó un momento en que el agua pasó las compuertas, pasó las ventanas y siguió entrando”.
+                    </p>
+                    <p class="curso__descripcion">
+                      “Lo primero que atinamos fue a cortar la luz y a tapar… para que no entrara, pero fue imposible”.
+                    </p>
+                    <p class="curso__descripcion">
+                      “Yo me fui para el lado de mi cocina, donde tengo una puerta que separa cocina y comedor”, comenta
+                      Silvia.
+                      “Resulta ser que subió el nivel del agua y la heladera, se subió y se acostó contra la puerta de
+                      salida de la cocina.
+                      ¡Quedó trabada!
+                      Para colmo tengo rejas para el fondo”.
+                    </p>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <!--.curso-informacion-->
+      </div>
+      <!--.curso -->
     </div>
     <!-- boton para ir arriba -->
-<div class="buttons">
-  <div class="go-up">
-    <a role="button" tabindex="0" aria-label="Regresar al encabezado."  alt="Botón para regresar al encabezado." href="#afiche-header">
-        <img loading="lazy" src="{{url_for('static', filename = '../img/general/arrow-up.svg')}}"  alt="imagen del botón para regresar al encabezado.">
-    </a>
-  </div>   
-  <!-- End Tap Target Structure -->
-  <div class="main-container-boton tooltip">
-    <a role="button" tabindex="0" aria-label="Volver a la página anterior."  alt="Botón para volver la página anterior." class="boton verde-4" onclick="history.back()">
-      <div class="boton-info">
-        <p>Go back</p> <img src="../img/general/backArrow.svg" alt="backArrow">
-      </div>
-    </a>
-    <span class="tooltiptext">Botón para volver a la página anterior.</span>
-  </div>             
-</div> 
-    
+
+    {% include 'partials/_button.html' %}
 
   </main>
-  <!-- FIN Info del testimonio 1 -->
-  {% endblock %}
-  
+  {% include 'partials/_footer.html' %}
+</body>
+
+</html>

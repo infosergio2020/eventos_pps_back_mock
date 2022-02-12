@@ -1,6 +1,8 @@
 <!-- El index es el primero que esta en el layout -->
-{% extends 'layout.html' %}
-{% block body %}
+{% include 'partials/_head.html' %}
+
+<body>
+  {% include 'partials/_header.html' %}
     <!-- Info del index-->
     <main>
 
@@ -129,5 +131,8 @@
     
       </main>
     <!-- FIN Info del index -->
-{% endblock %}
 
+    {% include 'partials/_footer.html' %}
+  </body>
+  
+  </html>

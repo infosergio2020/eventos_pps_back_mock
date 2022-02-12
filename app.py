@@ -15,8 +15,8 @@ def Index():
     
     return render_template('index.html')
 
-@app.route('/testimonio1.html')
-def Testimonio1():
+@app.route('/testimonio1')
+def testimonio1():
     
     return render_template('/testimonio1.html')    
 # app.secret_key="secret key" # configuro un valor para que se genere una sesion
