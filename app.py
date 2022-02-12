@@ -19,6 +19,17 @@ def Index():
 def Testimonio1():
     
     return render_template('/testimonio1.html')    
+
+@app.route('/testimonio2.html')
+def Testimonio2():
+    
+    return render_template('/testimonio2.html')  
+
+
+@app.route('/testimonio3.html')
+def Testimonio3():
+    
+    return render_template('/testimonio3.html')            
 # app.secret_key="secret key" # configuro un valor para que se genere una sesion
 # 
 # SQLAlchemy(app) #le paso al ORM la configuracion que posee el app  #Configuracion del app
