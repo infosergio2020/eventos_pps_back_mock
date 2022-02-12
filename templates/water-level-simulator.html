@@ -1,0 +1,66 @@
+  <!-- Contenedor del testimonio -->
+  {% extends 'partials/_layout.html' %}
+  {% block body %}
+  <!-- Info de la galeria de fotos-->
+    <main>
+        <div class="container">
+            <div class="main-card" style="margin: 10rem auto;">
+                <div class="main-card-body">
+                    <div id="afiche-header" class="afiche__head">
+                        <h3 tabindex="0" class="centrar-texto">Water-level-simulator</h3>
+                    </div>
+                  <!-- comienzo de la galería -->
+                    <div class="gallery__container" id="lightgallery">
+                       
+                              <a role="link" class="img1" href="{{url_for('static', filename = '/img/section2/1-1.pn')}}g">
+                                <img  loading="lazy" aria-label="imagen de la galería-1 de 7" alt= "img1." src="{{url_for('static', filename = '/img/section2/1.png')}}" />
+                              </a>
+                      
+                        
+                              <a role="link" class="img1" href="{{url_for('static', filename = '/img/section2/2.png')}}" class="vertical">
+                                <img  loading="lazy" aria-label="imagen de la galería-2 de 7.Presione enter si desea abrir el carrousel de imágenes." alt= "img2." src="{{url_for('static', filename = '/img/section2/2.jpeg')}}" />
+                              </a>
+                
+                              <a role="link" class="img1" href="{{url_for('static', filename = '/img/section2/3.png')}}" class="horizontal">
+                                <img  loading="lazy" aria-label="imagen de la galería-3 de 7.Presione enter si desea abrir el carrousel de imágenes." alt= "img3." src="{{url_for('static', filename = '/img/section2/3.jpeg')}}" />
+                              </a>
+                              <a role="link" class="img1" href="{{url_for('static', filename = '/img/section2/4.png')}}">
+                                <img  loading="lazy" aria-label="imagen de la galería-4 de 7.Presione enter si desea abrir el carrousel de imágenes." alt= "img4." src="{{url_for('static', filename = '/img/section2/4.jpeg')}}" />
+                              </a>
+                        
+                              <a role="link" class="img1" href="{{url_for('static', filename = '/img/section2/5.png')}}" class="horizontal">
+                                <img  loading="lazy" aria-label="imagen de la galería-5 de 7.Presione enter si desea abrir el carrousel de imágenes." alt= "img5." src="{{url_for('static', filename = '/img/section2/5.jpeg')}}" />
+                              </a>
+                        
+                              <a role="link" href="{{url_for('static', filename = '/img/section2/6.png')}}">
+                                <img  loading="lazy" aria-label="imagen de la galería-6 de 7.Presione enter si desea abrir el carrousel de imágenes." alt= "img6." src="{{url_for('static', filename = '/img/section2/6.jpeg')}}" />
+                              </a>
+                        
+                              <a role="link" href="{{url_for('static', filename = '/img/section2/7.png')}}">
+                                <img  loading="lazy" aria-label="imagen de la galería-7 de 7.Presione enter si desea abrir el carrousel de imágenes." alt= "img7." src="{{url_for('static', filename = '/img/section2/7.jpeg')}}" />
+                              </a>
+                        
+                        
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>
+        <!-- boton para ir arriba -->
+        {% include ('partials/_button.html') %}  
+    </main>
+    
+                      
+    <!-- script -->
+    <!-- barra de secciones -->
+    <script src="./js/lixtbox.js"></script>
+    <!-- galería de imagenes -->
+    <script src="./js/lightgallery.min.js"></script>
+    <script src="./js/lg-zoom.min.js"></script>
+    <script src="./js/lg-thumbnail.min.js"></script>
+    <script src="./js/lg-video.min.js"></script>
+    <!-- menu de barra deslizante -->
+    <script src="./js/index.js"></script>
+ <!-- FIN Info de la galeria de fotos -->
+ {% endblock %}

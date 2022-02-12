@@ -1,0 +1,68 @@
+  <!-- Contenedor del testimonio -->
+  {% extends 'partials/_layout.html' %}
+  {% block body %}
+  <!-- Info del video sandbox-->
+  <main>
+   
+        <div class="main-card">
+          <div class="main-card-body">
+            <div id="afiche-header" class="afiche__head">
+              <h3 tabindex="0" class="centrar-texto">Sandbox</h3>
+            </div>
+            <div tabindex="0" aria-label="Reproductor de video" class="contenedor-video">
+                <div class="px-video-container" id="myvid">
+                    <iframe width="100%" 
+                                height="100%" 
+                                src="https://www.youtube.com/embed/6wSfv4MV8MQ" 
+                                title="YouTube video player" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                    </iframe>
+                </div>
+                <!-- detalles del video -->
+                <div tabindex="0" class="video__informacion">
+                    <h4 class="no-margin"><span>
+                        Video detail:
+                    </span> </h4>
+                    
+                    <p class="video__descripcion">
+                        Se presenta material audiovisual especialmente diseñado para el circuito educativo. Narra comprensiblemente y dirigido a niños de 9 años y jóvenes de todas las edades, los motivos del por qué nos inundamos e indagaciones que surgieron del proyecto de investigación. A su vez sugiere y explica las medidas no estructurales que deberían complementar las obras hidráulicas en ejecuciónProyecto: “Las inundaciones en La Plata, Berisso y Ensenada: análisis de riesgo, estrategias de intervención. Hacia la construcción de un observatorio ambiental” (2014-2016)Informe Final que se puede consultar en los siguientes enlaces: 
+                        
+                        <a target="_blank" class="a-link" href="http://sedici.unlp.edu.ar/handle/10915/59633">Las inundaciones en La Plata, Berisso y Ensenada</a>
+                        
+                        )  y en 
+                        
+                        <a target="_blank" class="a-link" href="http://omlp.sedici.unlp.edu.ar/dataset/informe-final">Informe Final PIO</a>
+                    </p>
+                </div> 
+            </div>
+          </div>
+        </div>
+        <!-- boton para ir arriba -->
+        {% include ('partials/_button.html') %}  
+
+  </main>
+  
+
+  <!-- script -->
+    <!-- barra de secciones -->
+    <script src="./../../js/lixtbox.js"></script>
+    <!-- menu de barra deslizante -->
+    <script src="./../../js/index.js"></script>
+
+  <!-- script del video -->
+    <script src="js/strings.js"></script>
+    <script src="js/px-video.js"></script>
+    <script>
+    // Initialize
+    new InitPxVideo({
+        "videoId": "myvid",
+        "captionsOnDefault": true,
+        "seekInterval": 20,
+        "videoTitle": "clips of stand-up comedy",
+        "debug": true
+    });
+    </script>
+  <!-- FIN Info del video sandbox-->
+  {% endblock %}

@@ -1,0 +1,436 @@
+<!-- esta es la version 2 de la rama PC -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- color e icono IOS -->
+  <meta name="theme-color" content="#317EFB"/>
+  <link rel="apple-touch-icon" href="img/general/flooded-house.png">
+  <meta
+  name="descripción"
+  content="Informarte sobre los desastres naturales en Polonia, Alemania, Republica Dominicana, Chile y Argentina. Descubre que pasó antes, durante y después de la inundación de la Plata en 2013.">
+  
+  <!-- watson asistant -->
+  <link rel="stylesheet" href="./css/chat.css">
+  <!--Responsive Meta Tag-->
+  <link rel="shortcut icon" href="./img/tree.png" type="image/x-icon">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+  <link rel="preload" href="./css/normalize.css" as="style">
+  <link rel="stylesheet" href="./css/normalize.css">
+
+  <!-- <link rel="preload" href="./css/main.css" as="style"> -->
+  <link rel="stylesheet" href="./css/main.css">
+
+  <link rel="preload" href="./css/lixtbox.css" as="style">
+  <link rel="stylesheet" href="./css/lixtbox.css">
+
+  <!--Import jQuery Library-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <!--Import materialize.js-->
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+  <link rel="preload" href="./css/diario.css" as="style">
+  <link rel="stylesheet" href="./css/diario.css">
+  <title>Mock</title>
+</head>
+<!-- <body class="animate__animated animate__fadeIn"> -->
+
+<body>
+   <!-- <header class="header-container"> -->
+    <header class="header header-container">
+      <div>
+        <!-- logo de citadine -->
+        <div class="header__img__h1">
+          <a  role="menuitem" href="index.html" aria-label="Presione enter para ir a la pagina principal.">
+            <div class="item__img__h1 txt_white">
+              <img class="wh-88" src="img/general/flooded-house.png" alt="Logo de citadine.">
+              <h1>Generar <span>con</span>ciencia</h1>
+            </div>
+          </a>
+          <!-- <small> La muestra contará con 6 áreas o secciones de exhibición, que deben recorrerse en forma secuencial,
+            puesto que aborda la temática en forma cronológica.
+            Además, se analiza la inundación desde la perspectiva de 4 casos diferentes de personas que relatan sus
+            experiencias y lo sucedido antes, durante y después de vivenciarla.
+          </small> -->
+        </div>
+   
+        <!-- barra de secciones y boton -->
+        <div class="header__nav__menu">
+          <button class="boton__2 verde-4" aria-label="Presione enter para obtener mas informacion." id="logo">
+            <img src="img/general/menu.svg" alt="Citadine brand">
+          </button>
+          <nav class="header-container-nav-row" id="nav-id" aria-label="Barra de navegacion.">
+  
+            <ul class="menubar-navigation" role="menubar" aria-label="Barra de navegacion.">
+              <!-- boton 1 -->
+              <li role="none">
+                <a class="navegacion__enlace" role="menuitem" aria-label="Presione enter para conocer las opciones."
+                  aria-haspopup="true" aria-expanded="false" href="#academics">
+                  <img class="wh-30" src="img/general/secciones/1.webp" alt="seccion">
+                  <div class="navegacion__enlace--info">
+                    <p>seccion 1</p>
+                    <svg id="campo" xmlns="http://www.w3.org/2000/svg" class="down wh-12-9">
+                      <polygon points="1 0, 11 0, 6 8"></polygon>
+                    </svg>
+                  </div>
+                </a>
+                <ul role="menu" aria-label="1">
+                  <li role="none">
+                    <a role="menuitem" href="testimonio1.html" aria-label="Presione enter para conocer: ">1- Known our
+                      testimonies: Before the flood</a>
+                  </li>
+                  <li role="none">
+                    <a role="menuitem" href="the-news-of-the-day.html" aria-label="Presione enter para conocer: ">2- The
+                      news of the
+                      day</a>
+                  </li>
+  
+                </ul>
+              </li>
+              <!-- boton 2 -->
+              <li role="none">
+                <a class="navegacion__enlace" role="menuitem" aria-label="Presione enter para conocer las opciones."
+                  aria-haspopup="true" aria-expanded="false" href="#academics">
+  
+                  <img class="wh-30" src="img/general/secciones/2.webp" alt="seccion">
+  
+  
+                  <div class="navegacion__enlace--info">
+                    <p>seccion 2</p>
+                    <svg id="campo" xmlns="http://www.w3.org/2000/svg" class="down wh-12-9">
+                      <polygon points="1 0, 11 0, 6 8"></polygon>
+                    </svg>
+                  </div>
+                </a>
+                <ul role="menu" aria-label="2">
+                  <li role="none">
+                    <a role="menuitem" href="#interview-map.html" aria-label="Presione enter para conocer: ">1- Interview
+                      map</a>
+                  </li>
+                  <li role="none">
+                    <a role="menuitem" href="water-level-simulator.html" aria-label="Presione enter para conocer: ">2-
+                      Water level
+                      simulator</a>
+                  </li>
+  
+                </ul>
+              </li>
+              <!-- boton 3 -->
+              <li role="none">
+                <a class="navegacion__enlace" role="menuitem" aria-label="Presione enter para conocer las opciones."
+                  aria-haspopup="true" aria-expanded="false" href="#academics">
+  
+                  <img class="wh-30" src="img/general/secciones/3.webp" alt="seccion">
+  
+  
+                  <div class="navegacion__enlace--info">
+                    <p>seccion 3</p>
+                    <svg id="campo" xmlns="http://www.w3.org/2000/svg" class="down wh-12-9">
+                      <polygon points="1 0, 11 0, 6 8"></polygon>
+                    </svg>
+                  </div>
+                </a>
+                <ul role="menu" aria-label="3">
+                  <li role="none">
+                    <a role="menuitem" href="diarios.html" aria-label="Presione enter para conocer: ">1- Diarios</a>
+                  </li>
+                  <li role="none">
+                    <a role="menuitem" href="shocking-photos.html"
+                      aria-label="Presione enter para conocer: ">2- Shocking
+                      photos</a>
+                  </li>
+                  <li role="none">
+                    <a role="menuitem" href="testimonio2.html" aria-label="Presione enter para conocer: ">3- Known our
+                      testimonies: During the flood</a>
+                  </li>
+  
+                  <li role="none">
+                    <a role="menuitem" href="photo-album.html"
+                      aria-label="Presione enter para conocer: ">4- Photo album
+                    </a>
+                  </li>
+  
+                </ul>
+              </li>
+              <!-- boton 4 -->
+              <li role="none">
+                <a class="navegacion__enlace" role="menuitem" aria-label="Presione enter para conocer las opciones."
+                  aria-haspopup="true" aria-expanded="false" href="#academics">
+  
+                  <img class="wh-30" src="img/general/secciones/4.webp" alt="seccion">
+  
+  
+                  <div class="navegacion__enlace--info">
+                    <p>seccion 4</p>
+                    <svg id="campo" xmlns="http://www.w3.org/2000/svg" class="down wh-12-9">
+                      <polygon points="1 0, 11 0, 6 8"></polygon>
+                    </svg>
+                  </div>
+                </a>
+                <ul role="menu" aria-label="4">
+                  <li role="none">
+                    <a role="menuitem" href="testimonio3.html" aria-label="Presione enter para conocer: ">1- Known our
+                      testimonies: Before the flood</a>
+                  </li>
+                  <li role="none">
+                    <a role="menuitem" href="sandbox.html" aria-label="Presione enter para conocer: ">2- Sandbox</a>
+                  </li>
+                  <li role="none">
+                    <a role="menuitem" href="Why-do-we-flood.html"
+                      aria-label="Presione enter para conocer: ">3- Why do we flood</a>
+                  </li>
+  
+                </ul>
+              </li>
+  
+              <!-- botone 5 -->
+  
+              <li role="none">
+                <a class="navegacion__enlace" role="menuitem" aria-label="Presione enter para conocer las opciones."
+                  aria-haspopup="true" aria-expanded="false" href="#academics">
+  
+                  <img class="wh-30" src="img/general/secciones/5.webp" alt="seccion">
+  
+                  <div class="navegacion__enlace--info">
+                    <p>seccion 5</p>
+                    <svg id="campo" xmlns="http://www.w3.org/2000/svg" class="down wh-12-9">
+                      <polygon points="1 0, 11 0, 6 8"></polygon>
+                    </svg>
+                  </div>
+                </a>
+                <ul role="menu" aria-label="5">
+                  <li role="none">
+                    <a role="menuitem" href="/recomendacion-como-actuar.html" aria-label="Presione enter para conocer: ">1-
+                      recomendaciones de como actuar.</a>
+                  </li>
+                  <li role="none">
+                    <a role="menuitem" href="#/smart-survival-backpak.html" aria-label="Presione enter para conocer: ">2-
+                      Smart
+                      survival backpak</a>
+                  </li>
+                  <li role="none">
+                    <a role="menuitem" href="#/where-to-go.html" aria-label="Presione enter para conocer: ">3- Where to
+                      go</a>
+                  </li>
+  
+                  <li role="none">
+                    <a role="menuitem" href="#/educational-games.html" aria-label="Presione enter para conocer: ">4-
+                      Educational
+                      games</a>
+                  </li>
+                </ul>
+              </li>
+              <!-- botone 6 -->
+  
+              <li role="none">
+                <a class="navegacion__enlace" role="menuitem" aria-label="Presione enter para conocer las opciones."
+                  aria-haspopup="true" aria-expanded="false" href="#academics">
+  
+                  <img class="wh-30" src="img/general/secciones/6.webp" alt="seccion">
+  
+                  <div class="navegacion__enlace--info">
+                    <p>seccion 6</p>
+                    <svg id="campo" xmlns="http://www.w3.org/2000/svg" class="down wh-12-9">
+                      <polygon points="1 0, 11 0, 6 8"></polygon>
+                    </svg>
+                  </div>
+                </a>
+                <ul role="menu" id="sub-menu-academics">
+                  <li role="none">
+                    <a role="menuitem" href="#/go citadine blue" aria-label="Presione enter para conocer: ">1- Go citadine
+                      blue.</a>
+                  </li>
+                  <li role="none">
+                    <a role="menuitem" href="#/go citadine green" aria-label="Presione enter para conocer: ">2-
+                      Go citadine green</a>
+                  </li>
+                  <li role="none">
+                    <!-- polonia alemania chile y republica dominicana
+                                      reutilizar la interfaz de los 4 casos -->
+                    <a role="menuitem" href="Inundaciones-en-el-exterior.html" aria-label="Presione enter para conocer: ">3-
+                      Inundaciones en el exterior</a>
+                  </li>
+                  <li role="none">
+                    <!-- es un afiche de como se ayudaron los vecinos- cosas positivas -->
+                    <a role="menuitem" href="Conclusiones-del-evento.html" aria-label="Presione enter para conocer: ">4-
+                      Conclusiones del evento</a>
+                  </li>
+                </ul>
+              </li>
+              <!-- barra deslizante -->
+            </ul>
+          </nav>
+        </div>
+  
+      </div>
+  
+    </header>
+    <!-- menu deslizante -->
+    <div class="menu-deslizante-realtivo">
+      <div id="menuIcono" class="sideBar">
+        <div class="sideBar-header">
+          <img class="boton-close "  id="close-sideBar" src="./img/general/circle-x.svg" alt="haga click, o presione enter para cerrar el sidebar.">
+          <div class="sideBar-img" aria-labelledby="posts-heading">
+            <img src="../../img/general/flooded-house.png" alt="expo citadine logo">
+            <!-- <a href="/"><img src="./img/general/menu-deslizante/technical-support.png" alt="expo citadine logo"></a> -->
+            <!-- <a href="/"><img src="./img/general/menu-deslizante/options.png" alt="expo citadine logo"></a> -->
+            <!-- <a href="/"><img src="./img/general/menu-deslizante/choose.png" alt="expo citadine logo"></a> -->
+          </div>
+          <div class="sideBar-info header__img__h4"  id="posts-heading">
+            <h4>Elija una <span >op</span>ción</h4>
+            <p>Descubra más del evento.</p>
+          </div>
+        </div>
+        <div class="sideBar-body" role="navigation">
+          <section>
+            <ul class="sidebar-body-ul" role="menu">
+              <!-- NOTA: Las secciones no estan en la vista del PC -->
+              <a tabindex="-1" id="tab-secciones" href="./menu-deslizante/sections.html">
+                <li class="sidebar-link" role="menuitem"
+                  aria-label="Estas dentro del menu deslizante. Haga click si decea entrar a las secciones">
+                  <img class="wh-42" src="./img/general/menu-deslizante/secciones.png" alt="calendario-image">
+                  <p class="no-margin">sections</p>
+                  <img class="wh-42" src="./img/general/menu-deslizante/arrow.png" alt="flecha-image">
+                </li>
+              </a>
+              <a tabindex="-1" id="tab-novedades" href="./menu-deslizante/anounce.html">
+                <li  class="sidebar-link" role="menuitem"
+                  aria-label="haga click si decea entrar a Announcements">
+                  <img class="wh-42" src="./img/general/menu-deslizante/calendar.webp" alt="calendario-image">
+                  <p class="no-margin">Announcements</p>
+                  <img class="wh-42" src="./img/general/menu-deslizante/arrow.png" alt="flecha-image">
+                </li>
+              </a>
+              <a tabindex="-1" id="tab-covid" href="./menu-deslizante/covid.html">
+                <li  class="sidebar-link" role="menuitem"
+                  aria-label="haga click si decea entrar a COVID protocols">
+                  <img class="wh-42" src="./img/general/menu-deslizante/virus.webp" alt="virus-image">
+                  <p class="no-margin">COVID protocols </p>
+                  <img class="wh-42" src="./img/general/menu-deslizante/arrow.png" alt="flecha-image">
+                </li>
+              </a>
+              <a tabindex="-1" href="./menu-deslizante/about.html">
+                <li  class="sidebar-link" role="menuitem"
+                  aria-label="haga click si decea entrar a hacerca de citadine">
+                  <img class="wh-42" src="./img/general/menu-deslizante/Citadine.webp" alt="informacion-image">
+                  <p class="no-margin">About Citadine </p>
+                  <img class="wh-42" src="./img/general/menu-deslizante/arrow.png" alt="flecha-image">
+                </li>
+              </a>
+              <a tabindex="-1" href="./menu-deslizante/languaje.html">
+                <li  class="sidebar-link" role="menuitem"
+                  aria-label="haga click si decea entrar a hacerca de citadine">
+                  <img class="wh-42" src="./img/general/menu-deslizante/languages.webp" alt="lenguajes-image">
+                  <p class="no-margin">Languajes </p>
+                  <img class="wh-42" src="./img/general/menu-deslizante/arrow.png" alt="flecha-image">
+                </li>
+              </a>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+  
+
+    <!-- main -->
+    <main>
+        <div class="main-card">
+            <div class="main-card-body">               
+                <div id="afiche-header" class="afiche__head">
+                    <h3 class="centrar-texto">Conclusiones del evento</h3>
+                </div>
+                <div class="main-card-info">
+                    <div class="card-container">
+                        <div class="card" tabindex="1" aria-labelledby="diario-1">
+                            <!-- <img src="./img/diarios/eldia_logo.png" alt=""> -->
+                            <div class="card__info">
+                                <h3>La importancia de la soliradidad</h3>
+                                <p>Hecho por </div>
+                            <div class="button__container hide__only720">
+                                <a href="conclusion-del-evento/la-importancia-de-la-solidaridad.html" class="button__custom--fit verde-1"> La importancia de la soliradidad.</a>
+                            </div>
+                        </div>
+                        <div class="card" tabindex="3" aria-labelledby="diario-2">
+                            <!-- <img src="./img/diarios/Hoy_logo.png" alt=""> -->
+                            <div class="card__info">
+                                <h3>Reflexiones de los entrevistados</h3>
+                                <p>Hecho por </div>
+                            <div class="button__container hide__only720">
+                                <a href="conclusion-del-evento/reflexiones-de-los-entrevistados.html" class="button__custom--fit verde-1"> Reflexiones de los entrevistados.</a>
+                            </div>
+                        </div>
+                        <div class="card" tabindex="5" aria-labelledby="diario-3">
+                            <!-- <img src="./img/diarios/Diagoanles_logo.png" alt=""> -->
+                            <div class="card__info">
+                                <h3>El legado de la memoria</h3>
+                                <p>Hecho por </div>
+                            <div class="button__container hide__only720">
+                                <a href="conclusion-del-evento/legado-memoria.html" class="button__custom--fit verde-1"> El legado de la memoria.</a>
+                            </div>
+                        </div>
+                        <div class="card" tabindex="5" aria-labelledby="diario-3">
+                          <!-- <img src="img/diarios/Diagoanles_logo.png" alt=""> -->
+                          <div class="card__info">
+                              <h3>La ayuda de la radio</h3>
+                              <p>Hecho por </div>
+                          <div class="button__container hide__only720">
+                              <a href="/conclusion-del-evento/la-ayuda-de-la-radio.html" class="button__custom--fit verde-1">La ayuda de la radio.</a>
+                          </div>
+                      </div>
+                        
+
+                    </div>
+                    <div class="card-container hide_btn">
+                        <div class="button__container">
+                            <a role="button" href="conclusion-del-evento/la-importancia-de-la-solidaridad.html" tabindex="2" class="button__custom--fit verde-1" id="diario-1"> La importancia de la soliradidad. </a>
+                        </div>
+                        <div class="button__container">
+                            <a role="button" href="conclusion-del-evento/reflexiones-de-los-entrevistados.html" tabindex="4" class="button__custom--fit verde-1" id="diario-2"> Reflexiones de los entrevistados. </a>
+                        </div>
+                        <div class="button__container">
+                            <a role="button" href="conclusion-del-evento/legado-memoria.html" tabindex="6" class="button__custom--fit verde-1" id="diario-3"> El legado de la memoria. </a>
+                        </div>
+                        <div class="button__container">
+                          <a role="button" href="conclusion-del-evento/la-ayuda-de-la-radio.html" tabindex="6" class="button__custom--fit verde-1" id="diario-3"> La ayuda de la radio. </a>
+                        </div>
+                        
+                    </div>
+                </div>
+
+      </div>
+
+    </div>
+    <!-- boton para ir arriba -->
+  <div class="buttons">
+    <div class="go-up">
+      <a role="button" tabindex="0" aria-label="Regresar al encabezado."  alt="Botón para regresar al encabezado." href="#afiche-header">
+          <img loading="lazy" src="../img/general/arrow-up.svg"  alt="imagen del botón para regresar al encabezado.">
+      </a>
+    </div>    
+    <div class="main-container-boton tooltip">
+      <a role="button" tabindex="0" aria-label="Volver a la página anterior."  alt="Botón para volver la página anterior." class="boton verde-4" onclick="history.back()">
+        <div class="boton-info">
+          <p>Go back</p> <img src="../img/general/backArrow.svg" alt="backArrow">
+        </div>
+      </a>
+      <span class="tooltiptext">Botón para volver a la página anterior.</span>
+    </div>
+  </div>
+  </main>
+
+  <!-- script -->
+  <!-- barra de secciones -->
+  <script src="./js/lixtbox.js"></script>
+  <!-- menu de barra deslizante -->
+  <script src="./js/index.js"></script>
+
+</body>
+
+</html>
