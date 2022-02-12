@@ -13,6 +13,11 @@ app.config.from_object(config)
 def Index():
     
     return render_template('index.html')
+
+@app.route('/testimonio1.html')
+def Testimonio1():
+    
+    return render_template('/testimonio1.html')    
 # app.secret_key="secret key" # configuro un valor para que se genere una sesion
 # 
 # SQLAlchemy(app) #le paso al ORM la configuracion que posee el app  #Configuracion del app

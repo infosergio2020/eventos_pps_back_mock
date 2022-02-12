@@ -31,6 +31,10 @@
   <link rel="preload" href="{{url_for('static', filename = '/css/lixtbox.css')}}" as="style">
   <link rel="stylesheet" href="{{url_for('static', filename = '/css/lixtbox.css')}}">
 
+  <!-- CSS del testimonio -->
+  <link rel="stylesheet" href="{{url_for('static', filename = '/css/testimonios.css')}}">
+  <!-- CSS del acordeon -->
+  <link rel="stylesheet" href="{{url_for('static', filename = '/css/minAcordeon.css')}}">
 
   <!--Import jQuery Library-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -344,7 +348,7 @@
       <!-- main -->
       <main>
 
-            {% include ('partials/_navbar.html') %}
+            <!-- {% include ('partials/_navbar.html') %} -->
             <!-- agrego mi porcion de codigo y le doy espaciado y centrado-->
             <div class="container p2">
                 {% block body%}
@@ -358,6 +362,11 @@
     <!-- script -->
 
     <script src="{{url_for('static', filename = '/js/lixtbox.js')}}"></script>
+
+
+    
+    <!-- ver mas del testimonio  -->
+    <script src="./js/acordeon.js"></script>
 </body>
 
 </html>
