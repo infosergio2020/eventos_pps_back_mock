@@ -1,0 +1,78 @@
+{% extends 'partials/_layout.html' %}
+{% block body %}
+<!-- Info de la ayuda de la radio-->
+  <main>
+    <div class="contenedor-testimonio">
+
+    <div id="afiche-header" class="afiche__head">
+      <h3 tabindex="0" class="centrar-texto text-shadow">
+        La ayuda de la Radio.
+      </h3>
+    </div>
+    <!-- primera fila -->
+    <div  class="grid__texto flex__container2">
+      <div class="caja1">
+        <div tabindex="0">
+        <p>
+          La radio a pesar de todo… No había energía eléctrica, no funcionaban los teléfonos, no había comunicaciones, ni
+          televisión… solo una radio a pilas.
+        </p>
+        <p>
+          “El rol de la radio fue muy importante porque permitieron articular los primeros momentos de
+          Ayuda. Fue una voz solidaria, una voz comunicacional y una voz organizativa”.
+          (Héctor Ortiz, FM RAICES).
+        </p>
+        <p>
+          “La gente empezó a usarnos como una manera de contar lo que necesitaba, lo que le pasaba, lo que hacía falta”.
+          (Carlos Cantoni, FM 103.1).
+        </p>
+        <p>
+          “En este contexto
+          la radio la hizo la gente … entre los que donaban y la gente que necesitaba”.
+          (Matías Sáenz, FM Cielo).
+        </p>
+        <p>
+          “Atendíamos a los vecinos desde la radio, venían en reclamo de ayuda… y declararon el lugar como centro
+          operativo”.
+          (Héctor Ortiz, FM Raices).
+        </p>
+      </div>
+      <div tabindex="0">
+        <p>
+          “…se privilegió la parte informativa y se relegó la musical… Fuimos un puente”. (Sebastián Carattoli, FM 92.1).
+        </p>
+        <p>
+          “Levantamos la programación habitual…Teníamos mucha información por el contacto directo que generamos con las
+          organizaciones civiles”.
+          (Juan Salvador Delu, Radio Futura).
+
+        </p>
+      </div>
+      </div>
+
+      <div  tabindex="0"class="caja5">
+        <img role="img" aria-label="Imagen de la radio." alt="Imagen de la radio." src="../img/afiches/radio-Imagen1.png">
+      </div>
+    </div>
+  </div>
+    <div class="go-up">
+      <a role="button" tabindex="0" aria-label="Regresar al encabezado."  alt="Botón para regresar al encabezado." href="#afiche-header">
+          <img loading="lazy" src="../img/general/arrow-up.svg"  alt="imagen del botón para regresar al encabezado.">
+      </a>
+    </div>
+
+    <div class="main-container-boton tooltip">
+      <a role="button" tabindex="0" aria-label="Volver a la página anterior."  alt="Botón para volver a la página anterior." class="boton verde-4" onclick="history.back()">
+        <div class="boton-info">
+          <p>Go back</p> <img src="../img/general/backArrow.svg" alt="backArrow">
+        </div>
+      </a>
+      <span class="tooltiptext">Botón para volver a la página anterior.</span>
+    </div>
+  </main>
+  <!-- footer -->
+  <footer></footer>
+  <!-- script -->
+  <script src="../js/lixtbox.js"></script>
+  <script src="../js/index.js"></script>
+  {% endblock %}

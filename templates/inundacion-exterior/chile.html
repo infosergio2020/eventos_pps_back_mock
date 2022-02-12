@@ -1,0 +1,143 @@
+  <!-- Contenedor del testimonio -->
+  {% extends 'partials/_layout.html' %}
+  {% block body %}
+  <!-- Info de Chile-->
+  <main>
+    <!-- <main class="contenedor-testimonio"> -->
+    <div class="container">
+      <div class="main-card">
+        <div class="main-card-body">
+          <div id="afiche-header" class="afiche__head">
+            <h3 tabindex="0" class="centrar-texto text-shadow"> TSUNAMI CHILE 2010.</h3>
+          </div>
+
+          <div class="grid__container">
+            <div tabindex="0" class="grid__columna">
+              <h4> ¿Qué es un tsunami y cómo se genera? </h4>
+              <div class="grid__texto">
+                <p>
+                  La mayoría de tsunamis son originados por terremotos de gran
+                  magnitud bajo la superficie acuática. Para que se genere un
+                  tsunami, el fondo marino debe ser movido de manera abrupta en
+                  sentido vertical, de modo que una gran masa de agua del océano
+                  sea impulsada fuera de su equilibrio normal.
+                </p>
+                <p>
+                  En el centro del mar el agua es tan profunda que no llega
+                  a notarse tanto un maremoto, pero en la costa el agua es
+                  medianamente baja por lo que la ola se extiende notablemente
+                  hacia arriba y se hace muy grande.
+                </p>
+                <p>
+                  Un tsunami puede alcanzar hasta 1.000 kilómetros por hora y
+                  extenderse por un océano. La velocidad de un tsunami se puede
+                  comparar con la velocidad de un avión. En las costas, las olas del
+                  tsunami que se encuentran allí pueden crecer hasta 35 metros y
+                  extenderse por un área de 150 a 300 kilómetros.
+                </p>
+              </div>
+              <div class="grid__image">
+                <img role="img" aria-label="imagen de desastre en chile 1, edificios destruidos." src="../img/afiches/chile-1.jpg" alt="imagen de desatre en chile 1, edificios destruidos."
+                  title="Fotos: Globovisión, Flickr, CC BY-NC 2.0">
+                <small>Fotos: Globovisión, Flickr, CC BY-NC 2.0.</small>
+              </div>
+              <!-- imagen-1 -->
+              <div class="grid__texto">
+                <h4 class="mg-top">¿Cómo se puede advertir a la población
+                  ante la aparición de un tsunami?.</h4>
+                <p>
+                  Los sistemas de alerta temprana pueden avisar a la población
+                  de estos maremotos. A pesar de que un tsunami es tan rápido,
+                  tarda un poco en llegar a la tierra después de un terremoto en
+                  el mar. Durante este tiempo, las personas pueden ser advertidas.
+                  Los sistemas de alerta temprana se sitúan en medio del mar y
+                  detectan si un tsunami supone un peligro para la población de la
+                  costa. También detectan cuando se produce un terremoto bajo el
+                  mar.
+                </p>
+              </div>
+            </div>
+            <!-- Fin columna-1 -->
+
+            <div tabindex="0" class="grid__columna">
+              <div class="grid__texto">
+                <h4>¿Qué pasó en Chile en ese momento?</h4>
+                <p>
+                  El <strong><em> 27 de febrero de 2010 </em></strong> a las 3:34 a.m. hora local (6:34 UTC)
+                  se produjo un terremoto frente a la costa de la región del Maule
+                  en Chile.
+                </p>
+              </div>
+
+              <div class="grid__image">
+                <img role="img" aria-label="imagen de desatre en chile 1, edificios destruidos." alt="" src="../img/afiches/chile-3.jpg" alt="">
+                <small>Foto: Alagos, Flickr, CC BY-NC-SA 2.0.</small>
+              </div>
+              <!-- imagen-2 -->
+
+              <div class="grid__texto">
+                <p>
+                  Tras este terremoto se produjo un tsunami. El terremoto alcanzó
+                  una magnitud de 8,8 MW en la escala de magnitudes de ese
+                  momento. Fue considerado como el segundo más fuerte en
+                  la historia de Chile y el octavo más fuerte registrado por la
+                  humanidad. En las zonas costeras del centro de Chile, este fuerte
+                  sismo del 27 de febrero fue seguido por otras réplicas y sismos de
+                  menor y mediano tamaño.
+                </p>
+                <p>
+                  El terremoto y el posterior tsunami se
+                  cobraron la vida de muchas personas y causaron enormes daños.
+                  Más de 500 personas murieron y muchas personas desaparecidas
+                  fueron declaradas muertas. Los habitantes de las zonas
+                  siniestradas no pudieron seguir recibiendo electricidad ni agua.
+                  Muchos supermercados fueron destruidos por el tsunami. La
+                  atención médica también se vio afectada. También hubo saqueos,
+                  vandalismo y robos.
+                </p>
+              </div>
+
+              <div class="grid__image">
+                <img role="img" aria-label="imagen de desatre en chile 1, edificios destruidos." src="../img/afiches/chile-4.png" alt="">
+                <small>Foto: Globovisión, Flickr, CC BY-NC 2.0.</small>
+              </div>
+              <!-- imagen-3 -->
+
+              <div class="grid__texto">
+                <p>
+                  Los habitantes de las zonas damnificadas no pudieron seguir
+                  recibiendo electricidad ni agua y a su vez la mayoría de los
+                  supermercados fueron destruidos por el tsunami. La atención
+                  médica también se vio afectada, hubo saqueos, vandalismo y
+                  robos.
+                </p>
+              </div>
+
+
+            </div>
+            <!-- Fin columna-2 -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- boton para volver arriba -->
+    <div class="go-up">
+      <a role="button" tabindex="0" aria-label="Regresar al encabezado."  alt="Botón para regresar al encabezado." href="#afiche-header">
+          <img loading="lazy" src="../img/general/arrow-up.svg"  alt="imagen del botón para regresar al encabezado.">
+      </a>
+    </div>
+    <!-- End Tap Target Structure -->
+    <div class="main-container-boton tooltip">
+      <a role="button" tabindex="0" aria-label="Volver a la página anterior." alt="Botón para volver a la página anterior." class="boton verde-4" onclick="history.back()">
+        <div class="boton-info">
+          <p>Go back</p> <img src="../img/general/backArrow.svg" alt="backArrow">
+        </div>
+      </a>
+      <span class="tooltiptext">Botón para volver a la página anterior.</span>
+    </div>
+  </main>
+  <!-- footer -->
+  <footer></footer>
+  <!-- script -->
+  <script src="../js/lixtbox.js"></script>
+  {% endblock %}

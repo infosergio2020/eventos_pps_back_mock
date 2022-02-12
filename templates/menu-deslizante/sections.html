@@ -1,0 +1,108 @@
+  <!-- Contenedor del testimonio -->
+  {% extends 'partials/_layout.html' %}
+  {% block body %}
+  <!-- Info de secciones-->
+    
+    <main>
+        <div class="container">
+            <div id="header" class="main-sections" >
+                <!-- section y los tags en su interior son elementos  que pueden repetirse en un bucle sin necesidad de repetir tags-->
+                <section class="main-section verde-2">
+                    <div class="main-section-img">
+                        <img loading="lazy" class="main-section-icon" src="../img/general/otros/reporter.webp" alt="img 4">
+                    </div>
+                    <div class="main-section-info">
+                      <div tabindex="0">
+                        <h3>Section 1 - FROM RAIN TO FLOOD</h3>
+                        <p>Moments before the flood. You can know 4 shocking cases and news on the TV at that moment. </p>
+                      </div> 
+                        <a role="button" class="boton verde-4" href="../sections/section-1.html"> access section 1</a>
+                    </div>
+                </section>
+                <!-- --------------------------------        ------------------------------             ------------------------- -->
+                <section class="main-section verde-2">
+                    <div class="main-section-img">
+                        <img loading="lazy" class="main-section-icon" src="../img/general/otros/map.webp" alt="img 4">
+                    </div>
+                    <div  class="main-section-info">
+                      <div tabindex="0">
+                        <h3>Section 2 - FOR LIFE AND LIMB</h3>
+                        <p>The worst time of the flood. You can access the testimonies of the 4 cases and a flood simulator.  </p>
+                      </div>  
+                        <a role="button" class="boton verde-4" href="../sections/section-2.html"> access section 2</a>
+                    </div>
+                </section>
+
+                <section class="main-section verde-2">
+                    <div class="main-section-img">
+                        <img loading="lazy" class="main-section-icon" src="../img/general/otros/flood.png" alt="img 4" >
+                    </div>
+                    <div class="main-section-info">
+                      <div tabindex="0">
+                        <h3>Section 3 - JUST RUBBLE AND MUD</h3>
+                        <p>You can look at the most impressive photos and see the photo album shared by the people themselves affected. </p>
+                      </div>  
+                        <a role="button" class="boton verde-4" href="../sections/section-3.html"> access section 3</a>
+                    </div>
+                </section>
+
+                <section class="main-section verde-2">
+                    <div class="main-section-img">
+                        <img loading="lazy" class="main-section-icon" src="../img/general/otros/think-out-of-the-box.webp" alt="img 4">
+                    </div>
+                    <div  class="main-section-info">
+                      <div tabindex="0">
+                        <h3>Section 4 - LARNINGS OF THE FLOOD</h3>
+                        <p>You can play with the Sandbox AR to explore the effect according to the type of relief. In addition, you can know more about urban floods and analyze other reasons as to why it floods these areas. </p>
+                      </div> 
+                        <a role="button" class="boton verde-4" href="../sections/section-4.html"> access section 4</a>
+                    </div>
+                </section>
+
+                <section class="main-section verde-2">
+                    <div class="main-section-img">
+                        <img loading="lazy" class="main-section-icon" src="../img/general/otros/first-aid-kit.webp" alt="img 4">
+                    </div>
+                    <div class="main-section-info">
+                      <div  tabindex="0">
+                        <h3>Section 5 - BE PREPARED</h3>
+                        <p>Preparing is the most important. You can play with the smart survival backpack and learn where the shelters near your neighborhood are. </p>
+                      </div>  
+                        <a role="button" class="boton verde-4" href="../sections/section-5.html"> access section 5</a>
+                    </div>
+                </section>
+
+                <section class="main-section verde-2">
+                    <div class="main-section-img">
+                        <img loading="lazy" class="main-section-icon" src="../img/general/otros/video-game.webp" alt="img 4">
+                    </div>
+                    <div class="main-section-info">
+                      <div tabindex="0">
+                        <h3>Section 6 - FLOODING ABROAD</h3>
+                        <p>Access the Citadine site with interviews from other countries. You can also access <span style="font-weight: bold; color: #009281;">educational games  made by UNLP students </span> and the 4 shocking cases.</p>
+                      </div>  
+                        <a role="button" class="boton verde-4" href="../sections/section-6.html"> access section 6</a>
+                    </div>
+                </section>
+            </div>
+          </div>
+            <div class="buttons">
+            <div class="go-up">
+              <a role="button" tabindex="0" aria-label="Regresar al encabezado."  alt="Botón para regresar al encabezado." href="#afiche-header">
+                  <img loading="lazy" src="../img/general/arrow-up.svg"  alt="imagen del botón para regresar al encabezado.">
+              </a>
+            </div>
+            <div class="main-container-boton tooltip">
+              <a role="button" tabindex="0" aria-label="Volver a la página anterior."  alt="Botón para volver la página anterior." class="boton verde-4" onclick="history.back()">
+                <div class="boton-info">
+                  <p>Go back</p> <img src="../img/general/backArrow.svg" alt="backArrow">
+                </div>
+              </a>
+              <span class="tooltiptext">Botón para volver a la página anterior.</span>
+            </div>
+            </div>
+    </main>
+    <footer></footer>
+        <!-- script -->
+  <script src="../js/lixtbox.js"></script>
+  {% endblock %}
