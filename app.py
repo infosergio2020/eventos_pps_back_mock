@@ -70,6 +70,10 @@ def Inundacionesenelexterior():
 def Photoalbum():
     return rutas.render_photo_album()
 
+@app.route('/mochila-inteligente')
+def MochilaInteligente():
+    return rutas.render_smart_survival()
+
 ######################
 # carpeta sections
 #####################                       

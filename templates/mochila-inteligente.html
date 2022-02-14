@@ -1,0 +1,57 @@
+  <!-- Contenedor del testimonio -->
+  {% extends 'partials/_layout.html' %}
+  {% block body %}
+  <!-- Info del Contenedor del video-->
+  <main>
+   
+        <div class="main-card">
+          <div class="main-card-body">
+            <div id="afiche-header" class="afiche__head">
+              <h1 tabindex="0" class="centrar-texto">Mochila inteligente de supervivencia</h1>
+            </div>
+            <div tabindex="0" aria-label="Reproductor de video" class="contenedor-video">
+                <div class="px-video-container" id="myvid">
+                    <iframe width="100%" 
+                                height="100%" 
+                                src="https://www.youtube.com/embed/6wSfv4MV8MQ" 
+                                title="YouTube video player" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                    </iframe>
+                </div>
+                <!-- detalles del video -->
+                <div tabindex="0" class="video__informacion">
+                    <h4 class="no-margin"><span>
+                        Detalles del video:
+                    </span> </h4>
+                    
+                    <p class="video__descripcion">
+                        Esta es una mochila que te ayudará a recoger los elementos esenciales ante una inundación.
+                    </p>
+                </div> 
+            </div>
+          </div>
+        </div>
+        <!-- boton para ir arriba -->
+        {% include ('partials/_button.html') %}  
+  </main>
+  
+  <!-- script -->
+
+
+  <!-- script del video -->
+    <script src="js/strings.js"></script>
+    <script src="js/px-video.js"></script>
+    <script>
+    // Initialize
+    new InitPxVideo({
+        "videoId": "myvid",
+        "captionsOnDefault": true,
+        "seekInterval": 20,
+        "videoTitle": "clips of stand-up comedy",
+        "debug": true
+    });
+    </script>
+ <!-- FIN Info del contenedor de video -->
+ {% endblock %}
