@@ -4,47 +4,40 @@
   <!-- Info de los diarios-->
   <main>
    
-        <div class="main-card">
-          <div class="main-card-body">
-            <div id="afiche-header" class="afiche__head">
-                <h1 tabindex="0" class="centrar-texto">The news of the day</h1>
-            </div>
-            <div class="contenedor-video">
-                <div class="px-video-container" id="myvid">
-                    <div tabindex="0" aria-label="Este es el reproductor de video." class="px-video-img-captions-container">
-                        <div class="px-video-captions hide" aria-hidden="true"></div>
-                        <video width="640" height="360" poster="media/foo.jpg" controls>
-                            <!-- video files -->
-                            <source src="/public/7-1-22.mp4" type="video/mp4" />
-                            <source src="foo.webm" type="video/webm" />
-                            <!-- text track file -->
-                            <track kind="captions" label="English captions" src="media/foo.vtt" srclang="en" default />
-                            <!-- fallback for browsers that don't support the video element -->
-                            <div>
-                                <a href="foo.mp4">
-                                    <img src="media/foo.jpg" width="640" height="360" alt="download video" />
-                                </a>
-                            </div>
-                        </video>
-                    </div>
-                    <!-- end container for captions and video -->
-                    <div class="px-video-controls"></div>
-                </div>
-                <!-- detalles del video -->
-                <div tabindex="0" class="video__informacion">
-                    <h4  class="no-margin"><span>
-                        Video detail:
-                    </span> </h4>
-                    
-                    <p class="video__descripcion">
-                        Donec tempor, nisl et rhoncus viverra, turpis enim convallis ligula, non hendrerit nulla tortor nec odio. Morbi non mattis nunc, elementum auctor arcu. Aliquam vestibulum arcu non sem porta auctor. Nam vel congue ligula, eu condimentum felis. Nunc aliquam hendrerit odio sit amet venenatis. Nunc varius, libero a tempor rutrum, nulla risus congue velit, nec suscipit nibh lectus ac dolor. Nulla facilisi.
-                    </p>
-                </div> 
-            </div>
+    <div class="main-card">
+        <div class="main-card-body">
+          <div id="afiche-header" class="afiche__head">
+            <h1 tabindex="0" class="centrar-texto">Las noticias del día</h1>
+          </div>
+          <div tabindex="0" aria-label="Reproductor de video" class="contenedor-video">
+              <div class="px-video-container" id="myvid">
+                  <iframe width="100%" 
+                              height="100%" 
+                              src="https://www.youtube.com/embed/6wSfv4MV8MQ" 
+                              title="YouTube video player" 
+                              frameborder="0" 
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                              allowfullscreen>
+                  </iframe>
+              </div>
+              <!-- detalles del video -->
+              <div tabindex="0" class="video__informacion">
+                  <h4 class="no-margin"><span>
+                      Detalles del video:
+                  </span> </h4>
+                  
+                  <p class="video__descripcion">
+                    Donec tempor, nisl et rhoncus viverra, turpis enim convallis ligula, non hendrerit nulla tortor nec odio. Morbi non mattis nunc, elementum auctor arcu. Aliquam vestibulum arcu non sem porta auctor. Nam vel congue ligula, eu condimentum felis. Nunc aliquam hendrerit odio sit amet venenatis. Nunc varius, libero a tempor rutrum, nulla risus congue velit, nec suscipit nibh lectus ac dolor. Nulla facilisi.                      
+                      <a target="_blank" class="a-link" href="http://sedici.unlp.edu.ar/handle/10915/59633">Las inundaciones en La Plata, Berisso y Ensenada</a>
+                      
+                      )  y en 
+                      
+                      <a target="_blank" class="a-link" href="http://omlp.sedici.unlp.edu.ar/dataset/informe-final">Informe Final PIO</a>
+                  </p>
+              </div> 
           </div>
         </div>
-        
-
+      </div>
       
         <!-- boton para ir arriba -->
         {% include ('partials/_button.html') %}  
