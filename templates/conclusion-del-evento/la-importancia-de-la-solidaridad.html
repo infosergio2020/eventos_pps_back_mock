@@ -26,13 +26,13 @@
         </div>
 
         <div class="caja2">
-          <img role="img" aria-label="Imagen de perfil de María." alt="Imagen de María." src="../img/afiches/solidaridad-Imagen1.png">
+          <img role="img" aria-label="Imagen de perfil de María." alt="Imagen de María." src="{{url_for('static', filename = 'img/afiches/solidaridad-Imagen1.png')}}">
         </div>
       </div>
       <!-- segunda fila -->
       <div tabindex="0" class="grid__texto flex__container2">
         <div class="caja2">
-          <img role="img" aria-label="Imagen de perfil de Carlos." alt="Imagen de Carlos." src="../img/afiches/solidaridad-Imagen2.png">
+          <img role="img" aria-label="Imagen de perfil de Carlos." alt="Imagen de Carlos." src="{{url_for('static', filename = 'img/afiches/solidaridad-Imagen2.png')}}">
         </div>
         <div class="caja1">
           <p>
@@ -46,7 +46,7 @@
       <!-- tercer fila -->
       <div tabindex="0" class="grid__texto flex__container2">
         <div class="caja6 grid__image">
-          <img role="img" src="../img/afiches/solidaridad-Imagen3.jpg">
+          <img role="img" src="{{url_for('static', filename = 'img/afiches/solidaridad-Imagen3.jpg')}}">
           <small>Fotos:
             <a
               href="https://www.perfil.com/noticias/sociedad/colectas-donaciones-y-shows-para-ayudar-a-los-platenses-20130407-0060.phtml">
@@ -81,7 +81,7 @@
             obras, la de comunicación y la de arte, encargada de idear prácticas artísticas.
           </p>
           <div class="caja8 grid__image mg-top">
-            <img role="img" src="../img/afiches/solidaridad-Imagen4.png">
+            <img role="img" src="{{url_for('static', filename = 'img/afiches/solidaridad-Imagen4.png')}}">
             <small>Fotos: <a href="https://m.facebook.com/AsambleaVecinalParqueCastelli/?ref=nf_target&__tn__=%2Cg"
                 target="_blank">facebook - Asamblea vecinal Parque Castelli.</a>
           </div>
@@ -98,32 +98,13 @@
 
           </p>
           <div class="caja8 grid__image mg-top">
-            <img role="img" src="../img/afiches/solidaridad-Imagen5.png">
+            <img role="img" src="{{url_for('static', filename = 'img/afiches/solidaridad-Imagen5.png')}}">
             <small>Fotos: <a href="https://www.infoplatense.com.ar/nota/2017-4-2-bajo-el-llovizna-la-ciudad-recordo-la-tragedia-del-2-de-abril-en-la-plata"
               target="_blank">infoPlatense-nota-tragedia.</a>
           </div>
         </div>
       </div>
   </div>
-      <div class="go-up">
-        <a role="button" tabindex="0" aria-label="Regresar al encabezado."  alt="Botón para regresar al encabezado." href="#afiche-header">
-            <img loading="lazy" src="../img/general/arrow-up.svg"  alt="imagen del botón para regresar al encabezado.">
-        </a>
-      </div>
-
-      <!-- fin de la fila -->
-      <div class="main-container-boton tooltip">
-        <a role="button" tabindex="0" aria-label="Volver a la página anterior."  alt="Botón para volver la página anterior." class="boton verde-4" onclick="history.back()">
-          <div class="boton-info">
-            <p>Go back</p> <img src="../img/general/backArrow.svg" alt="backArrow">
-          </div>
-        </a>
-        <span class="tooltiptext">Botón para volver a la página anterior.</span>
-      </div>
-    </main>
-    <!-- footer -->
-    <footer></footer>
-    <!-- script -->
-    <script src="../js/lixtbox.js"></script>
-    <script src="../js/index.js"></script>
+    <!-- boton para volver a arriba -->
+    {% include ('partials/_button.html') %}
     {% endblock %}

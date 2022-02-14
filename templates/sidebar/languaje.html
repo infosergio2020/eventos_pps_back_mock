@@ -10,8 +10,8 @@
                     <h1 tabindex="0">Lenguajes</h1>
                   </div>
                     <div class="main-card-img-container">
-                        <img src="../img/general/otros/UK.webp" height="88px" alt="img 1">
-                        <img src="../img/general/otros/spain.webp" height="88px" alt="img 2">
+                        <img src="{{url_for('static', filename = 'img/general/otros/UK.webp')}}" height="88px" alt="img 1">
+                        <img src="{{url_for('static', filename = 'img/general/otros/spain.webp')}}" height="88px" alt="img 2">
                     </div>
                     <div class="main-card-img-container">
                         <a role="button" tabindex="0" aria-label="Presiona enter para cambiar el idioma a inglés." class="boton verde-4">English</a>
@@ -25,21 +25,8 @@
             </div>
           </div>
 
-            <div class="buttons">
-                <div class="go-up">
-                  <a role="button" tabindex="0" aria-label="Regresar al encabezado."  alt="Botón para regresar al encabezado." href="#afiche-header">
-                      <img loading="lazy" src="../img/general/arrow-up.svg"  alt="imagen del botón para regresar al encabezado.">
-                  </a>
-                </div>
-                <div class="main-container-boton tooltip">
-                    <a role="button" tabindex="0" aria-label="Volver a la página anterior."  alt="Botón para volver la página anterior." class="boton verde-4" onclick="history.back()">
-                      <div class="boton-info">
-                        <p>Go back</p> <img src="../img/general/backArrow.svg" alt="backArrow">
-                      </div>
-                    </a>
-                    <span class="tooltiptext">Botón para volver a la página anterior.</span>
-                </div>
-            </div>
+          <!-- boton para ir arriba -->
+          {% include ('partials/_button.html') %}
     </main>
     <footer></footer>
         <!-- script -->

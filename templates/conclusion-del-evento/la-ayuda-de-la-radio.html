@@ -51,28 +51,12 @@
       </div>
 
       <div  tabindex="0"class="caja5">
-        <img role="img" aria-label="Imagen de la radio." alt="Imagen de la radio." src="../img/afiches/radio-Imagen1.png">
+        <img role="img" aria-label="Imagen de la radio." alt="Imagen de la radio." src="{{url_for('static', filename = 'img/afiches/radio-Imagen1.png')}}">
       </div>
     </div>
   </div>
-    <div class="go-up">
-      <a role="button" tabindex="0" aria-label="Regresar al encabezado."  alt="Botón para regresar al encabezado." href="#afiche-header">
-          <img loading="lazy" src="../img/general/arrow-up.svg"  alt="imagen del botón para regresar al encabezado.">
-      </a>
-    </div>
-
-    <div class="main-container-boton tooltip">
-      <a role="button" tabindex="0" aria-label="Volver a la página anterior."  alt="Botón para volver a la página anterior." class="boton verde-4" onclick="history.back()">
-        <div class="boton-info">
-          <p>Go back</p> <img src="../img/general/backArrow.svg" alt="backArrow">
-        </div>
-      </a>
-      <span class="tooltiptext">Botón para volver a la página anterior.</span>
-    </div>
+    <!-- boton para volver a arriba -->
+    {% include ('partials/_button.html') %}
   </main>
-  <!-- footer -->
-  <footer></footer>
-  <!-- script -->
-  <script src="../js/lixtbox.js"></script>
-  <script src="../js/index.js"></script>
+
   {% endblock %}

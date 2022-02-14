@@ -10,61 +10,56 @@
                 </div>
                 <div class="main-card-body">
                     <div class="main-card-img-container">
-                        <img src="../img/afiches/quehacer-Imagen1.png" height="214px" alt="imagen de una niña.">
+                        <img src="{{url_for('static', filename = 'img/afiches/quehacer-Imagen1.png')}}" height="214px" alt="imagen de una niña.">
                     </div>
                    
                     <div class="main-container-boton">
-                        <a class="boton verde-4" href="../recomendacion-como-actuar.html">
+                        <a class="boton verde-4" href="/recomendacion-como-actuar">
                             <div class="boton-info">
-                                <p>Recomendaciones de como actuar</p> <img src="../img/people/webp/handPointUp.webp" height="88px" alt="backArrow">
+                                <p>Recomendaciones de como actuar</p> <img src="{{url_for('static', filename = 'img/people/webp/handPointUp.webp')}}" height="88px" alt="backArrow">
                             </div>
                         </a>
                     </div>
 
                     <div class="main-card-img-container">
-                        <img src="../img/section5/mochila.webp" height="214px" alt="imagen de una niña.">
+                        <img src="{{url_for('static', filename = 'img/section5/mochila.webp')}}" height="214px" alt="imagen de una niña.">
                     </div>
                    
                     <div class="main-container-boton">
-                        <a class="boton verde-4" href="#../smart-survival-backpak.html">
+                        <a class="boton verde-4" href="#/smart-survival-backpak">
                             <div class="boton-info">
-                                <p>Smart Survival Backpack</p> <img src="../img/people/webp/handPointUp.webp" height="88px" alt="backArrow">
+                                <p>Smart Survival Backpack</p> <img src="{{url_for('static', filename = 'img/people/webp/handPointUp.webp')}}" height="88px" alt="backArrow">
                             </div>
                         </a>
                     </div>
                     <div class="main-card-img-container">
-                        <img src="../img/section5/mapaNiño-1.webp" height="200px" alt="imagen de una niña.">
+                        <img src="{{url_for('static', filename = 'img/section5/mapaNiño-1.webp')}}" height="200px" alt="imagen de una niña.">
                     </div>
                     <div class="main-container-boton">
-                        <a class="boton verde-4" href="#../where-to-go.html">
+                        <a class="boton verde-4" href="#/where-to-go">
                             <div class="boton-info">
-                                <p>Where to go?</p> <img src="../img/people/webp/handPointUp.webp" height="88px" alt="backArrow">
+                                <p>Where to go?</p> <img src="{{url_for('static', filename = 'img/people/webp/handPointUp.webp')}}" height="88px" alt="backArrow">
                             </div>
                         </a>
                     </div>
 
                     <div class="main-card-img-container">
-                        <img src="../img/section5/unknown.png" height="200px" alt="imagen de una niña.">
+                        <img src="{{url_for('static', filename = 'img/section5/unknown.png')}}" height="200px" alt="imagen de una niña.">
                     </div>
                     <div class="main-container-boton">
-                        <a class="boton verde-4" href="#../educational-games.html">
+                        <a class="boton verde-4" href="#/educational-games">
                             <div class="boton-info">
-                                <p>Educational games</p> <img src="../img/people/webp/handPointUp.webp" height="88px" alt="backArrow">
+                                <p>Educational games</p> <img src="{{url_for('static', filename = 'img/people/webp/handPointUp.webp')}}" height="88px" alt="backArrow">
                             </div>
                         </a>
                     </div>
                    
                 </div>
             </div>
-            <div class="main-container-boton tooltip">
-                <a role="button" tabindex="0" aria-label="Volver a la página anterior."  alt="Botón para volver la página anterior." class="boton verde-4" onclick="history.back()">
-                  <div class="boton-info">
-                    <p>Go back</p> <img src="../img/general/backArrow.svg" alt="backArrow">
-                  </div>
-                </a>
-                <span class="tooltiptext">Botón para volver a la página anterior.</span>
-            </div>
+            
         </div>
+        <!-- boton para ir arriba -->
+        {% include ('partials/_button.html') %}
     </main>
 
     <!-- script -->

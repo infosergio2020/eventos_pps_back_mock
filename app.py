@@ -73,27 +73,27 @@ def Photoalbum():
 ######################
 # carpeta sections
 #####################                       
-@app.route('/sections/section-1')
+@app.route('/section-1')
 def Section1():  
     return rutas.render_section_1()
 
-@app.route('/sections/section-2')
+@app.route('/section-2')
 def Section2():  
     return rutas.render_section_2()
 
-@app.route('/sections/section-3')
+@app.route('/section-3')
 def Section3():  
     return rutas.render_section_3()
 
-@app.route('/sections/section-4')
+@app.route('/section-4')
 def Section4():  
     return rutas.render_section_4()
 
-@app.route('/sections/section-5')
+@app.route('/section-5')
 def Section5():  
     return rutas.render_section_5()
 
-@app.route('/sections/section-6')
+@app.route('/section-6')
 def Section6():  
     return rutas.render_section_6()
 
@@ -131,15 +131,15 @@ def Sections():
 def inundacion_exterior():  
     return rutas.render_inundacion_exterior()
 
-@app.route('/inundacion-exterior/alemania')
+@app.route('/alemania')
 def alemania():  
     return rutas.render_alemania()
 
-@app.route('/inundacion-exterior/chile')
+@app.route('/chile')
 def chile():  
     return rutas.render_chile()
 
-@app.route('/inundacion-exterior/polonia')
+@app.route('/polonia')
 def polonia():  
     return rutas.render_polonia()
 
@@ -152,18 +152,18 @@ def polonia():
 def conclusion():  
     return rutas.render_conclusiones()
 
-@app.route('/conclusion-del-evento/la-ayuda-de-la-radio')
+@app.route('/la-ayuda-de-la-radio')
 def Radio():  
     return rutas.render_conclusiones_radio()
 
-@app.route('/conclusion-del-evento/la-importancia-de-la-solidaridad')
+@app.route('/la-importancia-de-la-solidaridad')
 def Soliradidad():  
     return rutas.render_conclusiones_solidaridad()
 
-@app.route('/conclusion-del-evento/legado-memoria')
+@app.route('/legado-memoria')
 def Legadomemoria():  
     return rutas.render_conclusiones_legado_memoria()
 
-@app.route('/conclusion-del-evento/reflexiones-de-los-entrevistados')
+@app.route('/reflexiones-de-los-entrevistados')
 def Reflexiones():  
     return rutas.render_conclusiones_reflexiones()
