@@ -63,22 +63,5 @@
     <!-- boton para ir arriba -->
     {% include ('partials/_button.html') %}
   </main>
-  <footer></footer>
-  <!-- script -->
-  <script>
-    function keypress(e) {
-      var KeyID = e.keyCode;
-      switch (KeyID) {
-        case 32:
-          history.back()
-          break;
-        case 13:
-          history.back()
-          break;
-        default:
-          break;
-      }
-    }
-  </script>
-  <script src="../js/lixtbox.js"></script>
+
   {% endblock %}
