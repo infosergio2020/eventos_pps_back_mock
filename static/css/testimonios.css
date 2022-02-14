@@ -50,7 +50,7 @@ h4 {
 /** Cursos **/
 .curso {
   display: grid;
-  padding: 3rem 0;
+  padding: 2rem 0;
   justify-items: center;
 }
 

@@ -18,6 +18,7 @@
     
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     text-align:center;
     transition:.6s;
 
@@ -62,8 +63,10 @@
 
 /* estilo para botones */
 .button__custom--fit{
-  padding: .5rem 1.5rem;
+  padding: 2.5rem 1.5rem;
+  margin-bottom: 2rem;
   color: white;
+  text-align: center;
   font-weight: bold;
   border: 2px solid #313131;
   border-radius: .3rem;
@@ -87,7 +90,9 @@
 /* contenedor de botones */
 .button__container{
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: stretch;
   width: 100%;
   /* border: 2px solid chocolate; */
 }
