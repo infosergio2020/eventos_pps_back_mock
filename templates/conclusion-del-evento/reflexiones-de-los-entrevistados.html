@@ -20,13 +20,13 @@
         </div>
         
         <div class="caja2">
-              <img role="img" src="../img/afiches/memoria2-Imagen1.png" aria-label="Imagen de perfil de Gabriela." alt="Imagen de gabriela.">
+              <img role="img" src="{{url_for('static', filename = 'img/afiches/memoria2-Imagen1.png')}}" aria-label="Imagen de perfil de Gabriela." alt="Imagen de gabriela.">
         </div>  
     </div>
     <!-- segunda fila -->
     <div tabindex="0" class="grid__texto flex__container2">
         <div class="caja2">
-              <img role="img" aria-label="Imagen de perfil de Azucena." alt="Imagen de Azucena." class="wh-40"  src="../img/afiches/memoria2-Imagen2.png">
+              <img role="img" aria-label="Imagen de perfil de Azucena." alt="Imagen de Azucena." class="wh-40"  src="{{url_for('static', filename = 'img/afiches/memoria2-Imagen2.png')}}">
         </div>  
         <div class="caja1">
            <p>
@@ -38,7 +38,7 @@
     <!-- tercera fila -->
     <div tabindex="0" class="grid__texto flex__container2">
       <div class="caja2">
-            <img role="img" aria-label="Imagen de perfil de Gisela." alt="Imagen de Gisela." src="../img/afiches/memoria2-Imagen3.png" alt="">
+            <img role="img" aria-label="Imagen de perfil de Gisela." alt="Imagen de Gisela." src="{{url_for('static', filename = 'img/afiches/memoria2-Imagen3.png')}}" alt="">
       </div>  
       <div class="caja1">
           <p>
@@ -52,7 +52,7 @@
         <div tabindex="0" class="grid__texto flex__container3">
             <!-- columna 1 -->
             <div class="caja10">
-              <img role="img" aria-label="Imagen de perfil de Betina." alt="Imagen de Betina." src="../img/afiches/memoria2-Imagen4.png">
+              <img role="img" aria-label="Imagen de perfil de Betina." alt="Imagen de Betina." src="{{url_for('static', filename = 'img/afiches/memoria2-Imagen4.png')}}">
             </div>  
             <div class="caja1">
             <p>
@@ -64,7 +64,7 @@
         <div tabindex="0" class="grid__texto flex__container3">
             <!-- columna 2 -->
             <div class="caja10">
-              <img role="img" aria-label="Imagen de perfil de Nancy." alt="Imagen de Nancy." src="../img/afiches/memoria2-Imagen5.png">
+              <img role="img" aria-label="Imagen de perfil de Nancy." alt="Imagen de Nancy." src="{{url_for('static', filename = 'img/afiches/memoria2-Imagen5.png')}}">
             </div>  
             <div class="caja1">
                 <p>
@@ -85,13 +85,13 @@
       </div>
       
       <div class="caja2">
-            <img role="img" aria-label="Imagen de perfil de Estefanía." alt="Imagen de Estefanía." src="../img/afiches/memoria2-Imagen6.png">
+            <img role="img" aria-label="Imagen de perfil de Estefanía." alt="Imagen de Estefanía." src="{{url_for('static', filename = 'img/afiches/memoria2-Imagen6.png')}}">
       </div>  
     </div>
     <!-- sexta fila -->
     <div tabindex="0" class="grid__texto flex__container2">
       <div class="caja2">
-            <img role="img" aria-label="Imagen de perfil de Marily." alt="Imagen de Marily ." src="../img/afiches/memoria2-Imagen7.webp">
+            <img role="img" aria-label="Imagen de perfil de Marily." alt="Imagen de Marily ." src="{{url_for('static', filename = 'img/afiches/memoria2-Imagen7.webp')}}">
       </div>  
       <div class="caja1">
           <p>
@@ -100,24 +100,6 @@
       </div>
     </div>
   </div>
-    <div class="go-up">
-      <a role="button" tabindex="0" aria-label="Regresar al encabezado."  alt="Botón para regresar al encabezado." href="#afiche-header">
-          <img loading="lazy" src="../img/general/arrow-up.svg"  alt="imagen del botón para regresar al encabezado.">
-      </a>
-    </div>
-
-    <!-- End Tap Target Structure -->
-    <div class="main-container-boton tooltip">
-      <a role="button" tabindex="0" aria-label="Volver a la página anterior."  alt="Botón para volver a la página anterior." class="boton verde-4" onclick="history.back()">
-        <div class="boton-info">
-          <p>Go back</p> <img src="../img/general/backArrow.svg" alt="backArrow">
-        </div>
-      </a>
-      <span class="tooltiptext">Botón para volver a la página anterior.</span>
-    </div>
-  </main>
-  <!-- footer -->
-  <footer></footer>
-  <!-- script -->
-  <script src="../js/lixtbox.js"></script>
+        <!-- boton para volver a arriba -->
+        {% include ('partials/_button.html') %}
   {% endblock %}

@@ -11,14 +11,14 @@
                 <div class="main-card-body">
                     
                     <div class="main-card-img-container">
-                        <img src="../img/section2/map-1.png" height="88px" alt="backArrow">
+                        <img src="{{url_for('static', filename = 'img/section2/map-1.png')}}" height="88px" alt="backArrow">
                     </div>
 
                     
                     <div class="main-container-boton">
                         <a class="boton verde-4" onclick="history.back()">
                             <div class="boton-info">
-                                <p>Interview map</p> <img src="../img/people/webp/handPointUp.webp" height="88px" alt="backArrow">
+                                <p>Interview map</p> <img src="{{url_for('static', filename = 'img/people/webp/handPointUp.webp')}}" height="88px" alt="backArrow">
                             </div>
                         </a>
                     </div>
@@ -30,12 +30,12 @@
                         </div>
                     </div> -->
                     <div class="main-card-img-container">
-                        <img src="../img/section2/waterLevel.png" height="88px" alt="backArrow">
+                        <img src="{{url_for('static', filename = 'img/section2/waterLevel.png')}}" height="88px" alt="backArrow">
                     </div>
                     <div class="main-container-boton">
-                        <a class="boton verde-4" href="./../water-level-simulator.html">
+                        <a class="boton verde-4" href="/water-level-simulator">
                             <div class="boton-info">
-                                <p>Water lavel simulator</p> <img src="../img/people/webp/handPointUp.webp" height="88px" alt="backArrow">
+                                <p>Water lavel simulator</p> <img src="{{url_for('static', filename = 'img/people/webp/handPointUp.webp')}}" height="88px" alt="backArrow">
                             </div>
                         </a>
                     </div>
@@ -46,15 +46,10 @@
                     </div> -->
                 </div>
             </div>
-            <div class="main-container-boton tooltip">
-                <a role="button" tabindex="0" aria-label="Volver a la página anterior."  alt="Botón para volver la página anterior." class="boton verde-4" onclick="history.back()">
-                  <div class="boton-info">
-                    <p>Go back</p> <img src="../img/general/backArrow.svg" alt="backArrow">
-                  </div>
-                </a>
-                <span class="tooltiptext">Botón para volver a la página anterior.</span>
-            </div>
+            
         </div>
+        <!-- boton para ir arriba -->
+        {% include ('partials/_button.html') %}
     </main>
     <!-- script -->
     <script src="../js/lixtbox.js"></script>

@@ -11,7 +11,7 @@ class CustomRouter:
         return render_template('sidebar/sections.html')
 
     def render_announcements(self):
-        return render_template('sidebar/announcements.html')
+        return render_template('sidebar/anounce.html')
 
     def render_covid(self):
         return render_template('sidebar/covid.html')
