@@ -644,8 +644,18 @@ nav {
 }
 .main-card-info {
   margin: 1rem 0 0 0;
-  padding: 0 3rem;
+  padding: 1rem !important;
   text-align: justify;
+}
+@media (max-width: 768px){
+    .main-card-info{
+        padding: 0 1rem;
+    }
+}
+@media (min-width: 768px){
+    .main-card-info{
+        padding: 0 3rem !important;
+    }
 }
 #WACContainer.WACContainer
   .WACHomeScreenModern__body.WACHomeScreenModern__body--fill {
