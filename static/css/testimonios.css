@@ -50,7 +50,7 @@ h4 {
 /** Cursos **/
 .curso {
   display: grid;
-  padding: 3rem 0;
+  padding: 2rem 0;
   justify-items: center;
 }
 
@@ -116,4 +116,13 @@ h4 {
 .curso__info {
   /* font-size: calc(.4em + 1vw); */
   /* font-size: 2rem; */
+}
+
+/*Esto es para modificar la descripcion del parrafo en Why-do-we-flood y sandbox*/
+p.video__descripcion {
+  top: 0;
+  left: 0;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  padding-bottom: 2rem;
 }

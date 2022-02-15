@@ -96,7 +96,7 @@ class CustomRouter:
         return render_template('/recomendacion-como-actuar.html',flag_1="opcion_4",flag_2="opcion_3")
 
     def render_smart_survival(self):
-        return render_template('')
+        return render_template('/mochila-inteligente.html')
 
     def render_where_to_go(self):
         return render_template('')
