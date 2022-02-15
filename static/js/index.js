@@ -30,6 +30,40 @@ window.addEventListener("DOMContentLoaded", () => {
         document.getElementById("header").focus();
     }
 
+    // ###########
+    // LIGHT GALLERY
+    // ###########
+    var imagPop = document.getElementById("lightgallery");
+    console.log(imagPop);
+    if (imagPop != null){
+        lightGallery(imagPop, { 
+            download:false,
+            speed: 500,
+            addClass: 'lg-custom-thumbnails',
+            plugins: [lgZoom, lgThumbnail, lgVideo],      
+            mobileSettings:{ 
+                showCloseIcon: true,
+            }
+        });
+    }
+
+    let listimgPop = document.getElementsByClassName("gallery__libro");
+    console.log(listimgPop);
+    if(listimgPop != null){
+        for (let i = 0; i < listimgPop.length; i++) {
+            lightGallery(listimgPop[i], { 
+                download:false,
+                speed: 500,
+                addClass: 'lg-custom-thumbnails',
+                plugins: [lgThumbnail, lgVideo],
+                mobileSettings:{ 
+                    showCloseIcon: true,
+                }
+            });
+        }
+    }
+
+
 });
 const onkey_tab = (e)=>{
     switch (e.keyCode) {
@@ -81,33 +115,3 @@ const toggleMenu = () => {
 
 };
 
-// LIGHT GALLERY
-var imagPop = document.getElementById("lightgallery");
-console.log(imagPop);
-if (imagPop != null){
-    lightGallery(imagPop, { 
-        download:false,
-        speed: 500,
-        addClass: 'lg-custom-thumbnails',
-        plugins: [lgZoom, lgThumbnail, lgVideo],      
-        mobileSettings:{ 
-            showCloseIcon: true,
-        }
-     });
-}
-
-let listimgPop = document.getElementsByClassName("gallery__libro");
-console.log(listimgPop);
-if(listimgPop != null){
-    for (let i = 0; i < listimgPop.length; i++) {
-        lightGallery(listimgPop[i], { 
-            download:false,
-            speed: 500,
-            addClass: 'lg-custom-thumbnails',
-            plugins: [lgThumbnail, lgVideo],
-            mobileSettings:{ 
-                showCloseIcon: true,
-            }
-         });
-    }
-}
