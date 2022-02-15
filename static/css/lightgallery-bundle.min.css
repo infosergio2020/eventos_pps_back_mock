@@ -1404,3 +1404,18 @@ body:not(.lg-from-hash)
   right: 0;
   left: 0;
 }
+
+/* custom class by kotty_&_katty_&_kitty */
+
+#lg-prev-1:focus,#lg-prev-1:hover{
+  border: 1.5px solid white;
+}
+
+#lg-next-1:focus,#lg-next-1:hover{
+  border: 1.5px solid white!important;
+}
+
+#lg-close-1:focus,#lg-close-1:hover{
+  border: 1.5px solid white!important;
+  border-radius: 50%;
+}

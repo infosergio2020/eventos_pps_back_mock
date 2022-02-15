@@ -34,7 +34,7 @@ window.addEventListener("DOMContentLoaded", () => {
     // LIGHT GALLERY
     // ###########
     var imagPop = document.getElementById("lightgallery");
-    console.log(imagPop);
+    // console.log(imagPop); //imprime el elemento capturado con getElement
     if (imagPop != null){
         lightGallery(imagPop, { 
             download:false,
@@ -46,6 +46,25 @@ window.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
+
+
+    // #################
+    // MANEJO DE EVENTOS LIGHT GALLERY 
+// Perform any action just before opening the gallery
+    // imagPop.addEventListener('lgBeforeOpen', (event) => {
+    //     alert('onBeforeOpen');
+    //     console.log("target capturado antes de abrir la galería: ")
+    //     console.log(event.target);
+    // });
+
+
+    imagPop.addEventListener('lgAfterOpen', (event) => {
+        alert('lgAfterAppendSlide');
+        document.getElementById('lg-prev-1').focus();
+    });
+
+    // #################
+
 
     let listimgPop = document.getElementsByClassName("gallery__libro");
     console.log(listimgPop);
@@ -65,6 +84,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 });
+
 const onkey_tab = (e)=>{
     switch (e.keyCode) {
         case 13:
