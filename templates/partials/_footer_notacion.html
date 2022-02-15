@@ -1,11 +1,15 @@
-<!-- barra de secciones -->
+<!-- barra de secciones GENERAL-->
 <script src="{{url_for('static', filename = 'js/lixtbox.js')}}"></script>
 
 <!-- photo-album.html / shocking-photos.html / water-leve-simulator.html -->
+{% if flag_2 == "opcion_2" %}
 <script src="{{url_for('static', filename = 'js/lightgallery.min.js')}}"></script>
 <script src="{{url_for('static', filename = 'js/lg-zoom.min.js')}}"></script>
 <script src="{{url_for('static', filename = 'js/lg-thumbnail.min.js')}}"></script>
 <script src="{{url_for('static', filename = 'js/lg-video.min.js')}} "></script>
+{% endif %}
 
 <!-- recomendacion-como-actuar.html / testimonio123  -->
+{% if flag_2 == "opcion_3" %}
 <script src="{{url_for('static', filename = 'js/acordeon.js')}} "></script>
+{% endif %}

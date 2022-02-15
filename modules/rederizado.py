@@ -4,7 +4,7 @@ class CustomRouter:
 
     # index
     def render_index(self):
-        return render_template('index.html')
+        return render_template('index.html',flag_1="index",flag_2=" ")
 
     # secciones del sidebar
     def render_sections(self):
@@ -31,7 +31,7 @@ class CustomRouter:
 
     # subseccion-1
     def render_before_flood(self):
-        return render_template('/testimonio1.html')
+        return render_template('/testimonio1.html',flag_1="opcion_4",flag_2="opcion_3")
 
     def render_noticias_dia(self):
         return render_template('/the-news-of-the-day.html')
@@ -47,7 +47,7 @@ class CustomRouter:
         return render_template('index.html')
 
     def render_agua_simulador(self):
-        return render_template('/water-level-simulator.html')
+        return render_template('/water-level-simulator.html',flag_1="opcion_2",flag_2="opcion_2")
 
 
 
@@ -57,16 +57,16 @@ class CustomRouter:
         return render_template('sections/section-3.html')
     # subseccion-3
     def render_diarios(self):
-        return render_template('/diarios.html')
+        return render_template('/diarios.html',flag_1="opcion_1",flag_2=" ")
 
     def render_shocking_photos(self):
-        return render_template('/shocking-photos.html')
+        return render_template('/shocking-photos.html',flag_1="opcion_2",flag_2="opcion_2")
 
     def render_during_flood(self):
-        return render_template('/testimonio2.html')
+        return render_template('/testimonio2.html',flag_1="opcion_4",flag_2="opcion_3")
 
     def render_photo_album(self):
-        return render_template('/photo-album.html')
+        return render_template('/photo-album.html',flag_1="opcion_2",flag_2="opcion_2",flag_3="opcion_3")
 
 
 
@@ -77,7 +77,7 @@ class CustomRouter:
         return render_template('sections/section-4.html')
     # subseccion-4
     def render_after_flood(self):
-        return render_template('/testimonio3.html')
+        return render_template('/testimonio3.html',flag_1="opcion_4",flag_2="opcion_3")
 
     def render_sandbox(self):
         return render_template('/sandbox.html')
@@ -93,7 +93,7 @@ class CustomRouter:
         return render_template('sections/section-5.html')
     # subseccion-5
     def render_recomendacion(self):
-        return render_template('/recomendacion-como-actuar.html')
+        return render_template('/recomendacion-como-actuar.html',flag_1="opcion_4",flag_2="opcion_3")
 
     def render_smart_survival(self):
         return render_template('')
@@ -120,7 +120,7 @@ class CustomRouter:
 
 
     def render_inundacion_exterior(self):
-        return render_template('/Inundaciones-en-el-exterior.html')
+        return render_template('/Inundaciones-en-el-exterior.html',flag_1="opcion_1",flag_2=" ")
 
     #subseccion-inundacion-exterior 
     def render_alemania(self):  
@@ -135,7 +135,7 @@ class CustomRouter:
 
 
     def render_conclusiones(self):
-        return render_template('/Conclusiones-del-evento.html')
+        return render_template('/Conclusiones-del-evento.html',flag_1="opcion_1",flag_2=" ")
 
     def render_conclusiones_radio(self):  
         return render_template('/conclusion-del-evento/la-ayuda-de-la-radio.html')   

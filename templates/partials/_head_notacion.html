@@ -14,12 +14,7 @@
 
 
     <!-- APARTIR DE ACA SE VA ARMAR LA DISTRIBUCION DE LINKS Y SCRIPTS -->
-    
-
-    <!-- index.html -->
-    <link rel="preload" href="{{url_for('static', filename = './css/chat.css')}}" as="style">
-    <link rel="stylesheet" href="{{url_for('static', filename = './css/chat.css')}}">  
-    
+  
     <!-- ESTILOS GENERALES (ESTAN EN TODAS LAS PAGINAS) -->
     <link rel="preload" href="{{url_for('static', filename = './css/normalize.css')}}" as="style">
     <link rel="stylesheet" href="{{url_for('static', filename = './css/normalize.css')}}">
@@ -30,31 +25,46 @@
     <link rel="preload" href="{{url_for('static', filename = './css/lixtbox.css')}}" as="style">
     <link rel="stylesheet" href="{{url_for('static', filename = './css/lixtbox.css')}}">
 
-    <!-- diario.html / Conclusiones-del-evento.html & Inundaciones-en-el-exterior.html-->
+    <!-- index.html -->
+    {% if flag_1 == "index" %}
+    <link rel="preload" href="{{url_for('static', filename = './css/chat.css')}}" as="style">
+    <link rel="stylesheet" href="{{url_for('static', filename = './css/chat.css')}}">  
+    {% endif %}
 
+    <!-- diario.html / Conclusiones-del-evento.html & Inundaciones-en-el-exterior.html-->
+    {% if flag_1 == "opcion_1" %}
     <link rel="preload" href="{{url_for('static', filename = './css/diario.css')}}" as="style">
-    <link rel="stylesheet" href="{{url_for('static', filename = './css/diario.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename = './css/diario.css')}}"> 
+    {% endif %}
 
     <!-- photo-album.html / shocking-photos & water-level-simulator.html use this-->
+    {% if flag_1 == "opcion_2" %}
     <link rel="preload" href="{{url_for('static', filename = './css/lightgallery-bundle.min.css')}}" as="style">
-    <link rel="stylesheet" href="{{url_for('static', filename = './css/lightgallery-bundle.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename = './css/lightgallery-bundle.min.css')}}">    
+    {% endif %}
+    
 
     <!-- photo-album.html -->
+    {% if flag_3 == "opcion_3" %}
     <link rel="preload" href="{{url_for('static', filename = './css/libro.css')}}" as="style">
-    <link rel="stylesheet" href="{{url_for('static', filename = './css/libro.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename = './css/libro.css')}}">    
+    {% endif %}
 
     <!-- recomendacion-como-actuar.html / testimonio123 -->
-    <link rel="preload" href="{{url_for('static', filename = ''./css/testimonios.css')}}" as="style">
+    {% if flag_1 == "opcion_4" %}
+    <link rel="preload" href="{{url_for('static', filename = './css/testimonios.css')}}" as="style">
     <link rel="stylesheet" href="{{url_for('static', filename = './css/testimonios.css')}}">
 
-    <link rel="preload" href="{{url_for('static', filename = ''./css/minAcordeon.css')}}" as="style">
+    <link rel="preload" href="{{url_for('static', filename = './css/minAcordeon.css')}}" as="style">
     <link rel="stylesheet" href="{{url_for('static', filename = './css/minAcordeon.css')}}">
-
+    {% endif %}
 
     <!--diario.html / Conclusiones-del-evento.html & Inundaciones-en-el-exterior.html -->
+    {% if flag_1 == "opcion_5" %}
     <link rel="preload" href="{{url_for('static', filename = './css/diario.css')}}" as="style">
-    <link rel="stylesheet" href="{{url_for('static', filename = './css/diario.css')}}">
-
+    <link rel="stylesheet" href="{{url_for('static', filename = './css/diario.css')}}">    
+    {% endif %}
+    
 
     <!--SCRIPT'S GENERALES (ESTAN EN TODAS LAS PAGINAS) -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
