@@ -63,11 +63,13 @@ window.addEventListener("DOMContentLoaded", () => {
     // MANEJO DE EVENTOS LIGHT GALLERY 
     // Perform any action just before opening the gallery
     let listimgPop = document.getElementsByClassName("gallery__libro");
-    if (listimgPop != null) {
-        listimgPop[0].addEventListener('lgAfterOpen', (event) => {
-            alert('lgAfterAppendSlide');
-            document.getElementById('lg-prev-1').focus();
-        });
+    if (listimgPop != null ) {
+        if (listimgPop.length != 0 ) {
+            listimgPop[0].addEventListener('lgAfterOpen', (event) => {
+                alert('lgAfterAppendSlide');
+                document.getElementById('lg-prev-1').focus();
+            });
+        }
     }
 
     if(listimgPop != null){

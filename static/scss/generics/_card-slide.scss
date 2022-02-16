@@ -54,6 +54,15 @@
 
 .main-card-info {
     margin: 1rem 0 0 0;
-    padding: 0 3rem;
+    padding: 1rem !important;
     text-align: justify;
 }
+
+
+
+@media (min-width: 768px){
+    .main-card-info{
+        padding: 0 3rem !important;
+    }
+}
+
