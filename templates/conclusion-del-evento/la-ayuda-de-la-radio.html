@@ -2,8 +2,8 @@
 {% block body %}
 <!-- Info de la ayuda de la radio-->
   <main>
-    <div class="contenedor-testimonio">
-
+    <div class="main-card">
+    <div class="main-card-body">
     <div id="afiche-header" class="afiche__head">
       <h1 tabindex="0" class="centrar-texto text-shadow">
         La ayuda de la Radio.
@@ -48,13 +48,40 @@
 
         </p>
       </div>
+      <div  class="grid__container__3">
+      <!-- img 1 -->
+      <div class="grid__columna grid__image mg-bottom">
+        <div  class="grid__image small">
+            <img tabindex="0" width="400px" role="img" src="{{url_for('static', filename = 'img/afiches/radio-Imagen1.png')}}" aria-label="Radio portatil Philco PRM60 AM - FM analógica. 1 de 3." alt="Foto: Radio portatil Philco PRM60 AM - FM analógica. 1 de 3.">
+            <small class="contenedor__text">
+              Foto: Radio portatil Philco PRM60 AM - FM analógica.
+            </small>
+        </div>
       </div>
-
-      <div  tabindex="0"class="caja5">
-        <img role="img" aria-label="Imagen de la radio." alt="Imagen de la radio." src="{{url_for('static', filename = 'img/afiches/radio-Imagen1.png')}}">
+      <!-- img 2 -->
+      <div class="grid__columna grid__image mg-bottom">
+            <div class="grid__image small">
+                <img  tabindex="0" role="img" src="{{url_for('static', filename = 'img/afiches/radio-Imagen2.png')}}" aria-label="Radio Portatil Winco Dual AM - FM analógica. 2 de 3." alt="Foto: Radio Portatil Winco Dual AM - FM analógica.">
+                <small class="contenedor__text">
+                  Foto: Radio Portatil Winco Dual AM - FM analógica.
+                </small>
+            </div>
+      </div>
+      <!-- img 3 -->
+      <div class="grid__columna grid__image mg-bottom">
+        <div class="grid__image small">
+            <img  tabindex="0" role="img" src="{{url_for('static', filename = 'img/afiches/radio-Imagen3.png')}}" aria-label="Radio Portatil Sony Icf-p36 AM - FM analógica. 3 de 3." alt="Foto: Radio Portatil Sony Icf-p36 AM - FM analógica.">
+            <small class="contenedor__text">
+              Foto: Radio Portatil Sony Icf-p36 AM - FM analógica.
+            </small>
+        </div>       
+      </div>
+    </div>
+      <!-- fin de las imagenes -->
       </div>
     </div>
   </div>
+</div>
     <!-- boton para volver a arriba -->
     {% include ('partials/_button.html') %}
   </main>
