@@ -133,7 +133,5 @@ const toggleMenu = () => {
         document.getElementById("close-sideBar").blur();
     }
     
-
-
 };
 

@@ -13,7 +13,6 @@
                 </div>
                 <div class="main-card-body">
                     <div class="gallery__container" id="lightgallery">
-                       
                               <!-- <a aria-label="imagen de la galería-1 de 19.Presione enter si desea abrir el carrousel de imágenes." alt= "img1." href="../../img/section3/album/1.webp">
                                 <img loading="lazy" alt= "imagen de la galeria-1" src="../../img/section3/album/1.webp" />
                               </a>
@@ -71,19 +70,19 @@
                               <a aria-label="imagen de la galería-15 de 19.Presione enter si desea abrir el carrousel de imágenes." alt= "img15." href="../../img/section3/album/15.webp" class="vertical">
                                 <img loading="lazy" alt= "imagen de la galeria" src="../../img/section3/album/15.webp" />
                               </a>-->
-                              <a role="img" aria-label="imagen de la galería-16 de 19.Presione enter si desea abrir el carrousel de imágenes." alt= "img16." href="{{url_for('static', filename = 'img/section3/album/16.webp')}}" class="vertical">
+                              <a role="link" class="img1" aria-label="imagen de la galería-16 de 19.Presione enter si desea abrir el carrousel de imágenes." alt= "img16." href="{{url_for('static', filename = 'img/section3/album/16.webp')}}" class="vertical">
+                                <img  loading="lazy" aria-label="imagen de la galería-2 de 7.Presione enter si desea abrir el carrousel de imágenes." alt= "img2." src="{{url_for('static', filename = 'img/section3/album/16.webp')}}" />
                                 </a>
-                              <a aria-label="imagen de la galería-17 de 19.Presione enter si desea abrir el carrousel de imágenes." alt= "img17." href="{{url_for('static', filename = 'img/section3/album/17.webp')}}" class="vertical"> 
+                              <a role="link" class="img1" aria-label="imagen de la galería-17 de 19.Presione enter si desea abrir el carrousel de imágenes." alt= "img17." href="{{url_for('static', filename = 'img/section3/album/17.webp')}}" class="vertical"> 
                                 <img loading="lazy" alt= "imagen de la galeria" src="{{url_for('static', filename = 'img/section3/album/17.webp')}}" />
                               </a>
-                              <a aria-label="imagen de la galería-18 de 19.Presione enter si desea abrir el carrousel de imágenes." alt= "img18." href="{{url_for('static', filename = 'img/section3/album/18.webp')}}" data-sub-html="<h4>Vista acerca de la vaca totalmente inundado.</h4><p>(foto: Adrian Scandar).</p>">
-                                
+                              <a role="link" class="img1" aria-label="imagen de la galería-18 de 19.Presione enter si desea abrir el carrousel de imágenes." alt= "img18." href="{{url_for('static', filename = 'img/section3/album/18.webp')}}" data-sub-html="<h4>Vista acerca de la vaca totalmente inundado.</h4><p>(foto: Adrian Scandar).</p>">
                                 <img loading="lazy" alt= "imagen de la galeria" src="{{url_for('static', filename = 'img/section3/album/18.webp')}}" />
                               </a>
-                              <a aria-label="imagen de la galería-19 de 19.Presione enter si desea abrir el carrousel de imágenes." alt= "img19." href="{{url_for('static', filename = 'img/section3/album/19.webp')}}" data-sub-html="<h4>Vista acerca de la vaca totalmente inundado.</h4><p>(foto: Adrian Scandar).</p>">
+                              <a role="link" class="img1" aria-label="imagen de la galería-19 de 19.Presione enter si desea abrir el carrousel de imágenes." alt= "img19." href="{{url_for('static', filename = 'img/section3/album/19.webp')}}" data-sub-html="<h4>Vista acerca de la vaca totalmente inundado.</h4><p>(foto: Adrian Scandar).</p>">
                                 <img loading="lazy" alt= "imagen de la galeria" src="{{url_for('static', filename = 'img/section3/album/19.webp')}}" />
                               </a>
-                        
+
                     </div>
 
                 </div>
@@ -98,9 +97,5 @@
                       
     <!-- script -->
     <!-- galeria de imagenes -->
-    <script src="./../../js/lightgallery.min.js"></script>
-    <script src="./../../js/lg-zoom.min.js"></script>
-    <script src="./../../js/lg-thumbnail.min.js"></script>
-    <script src="./../../js/lg-video.min.js"></script>
   <!-- FIN Info de la galeria de fotos -->
   {% endblock %}
