@@ -27,9 +27,9 @@
         </div>
      </div>
     <!-- tercer componente  -->
-    <div  class="grid__container">
+    <div tabindex="0" class="grid__container">
         <div class="grid__columna">
-          <div tabindex="0" class="grid__texto">
+          <div  class="grid__texto">
             <hr class="mg-top">
             <h4 >Material bibliográfico</h4>         
             <p>
@@ -41,9 +41,9 @@
           </div>
         </div>
         <div class="grid__columna grid__image">
-          <div tabindex="0" class="grid__image small caja5">
-            <img role="img" src="{{url_for('static', filename = 'img/afiches/memoria-Imagen1.png')}}">
-            <small class="contenedor__text">Foto: Alagos, Flickr, CC BY-NC-SA 2.0.</small>
+          <div class="grid__image caja5">
+            <img role="img" aria-label="Alagos, Flickr, CC BY-NC-SA 2.0." alt="Foto: Alagos, Flickr, CC BY-NC-SA 2.0." src="{{url_for('static', filename = 'img/afiches/memoria-Imagen1.png')}}">
+            <small class="small contenedor__text">Foto: Alagos, Flickr, CC BY-NC-SA 2.0.</small>
           </div>
         </div>
    </div>
