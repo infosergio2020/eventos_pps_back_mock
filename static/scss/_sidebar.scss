@@ -3,7 +3,7 @@
     position: absolute;
     top: 0;
     left: -100%;
-    z-index: 999;
+    z-index: 800;
     width: 100%;
     background-color: #05241E;
     color: #fff;
@@ -23,6 +23,8 @@
     display: flex;
     align-items: center;
     column-gap: 1rem;
+    border-bottom: 2px solid #ffffff;
+    margin-bottom: .5rem;
 }
 
 #close-sideBar{
@@ -61,9 +63,6 @@
 }
 
 .sideBar-body{
-    border-top: 1px solid #ffffff;
-    
-    
     text-align: center;
     position: relative;
 }
@@ -77,7 +76,7 @@
 }
 
 .sidebar-link{
-    background-color: #083d33;
+    background-color: #0A8025;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -88,6 +87,12 @@
     // forma y separacion de los botones del sidebar
     padding: 1rem;
     margin-top: 4.3rem;
+}
+
+@media (min-width:768px) {
+    .sidebar-link{
+        margin-top: .2rem;
+    }
 }
 
 #tab-secciones li{
