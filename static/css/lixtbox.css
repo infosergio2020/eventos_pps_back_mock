@@ -37,12 +37,12 @@
   list-style: none;
 }
 
-.menubar-navigation > li {
+.menubar-navigation li {
   display: inline-block;
   position: relative;
 }
 
-.menubar-navigation > li li {
+.menubar-navigation li li {
   display: block;
 }
 
