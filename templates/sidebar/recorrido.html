@@ -28,10 +28,19 @@
                         </p>
                         
                     </div>
-                    <img class="mg-b" width="50rem" tabindex="0" role="img"  aria-label="imagen de la casa del niño desde adentro." alt="imagen de la casa del niño desde adentro." src="{{url_for('static', filename = 'img/general/otros/recorrido1.png')}}">
-                       
+                    <div class="flex__container16 mg-bot">
+                      <div class="caja16 ">
+                        <img  role="img" tabindex="0" src="{{url_for('static', filename = 'img/general/otros/recorrido1.png')}}"  aria-label="La casa del niño desde adentro." alt="Foto: La casa del niño desde adentro." >
+                      </div>  
+                      <small style="margin: 0 auto;" >Foto: <a 
+                        target="_blank" class="contenedor__text">La casa del niño desde adentro.</a>
+                     
+                    </div>
+                    
+                    
                 </div>
             </div>
+            
           </div>
           <!-- boton para ir arriba -->
           {% include ('partials/_button.html') %}
