@@ -75,6 +75,7 @@ const onkey_tab = (e) => {
         -1 == e[t].children[0].getAttribute("tabindex")
           ? e[t].children[0].setAttribute("tabindex", aux)
           : e[t].children[0].setAttribute("tabindex", -1);
+         
     -1 != e[0].children[0].getAttribute("tabindex")
       ? (e[0].children[0].focus(),
         document

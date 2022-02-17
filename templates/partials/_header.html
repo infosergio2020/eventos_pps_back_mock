@@ -11,7 +11,10 @@
         <div role="banner" class="item__img__h1 txt_white">
           <img class="wh-88" src="{{url_for('static', filename = './img/general/flooded-house.png')}}"
             alt="Logo de citadine.">
-          <h1>Generar <span>con</span>ciencia</h1>
+          <div class="header__left">
+            <div><h5 style="background-color: rgb(185, 4, 140);"> Generar <span>con</span>ciencia </h5></div>
+            <div>Experiencias y conocimientos sobre las inundaciones de La Plata</div>
+          </div>
         </div>
       </a>
       <!-- <small> La muestra contará con 6 áreas o secciones de exhibición, que deben recorrerse en forma secuencial,
@@ -36,7 +39,7 @@
               aria-expanded="false" href="#academics">
               <img class="wh-30" src="{{url_for('static', filename = 'img/general/secciones/1.webp')}}" alt="seccion">
               <div class="navegacion__enlace--info">
-                <p>sección 1</p>
+                <p>SECCIÓN 1</p>
                 <svg id="campo" xmlns="http://www.w3.org/2000/svg" class="down wh-12-9">
                   <polygon points="1 0, 11 0, 6 8"></polygon>
                 </svg>
@@ -73,7 +76,7 @@
 
 
               <div class="navegacion__enlace--info">
-                <p>sección 2</p>
+                <p>SECCIÓN 2</p>
                 <svg id="campo" xmlns="http://www.w3.org/2000/svg" class="down wh-12-9">
                   <polygon points="1 0, 11 0, 6 8"></polygon>
                 </svg>
@@ -105,7 +108,7 @@
 
 
               <div class="navegacion__enlace--info">
-                <p>sección 3</p>
+                <p>SECCIÓN 3</p>
                 <svg id="campo" xmlns="http://www.w3.org/2000/svg" class="down wh-12-9">
                   <polygon points="1 0, 11 0, 6 8"></polygon>
                 </svg>
@@ -146,7 +149,7 @@
 
 
               <div class="navegacion__enlace--info">
-                <p>sección 4</p>
+                <p>SECCIÓN 4</p>
                 <svg id="campo" xmlns="http://www.w3.org/2000/svg" class="down wh-12-9">
                   <polygon points="1 0, 11 0, 6 8"></polygon>
                 </svg>
@@ -180,7 +183,7 @@
               <img class="wh-30" src="{{url_for('static', filename = 'img/general/secciones/5.webp')}}" alt="seccion">
 
               <div class="navegacion__enlace--info">
-                <p>sección 5</p>
+                <p>SECCIÓN 5</p>
                 <svg id="campo" xmlns="http://www.w3.org/2000/svg" class="down wh-12-9">
                   <polygon points="1 0, 11 0, 6 8"></polygon>
                 </svg>
@@ -221,7 +224,7 @@
               <img class="wh-30" src="{{url_for('static', filename = 'img/general/secciones/6.webp')}}" alt="seccion">
 
               <div class="navegacion__enlace--info">
-                <p>sección 6</p>
+                <p>SECCIÓN 6</p>
                 <svg id="campo" xmlns="http://www.w3.org/2000/svg" class="down wh-12-9">
                   <polygon points="1 0, 11 0, 6 8"></polygon>
                 </svg>
@@ -282,8 +285,9 @@
       <nav>
         <ul class="sidebar-body-ul" role="menubar">
           <!-- NOTA: Las secciones no estan en la vista del PC -->
+          
           <li tabindex="-1" role="menuitem">
-            <a tabindex="-1" id="tab-secciones" href="sections" class="sidebar-link"
+            <a id="tab-secciones" href="sections" class="sidebar-link"
               aria-label="Estas dentro del menu deslizante. Haga click si decea entrar a las secciones. 1 de 5.">
               <img class="wh-42" src="{{url_for('static', filename = './img/general/menu-deslizante/secciones.png')}}"
                 alt="calendario-image">
@@ -292,8 +296,9 @@
                 alt="flecha-image">
             </a>
           </li>
+        
           <li tabindex="-1" role="menuitem">
-            <a tabindex="-1" id="tab-novedades" href="anounce" class="sidebar-link" aria-label="Haga click si decea entrar a Announcements. 2 de 5.">
+            <a id="tab-novedades" href="anounce" class="sidebar-link" aria-label="Haga click si decea entrar a Announcements. 2 de 5.">
               <img class="wh-42" src="{{url_for('static', filename = './img/general/menu-deslizante/calendar.webp')}}"
                 alt="calendario-image">
               <p class="no-margin">Novedades</p>
@@ -302,7 +307,7 @@
             </a>
           </li>
           <li tabindex="-1" role="menuitem">
-            <a tabindex="-1" id="tab-covid" href="covid" class="sidebar-link" aria-label="Haga click si decea entrar a COVID protocols. 3 de 5.">
+            <a id="tab-covid" href="covid" class="sidebar-link" aria-label="Haga click si decea entrar a COVID protocols. 3 de 5.">
               <img class="wh-42" src="{{url_for('static', filename = './img/general/menu-deslizante/virus.webp')}}"
                 alt="virus-image">
               <p class="no-margin">Protocolos COVID</p>
@@ -311,7 +316,7 @@
             </a>
           </li>
           <li tabindex="-1" role="menuitem" >
-            <a tabindex="-1" id="tab-about" href="about" class="sidebar-link" aria-label="Haga click si decea entrar a hacerca de citadine. 4 de 5.">
+            <a id="tab-about" href="about" class="sidebar-link" aria-label="Haga click si decea entrar a hacerca de citadine. 4 de 5.">
               <img class="wh-42" src="{{url_for('static', filename = './img/general/menu-deslizante/Citadine.webp')}}"
                 alt="informacion-image">
               <p class="no-margin">Acerca del evento</p>
@@ -321,7 +326,7 @@
             </a>
           </li>
           <li tabindex="-1" role="menuitem" >
-            <a id="tab-languaje" tabindex="-1" href="languaje" class="sidebar-link" aria-label="Haga click si decea entrar a hacerca de lenguajes. 5 de 5.">
+            <a id="tab-languaje" href="languaje" class="sidebar-link" aria-label="Haga click si decea entrar a hacerca de lenguajes. 5 de 5.">
               <img class="wh-42" src="{{url_for('static', filename = './img/general/menu-deslizante/languages.webp')}}"
                 alt="lenguajes-image">
               <p class="no-margin">Idiomas</p>
@@ -329,6 +334,7 @@
                 alt="flecha-image">
             </a>
           </li>
+        
         </ul>
       </nav>
     </div>
