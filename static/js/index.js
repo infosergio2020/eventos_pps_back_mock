@@ -70,16 +70,17 @@ const onkey_tab = (e) => {
     document.getElementById("menuIcono").classList.toggle("active"),
       document.getElementById("logo").classList.toggle("boton-active");
     let e = document.getElementsByClassName("sidebar-body-ul")[0].children;
-    for (let t = 0; t < e.length; t++)
-      (aux = t + 1),
-        -1 == e[t].children[0].getAttribute("tabindex")
-          ? e[t].children[0].setAttribute("tabindex", aux)
-          : e[t].children[0].setAttribute("tabindex", -1);
-    -1 != e[0].children[0].getAttribute("tabindex")
-      ? (e[0].children[0].focus(),
+    for (let t = 0; t < e.length; t++){
+        aux = t + 1;
+        if (-1 == e[t].children[0].getAttribute("tabindex") )
+           { e[t].children[0].setAttribute("tabindex", aux), e[t].setAttribute("tabindex", aux)}
+        else e[t].children[0].setAttribute("tabindex", -1),e[t].setAttribute("tabindex", -1);
+    }
+    if (-1 != e[0].children[0].getAttribute("tabindex"))
+      { (e[0].focus(),
         document
           .getElementById("close-sideBar")
-          .setAttribute("tabindex", e.length + 1))
-      : (document.getElementById("close-sideBar").setAttribute("tabindex", -1),
+          .setAttribute("tabindex", e.length + 1)) }
+    else (document.getElementById("close-sideBar").setAttribute("tabindex", -1),
         document.getElementById("close-sideBar").blur());
   };
