@@ -17,7 +17,9 @@
                               title="YouTube video player" 
                               frameborder="0" 
                               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                              allowfullscreen>
+                              allowfullscreen
+                              
+                              >
                   </iframe>
               </div>
               <!-- detalles del video -->
@@ -42,20 +44,18 @@
         <!-- boton para ir arriba -->
         {% include ('partials/_button.html') %}  
   </main>
-  <!-- barra de secciones -->
-  <script src="{{url_for('static', filename = './js/lixtbox.js')}}"></script>
   <!-- script del video -->
-    <script src="{{url_for('static', filename = './js/strings.js')}}"></script>
-    <script src="{{url_for('static', filename = './js/px-video.js')}}"></script>
+    <!-- <script src="{{url_for('static', filename = './js/strings.js')}}"></script>
+    <script src="{{url_for('static', filename = './js/px-video.js')}}"></script> -->
     <script>
     // Initialize
-    new InitPxVideo({
-        "videoId": "myvid",
-        "captionsOnDefault": true,
-        "seekInterval": 20,
-        "videoTitle": "clips of stand-up comedy",
-        "debug": true
-    });
+    // new InitPxVideo({
+    //     "videoId": "myvid",
+    //     "captionsOnDefault": true,
+    //     "seekInterval": 20,
+    //     "videoTitle": "clips of stand-up comedy",
+    //     "debug": true
+    // });
     </script>
  <!-- FIN Info de los diarios -->
  {% endblock %}
