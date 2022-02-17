@@ -113,6 +113,14 @@ def About():
 def Anounce():  
     return rutas.render_announcements()
 
+@app.route('/objetivo')
+def Objetivo():  
+    return rutas.render_objetivo()
+
+@app.route('/recorrido')
+def Recorrido():  
+    return rutas.render_recorrido()    
+
 @app.route('/covid')
 def Covid():  
     return rutas.render_covid()

@@ -1,0 +1,36 @@
+  <!-- Contenedor del testimonio -->
+  {% extends 'partials/_layout.html' %}
+  {% block body %}
+  <!-- Info de novedades-->
+    <main>
+        <div class="container">
+            <div class="main-card">
+                <div id="anounce" class="main-card-body" >
+                     <div class="afiche__head">
+                        <h1>Objetivo de la exhibición</h1>
+                      </div>
+                      <div class="main-card-img-container">                        
+                        <img tabindex="0" role="img"  aria-label="imagen de un megáfono." alt="imagen de un megáfono." class="main-section-icon" src="{{url_for('static', filename = 'img/general/otros/novedades1.png')}}" height="88px" alt="img 1">
+                        <img tabindex="0" role="img"  aria-label="imagen de una libreta." alt="imagen de una libreta." class="main-section-icon" src="{{url_for('static', filename = 'img/general/otros/novedades2.png')}}" height="88px" alt="img 2">
+                        <img tabindex="0" role="img"  aria-label="imagen de un diario." alt="imagen de un diario." class="main-section-icon" src="{{url_for('static', filename = 'img/general/otros/novedades3.png')}}" height="88px" alt="img 3">
+                    </div>  
+                    <div tabindex="0" class="main-card-info">
+                        <p>El 2 de abril de 2013, la incesante lluvia sobre la ciudad de La Plata y alrededores marcó un record histórico y provocó la mayor catástrofe sufrida por la ciudad. 
+                            Con 302 mm de lluvia intensa en 3 horas, y 400 en toda la noche, muchas regiones quedaron bajo el agua. Una catástrofe que no sólo se cobró vidas, sino que sumió a la
+                            población en una inestabilidad y peligrosidad extrema en cuestión de horas. 
+                            Si bien la tormenta tuvo un carácter inédito, hay múltiples razones interrelacionadas para la gravedad de la inundación, como la falta de obras hidráulicas, de drenaje, reservorios, plan de contingencia o el desarrollo urbano sin control ambiental. 
+                        </p>
+                        <p>
+                            En esta exhibición, entra en juego la ciencia ciudadana para la comunicación de riesgos: su objetivo es permitir a las personas comprender una situación mediante testimonios y relatos de testigos y sobrevivientes.
+                            La exhibición les guiará a través de las experiencias diferentes de cuatro personas. Se compartirán relatos, testimonios, conocimientos, acciones llevadas a cabo y ciertas recomendaciones para encarar este tipo de inundaciones. 
+                            Los elementos interactivos y las diferentes formas de informar y aprender hacen que sea una experiencia entretenida para niños y adultos. También habrá soporte visual y auditivo para que esta exposición sea lo más accesible posible.
+                        </p>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <!-- boton para ir arriba -->
+          {% include ('partials/_button.html') %}
+    </main>
+
+  {% endblock %}

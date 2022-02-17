@@ -13,6 +13,12 @@ class CustomRouter:
     def render_announcements(self):
         return render_template('sidebar/anounce.html')
 
+    def render_objetivo(self):
+        return render_template('sidebar/objetivo.html')
+
+    def render_recorrido(self):
+        return render_template('sidebar/recorrido.html')
+
     def render_covid(self):
         return render_template('sidebar/covid.html')
 

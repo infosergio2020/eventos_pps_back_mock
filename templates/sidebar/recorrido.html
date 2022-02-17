@@ -1,0 +1,40 @@
+  <!-- Contenedor del testimonio -->
+  {% extends 'partials/_layout.html' %}
+  {% block body %}
+  <!-- Info de novedades-->
+    <main>
+        <div class="container">
+            <div class="main-card">
+                <div id="anounce" class="main-card-body" >
+                     <div class="afiche__head">
+                        <h1>Recorrido recomendado</h1>
+                      </div>
+                      <div class="main-card-img-container">                        
+                        <img tabindex="0" role="img"  aria-label="imagen de un megáfono." alt="imagen de un megáfono." class="main-section-icon" src="{{url_for('static', filename = 'img/general/otros/novedades1.png')}}" height="88px" alt="img 1">
+                        <img tabindex="0" role="img"  aria-label="imagen de una libreta." alt="imagen de una libreta." class="main-section-icon" src="{{url_for('static', filename = 'img/general/otros/novedades2.png')}}" height="88px" alt="img 2">
+                        <img tabindex="0" role="img"  aria-label="imagen de un diario." alt="imagen de un diario." class="main-section-icon" src="{{url_for('static', filename = 'img/general/otros/novedades3.png')}}" height="88px" alt="img 3">
+                    </div>  
+                    <div tabindex="0" class="main-card-info">
+                        <p>La exposición trata sobre la inundación de La Plata del 2013, desde la mirada de los sobrevivientes y testigos. Está acompañada por el relato de cuatro personas que vivieron la inundación en carne propia y compartieron sus vivencias y conocimientos. 
+                          Está organizado en forma cronológica en 6 secciones  diferentes en las que se puede explorar y aprender mucho:
+                          Sección 1: De la lluvia a la inundación.
+                          Sección 2: Por la vida y la integridad física.
+                          Sección 3: Solo escombros y barro.
+                          Sección 4: Lecciones aprendidas.
+                          Sección 5: Estar preparados.
+                          Sección 6: Inundaciones en el exterior.
+                          Se puede recorrer las distintas áreas en forma entretenida y dinámica. Se incluyen juegos educativos y atracciones interactivas para grandes y pequeños.
+                          En el siguiente mapa se muestra la disposición de las áreas:
+                        </p>
+                        
+                    </div>
+                    <img class="mg-b" width="50rem" tabindex="0" role="img"  aria-label="imagen de la casa del niño desde adentro." alt="imagen de la casa del niño desde adentro." src="{{url_for('static', filename = 'img/general/otros/recorrido1.png')}}">
+                       
+                </div>
+            </div>
+          </div>
+          <!-- boton para ir arriba -->
+          {% include ('partials/_button.html') %}
+    </main>
+
+  {% endblock %}
