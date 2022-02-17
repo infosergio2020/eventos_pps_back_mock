@@ -43,6 +43,22 @@
   text-align: start;
   padding: 0 0.8rem;
 }
+.back-conclusiones-1{
+    background-image: url(./../img/diarios/tapas/Tapa-SOLIDAR.png);
+    background-size: cover;
+}
+.back-conclusiones-2{
+    background-image: url(./../img/diarios/tapas/Tapa\ reflex.png);
+    background-size: cover;
+}
+.back-conclusiones-3{
+    background-image: url(./../img/diarios/tapas/Tapa-LEGADO.png);
+    background-size: cover;
+}
+
+
+
+
 .back-1{
     background-image: url(./../img/diarios/tapas/Tapa-CHILE.png);
     background-size: cover;
