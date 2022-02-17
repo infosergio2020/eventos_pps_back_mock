@@ -9,7 +9,7 @@
           <div>
             <div class="main-card">
               <div id="contenido" class="main-card-body" aria-label="contenedor de bienvenida">
-                <img loading="lazy" tabindex="0" aria-labelledby="bienvenido" src="{{url_for('static', filename = './img/portada/Republica_de_los_ninos-scaled.webp')}}" alt="image republica de los niños" width="100%">
+                <img role="img" loading="lazy" tabindex="0" aria-labelledby="bienvenido" src="{{url_for('static', filename = './img/portada/Republica_de_los_ninos-scaled.webp')}}" aria-label="image republica de los niños." alt="image republica de los niños." width="100%">
                 <div id="bienvenido" class="main-card-info generar_conciencia span">
                   <div class="text__center">
                     <b>¡Bienvenido a la exhibición Generar <span>CON</span>CIENCIA</b>
@@ -34,16 +34,17 @@
                 </div>
               </div>
             </div>
-            <div role="button" class="main-container-boton">
+            <div role="button"  class="main-container-boton">
               <a class="boton verde-4" href="/sections">INGRESAR A LA MUESTRA</a>
     
             </div>
+            
           </div>
     
           <div class="paddin">
             <div class="main-card" style="background-color: #011b17d8;">
               <div class="main-card-body">
-                <img tabindex="0" aria-labelledby="ayuda" loading="lazy" src="{{url_for('static', filename = 'img/portada/ayuda.webp')}}" alt="imagen blog">
+                <img role="img" tabindex="0" aria-labelledby="ayuda" loading="lazy" src="{{url_for('static', filename = 'img/portada/ayuda.webp')}}" aria-label="imagen de un niño pidiendo ayuda."alt="imagen de un niño pidiendo ayuda.">
                 <div id="ayuda" class="main-card-info no-padding txt_left">
                   <h3>¡Ayuda! No sé por dónde empezar.</h3>
                   <p>
