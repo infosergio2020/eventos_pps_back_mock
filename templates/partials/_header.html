@@ -282,8 +282,8 @@
       <nav>
         <ul class="sidebar-body-ul" role="menubar">
           <!-- NOTA: Las secciones no estan en la vista del PC -->
-          <li tabindex="-1" role="none" id="tab-secciones" href="sections">
-            <a role="menuitem" class="sidebar-link"
+          <li tabindex="-1" role="menuitem">
+            <a id="tab-secciones" href="sections" class="sidebar-link"
               aria-label="Estas dentro del menu deslizante. Haga click si decea entrar a las secciones. 1 de 5.">
               <img class="wh-42" src="{{url_for('static', filename = './img/general/menu-deslizante/secciones.png')}}"
                 alt="calendario-image">
@@ -292,8 +292,8 @@
                 alt="flecha-image">
             </a>
           </li>
-          <li tabindex="-1" role="none" id="tab-novedades" href="anounce">
-            <a role="menuitem" class="sidebar-link" aria-label="Haga click si decea entrar a Announcements. 2 de 5.">
+          <li tabindex="-1" role="menuitem">
+            <a id="tab-novedades" href="anounce" class="sidebar-link" aria-label="Haga click si decea entrar a Announcements. 2 de 5.">
               <img class="wh-42" src="{{url_for('static', filename = './img/general/menu-deslizante/calendar.webp')}}"
                 alt="calendario-image">
               <p class="no-margin">Novedades</p>
@@ -301,8 +301,8 @@
                 alt="flecha-image">
             </a>
           </li>
-          <li tabindex="-1" role="none" id="tab-covid" href="covid">
-            <a role="menuitem" class="sidebar-link" aria-label="Haga click si decea entrar a COVID protocols. 3 de 5.">
+          <li tabindex="-1" role="menuitem">
+            <a id="tab-covid" href="covid" class="sidebar-link" aria-label="Haga click si decea entrar a COVID protocols. 3 de 5.">
               <img class="wh-42" src="{{url_for('static', filename = './img/general/menu-deslizante/virus.webp')}}"
                 alt="virus-image">
               <p class="no-margin">Protocolos COVID</p>
@@ -310,8 +310,8 @@
                 alt="flecha-image">
             </a>
           </li>
-          <li tabindex="-1" role="none" href="about">
-            <a role="menuitem" class="sidebar-link" aria-label="Haga click si decea entrar a hacerca de citadine. 4 de 5.">
+          <li tabindex="-1" role="menuitem" >
+            <a id="tab-about" href="about" class="sidebar-link" aria-label="Haga click si decea entrar a hacerca de citadine. 4 de 5.">
               <img class="wh-42" src="{{url_for('static', filename = './img/general/menu-deslizante/Citadine.webp')}}"
                 alt="informacion-image">
               <p class="no-margin">Acerca del evento</p>
@@ -320,8 +320,8 @@
                 alt="flecha-image">
             </a>
           </li>
-          <li tabindex="-1" role="none" href="languaje">
-            <a role="menuitem" class="sidebar-link" aria-label="Haga click si decea entrar a hacerca de lenguajes. 5 de 5.">
+          <li tabindex="-1" role="menuitem" >
+            <a id="tab-languaje" href="languaje" class="sidebar-link" aria-label="Haga click si decea entrar a hacerca de lenguajes. 5 de 5.">
               <img class="wh-42" src="{{url_for('static', filename = './img/general/menu-deslizante/languages.webp')}}"
                 alt="lenguajes-image">
               <p class="no-margin">Idiomas</p>
