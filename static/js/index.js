@@ -70,16 +70,6 @@ const onkey_tab = (e) => {
     document.getElementById("menuIcono").classList.toggle("active"),
       document.getElementById("logo").classList.toggle("boton-active");
     let e = document.getElementsByClassName("sidebar-body-ul")[0].children;
-<<<<<<< HEAD
-    for (let t = 0; t < e.length; t++)
-      (aux = t + 1),
-        -1 == e[t].children[0].getAttribute("tabindex")
-          ? e[t].children[0].setAttribute("tabindex", aux)
-          : e[t].children[0].setAttribute("tabindex", -1);
-         
-    -1 != e[0].children[0].getAttribute("tabindex")
-      ? (e[0].children[0].focus(),
-=======
     for (let t = 0; t < e.length; t++){
         aux = t + 1;
         if (-1 == e[t].children[0].getAttribute("tabindex") )
@@ -88,7 +78,6 @@ const onkey_tab = (e) => {
     }
     if (-1 != e[0].children[0].getAttribute("tabindex"))
       { (e[0].focus(),
->>>>>>> 281c56e4029562e71c46dc70a8470fcb61703291
         document
           .getElementById("close-sideBar")
           .setAttribute("tabindex", e.length + 1)) }
