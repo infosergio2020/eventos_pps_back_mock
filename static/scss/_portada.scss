@@ -136,9 +136,17 @@
 }
 
 .margin__franja{
-    margin: 0px -3rem;
+    margin: 0px -0.99rem;
     padding: 0.001rem 3rem;
     border-radius: 1rem;
+}
+
+@media (min-width:768px) {
+    .margin__franja{
+        margin: 0px -3rem;
+        padding: 0.001rem 3rem;
+        border-radius: 1rem;
+    }    
 }
 
 .text__center{
