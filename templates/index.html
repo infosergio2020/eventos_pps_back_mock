@@ -9,7 +9,7 @@
           <div>
             <div class="main-card">
               <div id="contenido" class="main-card-body" aria-label="contenedor de bienvenida">
-                <img tabindex="0" aria-labelledby="bienvenido" src="{{url_for('static', filename = './img/portada/Republica_de_los_ninos-scaled.webp')}}" alt="image republica de los niños" width="100%">
+                <img loading="lazy" tabindex="0" aria-labelledby="bienvenido" src="{{url_for('static', filename = './img/portada/Republica_de_los_ninos-scaled.webp')}}" alt="image republica de los niños" width="100%">
                 <div id="bienvenido" class="main-card-info generar_conciencia span">
                   <div class="text__center">
                     <b>¡Bienvenido a la exhibición Generar <span>CON</span>CIENCIA</b>
@@ -103,7 +103,7 @@
                             });
                             instance.updateHomeScreenConfig({
                                 
-                                bot_avatar_url: 'img/portada/bot.png'
+                                bot_avatar_url: "{{url_for('static', filename = 'img/portada/bot.png')}}"
     
                                 
                                 
