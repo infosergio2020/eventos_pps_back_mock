@@ -148,10 +148,12 @@
 }
 .card-libro .details p {
   /* transform: rotate(-10deg); */
-  /* padding: 0 0 0 20px; */
-  padding: -2px 0 7px 20px;
+  padding: 0 0 0 20px;
+  /* padding: -2px 0 7px 20px; */
+  font-size: large;
   color: #013243;
   pointer-events:none;
+  
 }
 .card-libro .details h4 {
   text-align: center;
@@ -169,9 +171,9 @@
   .card-libro .details p {
     /* padding: 0 0 0 20px; */
     padding: -2px 0 7px 20px;
-    font-size: 1.8rem;
+    /* font-size: 1.8rem; */
     pointer-events:none;
-    letter-spacing: normal;
+    font-size: medium;
 
   }
   .libro-container {
