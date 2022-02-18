@@ -90,15 +90,15 @@ const onkey_tab = (e) => {
   null != e &&
   e.addEventListener("click", (e) => {
     Swal.fire({
-      title: '<strong>Atención. </strong>Estas saliendo de la página Generar Conciencia hacia un enlace del diario El Día. ¿Desea continuar?',
+      title: 'Estas saliendo de la página <strong>Generar Conciencia</strong> hacia un enlace del diario <strong>El Día</strong>. ¿Desea continuar?',
       icon: 'warning',
       showCloseButton: true,
       showDenyButton: true,
       focusConfirm: false,
       confirmButtonText: 'Aceptar',
       denyButtonText: 'Cancelar',
-      confirmButtonAriaLabel: 'Saliendo de la página.',
-      denyButtonAriaLabel: 'Cancelado.'
+      confirmButtonAriaLabel: 'Aceptar.',
+      denyButtonAriaLabel: 'Cancelar.'
     }).then((result) => {
         if (result.isConfirmed) window.location.href='https://www.eldia.com/nota/2013-4-3--el-agua-ya-esta-en-un-metro-y-medio-por-favor-que-alguien-nos-mande-botes'
     })
@@ -108,15 +108,15 @@ const onkey_tab = (e) => {
   null != e &&
   e.addEventListener("click", (e) => {
     Swal.fire({
-      title: '<strong>Atención.</strong>Estas saliendo de la página Generar Conciencia hacia un enlace del diario Hoy. ¿Desea continuar?',
+      title: 'Estas saliendo de la página <strong>Generar Conciencia</strong> hacia un enlace del diario <strong>Hoy</strong>. ¿Desea continuar?',
       icon: 'warning',
       showCloseButton: true,
       showDenyButton: true,
       focusConfirm: false,
       confirmButtonText: 'Aceptar',
       denyButtonText: 'Cancelar',
-      confirmButtonAriaLabel: 'Saliendo de la página.',
-      denyButtonAriaLabel: 'Cancelado.'
+      confirmButtonAriaLabel: 'Aceptar.',
+      denyButtonAriaLabel: 'Cancelar.'
     }).then((result) => {
         if (result.isConfirmed) window.location.href='https://diariohoy.net/adjuntos/archivos/000/024/0000024100.pdf'
     })
@@ -126,15 +126,15 @@ const onkey_tab = (e) => {
   null != e &&
   e.addEventListener("click", (e) => {
     Swal.fire({
-      title: '<strong>Atención.</strong>Estas saliendo de la página Generar Conciencia hacia un enlace del diario Clarín. ¿Desea continuar?',
+      title: 'Estas saliendo de la página <strong>Generar Conciencia</strong> hacia un enlace del diario <strong>Clarín</strong>. ¿Desea continuar?',
       icon: 'warning',
       showCloseButton: true,
       showDenyButton: true,
       focusConfirm: false,
       confirmButtonText: 'Aceptar',
       denyButtonText: 'Cancelar',
-      confirmButtonAriaLabel: 'Saliendo de la página.',
-      denyButtonAriaLabel: 'Cancelado.'
+      confirmButtonAriaLabel: 'Aceptar.',
+      denyButtonAriaLabel: 'Cancelar.'
     }).then((result) => {
         if (result.isConfirmed) window.location.href='https://www.clarin.com/ciudades/critica-situacion-plata-cientos-evacuados_0_S19zAYFiDXg.html'
     })
@@ -144,15 +144,17 @@ const onkey_tab = (e) => {
   null != e &&
   e.addEventListener("click", (e) => {
     Swal.fire({
-      title: '<strong>Atención.</strong> Estas saliendo de la página Generar Conciencia hacia un enlace del diario La Nación. ¿Desea continuar?',
+      title: ' Estas saliendo de la página <strong>Generar Conciencia</strong> hacia un enlace del diario <strong>La Nación</strong>. ¿Desea continuar?',
       icon: 'warning',
       showCloseButton: true,
       showDenyButton: true,
       focusConfirm: false,
       confirmButtonText: 'Aceptar',
       denyButtonText: 'Cancelar',
-      confirmButtonAriaLabel: 'Saliendo de la página.',
-      denyButtonAriaLabel: 'Cancelado.'
+      // cancelButtonText:'funciona',
+      // cancelButtonAriaLabel: 'lool',
+      confirmButtonAriaLabel: 'Aceptar.',
+      denyButtonAriaLabel: 'Cancelar.'
     }).then((result) => {
         if (result.isConfirmed) window.location.href='https://es.kiosko.net/ar/2013-04-03/np/nacion.html'
     })
@@ -166,15 +168,15 @@ const onkey_tab = (e) => {
    for(let i=0;i<e.length;i++){
    e[i].addEventListener("click", (e) => {
      Swal.fire({
-       title: '<strong>Atención.</strong> Estas saliendo de la página Generar Conciencia hacia la página de Citadine. ¿Desea continuar?',
+       title: ' Estas saliendo de la página <strong>Generar Conciencia</strong> hacia la página de <strong>Citadine</strong>. ¿Desea continuar?',
        icon: 'warning',
        showCloseButton: true,
        showDenyButton: true,
        focusConfirm: false,
        confirmButtonText: 'Aceptar',
        denyButtonText: 'Cancelar',
-       confirmButtonAriaLabel: 'Saliendo de la página.',
-       denyButtonAriaLabel: 'Cancelado.'
+       confirmButtonAriaLabel: 'Aceptar.',
+       denyButtonAriaLabel: 'Cancelar.'
      }).then((result) => {
          if (result.isConfirmed) window.location.href='http://ifw-raspi.projekt.jade-hs.de/wordpress/'
      })
@@ -185,15 +187,15 @@ const onkey_tab = (e) => {
    for(let i=0;i<e.length;i++){
    e[i].addEventListener("click", (e) => {
      Swal.fire({
-       title: '<strong>Atención.</strong> Estas saliendo de la página Generar Conciencia hacia la página de Citadine. ¿Desea continuar?',
+       title: ' Estas saliendo de la página <strong>Generar Conciencia</strong> hacia la página de <strong>Citadine</strong>. ¿Desea continuar?',
        icon: 'warning',
        showCloseButton: true,
        showDenyButton: true,
        focusConfirm: false,
        confirmButtonText: 'Aceptar',
        denyButtonText: 'Cancelar',
-       confirmButtonAriaLabel: 'Saliendo de la página.',
-       denyButtonAriaLabel: 'Cancelado.'
+       confirmButtonAriaLabel: 'Aceptar.',
+       denyButtonAriaLabel: 'Cancelar.'
      }).then((result) => {
          if (result.isConfirmed) window.location.href='http://ifw-raspi.projekt.jade-hs.de/wordpress/nbs/'
      })
