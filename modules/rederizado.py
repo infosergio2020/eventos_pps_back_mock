@@ -115,7 +115,7 @@ class CustomRouter:
 
     # seccion-6
     def render_section_6(self):
-        return render_template('sections/section-6.html',flag_6="ir_citadine")
+        return render_template('sections/section-6.html')
     # subseccion-6
     def render_citadine_blue(self):
         return render_template('')
