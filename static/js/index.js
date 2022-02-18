@@ -19,7 +19,7 @@ window.addEventListener("DOMContentLoaded", () => {
   var e = document.getElementById("lightgallery");
   null != e &&
     e.addEventListener("lgAfterOpen", (e) => {
-      alert("lgAfterAppendSlide"), document.getElementById("lg-prev-1").focus();
+       document.getElementById("lg-prev-1").focus();
     }),
     null != e &&
       lightGallery(e, {
@@ -34,7 +34,6 @@ window.addEventListener("DOMContentLoaded", () => {
     (null != t &&
       0 != t.length &&
       t[0].addEventListener("lgAfterOpen", (e) => {
-        alert("lgAfterAppendSlide"),
           document.getElementById("lg-prev-1").focus();
       }),
     null != t)

@@ -1,1 +1,122 @@
-.contenedor-testimonio{margin:2rem auto;background-color:#004d40;width:80%;border:1px solid #c7c7c767;border-radius:2.8rem;box-shadow:4px 4px 5px -1px rgba(0,0,0,.89);padding:2rem auto}a{text-decoration:none}h1,h2,h3,h4{color:#ffffff!important}.img-testimonio{padding:0 1rem;object-fit:cover;max-width:100%;object-fit:cover;display:flex;align-items:center}@media (max-width:768px){.img-testimonio{max-width:100%;padding:0 1rem;height:100%}}.no-margin{margin:0}.no-padding{padding:0}.centrar-texto{text-align:center}.curso{display:grid;padding:2rem 0;justify-items:center}.curso::after{content:""}.curso__informacion{padding:0 1rem!important}.curso__descripcion{color:#fff;font-weight:400}@media (min-width:768px){.curso{column-gap:2rem;grid-template-columns:1fr 2fr;padding:2rem}.curso__descripcion{color:#fff}}.curso__imagen{display:block;border-radius:2rem;height:100%;object-fit:cover;overflow:hidden;max-width:100%}.curso__imagen img{padding:0;margin:0}@media (max-width:768px){.curso__imagen{margin:0 auto;max-width:40%}}.curso:last-of-type{border:none}.curso__label{font-weight:700;color:#fff}.curso__info{font-weight:400}p.video__descripcion{top:0;left:0;padding-right:2rem;padding-left:2rem;padding-bottom:2rem}
+.contenedor-testimonio {
+    margin: 2rem auto;
+    background-color: #004d40;
+    width: 80%;
+    border: 1px solid #c7c7c767;
+    border-radius: 2.8rem;
+    box-shadow: 4px 4px 5px -1px rgba(0, 0, 0, .89);
+    padding: 2rem auto
+}
+
+a {
+    text-decoration: none
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: #ffffff !important
+}
+
+.img-testimonio {
+    padding: 0 1rem;
+    object-fit: cover;
+    max-width: 100%;
+    object-fit: contain;
+    display: flex;
+    align-items: center
+}
+
+@media (min-width:768px) {
+    .img-testimonio {
+        width: 100%;
+        padding: 0 1rem;
+        height: 100%
+    }
+}
+
+.no-margin {
+    margin: 0
+}
+
+.no-padding {
+    padding: 0
+}
+
+.centrar-texto {
+    text-align: center
+}
+
+.curso {
+    display: grid;
+    padding: 2rem 0;
+    justify-items: center
+}
+
+.curso::after {
+    content: ""
+}
+
+.curso__informacion {
+    padding: 0 1rem !important
+}
+
+.curso__descripcion {
+    color: #fff;
+    font-weight: 400
+}
+
+@media (min-width:768px) {
+    .curso {
+        column-gap: 2rem;
+        grid-template-columns: 1fr 2fr;
+        padding: 2rem
+    }
+
+    .curso__descripcion {
+        color: #fff
+    }
+}
+
+.curso__imagen {
+    display: block;
+    border-radius: 2rem;
+    height: 100%;
+    object-fit: contain;
+    overflow: hidden;
+    max-width: 100%
+}
+
+.curso__imagen img {
+    padding: 0;
+    margin: 0
+}
+
+@media (max-width:768px) {
+    .curso__imagen {
+        margin: 0 auto;
+        /* max-width: 40% */
+    }
+}
+
+.curso:last-of-type {
+    border: none
+}
+
+.curso__label {
+    font-weight: 700;
+    color: #fff
+}
+
+.curso__info {
+    font-weight: 400
+}
+
+p.video__descripcion {
+    top: 0;
+    left: 0;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 2rem
+}
