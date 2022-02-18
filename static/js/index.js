@@ -84,12 +84,13 @@ const onkey_tab = (e) => {
         document.getElementById("close-sideBar").blur());
   };
 /**
- * A partir de acá se utiliza sweetalert2 para mostrar advertencias antes de salir de diarios
+ * Se utiliza sweetalert2 para mostrar advertencias antes de salir de diarios
  */
   var e = document.getElementById('diario-1-1');
+  null != e &&
   e.addEventListener("click", (e) => {
     Swal.fire({
-      title: '<strong>Atención. </strong>Estas saliendo de la página de Citadine hacia un enlace del diario El Día. ¿Desea continuar?',
+      title: '<strong>Atención. </strong>Estas saliendo de la página Generar Conciencia hacia un enlace del diario El Día. ¿Desea continuar?',
       icon: 'warning',
       showCloseButton: true,
       showDenyButton: true,
@@ -107,7 +108,7 @@ const onkey_tab = (e) => {
   null != e &&
   e.addEventListener("click", (e) => {
     Swal.fire({
-      title: '<strong>Atención.</strong>Estas saliendo de la página de Citadine hacia un enlace del diario Hoy. ¿Desea continuar?',
+      title: '<strong>Atención.</strong>Estas saliendo de la página Generar Conciencia hacia un enlace del diario Hoy. ¿Desea continuar?',
       icon: 'warning',
       showCloseButton: true,
       showDenyButton: true,
@@ -125,7 +126,7 @@ const onkey_tab = (e) => {
   null != e &&
   e.addEventListener("click", (e) => {
     Swal.fire({
-      title: '<strong>Atención.</strong>Estas saliendo de la página de Citadine hacia un enlace del diario Clarín. ¿Desea continuar?',
+      title: '<strong>Atención.</strong>Estas saliendo de la página Generar Conciencia hacia un enlace del diario Clarín. ¿Desea continuar?',
       icon: 'warning',
       showCloseButton: true,
       showDenyButton: true,
@@ -143,7 +144,7 @@ const onkey_tab = (e) => {
   null != e &&
   e.addEventListener("click", (e) => {
     Swal.fire({
-      title: '<strong>Atención.</strong> Estas saliendo de la página de Citadine hacia un enlace del diario La Nación. ¿Desea continuar?',
+      title: '<strong>Atención.</strong> Estas saliendo de la página Generar Conciencia hacia un enlace del diario La Nación. ¿Desea continuar?',
       icon: 'warning',
       showCloseButton: true,
       showDenyButton: true,
@@ -156,3 +157,45 @@ const onkey_tab = (e) => {
         if (result.isConfirmed) window.location.href='https://es.kiosko.net/ar/2013-04-03/np/nacion.html'
     })
   });
+
+  /**
+ * Se utiliza sweetalert2 para mostrar advertencias antes de salir a links de citadine
+ */
+   e = document.getElementsByClassName('citadineAzul');
+   if (null != e)
+   for(let i=0;i<e.length;i++){
+   e[i].addEventListener("click", (e) => {
+     Swal.fire({
+       title: '<strong>Atención.</strong> Estas saliendo de la página Generar Conciencia hacia la página de Citadine. ¿Desea continuar?',
+       icon: 'warning',
+       showCloseButton: true,
+       showDenyButton: true,
+       focusConfirm: false,
+       confirmButtonText: 'Aceptar',
+       denyButtonText: 'Cancelar',
+       confirmButtonAriaLabel: 'Saliendo de la página.',
+       denyButtonAriaLabel: 'Cancelado.'
+     }).then((result) => {
+         if (result.isConfirmed) window.location.href='http://ifw-raspi.projekt.jade-hs.de/wordpress/'
+     })
+   });
+  }
+   e = document.getElementsByClassName('citadineVerde');
+   if (null != e)
+   for(let i=0;i<e.length;i++){
+   e[i].addEventListener("click", (e) => {
+     Swal.fire({
+       title: '<strong>Atención.</strong> Estas saliendo de la página Generar Conciencia hacia la página de Citadine. ¿Desea continuar?',
+       icon: 'warning',
+       showCloseButton: true,
+       showDenyButton: true,
+       focusConfirm: false,
+       confirmButtonText: 'Aceptar',
+       denyButtonText: 'Cancelar',
+       confirmButtonAriaLabel: 'Saliendo de la página.',
+       denyButtonAriaLabel: 'Cancelado.'
+     }).then((result) => {
+         if (result.isConfirmed) window.location.href='http://ifw-raspi.projekt.jade-hs.de/wordpress/nbs/'
+     })
+   });
+  }

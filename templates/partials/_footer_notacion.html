@@ -4,6 +4,7 @@
 
 <!-- barra de secciones GENERAL-->
 <script src="{{url_for('static', filename = 'js/lixtbox.js')}}"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <!-- photo-album.html / shocking-photos.html / water-leve-simulator.html -->
 {% if flag_2 == "opcion_2" %}
@@ -20,5 +21,10 @@
 
 <!-- diarios.html -->
 {% if flag_1 == "opcion_1" %}
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+{% endif %}
+
+<!-- section-6.html -->
+{% if flag_6 == "ir_citadine" %}
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 {% endif %}
