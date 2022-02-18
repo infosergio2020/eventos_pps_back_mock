@@ -84,3 +84,22 @@ const onkey_tab = (e) => {
     else (document.getElementById("close-sideBar").setAttribute("tabindex", -1),
         document.getElementById("close-sideBar").blur());
   };
+
+  var e = document.getElementById('diario-1');
+  e.addEventListener("click", (e) => {
+    Swal.fire({
+      title: '<strong>Atención</strong>',
+      icon: 'info',
+      html:
+        'Estas saliendo de la página de Citadine, ¿Desea continuar?',
+      showCloseButton: true,
+      showDenyButton: true,
+      focusConfirm: false,
+      confirmButtonText: 'Aceptar',
+      denyButtonText: 'Cancelar',
+      confirmButtonAriaLabel: 'Saliendo de la página.',
+      denyButtonAriaLabel: 'Cancelado.'
+    }).then((result) => {
+        if (result.isConfirmed) window.location.href='https://www.eldia.com/nota/2013-4-3--el-agua-ya-esta-en-un-metro-y-medio-por-favor-que-alguien-nos-mande-botes'
+    })
+  });
