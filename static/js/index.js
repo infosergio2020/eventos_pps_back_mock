@@ -86,7 +86,7 @@ const onkey_tab = (e) => {
 /**
  * A partir de acá se utiliza sweetalert2 para mostrar advertencias antes de salir de diarios
  */
-  var e = document.getElementById('diario-1');
+  var e = document.getElementById('diario-1-1');
   e.addEventListener("click", (e) => {
     Swal.fire({
       title: '<strong>Atención. </strong>Estas saliendo de la página de Citadine hacia un enlace del diario El Día. ¿Desea continuar?',
@@ -103,7 +103,7 @@ const onkey_tab = (e) => {
     })
   });
 
-  e = document.getElementById('diario-2');
+  e = document.getElementById('diario-2-2');
   null != e &&
   e.addEventListener("click", (e) => {
     Swal.fire({
@@ -121,7 +121,7 @@ const onkey_tab = (e) => {
     })
   });
 
-  e = document.getElementById('diario-3');
+  e = document.getElementById('diario-3-3');
   null != e &&
   e.addEventListener("click", (e) => {
     Swal.fire({
@@ -139,7 +139,7 @@ const onkey_tab = (e) => {
     })
   });
 
-  e = document.getElementById('diario-4');
+  e = document.getElementById('diario-4-4');
   null != e &&
   e.addEventListener("click", (e) => {
     Swal.fire({
