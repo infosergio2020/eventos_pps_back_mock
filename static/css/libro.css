@@ -148,9 +148,9 @@
 }
 .card-libro .details p {
   /* transform: rotate(-10deg); */
-  padding: 0 0 0 20px;
-  /* padding: -2px 0 7px 20px; */
-  font-size: large;
+  /* padding: 0 0 0 20px; */
+  padding: -2px 0 7px 20px;
+  font-size: medium;
   color: #013243;
   pointer-events:none;
   
