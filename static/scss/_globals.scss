@@ -28,6 +28,9 @@ p{
   color: #ffffff;
 }
 
+.p-10{
+  font-size: calc(0.19em + 1vw);
+}
 
 h1,h2,h3,h4{
   margin: 0;
@@ -155,6 +158,11 @@ nav {
 .wh-30{
   width: calc(2.5em + 1vw);
   height: calc(2.5em + 1vw);
+}
+
+.wh-37{  
+  width: calc(2.9em + 1vw);
+  height: calc(2.9em + 1vw);
 }
 
 .wh-88{
