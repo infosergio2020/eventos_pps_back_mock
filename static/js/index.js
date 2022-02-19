@@ -100,7 +100,7 @@ const onkey_tab = (e) => {
       confirmButtonAriaLabel: 'Aceptar.',
       denyButtonAriaLabel: 'Cancelar.'
     }).then((result) => {
-        if (result.isConfirmed) window.location.href='https://www.eldia.com/nota/2013-4-3--el-agua-ya-esta-en-un-metro-y-medio-por-favor-que-alguien-nos-mande-botes'
+        if (result.isConfirmed) {window.open('https://www.eldia.com/nota/2013-4-3--el-agua-ya-esta-en-un-metro-y-medio-por-favor-que-alguien-nos-mande-botes','_blank');}
     })
   });
 
@@ -118,7 +118,7 @@ const onkey_tab = (e) => {
       confirmButtonAriaLabel: 'Aceptar.',
       denyButtonAriaLabel: 'Cancelar.'
     }).then((result) => {
-        if (result.isConfirmed) window.location.href='https://diariohoy.net/adjuntos/archivos/000/024/0000024100.pdf'
+        if (result.isConfirmed) {window.open('https://diariohoy.net/adjuntos/archivos/000/024/0000024100.pdf', '_blank');}
     })
   });
 
@@ -136,7 +136,7 @@ const onkey_tab = (e) => {
       confirmButtonAriaLabel: 'Aceptar.',
       denyButtonAriaLabel: 'Cancelar.'
     }).then((result) => {
-        if (result.isConfirmed) window.location.href='https://www.clarin.com/ciudades/critica-situacion-plata-cientos-evacuados_0_S19zAYFiDXg.html'
+        if (result.isConfirmed) {window.open('https://www.clarin.com/ciudades/critica-situacion-plata-cientos-evacuados_0_S19zAYFiDXg.html','_blank')}
     })
   });
 
@@ -156,7 +156,7 @@ const onkey_tab = (e) => {
       confirmButtonAriaLabel: 'Aceptar.',
       denyButtonAriaLabel: 'Cancelar.'
     }).then((result) => {
-        if (result.isConfirmed) window.location.href='https://es.kiosko.net/ar/2013-04-03/np/nacion.html'
+        if (result.isConfirmed) {window.open('https://es.kiosko.net/ar/2013-04-03/np/nacion.html','_blank')}
     })
   });
 
@@ -178,7 +178,7 @@ const onkey_tab = (e) => {
        confirmButtonAriaLabel: 'Aceptar.',
        denyButtonAriaLabel: 'Cancelar.'
      }).then((result) => {
-         if (result.isConfirmed) window.location.href='http://ifw-raspi.projekt.jade-hs.de/wordpress/'
+         if (result.isConfirmed) {window.open('http://ifw-raspi.projekt.jade-hs.de/wordpress/','_blank')}
      })
    });
   }
@@ -197,7 +197,7 @@ const onkey_tab = (e) => {
        confirmButtonAriaLabel: 'Aceptar.',
        denyButtonAriaLabel: 'Cancelar.'
      }).then((result) => {
-         if (result.isConfirmed) window.location.href='http://ifw-raspi.projekt.jade-hs.de/wordpress/nbs/'
+         if (result.isConfirmed) {window.open('http://ifw-raspi.projekt.jade-hs.de/wordpress/nbs/','_blank')}
      })
    });
   }

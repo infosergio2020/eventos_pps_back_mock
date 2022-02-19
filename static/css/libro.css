@@ -132,7 +132,7 @@
 .card-libro:focus-within,
 .card-libro:active,
 .card-libro:focus {
-  transform: translate(-10%, -10%) perspective(2000px) rotate(10deg) scale(1.05);
+  transform: translate(-10%, -5%) perspective(2000px) rotate(6deg) scale(1.05);
   box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.5),
     0 10px 100px rgba(0, 0, 0, 0.5);
 }
@@ -147,8 +147,6 @@
   margin-right: 20px;
 }
 .card-libro .details p {
-  /* transform: rotate(-10deg); */
-  /* padding: 0 0 0 20px; */
   padding: -2px 0 7px 20px;
   font-size: medium;
   color: #013243;
@@ -166,53 +164,40 @@
   margin-left: 20rem;
 }
 
-@media (max-width: 767px) {
+.libro-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 6rem;
+}
 
-  .card-libro .details p {
-    /* padding: 0 0 0 20px; */
-    padding: -2px 0 7px 20px;
-    /* font-size: 1.8rem; */
-    pointer-events:none;
-    font-size: medium;
+@media (min-width: 768px) {
+    .margenes {
+      margin-left: 2rem;
+    }
 
-  }
-  .libro-container {
-    display: grid;
-    grid-template-columns: 20rem;
-    column-gap: 12rem;
-    row-gap: 12rem;
-    margin-top: 20rem;
-    justify-content: center;
-  }
+    .card-libro .details p {
+      /* padding: 0 0 0 20px; */
+      padding: -2px 0 7px 20px;
+      /* font-size: 1.8rem; */
+      pointer-events:none;
+      font-size: medium;
+
+    }
+
+    .libro-container {
+      display: grid;
+      grid-template-columns: repeat(2 , 1fr);;
+      column-gap: 6rem;
+      row-gap: 6rem;
+      margin: 0 auto;
+      margin-top: 3rem;
+      justify-content: center;
+      justify-items: center;
+    }
+}
   
-}
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .margenes {
-    margin-left: 30rem;
-  }
-  .libro-container {
-    display: grid;
-    grid-template-columns: 25rem;
-    column-gap: 12rem;
-    row-gap: 12rem;
-    margin-top: 20rem;
-    justify-content: center;
-  }
-
-}
-@media screen and (min-width: 1024px) {
-  .margenes {
-    margin-right: 30rem;
-  }
-  .libro-container {
-    display: grid;
-    grid-template-columns: 25rem;
-    column-gap: 12rem;
-    row-gap: 12rem;
-    margin-top: 25rem;
-    justify-content: flex-end;
-  }
-}
 .achicar-img {
   width: 10px;
   height: 10px;
