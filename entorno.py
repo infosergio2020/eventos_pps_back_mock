@@ -5,5 +5,6 @@ class DevelopmentConfig:
     # FLASK
     ENV = "development"
     DEBUG = environ.get("DEBUG", True) #modo debug para flask
+    # TEMPLATES_AUTO_RELOAD = True
     
 config = DevelopmentConfig

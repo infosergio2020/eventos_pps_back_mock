@@ -1,55 +1,61 @@
-{% extends 'partials/_layout.html' %}
-{% block body %}
+{% extends 'partials/_layout.html' %} {% block body %}
 <!-- Info de seccion 2-->
-    <main>
-        <div class="container">
-            <div class="main-card" style="margin: 10rem auto;">
-                <div class="main-card-header afiche__head">
-                 
-                    <h1 id="contenido" tabindex="0">Sección 2: For life and limb.</h1>
-                </div>
-                <div class="main-card-body">
-                    
-                    <div class="main-card-img-container">
-                        <img src="{{url_for('static', filename = 'img/section2/map-1.png')}}" height="88px" alt="Imágen de un mapa.">
-                    </div>
-
-                    
-                    <div class="main-container-boton">
-                        <a class="boton verde-4" onclick="history.back()">
-                            <div class="boton-info" aria-label="Presione enter si desea acceder al mapa de entrevistados.">
-                                <p>Mapa de entrevistados</p> <img src="{{url_for('static', filename = 'img/people/webp/handPointUp.webp')}}" height="88px" alt="botón.">
-                            </div>
-                        </a>
-                    </div>
-                    <!-- <div class="main-card-info" style="margin: 5rem 0; font-size: 1.8rem;">
-                        <div class="main-card-info" style="margin: 5rem 0; font-size: 1.8rem;">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the</p>
-                            <p>industry's standard dummy text ever since the 1500s , when an unknown printer took a galley of type and</p>
-                            <p>scrambled it to make a type specimen book. It has survived not only five centuries, but also the lea.</p>
-                        </div>
-                    </div> -->
-                    <div class="main-card-img-container">
-                        <img src="{{url_for('static', filename = 'img/section2/waterLevel.png')}}" height="88px" alt="Imágen de simulador de nivel de agua.">
-                    </div>
-                    <div class="main-container-boton">
-                        <a role="button" class="boton verde-4" href="/water-level-simulator">
-                            <div class="boton-info" aria-label="Presione enter si desea acceder al simulador de agua.">
-                                <p>Simulador de nivel de agua</p> <img src="{{url_for('static', filename = 'img/people/webp/handPointUp.webp')}}" height="88px" alt="botón.">
-                            </div>
-                        </a>
-                    </div>
-                    <!-- <div class="main-card-info" style="margin: 5rem 0; font-size: 1.8rem;">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the</p>
-                        <p>industry's standard dummy text ever since the 1500s , when an unknown printer took a galley of type and</p>
-                        <p>scrambled it to make a type specimen book. It has survived not only five centuries, but also the lea.</p>
-                    </div> -->
-                </div>
-            </div>
-            
+<main>
+  <div class="container">
+    <div class="main-card" style="margin: 10rem auto">
+      <div class="main-card-header afiche__head">
+        <h1 id="contenido" tabindex="0">Sección 2: For life and limb.</h1>
+      </div>
+      <div class="main-card-body">
+        <div class="main-card-img-container">
+          <img
+            src="{{url_for('static', filename = 'img/section2/map-1.png')}}"
+            height="88px"
+            alt="Imágen de un mapa con un punto de interes."
+          />
         </div>
-        <!-- boton para ir arriba -->
-        {% include ('partials/_button.html') %}
-    </main>
 
+        <div class="main-container-boton">
+          <a role="button" class="boton verde-4" href="/">
+            <div
+              class="boton-info"
+              aria-label="Presione enter si desea acceder al mapa de entrevistados."
+            >
+              <p>Mapa de entrevistados</p>
+              <img
+                src="{{url_for('static', filename = 'img/people/webp/handPointUp.webp')}}"
+                height="88px"
+                alt="botón."
+              />
+            </div>
+          </a>
+        </div>
+        <div class="main-card-img-container">
+          <img
+            src="{{url_for('static', filename = 'img/section2/waterLevel.png')}}"
+            height="88px"
+            alt="Imágen de simulador de nivel de agua."
+          />
+        </div>
+        <div class="main-container-boton">
+          <a role="button" class="boton verde-4" href="/water-level-simulator">
+            <div
+              class="boton-info"
+              aria-label="Presione enter si desea acceder al simulador de agua."
+            >
+              <p>Simulador de nivel de agua</p>
+              <img
+                src="{{url_for('static', filename = 'img/people/webp/handPointUp.webp')}}"
+                height="88px"
+                alt="botón."
+              />
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- boton para ir arriba -->
+  {% include ('partials/_button.html') %}
+</main>
 {% endblock %}
