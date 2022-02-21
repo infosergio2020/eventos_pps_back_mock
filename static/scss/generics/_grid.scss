@@ -12,6 +12,19 @@
 .afiche__head h3{
     margin: 0;
 }
+.grid__container2{
+    display: block;
+    // padding: 1rem 4rem;
+}
+
+@media (min-width: 680px) {
+    .grid__container2{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        // column-gap: 7rem;
+    }
+}
+
 
 .grid__container{
     display: block;
