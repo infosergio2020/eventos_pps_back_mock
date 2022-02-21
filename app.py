@@ -27,6 +27,11 @@ def Testimonio3():
     return rutas.render_after_flood()
 
 
+
+@app.route('/educational-games')
+def Educational_games():
+    return rutas.render_educational_games()
+
 @app.route('/water-level-simulator')
 def Waterlevelsimulator():
     return rutas.render_agua_simulador()

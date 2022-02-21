@@ -108,7 +108,7 @@ class CustomRouter:
         return render_template('/dondeir.html')
 
     def render_educational_games(self):
-        return render_template('')
+        return render_template('/juegos.html')
 
 
 
