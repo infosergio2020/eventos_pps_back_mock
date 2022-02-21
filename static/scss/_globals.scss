@@ -180,31 +180,66 @@ nav {
 
 // juegos
 .container-juego{
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
+.intro{
+  height: 6rem;
+  width: 38.5rem;
+  // padding: 0.375rem;
+  box-sizing: border-box;
+  position: absolute;
+  background: rgb(27, 27, 27, .5);
+  color: white;
+  bottom: -20rem;
+  transition: .5s;
+}
+@media (min-width: 829px)and (max-width: 1270px) {
+  .container-juego{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      // column-gap: 7rem;
+  }
+  .intro{
+    height: 6rem;
+    width: 38.5rem;
+    bottom: -10rem;
+}
+  
+}
+.img-juego{
+  height: 50rem;
+  width: 50rem;
+  border-radius: 3px;
+}
+@media (max-width: 830px) {
+  .container-juego{
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      // column-gap: 7rem;
+  }
+  .img-juego{
+    height: 55rem;
+    width: 80rem;
+    border-radius: 3px;
+  }
+  .intro{
+    height: 6rem;
+    width: 53.5rem;
+    bottom: -10rem;
+}
+  
+}
+
 .card{
   height: 50rem;
   margin: 3.125rem;
   box-shadow: 5px 5px 20px black;
   overflow: hidden;
   }
-  .img-juego{
-    height: 50rem;
-    width: 50rem;
-    border-radius: 3px;
-}
+  
 
-.intro{
-    height: 6rem;
-    width: 38.5rem;
-    // padding: 0.375rem;
-    box-sizing: border-box;
-    position: absolute;
-    background: rgb(27, 27, 27, .5);
-    color: white;
-    bottom: -20rem;
-    transition: .5s;
-}
+
 .verde-4{
  border-radius: 0.25em; 
 }
