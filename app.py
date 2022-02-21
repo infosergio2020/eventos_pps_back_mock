@@ -48,6 +48,9 @@ def Recomendacioncomoactuar():
 def Sandbox():
     return rutas.render_sandbox()
 
+@app.route('/dondeir')
+def Where_to_go():
+    return rutas.render_where_to_go()
 
 @app.route('/shocking-photos')
 def Shockingphotos():

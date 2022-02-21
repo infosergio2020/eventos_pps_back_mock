@@ -1,0 +1,48 @@
+  <!-- Contenedor del testimonio -->
+  {% extends 'partials/_layout.html' %}
+  {% block body %}
+  <!-- Info del Contenedor del video-->
+  <main>
+   
+        <div class="main-card">
+          <div class="main-card-body">
+            <div id="afiche-header" class="afiche__head">
+              <h1 id="contenido" tabindex="0" class="centrar-texto">Dónde ir- Centros de evacuación</h1>
+            </div>
+            <div tabindex="0" aria-label="Reproductor de video" class="contenedor-video">
+                
+                <!-- detalles del video -->
+                <div tabindex="0" class="video__informacion">
+                    
+                    
+                    <p class="video__descripcion">
+                      Descripción: Es una aplicación que muestra los centros de evacuación cercanos a la dirección que vos indiques, o a tu ubicación geográfica.
+                      Genera caminos a dichos puntos de encuentro, evitando las zonas inundables.
+                      Considera mapas publicados en la UNLP y los centros de evacuación publicados por la Municipalidad de La Plata. 
+    
+                    </p>
+                   
+                    <!-- 1 imagen -->
+                    <div  class="grid__container__2">
+                        <div class="grid__columna grid__image mg-bottom">
+                          <div class="grid__image small">
+                              <img src="{{url_for('static', filename = 'img/afiches/dondeir.png')}}" aria-label="Imagen de un mapa con caminos." alt="Imagen de un mapa con caminos.">
+                              <small class="contenedor__text">
+                                <a tabindex="0" href="http://omlp.sedici.unlp.edu.ar/dataset/informe-final/resource/9b25beec-b597-4743-8084-5c1bc84f9197?inner_span=True este es mapa de znas inundables la 
+                                "> Foto: Realizado por los estudiantes: Joaquín de Antueno e Iván Mindlin."</a>
+                              </small>
+                              
+                            
+                          </div>
+                      </div>
+                  </div>
+                  
+            </div>
+          </div>
+        </div>
+        <!-- boton para ir arriba -->
+        {% include ('partials/_button.html') %}  
+  </main>
+  
+ <!-- FIN Info del contenedor de video -->
+ {% endblock %}
