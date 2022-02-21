@@ -1,0 +1,113 @@
+  <!-- Contenedor del testimonio -->
+  {% extends 'partials/_layout.html' %}
+  {% block body %}
+  <!-- Info de galeria de fotos-->
+    <main>
+        <div class="container">
+            <div class="main-card" style="margin: 10rem auto;">
+                <div class="main-card-header">
+                    <div id="afiche-header" class="afiche__head">
+                      <h1 id="contenido" tabindex="0" class="centrar-texto">Juegos educativos</h1>
+                    </div>
+                    <div tabindex="0" class="centrar-texto">
+                      <p>Seleccionar la imagen para entrar al juego.</p>
+                    </div>
+
+                </div>
+                <div class="main-card-body">
+                    <div class="container-juego" id="lightgallery">
+                             
+                              
+                          
+                              <div class="card" tabindex="0"> 
+                                  <img class="img-juego img1" src="{{url_for('static', filename = 'img/section5/juegos-tapa/juego2.png')}}"  alt="mono">
+                                  <div class="intro">
+                                      <h4>
+                                        Disaster cross
+                                      </h4>
+                                      <!-- <p>
+                                          Rompecabezas interactivo y accesible para aprender sobre NBS, soluciones basadas en la naturaleza que pueden ayudar a cuidar el ambiente donde vivimos mediante acciones que las personas pueden llevar a cabo.
+                                          El usuario tiene que resolver un puzzle. Cuando éste decide empezar, se mezclan las piezas de esa imagen para que el usuario las reconstruya.
+                                              
+                                      </p> -->
+                                      <p class="esconder-detail" style="margin-bottom:1rem">
+                                        Juego educativo en forma de crucigrama para aprender sobre distintas catástrofes. Brinda pistas para completar el crucigrama. Provee distintos niveles de dificultad.     
+                            
+                                      </p>
+                                      <div aria-labelledby="diario-2">
+                                        <!-- <img src="./img/diarios/Hoy_logo.png" alt=""> -->
+                                        
+                                        <div class="centrar-texto verde-4 esconder-detail" style="margin-top:6rem; height: 6rem;" >
+                                            <a href="/reflexiones-de-los-entrevistados" class="button__custom--fit verde-4 text-center"> Jugar</a>
+                                        </div>
+                                      </div>
+                                  </div>
+                              </div>
+            <!-- juego 2 -->
+                            <div class="card" tabindex="0"> 
+                                <img class="img-juego img1" src="{{url_for('static', filename = 'img/section5/juegos-tapa/juego3.png')}}"  alt="mono">
+                                <div class="intro">
+                                    <h4>
+                                      Limpiar la ciudad
+                                    </h4>
+                                    <!-- <p>
+                                        Rompecabezas interactivo y accesible para aprender sobre NBS, soluciones basadas en la naturaleza que pueden ayudar a cuidar el ambiente donde vivimos mediante acciones que las personas pueden llevar a cabo.
+                                        El usuario tiene que resolver un puzzle. Cuando éste decide empezar, se mezclan las piezas de esa imagen para que el usuario las reconstruya.
+                                            
+                                    </p> -->
+                                    <p class="esconder-detail">
+                                      Juego educativo que permite ayudar a `la gente de limpieza a distinguir los residuos de la ciudad y recolectarlos para mantener la ciudad limpia.    
+                            
+                                    </p>
+                                    <div aria-labelledby="diario-2">
+                                      <!-- <img src="./img/diarios/Hoy_logo.png" alt=""> -->
+                                      
+                                      <div class="verde-4 centrar-texto esconder-detail" style="margin-top:6rem; height: 6rem;" >
+                                          <a href="/reflexiones-de-los-entrevistados" class="button__custom--fit verde-4 text-center"> Jugar</a>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+          <!-- juego 3 -->
+                          <div class="card" tabindex="0"> 
+                              <img class="img-juego img1" src="{{url_for('static', filename = 'img/section5/juegos-tapa/juego1.png')}}"  alt="mono">
+                              <div class="intro">
+                                  <h4>
+                                      Rompecabezas NBS
+                                  </h4>
+                                  <!-- <p>
+                                      Rompecabezas interactivo y accesible para aprender sobre NBS, soluciones basadas en la naturaleza que pueden ayudar a cuidar el ambiente donde vivimos mediante acciones que las personas pueden llevar a cabo.
+                                      El usuario tiene que resolver un puzzle. Cuando éste decide empezar, se mezclan las piezas de esa imagen para que el usuario las reconstruya.
+                                          
+                                  </p> -->
+                                  <p class="esconder-detail">
+                                      Rompecabezas interactivo y accesible para aprender sobre NBS, soluciones basadas en la naturaleza que pueden ayudar a cuidar el ambiente donde vivimos mediante acciones que las personas pueden llevar a cabo.
+                                          
+                                  </p>
+                                  <div  aria-labelledby="diario-2">
+                                    <!-- <img src="./img/diarios/Hoy_logo.png" alt=""> -->
+                                    
+                                    <div class="verde-4 centrar-texto esconder-detail" style="margin-top:6rem; height: 6rem;" >
+                                        <a href="/reflexiones-de-los-entrevistados" class="button__custom--fit verde-4 text-center"> Jugar</a>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+        
+
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>
+        <!-- boton para ir arriba -->
+        {% include ('partials/_button.html') %}  
+
+    </main>
+    
+                      
+    <!-- script -->
+    <!-- galeria de imagenes -->
+  <!-- FIN Info de la galeria de fotos -->
+  {% endblock %}
