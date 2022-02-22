@@ -1,104 +1,87 @@
-  <!-- Contenedor del testimonio -->
-  {% extends 'partials/_layout.html' %}
-  {% block body %}
-  <!-- Info de galeria de fotos-->
-    <main>
-        <div class="container">
-            <div class="main-card" style="margin: 10rem auto;">
-                <div class="main-card-header">
-                    <div id="afiche-header" class="afiche__head">
-                      <h1 id="contenido" tabindex="0" class="centrar-texto">Fotos impactantes</h1>
-                    </div>
-                    <div class="centrar-texto">
-                      <p>Seleccionar la imagen para entrar a la galería de fotos.</p>
-                    </div>
-
-                </div>
-                <div class="main-card-body">
-                    <div class="gallery__container" id="lightgallery">
-                              <!-- <a aria-label="imagen de la galería-1 de 19.Presione enter si desea abrir el carrousel de imágenes." alt= "img1." href="../../img/section3/album/1.webp">
-                                <img loading="lazy" alt= "imagen de la galeria-1" src="../../img/section3/album/1.webp" />
-                              </a>
-                              <a aria-label="imagen de la galería-2 de 19.Presione enter si desea abrir el carrousel de imágenes." alt= "img2." href="../../img/section3/album/2.webp" class="vertical">
-                                <img loading="lazy" alt= "imagen de la galeria-2" src="../../img/section3/album/2.webp" />
-                              </a>
-                              <a aria-label="imagen de la galería-3 de 19.Presione enter si desea abrir el carrousel de imágenes." alt= "img3." href="../../img/section3/album/3.webp" class="horizontal">
-                                <img loading="lazy" alt= "imagen de la galeria-3" src="../../img/section3/album/3.webp" />
-                              </a>
-                              <a aria-label="imagen de la galería-4 de 19.Presione enter si desea abrir el carrousel de imágenes." alt= "img4." href="../../img/section3/album/4.webp">
-                                <img loading="lazy" alt= "imagen de la galeria-4" src="../../img/section3/album/4.webp" />
-                              </a>
-                        
-                              <a aria-label="imagen de la galería-5 de 19.Presione enter si desea abrir el carrousel de imágenes." alt= "img5." href="../../img/section3/album/5.webp" class="horizontal">
-                                <img loading="lazy" alt= "imagen de la galeria-5" src="../../img/section3/album/5.webp" />
-                              </a>
-                        
-                              <a aria-label="imagen de la galería-6 de 19.Presione enter si desea abrir el carrousel de imágenes." alt= "img6." href="../../img/section3/album/6.webp" class="vertical">
-                                <img loading="lazy" alt= "imagen de la galeria" src="../../img/section3/album/6.webp" />
-                              </a>
-                        
-                              <a aria-label="imagen de la galería-7 de 19.Presione enter si desea abrir el carrousel de imágenes." alt= "img7." href="../../img/section3/album/7.webp">
-                                <img loading="lazy" alt= "imagen de la galeria" src="../../img/section3/album/7.webp" />
-                              </a>
-                        
-                        
-                              <a aria-label="imagen de la galería-8 de 19.Presione enter si desea abrir el carrousel de imágenes." alt= "img8." href="../../img/section3/album/8.webp">
-                                <img loading="lazy" alt= "imagen de la galeria" src="../../img/section3/album/8.webp" />
-                              </a>
-                        
-                              <a aria-label="imagen de la galería-9 de 19.Presione enter si desea abrir el carrousel de imágenes." alt= "img9." href="../../img/section3/album/9.webp" class="big">
-                                <img loading="lazy" alt= "imagen de la galeria" src="../../img/section3/album/9.webp" />
-                              </a>
-                        
-                              <a aria-label="imagen de la galería-10 de 19.Presione enter si desea abrir el carrousel de imágenes." alt= "img10." href="../../img/section3/album/10.webp">
-                                <img loading="lazy" alt= "imagen de la galeria" src="../../img/section3/album/10.webp" />
-                              </a>
-                        
-                              <a aria-label="imagen de la galería-11 de 19.Presione enter si desea abrir el carrousel de imágenes." alt= "img11." href="../../img/section3/album/11.webp" class="horizontal">
-                                <img loading="lazy" alt= "imagen de la galeria" src="../../img/section3/album/11.webp" />
-                              </a>
-                        
-                              <a aria-label="imagen de la galería-12 de 19.Presione enter si desea abrir el carrousel de imágenes." alt= "img12." href="../../img/section3/album/12.webp">
-                                <img loading="lazy" alt= "imagen de la galeria" src="../../img/section3/album/12.webp" />
-                              </a>
-                        
-                              <a aria-label="imagen de la galería-13 de 19.Presione enter si desea abrir el carrousel de imágenes." alt= "img13." href="../../img/section3/album/13.webp" class="big">
-                                <img loading="lazy" alt= "imagen de la galeria" src="../../img/section3/album/13.webp" />
-                              </a>
-                        
-                              <a aria-label="imagen de la galería-14 de 19.Presione enter si desea abrir el carrousel de imágenes." alt= "img14." href="../../img/section3/album/14.webp">
-                                <img loading="lazy" alt= "imagen de la galeria" src="../../img/section3/album/14.webp" />
-                              </a>
-                        
-                              <a aria-label="imagen de la galería-15 de 19.Presione enter si desea abrir el carrousel de imágenes." alt= "img15." href="../../img/section3/album/15.webp" class="vertical">
-                                <img loading="lazy" alt= "imagen de la galeria" src="../../img/section3/album/15.webp" />
-                              </a>-->
-                              <a role="link" class="img1" aria-label="imagen de la galería-16 de 19.Presione enter si desea abrir el carrousel de imágenes." alt= "img16." href="{{url_for('static', filename = 'img/section3/album/16.webp')}}" class="vertical">
-                                <img  loading="lazy" aria-label="imagen de la galería-2 de 7.Presione enter si desea abrir el carrousel de imágenes." alt= "img2." src="{{url_for('static', filename = 'img/section3/album/16.webp')}}" />
-                                </a>
-                              <a role="link" class="img1" aria-label="imagen de la galería-17 de 19.Presione enter si desea abrir el carrousel de imágenes." alt= "img17." href="{{url_for('static', filename = 'img/section3/album/17.webp')}}" class="vertical"> 
-                                <img loading="lazy" alt= "imagen de la galeria" src="{{url_for('static', filename = 'img/section3/album/17.webp')}}" />
-                              </a>
-                              <a role="link" class="img1" aria-label="imagen de la galería-18 de 19.Presione enter si desea abrir el carrousel de imágenes." alt= "img18." href="{{url_for('static', filename = 'img/section3/album/18.webp')}}" data-sub-html="<h4>Vista acerca de la vaca totalmente inundado.</h4><p>(foto: Adrian Scandar).</p>">
-                                <img loading="lazy" alt= "imagen de la galeria" src="{{url_for('static', filename = 'img/section3/album/18.webp')}}" />
-                              </a>
-                              <a role="link" class="img1" aria-label="imagen de la galería-19 de 19.Presione enter si desea abrir el carrousel de imágenes." alt= "img19." href="{{url_for('static', filename = 'img/section3/album/19.webp')}}" data-sub-html="<h4>Vista acerca de la vaca totalmente inundado.</h4><p>(foto: Adrian Scandar).</p>">
-                                <img loading="lazy" alt= "imagen de la galeria" src="{{url_for('static', filename = 'img/section3/album/19.webp')}}" />
-                              </a>
-
-                    </div>
-
-                </div>
-            </div>
-            
+<!-- Contenedor del testimonio -->
+{% extends 'partials/_layout.html' %} {% block body %}
+<!-- Info de galeria de fotos-->
+<main>
+  <div class="container">
+    <div class="main-card" style="margin: 10rem auto">
+      <div class="main-card-header">
+        <div id="afiche-header" class="afiche__head">
+          <h1 id="contenido" tabindex="0" class="centrar-texto">
+            Fotos impactantes
+          </h1>
         </div>
-        <!-- boton para ir arriba -->
-        {% include ('partials/_button.html') %}  
+        <div class="centrar-texto">
+          <p>Seleccionar la imagen para entrar a la galería de fotos.</p>
+        </div>
+      </div>
+      <div class="main-card-body">
+        <div class="gallery__container" id="lightgallery">
+          <a
+            role="link"
+            class="img1"
+            aria-label="imagen de la galería-16 de 19.Presione enter si desea abrir el carrousel de imágenes."
+            alt="img16."
+            href="{{url_for('static', filename = 'img/section3/album/16.webp')}}"
+            class="vertical"
+          >
+            <img
+              width="100%" height="100%"
+              alt="img2."
+              aria-label="imagen de la galería-2 de 7.Presione enter si desea abrir el carrousel de imágenes."
+              src="{{url_for('static', filename = 'img/section3/album/16.webp')}}"
+            />
+          </a>
+          <a
+            role="link"
+            class="img1"
+            aria-label="imagen de la galería-17 de 19.Presione enter si desea abrir el carrousel de imágenes."
+            alt="img17."
+            href="{{url_for('static', filename = 'img/section3/album/17.webp')}}"
+            class="vertical"
+          >
+            <img
+              width="100%" height="100%"
+              alt="imagen de la galeria"
+              src="{{url_for('static', filename = 'img/section3/album/17.webp')}}"
+            />
+          </a>
+          <a
+            role="link"
+            class="img1"
+            aria-label="imagen de la galería-18 de 19.Presione enter si desea abrir el carrousel de imágenes."
+            alt="img18."
+            href="{{url_for('static', filename = 'img/section3/album/18.webp')}}"
+            data-sub-html="<h4>Vista acerca de la vaca totalmente inundado.</h4><p>(foto: Adrian Scandar).</p>"
+          >
+            <img
+              width="100%" height="100%"
+              alt="imagen de la galeria"
+              src="{{url_for('static', filename = 'img/section3/album/18.webp')}}"
+            />
+          </a>
+          <a
+            role="link"
+            class="img1"
+            aria-label="imagen de la galería-19 de 19.Presione enter si desea abrir el carrousel de imágenes."
+            alt="img19."
+            href="{{url_for('static', filename = 'img/section3/album/19.webp')}}"
+            data-sub-html="<h4>Vista acerca de la vaca totalmente inundado.</h4><p>(foto: Adrian Scandar).</p>"
+          >
+            <img
+              width="100%" height="100%"
+              alt="imagen de la galeria"
+              src="{{url_for('static', filename = 'img/section3/album/19.webp')}}"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- boton para ir arriba -->
+  {% include ('partials/_button.html') %}
+</main>
 
-    </main>
-    
-                      
-    <!-- script -->
-    <!-- galeria de imagenes -->
-  <!-- FIN Info de la galeria de fotos -->
-  {% endblock %}
+<!-- script -->
+<!-- galeria de imagenes -->
+<!-- FIN Info de la galeria de fotos -->
+{% endblock %}
