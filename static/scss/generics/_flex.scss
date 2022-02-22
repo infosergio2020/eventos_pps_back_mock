@@ -10,6 +10,9 @@
     height: 26rem;
     width: 65.6rem;
 }
+.infop-img p{
+    width: 65.6rem;
+}
 @media (min-width: 829px)and (max-width: 1270px) {
     .flex__container16{
         display: flex;
@@ -22,6 +25,9 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+    .infop-img p{
+        width: 39rem;
     }
     .caja16{
         background-image: url('../img/general/otros/recorrido1.png');
