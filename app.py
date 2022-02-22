@@ -1,13 +1,23 @@
 # comienzo
-from flask import Flask,render_template
+from flask import Flask
 from entorno import config
 from modules.rederizado import CustomRouter
 
+# compresion de la app
+from flask_compress import Compress
+
+# creando la instancia del compresor
+compress = Compress()
+
+# instanciando el controlador que se encarga de renderizar
 rutas = CustomRouter()
+
 
 ##Configuracion del app
 app = Flask(__name__)
 app.config.from_object(config)
+
+compress.init_app(app)
 
 #colocar las rutas antes de correr el servidor
 @app.route('/')
