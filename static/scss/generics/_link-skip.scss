@@ -1,36 +1,31 @@
-.sacar_vinvulo{
-    pointer-events: none;
-    cursor: e-resize;
-    text-decoration:none
+.sacar_vinvulo {
+  pointer-events: none;
+  cursor: e-resize;
+  text-decoration: none;
 }
-
-.link__skip{
-    margin: 0;
-    padding: 0;
-    position: relative;
-    list-style: none;
-    top: 0;
-    left: 0;
+.link__skip {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  list-style: none;
+  top: 0;
+  left: 0;
 }
-
-.link__skip--item a{
-    position: absolute;
-    color: white;
-    background-color: black;
-    padding: .5rem;
-    top: -3em;
-    right: 0;
+.link__skip--item a {
+  position: absolute;
+  color: white;
+  background-color: black;
+  padding: 0.5rem;
+  top: -3em;
+  right: 0;
 }
-
 .go-up {
-    padding: 1rem 0;
+  padding: 1rem 0;
 }
-
 .buttons {
-    display: flex;
-    flex-direction: row-reverse;
+  display: flex;
+  flex-direction: row-reverse;
 }
-
-.link__skip--item a:focus-within{
-    top: 0;
+.link__skip--item a:focus-within {
+  top: 0;
 }

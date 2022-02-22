@@ -3,18 +3,11 @@
 //     // probando sobreescritura del font-family
 //     // --WatsonAssistantChat-BASE-font-family: "Source Sans Pro", Times, serif !important;
 // }
-
-#WACContainer.WACContainer .WACHomeScreenModern__body.WACHomeScreenModern__body--fill{
-    padding-top: 1rem;
-    align-items: center;
+#WACContainer.WACContainer
+  .WACHomeScreenModern__body.WACHomeScreenModern__body--fill {
+  padding-top: 1rem;
+  align-items: center;
 }
-
-#WACContainer.WACContainer .WACHomeScreenModern__header{
-    background-color: #001f1a !important;
+#WACContainer.WACContainer .WACHomeScreenModern__header {
+  background-color: #001f1a !important;
 }
-
-// #WACContainer.WACContainer .myAwesomeClass {
-//     background: hotpink;
-//     color: indigo;
-//   }
-  
