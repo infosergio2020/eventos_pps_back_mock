@@ -1,6 +1,5 @@
-<!-- Contenedor del testimonio -->
-{% extends 'partials/_layout.html' %} {% block body %}
-<!-- Info de la galeria de fotos-->
+<!-- Contenedor del testimonio -->{% extends 'partials/_layout.html' %} {% block
+body %}<!-- Info de la galeria de fotos-->
 <main>
   <div class="container">
     <div class="main-card" style="margin: 10rem auto">
@@ -21,13 +20,12 @@
             href="{{url_for('static', filename = '/img/section2/1-1.webp')}}"
           >
             <img
-              loading="lazy"
+              
               aria-label="imagen de la galería-1 de 7"
               alt="img1."
               src="{{url_for('static', filename = '/img/section2/1.webp')}}"
             />
           </a>
-
           <a
             role="link"
             class="img1"
@@ -35,13 +33,12 @@
             class="vertical"
           >
             <img
-              loading="lazy"
+              
               aria-label="imagen de la galería-2 de 7.Presione enter si desea abrir el carrousel de imágenes."
               alt="img2."
               src="{{url_for('static', filename = '/img/section2/2.webp')}}"
             />
           </a>
-
           <a
             role="link"
             class="img1"
@@ -67,7 +64,6 @@
               src="{{url_for('static', filename = '/img/section2/4.webp')}}"
             />
           </a>
-
           <a
             role="link"
             class="img1"
@@ -81,7 +77,6 @@
               src="{{url_for('static', filename = '/img/section2/5.webp')}}"
             />
           </a>
-
           <a
             role="link"
             href="{{url_for('static', filename = '/img/section2/6.png')}}"
@@ -93,7 +88,6 @@
               src="{{url_for('static', filename = '/img/section2/6.webp')}}"
             />
           </a>
-
           <a
             role="link"
             href="{{url_for('static', filename = '/img/section2/7.png')}}"
@@ -112,5 +106,4 @@
   <!-- boton para ir arriba -->
   {% include ('partials/_button.html') %}
 </main>
-<!-- FIN Info de la galeria de fotos -->
-{% endblock %}
+<!-- FIN Info de la galeria de fotos -->{% endblock %}
