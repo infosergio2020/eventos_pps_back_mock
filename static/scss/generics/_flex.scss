@@ -6,8 +6,12 @@
     align-content: space-around;
 }
 .caja16{
-    @include background-template('../img/general/otros/recorrido3.png');
-
+    background-image: url('../img/general/otros/recorrido3.png');
+    height: 26rem;
+    width: 65.6rem;
+}
+.infop-img p{
+    width: 65.6rem;
 }
 @media (min-width: 829px)and (max-width: 1270px) {
     .flex__container16{
@@ -22,8 +26,18 @@
         flex-direction: column;
         align-items: center;
     }
+    .infop-img p{
+        width: 39rem;
+    }
     .caja16{
+<<<<<<< HEAD
         @include background-template('../img/general/otros/recorrido1.png');
+=======
+        background-image: url('../img/general/otros/recorrido1.png');
+        background-size: cover;
+        height: 95rem;
+        width: 39rem;
+>>>>>>> b6a7295485a58cea7d73361383e221ac2f745887
     }
 }
 
