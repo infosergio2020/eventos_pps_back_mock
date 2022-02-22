@@ -30,10 +30,14 @@
         width: 39rem;
     }
     .caja16{
+<<<<<<< HEAD
+        @include background-template('../img/general/otros/recorrido1.png');
+=======
         background-image: url('../img/general/otros/recorrido1.png');
         background-size: cover;
         height: 95rem;
         width: 39rem;
+>>>>>>> b6a7295485a58cea7d73361383e221ac2f745887
     }
 }
 
