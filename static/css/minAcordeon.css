@@ -3,8 +3,11 @@
     justify-content: space-around;
     align-items: center;
     margin: 0 1px;
-    background-color: #479949;
-    border: 4px solid #479949;
+    /* background-color: #479949;
+    border: 4px solid #479949; */
+    background-color: #0a8025;
+    border: 4px solid #0a8025;
+    border-radius: 1.2rem;
     box-shadow: 10px 6px 5px -2px rgb(0 0 0 / 75%);
     color: #fff!important;
     cursor: pointer;
