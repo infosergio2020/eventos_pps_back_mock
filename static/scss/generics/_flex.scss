@@ -2,7 +2,32 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: nowrap;
+    align-content: space-around;
 }
+.caja16{
+    @include background-template('../img/general/otros/recorrido3.png');
+
+}
+@media (min-width: 829px)and (max-width: 1270px) {
+    .flex__container16{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+}
+@media (max-width: 830px) {
+    .flex__container16{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .caja16{
+        @include background-template('../img/general/otros/recorrido1.png');
+    
+    }
+}
+
 .flex__container2{
     display: flex;
     padding: 1rem!important;
