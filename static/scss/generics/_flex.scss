@@ -41,6 +41,8 @@
     display: flex;
     padding: 1rem!important;
     gap: 2rem;
+    // align para centrar la image de fotos en solidaridad
+    align-items: center;
 }
 
 @media (min-width: 768px) {
@@ -56,7 +58,8 @@
     width: 100%;
 }
 .caja2{
-    max-width: 10%;
+    // max-width: 10%;
+    max-width: 25%;//probando distribucion de ancho para coclusiones del evento
 }
 .caja10{
     max-width: 35%;
