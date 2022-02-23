@@ -170,10 +170,15 @@ nav {
   bottom: -20rem;
   transition: 0.5s;
 }
-@media (min-width: 829px) and (max-width: 1270px) {
+@media (min-width: 931px) and (max-width: 1270px) {
   .container-juego {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+  .card{
+    width: 30rem;
+    height: 40rem;
   }
 }
 .img-juego {
@@ -181,23 +186,28 @@ nav {
   width: 50rem;
   border-radius: 3px;
 }
-@media (max-width: 830px) {
+.card {
+  height: 45rem; 
+  margin: 3.125rem;
+  box-shadow: 5px 5px 20px black;
+  overflow: hidden;
+  position: relative;
+}
+@media (max-width: 932px) {
+  .card{
+    width: 30rem;
+    height: 40rem;
+  }
   .container-juego {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
   }
   .img-juego {
     height: 55rem;
     width: 80rem;
     border-radius: 3px;
   }
-}
-.card {
-  height: 50rem;
-  margin: 3.125rem;
-  box-shadow: 5px 5px 20px black;
-  overflow: hidden;
-  position: relative;
 }
 .verde-4 {
   border-radius: 0.25em;
