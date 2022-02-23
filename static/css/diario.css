@@ -123,16 +123,16 @@
 }
 .blue__grad-2 {
   /* background-image: url(./../img/diarios/tapas/Diario-HOY.webp); */
-  background-image: url(./../img/diarios/tapas/lanacion.svg);
+  background-image: url(./../img/diarios/tapas/portada-EL-DIA.svg);
   background-size: cover;
 }
 .blue__grad-3 {
   /* background-image: url(./../img/diarios/tapas/El-Clarin.webp); */
-
+  background-image: url(./../img/diarios/tapas/portada-EL-DIA.svg);
   background-size: cover;
 }
 .blue__grad-4 {
-  background-image: url(./../img/diarios/tapas/nacion.svg);
+  background-image: url(./../img/diarios/tapas/portada-EL-DIA.svg);
   background-size: cover;
 }
 .verde-1 {
