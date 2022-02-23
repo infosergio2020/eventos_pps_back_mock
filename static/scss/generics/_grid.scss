@@ -88,13 +88,14 @@
 }
 .grid__container__3 {
   display: block;
-  padding: 1rem 4rem;
+  padding: 1rem 10rem;
 }
 @media (min-width: 680px) {
   .grid__container__3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 2rem;
+    padding: 1rem 4rem;
     // align-items: center;
   }
 }
