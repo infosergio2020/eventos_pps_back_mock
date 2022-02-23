@@ -94,7 +94,8 @@
   .grid__container__3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 7rem;
+    column-gap: 2rem;
+    // align-items: center;
   }
 }
 .mg-bottom {
