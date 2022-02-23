@@ -38,16 +38,20 @@
   justify-content: start;
 }
 .grid__image small {
-  padding: 0 1rem;
+  padding: 1rem;
   background-color: #000000d0;
-  color: #ffffff;
-  position: absolute;
+  color: #fff;
+  /* position: absolute; */
   bottom: 0;
   left: auto;
   z-index: 1;
   width: 100%;
-  border-bottom-left-radius: 1.3rem;
-  border-bottom-right-radius: 1.3rem;
+  /* border-bottom-left-radius: 1.3rem; */
+  /* border-bottom-right-radius: 1.3rem; */
+  margin-top: 1rem;
+  border-radius: 1.3rem;
+  text-align: center;
+
 }
 .grid__image img {
   object-fit: cover;
