@@ -43,6 +43,14 @@
   // align para centrar la image de fotos en solidaridad
   align-items: center;
 }
+.flex__container_dondeir{
+  display: flex;
+  padding: 1rem !important;
+  gap: 2rem;
+  // align para centrar la image de fotos en solidaridad
+  align-items: center;
+  flex-direction: column;
+}
 @media (min-width: 768px) {
   .flex__container2 {
     padding: 1rem 4rem !important;

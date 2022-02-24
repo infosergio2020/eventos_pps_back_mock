@@ -12,6 +12,7 @@
 }
 .grid__container2 {
   display: block;
+  margin-left: 4rem;
 }
 @media (min-width: 680px) {
   .grid__container2 {
@@ -41,7 +42,7 @@
   display: flex;
   flex-direction: column;
   justify-content: start;
-  // align-items: center;
+  align-items: center;
 }
 .grid__image small {
   padding: 1rem;
