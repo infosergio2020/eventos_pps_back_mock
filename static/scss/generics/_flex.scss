@@ -27,13 +27,14 @@
     align-items: center;
   }
   .infop-img p {
-    width: 39rem;
+    width: 33rem;
   }
   .caja16 {
     background-image: url("../img/general/otros/recorrido1.webp");
-    background-size: cover;
-    height: 95rem;
-    width: 39rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 78rem;
+    width: 32rem;
   }
 }
 .flex__container2 {
