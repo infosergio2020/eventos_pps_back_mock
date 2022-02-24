@@ -41,7 +41,7 @@
   display: flex;
   flex-direction: column;
   justify-content: start;
-  align-items: center;
+  // align-items: center;
 }
 .grid__image small {
   padding: 1rem;
@@ -60,6 +60,7 @@
 
 }
 .grid__image img {
+  margin: 0 auto;//centrar imagen dentro del flexbox
   object-fit: cover;
   width: 50%;
   border-radius: 1.5rem;
@@ -83,13 +84,14 @@
 }
 .grid__container__4 {
   display: block;
-  padding: 1rem 4rem;
+  padding: 0 1rem;
 }
 @media (min-width: 680px) {
   .grid__container__4 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 7rem;
+    column-gap: 5rem;
+    align-items: flex-start;
   }
 }
 .grid__container__3 {
