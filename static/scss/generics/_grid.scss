@@ -30,6 +30,11 @@
     grid-template-columns: repeat(2, 1fr);
     column-gap: 7rem;
   }
+  .grid__image img{
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+  }
 }
 .grid__image {
   position: relative;
@@ -56,6 +61,7 @@
 }
 .grid__image img {
   object-fit: cover;
+  width: 50%;
   border-radius: 1.5rem;
   border: 1.5px solid #bbbbbbc7;
   -webkit-box-shadow: -6px 6px 5px 0px rgba(0, 0, 0, 0.75);
