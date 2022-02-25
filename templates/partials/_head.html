@@ -2,12 +2,29 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="refresh" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- color e icono IOS -->
-    <meta name="theme-color" content="#317EFB"/>
-    <link rel="apple-touch-icon" href="{{url_for('static', filename = 'img/general/flooded-house.png')}}">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <meta
+    name="descripción"
+    content="Informarte sobre los desastres naturales en Polonia, Alemania, Republica Dominicana, Chile y Argentina. Descubre que pasó antes, durante y después de la inundación de la Plata en 2013.">
+    
     <!--Responsive Meta Tag-->
+
+    <link rel="manifest" href="{{url_for('static', filename = 'manifest.json')}}">
+    <!-- chorme firefox OS y opera -->
+    <meta name='theme-color' content='#009879' />
+    <!-- windows phone -->
+    <meta name='msapplication-navbutton-color' content='#009879' />
+    <!-- color e icono IOS -->
     <link rel="shortcut icon" href="{{url_for('static', filename = './img/general/otros/tree.webp')}}" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{{url_for('static', filename = 'img/general/flooded-house.png')}}">
+    
+    <meta name='apple-mobile-web-app-title' content='descripción' />
+    <!-- safary ios -->
+    <meta name='apple-mobile-web-app-capable' content='no' />
+    <meta name='apple-mobile-web-app-status-bar-style' content='black-translucent' />
+    
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   
