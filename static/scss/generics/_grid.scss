@@ -37,6 +37,8 @@
         justify-content: center;
   }
 }
+
+
 .grid__image {
   position: relative;
   display: flex;
@@ -60,6 +62,7 @@
   text-align: center;
 
 }
+
 .grid__image img {
   margin: 0 auto;//centrar imagen dentro del flexbox
   object-fit: cover;
@@ -69,6 +72,9 @@
   -webkit-box-shadow: -6px 6px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: -6px 6px 5px 0px rgba(0, 0, 0, 0.75);
   box-shadow: -6px 6px 5px 0px rgba(0, 0, 0, 0.75);
+}
+.exterior img{
+  width: 100%; 
 }
 .grid__texto {
   color: #ffffff;
