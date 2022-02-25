@@ -5,6 +5,8 @@ from modules.rederizado import CustomRouter
 
 # compresion de la app
 from flask_compress import Compress
+# CORS
+from flask_cors import CORS, cross_origin
 
 # creando la instancia del compresor
 compress = Compress()
@@ -12,10 +14,11 @@ compress = Compress()
 # instanciando el controlador que se encarga de renderizar
 rutas = CustomRouter()
 
-
 ##Configuracion del app
 app = Flask(__name__)
 app.config.from_object(config)
+
+CORS(app)
 
 compress.init_app(app)
 
@@ -47,6 +50,7 @@ def Waterlevelsimulator():
     return rutas.render_agua_simulador()
 
 @app.route('/the-news-of-the-day')
+@cross_origin()
 def Thenewsoftheday():
     return rutas.render_noticias_dia()
 

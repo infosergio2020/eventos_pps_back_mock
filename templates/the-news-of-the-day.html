@@ -1,51 +1,48 @@
-  <!-- Contenedor del testimonio -->
-  {% extends 'partials/_layout.html' %}
-  {% block body %}
-  <!-- Info de los diarios-->
-  <main>
-   
-    <div class="main-card">
-        <div class="main-card-body">
-          <div id="afiche-header" class="afiche__head">
-            <h1 id="contenido" tabindex="0" class="centrar-texto">Las noticias del día</h1>
-          </div>
-          <div tabindex="0" aria-label="Reproductor de video">
-              <div id="myvid">
-                  <iframe width="100%" 
-                              height="100%" 
-                              src="https://www.youtube.com/embed/6wSfv4MV8MQ" 
-                              title="YouTube video player" 
-                              frameborder="0" 
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                              allowfullscreen
-                              
-                              >
-                  </iframe>
-              </div>
-              <!-- detalles del video -->
-              <div tabindex="0" class="grid__texto flex__container_dondeir">
-                  <h2 class="no-margin"><span>
-                      Detalles del video:
-                  </span> </h2>
-                  
-                  <div class="video__descripcion">
-                    <p>
-                      Se realizó un compilado con  las noticias vertidas durante la tarde del 2 de abril de 2013, cuando la tormenta de lluvia comenzó a azotar la ciudad de La Plata y alrededores.
-                   
-                    </p>
-                    <p>
-                      En este video se observarán las comunicaciones realizadas en los noticieros de la televisión. 
-  
-                    </p>
-                    
-                  </div>
-              </div> 
+<!-- Contenedor del testimonio -->
+{% extends 'partials/_layout.html' %} {% block body %}
+<!-- Info de los diarios-->
+<main>
+  <div class="main-card">
+    <div class="main-card-body">
+      <div id="afiche-header" class="afiche__head">
+        <h1 id="contenido" tabindex="0" class="centrar-texto">
+          Las noticias del día
+        </h1>
+      </div>
+      <div tabindex="0" aria-label="Reproductor de video">
+        <div id="myvid" >
+          <iframe
+            width="100%"
+            height="720"
+            src="https://www.youtube.com/embed/6wSfv4MV8MQ"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <!-- detalles del video -->
+        <div tabindex="0" class="grid__texto flex__container_dondeir">
+          <h2 class="no-margin"><span> Detalles del video: </span></h2>
+
+          <div class="video__descripcion">
+            <p>
+              Se realizó un compilado con las noticias vertidas durante la tarde
+              del 2 de abril de 2013, cuando la tormenta de lluvia comenzó a
+              azotar la ciudad de La Plata y alrededores.
+            </p>
+            <p>
+              En este video se observarán las comunicaciones realizadas en los
+              noticieros de la televisión.
+            </p>
           </div>
         </div>
       </div>
-      
-        <!-- boton para ir arriba -->
-        {% include ('partials/_button.html') %}  
-  </main>
- <!-- FIN Info de los diarios -->
- {% endblock %}
+    </div>
+  </div>
+
+  <!-- boton para ir arriba -->
+  {% include ('partials/_button.html') %}
+</main>
+<!-- FIN Info de los diarios -->
+{% endblock %}

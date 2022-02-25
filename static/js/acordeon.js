@@ -3,7 +3,7 @@ class Accordion {
     constructor(t) {
         this.rootEl = t, this.buttonEl = this.rootEl.querySelector("button[aria-expanded]");
         const e = this.buttonEl.getAttribute("aria-controls");
-        console.log(e);
+        // console.log(e);
         this.contentEl = document.getElementById(e), this.open = "true" === this.buttonEl.getAttribute("aria-expanded"), this.buttonEl.addEventListener("click", this.onButtonClick.bind(this))
     }
     onButtonClick() {
