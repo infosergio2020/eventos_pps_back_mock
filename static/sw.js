@@ -48,3 +48,38 @@ async function networkAndCache(req) {
     return cached;
   }
 }
+// listen for beforeinstallprompt
+
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e)=>{
+  // prevent chrome 67 and earlier from automatically
+  // showing the prompt
+  e.preventDefault();
+  // stash the event so it can be triggered later.
+  deferredPrompt=w;
+});
+// Notify the user to install
+
+window.addEventListener('beforeinstallprompt', (e)=>{
+  e.preventDefault();
+  deferredPrompt=e;
+  //update ui notify the user they can
+  // add to home screen
+  btnAdd.style.display='block';
+});
+
+// show the prompt
+btnAdd.addEventListener('click', (e)=>{
+  deferredPrompt.prompt();
+  deferredPrompt.userChoice.then((choiceResult)=>{
+    if(choiceResult.outcome==='accepted'){
+      console.log('user accepted the A2hs prompt');
+    }
+    deferredPrompt=null;
+  });
+});
+// confirming installations
+window.addEventListener('appinstalled', (evt)=>{
+  app.logEvent('a2hs','installed');
+});
