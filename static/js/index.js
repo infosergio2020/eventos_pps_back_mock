@@ -1,5 +1,5 @@
 const TITULO =
-  " Estas saliendo de la página <strong>Generar Conciencia</strong> hacia la página de <strong>Citadine</strong>. ¿Desea continuar?";
+  " Estas saliendo de la página <strong>Generar Conciencia</strong> <br> hacia la página de <strong>Citadine</strong>. ¿Desea continuar?";
 const CITADINE_VERDE = "http://ifw-raspi.projekt.jade-hs.de/wordpress/nbs/";
 const CITADINE_AZUL = "http://ifw-raspi.projekt.jade-hs.de/wordpress/";
 const NACION = "https://es.kiosko.net/ar/2013-04-03/np/nacion.html";
