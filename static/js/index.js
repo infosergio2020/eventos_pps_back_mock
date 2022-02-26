@@ -135,7 +135,7 @@ function custom_popup(titulo, comportamiento, parametro) {
   Swal.fire({
     title: titulo,
     icon: "warning",
-    iconColor:"rgb(255 247 1 / 93%)",
+    iconColor:"#E10000",
     showCloseButton: !0,
     showDenyButton: !0,
     focusConfirm: !1,
@@ -145,8 +145,9 @@ function custom_popup(titulo, comportamiento, parametro) {
     denyButtonAriaLabel: "Cancelar.",
     width: "70rem",
     height: "35rem",
-    color: 'rgb(0 0 0);',
-    background: '#fff url(./static/images/greeb.jpg)' ,
+    color: '#000',
+    background: '#fff url(./static/images/greeb.jpg) no-repeat left center/contain' ,
+    
     backdrop: `
         rgba(0,0,123,0.4)
         url("./static/images/cat.gif")
