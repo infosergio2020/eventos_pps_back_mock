@@ -1,19 +1,13 @@
-
-<!-- boton para ir arriba -->
-<div class="buttons">
-    <div class="go-up">
-      <a role="button" tabindex="0" aria-label="Regresar a la barra de navegación."  alt="Botón para regresar a la barra de navegación." href="#init">
-          <img loading="lazy" width="86px" height="86px" src="{{url_for('static', filename = 'img/general/arrow-up.svg')}}"  alt="imagen del botón para regresar a la barra de navegación.">
-      </a>
-    </div>   
+<div class="buttons">     
     <!-- End Tap Target Structure -->
     <div class="main-container-boton ">
       <div class="main-container-boton tooltip">
-      <a role="button" tabindex="0" aria-label="Volver a la página principal."  alt="Botón para volver la página principal." class="boton verde-4" onclick="history.back()">
-        <div class="boton-info">
-          <p>Volver a la página anterior</p> <img loading="lazy" height="56px" width="56px" src="{{url_for('static', filename = 'img/general/backArrow.svg')}}" alt="backArrow">
-        </div>
-      </a>
-      <!-- <span class="tooltiptext">Botón para volver a la página principal.</span> -->
+        <a role="button" tabindex="0" aria-label="Volver a la página anterior."  alt="Botón para volver la página anterior." class="boton verde-4" onclick="history.back()">
+          <div class="boton-info">
+            <p>Volver a la página anterior</p> <img loading="lazy" height="56px" width="56px" src="{{url_for('static', filename = 'img/general/backArrow.svg')}}" alt="backArrow">
+          </div>
+        </a>
+        <!-- <span class="tooltiptext">Botón para volver a la página principal.</span> -->
+      </div>
     </div>             
 </div>
