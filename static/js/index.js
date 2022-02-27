@@ -164,3 +164,9 @@ function custom_popup(titulo, comportamiento, parametro) {
 function abri_website(url) {
   window.open(url, "_blank");
 }
+//service worker
+if('serviceWorker' in navigator){
+  navigator.serviceWorker.register('./sw.js').catch(error=>{
+    console.log(error.message);
+  })
+}
