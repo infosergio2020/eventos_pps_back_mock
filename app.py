@@ -1,5 +1,6 @@
 # comienzo
-from flask import Flask
+from importlib.resources import path
+from flask import Flask, make_response,send_from_directory
 from entorno import config
 from modules.rederizado import CustomRouter
 
@@ -23,6 +24,16 @@ CORS(app)
 compress.init_app(app)
 
 #colocar las rutas antes de correr el servidor
+@app.route('/sw.js')
+def sw():
+    response=make_response(
+                     send_from_directory(directory='static',path='sw.js'))
+    #change the content header file. Can also omit; flask will handle correctly.
+    response.headers['Content-Type'] = 'application/javascript'
+    return response
+
+# ruta para service worker
+
 @app.route('/')
 def Index():
     return rutas.render_index()
