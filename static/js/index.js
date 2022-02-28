@@ -26,19 +26,78 @@ window.addEventListener("DOMContentLoaded", () => {
       document.getElementById("languaje").focus(),
     document.getElementById("header") &&
       document.getElementById("header").focus();
-  var e = document.getElementById("lightgallery");
-  null != e &&
-    e.addEventListener("lgAfterOpen", (e) => {
+      // llamada de los 5 albumnes
+  var album_1 = document.getElementById("lightgallery_1");
+  var album_2 = document.getElementById("lightgallery_2");
+  var album_3 = document.getElementById("lightgallery_3");
+  var album_4 = document.getElementById("lightgallery_4");
+  var album_5 = document.getElementById("lightgallery_5");
+  // album 1
+  null != album_1 &&
+  album_1.addEventListener("lgAfterOpen", (e) => {
       document.getElementById("lg-prev-1").focus();
     }),
-    null != e &&
-      lightGallery(e, {
+    null != album_1 &&
+      lightGallery(album_1, {
         download: !1,
         speed: 500,
         addClass: "lg-custom-thumbnails",
         plugins: [lgZoom, lgThumbnail, lgVideo],
         mobileSettings: { showCloseIcon: !0 },
       });
+  // album 2
+  null != album_2 &&
+  album_2.addEventListener("lgAfterOpen", (e) => {
+      document.getElementById("lg-prev-1").focus();
+    }),
+    null != album_2 &&
+      lightGallery(album_2, {
+        download: !1,
+        speed: 500,
+        addClass: "lg-custom-thumbnails",
+        plugins: [lgZoom, lgThumbnail, lgVideo],
+        mobileSettings: { showCloseIcon: !0 },
+      });
+   //album 3
+   null != album_3 &&
+  album_3.addEventListener("lgAfterOpen", (e) => {
+      document.getElementById("lg-prev-1").focus();
+    }),
+    null != album_3 &&
+      lightGallery(album_3, {
+        download: !1,
+        speed: 500,
+        addClass: "lg-custom-thumbnails",
+        plugins: [lgZoom, lgThumbnail, lgVideo],
+        mobileSettings: { showCloseIcon: !0 },
+      });
+    // album 4
+    null != album_4 &&
+  album_4.addEventListener("lgAfterOpen", (e) => {
+      document.getElementById("lg-prev-1").focus();
+    }),
+    null != album_4 &&
+      lightGallery(album_4, {
+        download: !1,
+        speed: 500,
+        addClass: "lg-custom-thumbnails",
+        plugins: [lgZoom, lgThumbnail, lgVideo],
+        mobileSettings: { showCloseIcon: !0 },
+      });
+    // album 5
+    null != album_5 &&
+  album_5.addEventListener("lgAfterOpen", (e) => {
+      document.getElementById("lg-prev-1").focus();
+    }),
+    null != album_5 &&
+      lightGallery(album_5, {
+        download: !1,
+        speed: 500,
+        addClass: "lg-custom-thumbnails",
+        plugins: [lgZoom, lgThumbnail, lgVideo],
+        mobileSettings: { showCloseIcon: !0 },
+      });
+      // me traigo la galeria       
   let t = document.getElementsByClassName("gallery__libro");
   if (
     (null != t &&
