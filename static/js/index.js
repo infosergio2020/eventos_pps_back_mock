@@ -1,5 +1,10 @@
-const TITULO =
-  " Estas saliendo de la página <strong>Generar Conciencia</strong> <br> hacia la página de <strong>Citadine</strong>. ¿Desea continuar?";
+// titulos para los alert de diario y citadine
+const title_dia = 'Estas saliendo de la página <strong>Generar Conciencia</strong> hacia un enlace del diario <strong>El Día</strong>. ¿Desea continuar?';
+const title_hoy = 'Estas saliendo de la página <strong>Generar Conciencia</strong> hacia un enlace del diario <strong>Hoy</strong>. ¿Desea continuar?';
+const title_clarin = 'Estas saliendo de la página <strong>Generar Conciencia</strong> hacia un enlace del diario <strong>Clarín</strong>. ¿Desea continuar?';
+const title_nacion = ' Estas saliendo de la página <strong>Generar Conciencia</strong> hacia un enlace del diario <strong>La Nación</strong>. ¿Desea continuar?';
+const title_citadine = ' Estas saliendo de la página <strong>Generar Conciencia</strong> hacia la página de <strong>Citadine</strong>. ¿Desea continuar?';
+// enlaces para redireccionar en caso de confirmaicon en el alert
 const CITADINE_VERDE = "http://ifw-raspi.projekt.jade-hs.de/wordpress/nbs/";
 const CITADINE_AZUL = "http://ifw-raspi.projekt.jade-hs.de/wordpress/";
 const NACION = "https://es.kiosko.net/ar/2013-04-03/np/nacion.html";
@@ -8,7 +13,8 @@ const CLARIN =
 const HOY = "https://diariohoy.net/adjuntos/archivos/000/024/0000024100.pdf";
 const ELDIA =
   "https://www.eldia.com/nota/2013-4-3--el-agua-ya-esta-en-un-metro-y-medio-por-favor-que-alguien-nos-mande-botes";
-window.addEventListener("DOMContentLoaded", () => {
+// una vez que el DOM esté cargado...
+  window.addEventListener("DOMContentLoaded", () => {
   document.getElementById("logo").addEventListener("click", () => toggleMenu()),
     document
       .getElementById("close-sideBar")
@@ -97,38 +103,39 @@ const onkey_tab = (e) => {
       document.getElementById("close-sideBar").setAttribute("tabindex", -1),
         document.getElementById("close-sideBar").blur();
   };
+//  busqueda y asignacion de eventos...
 var e = document.getElementById("diario-1-1");
 null != e &&
   e.addEventListener("click", (e) => {
-    custom_popup(TITULO, abri_website, ELDIA);
+    custom_popup(title_dia, abri_website, ELDIA);
   });
 e = document.getElementById("diario-2-2");
 null != e &&
   e.addEventListener("click", (e) => {
-    custom_popup(TITULO, abri_website, HOY);
+    custom_popup(title_hoy, abri_website, HOY);
   });
 e = document.getElementById("diario-3-3");
 null != e &&
   e.addEventListener("click", (e) => {
-    custom_popup(TITULO, abri_website, CLARIN);
+    custom_popup(title_clarin, abri_website, CLARIN);
   });
 e = document.getElementById("diario-4-4");
 null != e &&
   e.addEventListener("click", (e) => {
-    custom_popup(TITULO, abri_website, NACION);
+    custom_popup(title_nacion, abri_website, NACION);
   });
 e = document.getElementsByClassName("citadineAzul");
 if (null != e)
   for (let i = 0; i < e.length; i++) {
     e[i].addEventListener("click", (e) => {
-      custom_popup(TITULO, abri_website, CITADINE_AZUL);
+      custom_popup(title_citadine, abri_website, CITADINE_AZUL);
     });
   }
 e = document.getElementsByClassName("citadineVerde");
 if (null != e)
   for (let i = 0; i < e.length; i++) {
     e[i].addEventListener("click", (e) => {
-      custom_popup(TITULO, abri_website, CITADINE_VERDE);
+      custom_popup(title_citadine, abri_website, CITADINE_VERDE);
     });
   }
 function custom_popup(titulo, comportamiento, parametro) {
