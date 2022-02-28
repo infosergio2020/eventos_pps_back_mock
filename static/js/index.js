@@ -54,6 +54,8 @@ window.addEventListener("DOMContentLoaded", () => {
   )
     for (let e = 0; e < t.length; e++)
       lightGallery(t[e], {
+        // galleryId:"lightgallery_"+(e+1),
+        galleryId:"lightgallery_2",
         download: !1,
         speed: 500,
         addClass: "lg-custom-thumbnails",
