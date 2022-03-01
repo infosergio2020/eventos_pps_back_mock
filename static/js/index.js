@@ -146,6 +146,13 @@ if (null != e)
   }
 function custom_popup(titulo, comportamiento, parametro) {
   Swal.fire({
+    customClass: {
+      confirmButton: 'alert-btn confirm-btn',
+      denyButton: 'alert-btn cancel-btn',
+      closeButton: 'cancel-btn'
+    },
+    buttonsStyling: false,
+
     title: titulo,
     icon: "warning",
     iconColor:"#E10000",
@@ -159,7 +166,7 @@ function custom_popup(titulo, comportamiento, parametro) {
     width: "70rem",
     height: "35rem",
     color: '#000',
-    background: '#fff url(./static/images/greeb.jpg) no-repeat left center/contain' ,
+    background: '#FBFFF0 url(./static/images/greeb.jpg) no-repeat left center/contain' ,
     
     backdrop: `
         rgba(0,0,123,0.4)
