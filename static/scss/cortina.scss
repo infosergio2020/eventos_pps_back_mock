@@ -1,0 +1,116 @@
+.rnOuter {
+  background: #ae1313;
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+}
+/* derecha */
+
+.rnInner_derecha {
+  width: 100%;
+  position: absolute;
+  top: -10%;
+  right: -110%;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+/* izquierda */
+.rnInner_izquierda {
+  width: 100%;
+  position: absolute;
+  top: -10%;
+  right: 0;
+  bottom: 0;
+  left: -5%;
+  margin: auto;
+}
+.rnInner_desplazar{
+  transform-style: preserve-3d;
+  transition: transform 6s ease;
+  transform-origin: -120% top;
+}
+.rnUnit {
+  width: 10vw;
+  height: 120vh;
+  background: repeating-linear-gradient(to left, #e61919 4vw, #8a0f0f 8vw, #f07575 10vw);
+  background-size: 100% 100%;
+  display: inline-block;
+  transform-origin: 0 0%;
+  transform: rotate(3deg);
+  animation: rnUnit 2s ease infinite;
+  
+}
+/* .rnUnit_right {
+  width: 10vw;
+  height: 120vh;
+  background: repeating-linear-gradient(to right, #e61919 4vw, #8a0f0f 8vw, #f07575 10vw);
+  background-size: 100% 100%;
+  display: inline-block;
+  transform-origin: 0 0%;
+  transform: rotate(3deg); 
+  animation: rnUnit 2s ease infinite;
+  animation-direction: reverse
+
+} */
+@keyframes rnUnit {
+  50% {
+    transform: rotate(-3deg);
+  }
+}
+.rnUnit:nth-child(1) {
+  animation-delay: -0.1s;
+}
+.rnUnit:nth-child(2) {
+  animation-delay: -0.2s;
+}
+.rnUnit:nth-child(3) {
+  animation-delay: -0.3s;
+}
+.rnUnit:nth-child(4) {
+  animation-delay: -0.4s;
+}
+.rnUnit:nth-child(5) {
+  animation-delay: -0.5s;
+}
+.rnUnit:nth-child(6) {
+  animation-delay: -0.6s;
+}
+.rnUnit:nth-child(7) {
+  animation-delay: -0.7s;
+}
+.rnUnit:nth-child(8) {
+  animation-delay: -0.8s;
+}
+.rnUnit:nth-child(9) {
+  animation-delay: -0.9s;
+}
+.rnUnit:nth-child(10) {
+  animation-delay: -1s;
+}
+.aoTable {
+  display: table;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+}
+.aoTableCell {
+  color: #ae1313;
+  display: table-cell;
+  vertical-align: middle;
+  transition: color 3s ease;
+}
+
+.rnOuter:hover .rnInner_derecha {
+  transform-origin: -120% top;
+  /* espejo */
+  transform: scaleX(2);
+}
+.rnOuter:hover .rnInner_izquierda {
+  transform-origin: -120% top;
+  transform: scaleX(0);
+}
+.rnOuter:hover .aoTableCell {
+  color: white;
+}
