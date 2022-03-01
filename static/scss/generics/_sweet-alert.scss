@@ -1,0 +1,22 @@
+.alert-btn{
+    padding: 2rem 4rem!important;
+    color: #ffffff;
+    font-size: 2.8rem;
+    margin-right: 1rem;
+    border-radius: 2rem;
+    transition: all .3s ease-in-out;
+}
+
+.alert-btn:focus,.alert-btn:focus-within,.alert-btn:hover{
+    transform: scale(1.03);
+    color: #000000;
+    border: 3px solid #0c0c0c;
+}
+
+.confirm-btn{
+    background-color: #0A8025!important;
+}
+
+.cancel-btn{
+    background-color: #C6323B!important;
+}
