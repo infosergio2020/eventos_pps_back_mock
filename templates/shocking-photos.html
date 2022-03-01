@@ -10,19 +10,18 @@
             Fotos impactantes
           </h1>
         </div>
-        <div class="centrar-texto">
+        <div class="centrar-texto" tabindex="0">
           <p>Seleccionar la imagen para entrar a la galería de fotos.</p>
         </div>
       </div>
       <div class="main-card-body">
-        
+        <div tabindex="0" class="rnOuter altura_img" style="margin: 2rem auto"  >
           <!-- comienzo de las cortinas -->
-          <section class="rnOuter ">
+          
            
-            <section class="aoTable">
-              <div class="aoTableCell">
-                <div style="position: absolute; bottom: 0rem; background-size:cover; height:100%; width:100%;"> 
-                    <div class="gallery__container" id="lightgallery">
+            <section class="aoTable" id="lightgallery" >
+              <div class="aoTableCell" id="telon_id">
+                    <!-- <div class="gallery__container altura_img" id="lightgallery"> -->
                         <a
                           role="link"
                           class="img1"
@@ -32,41 +31,38 @@
                           class="vertical"
                         >
                           <img
-                            width="100%" height="100%"
+                            width="50%" height="50%" style="margin-top: -35rem;"
                             alt="img2."
                             aria-label="imagen de la galería-2 de 7.Presione enter si desea abrir el carrousel de imágenes."
                             src="{{url_for('static', filename = 'img/section3/fotos-impactantes/16.webp')}}"
                           />
                         </a>
-                    </div>
+                    
                 </div>
-              </div>
           </section>
-              
-              <div class='rnInner_izquierda rnInner_desplazar'>
-                <!-- desde izquierda -->
-                <div class='rnUnit'></div>
-                <div class='rnUnit'></div>
-                <div class='rnUnit'></div>
-                <div class='rnUnit'></div>
-                <div class='rnUnit'></div>
+          <div class='rnInner_izquierda rnInner_desplazar'>
+            <!-- desde izquierda -->
+            <div class='rnUnit'></div>
+            <div class='rnUnit'></div>
+            <div class='rnUnit'></div>
+            <div class='rnUnit'></div>
+            <div class='rnUnit'></div>
+  
       
+          </div>
+          <div class="rnInner_derecha rnInner_desplazar">
+            <!-- desde derecha -->
+            <div class='rnUnit'></div>
+            <div class='rnUnit'></div>
+            <div class='rnUnit'></div>
+            <div class='rnUnit'></div>
+            <div class='rnUnit'></div>
+  
+          </div>
+
+           
           
-              </div>
-              <div class="rnInner_derecha rnInner_desplazar">
-                <!-- desde derecha -->
-                <div class='rnUnit'></div>
-                <div class='rnUnit'></div>
-                <div class='rnUnit'></div>
-                <div class='rnUnit'></div>
-                <div class='rnUnit'></div>
-      
-              </div>
-              <div style="position: absolute; bottom: 0rem; background-size:cover; height:160%; width:100%;"> 
-                <img width="100%" height="100%"   src="{{url_for('static', filename = 'img/section3/fotos-impactantes/siluetas.png')}}" alt="img">
-              </div>
-          </section>
-        
+        </div>
 
           <!-- fin de las cortinas -->
           

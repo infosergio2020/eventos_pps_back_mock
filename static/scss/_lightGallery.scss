@@ -32,6 +32,11 @@
 }
 .vertical {
   grid-row: span 2;
+  height: 30%!important;
+}
+.altura_img{
+  height: 30%!important;
+  width: 95%;
 }
 .big {
   grid-column: span 2;
