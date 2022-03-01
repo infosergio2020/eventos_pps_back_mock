@@ -15,29 +15,30 @@
         </div>
       </div>
       <div class="main-card-body">
-        <div class="gallery__container" id="lightgallery">
-
+        
           <!-- comienzo de las cortinas -->
           <section class="rnOuter ">
            
             <section class="aoTable">
               <div class="aoTableCell">
                 <div style="position: absolute; bottom: 0rem; background-size:cover; height:100%; width:100%;"> 
-                  <a
-                    role="link"
-                    class="img1"
-                    aria-label="imagen de la galería-16 de 19.Presione enter si desea abrir el carrousel de imágenes."
-                    alt="img16."
-                    href="{{url_for('static', filename = 'img/section3/fotos-impactantes/16.webp')}}"
-                    class="vertical"
-                  >
-                    <img
-                      width="100%" height="100%"
-                      alt="img2."
-                      aria-label="imagen de la galería-2 de 7.Presione enter si desea abrir el carrousel de imágenes."
-                      src="{{url_for('static', filename = 'img/section3/fotos-impactantes/16.webp')}}"
-                    />
-                  </a>
+                    <div class="gallery__container" id="lightgallery">
+                        <a
+                          role="link"
+                          class="img1"
+                          aria-label="imagen de la galería-16 de 19.Presione enter si desea abrir el carrousel de imágenes."
+                          alt="img16."
+                          href="{{url_for('static', filename = 'img/section3/fotos-impactantes/16.webp')}}"
+                          class="vertical"
+                        >
+                          <img
+                            width="100%" height="100%"
+                            alt="img2."
+                            aria-label="imagen de la galería-2 de 7.Presione enter si desea abrir el carrousel de imágenes."
+                            src="{{url_for('static', filename = 'img/section3/fotos-impactantes/16.webp')}}"
+                          />
+                        </a>
+                    </div>
                 </div>
               </div>
           </section>
@@ -61,13 +62,15 @@
                 <div class='rnUnit'></div>
       
               </div>
-              <div style="position: absolute; bottom: 0rem; background-size:cover; height:100%; width:100%;"> 
-                <img width="100%" height="100%"   src="/siluetas.png" alt="img">
+              <div style="position: absolute; bottom: 0rem; background-size:cover; height:160%; width:100%;"> 
+                <img width="100%" height="100%"   src="{{url_for('static', filename = 'img/section3/fotos-impactantes/siluetas.png')}}" alt="img">
               </div>
           </section>
-          <!-- comienzo de las cortinas -->
+        
+
+          <!-- fin de las cortinas -->
           
-          <a
+          <!-- <a
             role="link"
             class="img1"
             aria-label="imagen de la galería-17 de 19.Presione enter si desea abrir el carrousel de imágenes."
@@ -108,8 +111,8 @@
               alt="imagen de la galeria"
               src="{{url_for('static', filename = 'img/section3/fotos-impactantes/19.webp')}}"
             />
-          </a>
-        </div>
+          </a> -->
+        
       </div>
     </div>
   </div>
