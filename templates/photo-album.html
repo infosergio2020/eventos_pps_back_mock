@@ -12,8 +12,13 @@
         </div>
         <div class="centrar-texto">
           <p>
-            Las personas entrevistadas compartieron fotos sobre la tragedia del 2 de abril. Algunas no tuvieron registro fotográfico, porque era tal la desesperaciópn del momento que no podían sacar fotos. Otras personas directamente no querían buscar las fotos porque no podían volverlas a ver otra vez, directamente no pudieron. 
-            Les agradecemos mucho a todas, porque sabemos el dolor que implica volver a observarlas y a quienes aún no pueden, lo entendemos profundamente. 
+            Las personas entrevistadas compartieron fotos sobre la tragedia del
+            2 de abril. Algunas no tuvieron registro fotográfico, porque era tal
+            la desesperaciópn del momento que no podían sacar fotos. Otras
+            personas directamente no querían buscar las fotos porque no podían
+            volverlas a ver otra vez, directamente no pudieron. Les agradecemos
+            mucho a todas, porque sabemos el dolor que implica volver a
+            observarlas y a quienes aún no pueden, lo entendemos profundamente.
           </p>
           <p>
             Seleccione cualquiera de los 5 álbumnes y luego toque la foto del
@@ -30,22 +35,17 @@
                 <div class="bark"></div>
 
                 <img
-                  role="img"
-                  width="100%"
-                  height="100%"
-                  alt="portada de la tapa del album Graciela."
                   class="photo-not-border"
-                  src="{{url_for('static', filename = 'img/section3/tapas/Tapas mini Graciela.webp')}}"
+                  src="{{url_for('static', filename = 'img/section3/tapas/Tapas_mini_Graciela.webp')}}"
                 />
               </div>
               <div class="details">
                 <div class="container">
                   <div class="main-card-body">
-                    <div class="gallery__libro" id="lightgallery_1">
+                    <div class="gallery__libro">
                       <!-- video con su imagen -->
                       <!-- Album de Graciela  video 1-->
                       <a
-                        role="link"
                         class="box1 agrandar-img"
                         tabindex="1"
                         id="img1"
@@ -55,63 +55,34 @@
                         data-poster="{{url_for('static', filename = 'img/section3/album-graciela/foto-a.webp')}}"
                       >
                         <img
-                          role="img"
-                          width="100%"
-                          height="100%"
                           loading="lazy"
                           class="img-responsive"
                           src="{{url_for('static', filename = 'img/section3/album-graciela/foto-a.webp')}}"
                         />
                       </a>
-                      <!-- detalles del album -->
 
-                      <p>Seleccione la foto</p>
-                      <p>para ingresar a la</p>
-
-                      <p>galería de fotos y sus</p>
-                      <p>explicaciones.</p>
-                      <br />
-                      <br />
-                      <p>- Álbum de</p>
-                      <p>Graciela</p>
-
-                      <!-- video con su imagen video 2 -->
-                      <!-- <a
-                        role="link"
-                        tabindex="-1"
+                      {% for photo in albums['graciela'] %}
+                      <a
                         class="achicar-img"
-                        aria-label="Estas dentro del album de Graciela. Contenido 2 de 13."
+                        tabindex="-1"
+                        id="img{{loop.index}}"
+                        aria-label="Estas dentro del album de Graciela. Contenido {{loop.index}} de {{loop.length}}."
                         data-lg-size="1280-720"
-                        data-src="https://youtu.be/iGRuEBtqbuo"
-                        data-poster="{{url_for('static', filename = 'img/section3/album-graciela/foto-b.webp')}}"
+                        data-src="{{photo.video}}"
+                        data-poster="{{ url_for('static', filename = photo.image )}}"
                       >
                         <img
-                          role="img"
-                          width="100%"
-                          height="100%"
                           loading="lazy"
                           class="img-responsive"
-                          src="{{url_for('static', filename = 'img/section3/album-graciela/foto-b.webp')}}"
+                          src="{{url_for('static', filename = photo.image  )}}"
                         />
-                      </a> -->
-                      
-                      <!-- video con su imagen -->
-                      <!--orden: items dentro de la seccion 5
-                                                    1) estar preparado, que hacer y no hacer (componente de juego)
-                                                    2) como preparar la mochila (componente de juego)
-                                                    3) plan de evacuacion where to go.
-                                                    4) acceso de los demas juegos. 
-                                                    se usa 1 componente del juego para 2 infos, 
-                                                    a la mochila se le puede colocar lo del juego esto esta en la seccion 5.
-                                                    la profe arma esta parte de mas info de estar prepatado seccion 5
-                                                    muestro el primero en grande y (12 o 15)los demas los oculto y probar si el narrador lee las que no se ve -->
+                      </a>
+                      {% endfor %}
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-
-            
           </div>
         </div>
       </div>

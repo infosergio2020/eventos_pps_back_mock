@@ -1,4 +1,5 @@
 from flask import render_template,request
+from .mock_data import list_album
 
 class CustomRouter:
 
@@ -72,7 +73,7 @@ class CustomRouter:
         return render_template('/testimonio2.html',flag_1="opcion_4",flag_2="opcion_3")
 
     def render_photo_album(self):
-        return render_template('/photo-album.html',flag_1="opcion_2",flag_2="opcion_2",flag_3="opcion_3")
+        return render_template('/photo-album.html',flag_1="opcion_2",flag_2="opcion_2",flag_3="opcion_3", albums=list_album)
 
 
 

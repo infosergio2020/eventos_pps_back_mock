@@ -39,36 +39,34 @@ const ELDIA =
   null != e &&
   e.addEventListener("lgAfterOpen", (e) => {
       document.getElementById("lg-prev-1").focus();
-    }),
-    null != e &&
-      lightGallery(e, {
-        download: !1,
-        speed: 500,
-        addClass: "lg-custom-thumbnails",
-        plugins: [lgZoom, lgThumbnail, lgVideo],
-        mobileSettings: { showCloseIcon: !0 },
-      });
-      //Album de fotos      
-  let t = document.getElementsByClassName("gallery__libro");
-  if (
-    (null != t &&
-      0 != t.length &&
-      t[0].addEventListener("lgAfterOpen", (e) => {
-        document.getElementById("lg-prev-1").focus();
-      }),
-    null != t)
-  )
-    for (let e = 0; e < t.length; e++)
-      lightGallery(t[e], {
-        // galleryId:"lightgallery_"+(e+1),
-        galleryId:"lightgallery_2",
-        download: !1,
-        speed: 500,
-        addClass: "lg-custom-thumbnails",
-        plugins: [lgThumbnail, lgVideo],
-        mobileSettings: { showCloseIcon: !0 },
-      });
-});
+    }), null != e &&
+          lightGallery(e, {
+            download: !1,
+            speed: 500,
+            addClass: "lg-custom-thumbnails",
+            plugins: [lgZoom, lgThumbnail, lgVideo],
+            mobileSettings: { showCloseIcon: !0 },
+          });
+          let t = document.getElementsByClassName("gallery__libro");
+          if (
+          (null != t &&
+          0 != t.length &&
+          t[0].addEventListener("lgAfterOpen", (e) => {
+              document.getElementById("lg-prev-1").focus();
+          }),
+          null != t)
+          )
+          for (let e = 0; e < t.length; e++)
+          lightGallery(t[e], {
+            download: !1,
+            speed: 500,
+            addClass: "lg-custom-thumbnails",
+            plugins: [lgThumbnail, lgVideo],
+            mobileSettings: { showCloseIcon: !0 },
+          });
+          });
+
+
 const onkey_tab = (e) => {
     switch (e.keyCode) {
       case 13:
