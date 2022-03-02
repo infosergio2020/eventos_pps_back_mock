@@ -254,6 +254,62 @@
                 </div>
               </div>
             </div>
+            <!-- libro 5 -->
+            <!-- cuaderno de Graciela -->
+            <div class="card-libro libro1">
+                <div class="imgBox">
+                  <div class="bark"></div>
+  
+                  <img
+                    class="photo-not-border"
+                    src="{{url_for('static', filename = 'img/section3/cuaderno-graciela/tapa1.webp')}}"
+                  />
+                </div>
+                <div class="details">
+                  <div class="container">
+                    <div class="main-card-body">
+                      <div class="gallery__libro">
+                        <!-- video con su imagen -->
+                        <!-- cuaderno de Graciela  video 1-->
+                        <a
+                          class="box1 agrandar-img"
+                          tabindex="1"
+                          id="img1"
+                          aria-label="presione enter para conocer las imágenes del cuaderno de Graciela."
+                          data-lg-size="1280-720"
+                          data-src="https://youtu.be/BRrr73LE_zU"
+                          data-poster="{{url_for('static', filename = 'img/section3/cuaderno-graciela/hoja1.webp')}}"
+                        >
+                          <img
+                            loading="lazy"
+                            class="img-responsive"
+                            src="{{url_for('static', filename = 'img/section3/cuaderno-graciela/hoja1.webp')}}"
+                          />
+                        </a>
+  
+                        {% for photo in albums['graciela_book'] %}
+                        <a
+                          class="box1 agrandar-img"
+                          tabindex="1"
+                          id="img{{loop.index}}"
+                          aria-label="Estás dentro del cuaderno de Graciela. Contenido {{loop.index}} de {{loop.length}}."
+                          data-lg-size="1280-720"
+                          data-src="{{photo.video}}"
+                          data-poster="{{ url_for('static', filename = photo.image )}}"
+                        >
+                          <img
+                            loading="lazy"
+                            class="img-responsive"
+                            src="{{url_for('static', filename = photo.image  )}}"
+                          />
+                        </a>
+                        {% endfor %}
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
           </div>
         </div>
       </div>
