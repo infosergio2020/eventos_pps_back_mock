@@ -50,7 +50,13 @@ def Testimonio2():
 def Testimonio3():
     return rutas.render_after_flood()
 
+@app.route('/desastres-naturales')
+def Desastres_naturales():
+    return rutas.render_citadine_blue()
 
+@app.route('/soluciones-naturales')
+def Soluciones_naturales():
+    return rutas.render_citadine_green()    
 
 @app.route('/educational-games')
 def Educational_games():

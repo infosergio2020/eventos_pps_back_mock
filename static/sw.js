@@ -27,6 +27,7 @@ const resourceToPrecache = [
   './templates/sidebar/sections.html',
 
   './templates/Conclusiones-del-evento.html',
+  './templates/desastres_naturales.html',
   './templates/diarios.html',
   './templates/dondeir.html',
   './templates/index.html',
@@ -37,6 +38,7 @@ const resourceToPrecache = [
   './templates/recomendacion-como-actuar.html',
   './templates/sandbox.html',
   './templates/shocking-photos.html',
+  './templates/soluciones_naturales.html',
   './templates/testimonio1.html',
   './templates/testimonio2.html',
   './templates/testimonio3.html',

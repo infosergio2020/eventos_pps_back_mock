@@ -119,10 +119,10 @@ class CustomRouter:
         return render_template('sections/section-6.html')
     # subseccion-6
     def render_citadine_blue(self):
-        return render_template('')
+        return render_template('/desastres_naturales.html')
 
     def render_citadine_green(self):
-        return render_template('')
+        return render_template('/soluciones_naturales.html')
 
 
 

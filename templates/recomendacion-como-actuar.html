@@ -17,7 +17,7 @@
 
         <div class="flex__container2" tabindex="0">
           <p>
-            En el Manual del Plan de Reducción del Riesgo por Inundaciones para la Región La Plata se lista una serie de
+            En el Manual del Plan de Reducción del Riesgo por Inundaciones para la Región La Plata, se lista una serie de
             recomendaciones de cómo actuar frente a inundaciones. Aquí te mostramos algunas:
           </p>
         </div>
@@ -34,13 +34,13 @@
 
       <!-- elemento 1 -->
       <div class="grid__image mg-top">
-        <img aria-label="imagen de un dibujo 1." role="img" width="100%" height="100%" src="{{url_for('static', filename = 'img/afiches/quehacer-Imagen1.webp')}}" alt="Imagen de asegurá.">
+        <img aria-label="imágen de un dibujo 1." role="img" width="100%" height="100%" src="{{url_for('static', filename = 'img/afiches/quehacer-Imagen1.webp')}}" alt="Imagen de asegurá.">
 
         <!-- componente 1 -->
         <div class="accordion">
 
-          <button type="button" aria-label="Presiona enter si desea conocer mas sobre el testimonio de Amina Suarez."
-            aria-expanded="false" class="accordion-trigger boton-acordeon" aria-controls="sect1" id="accordion1id-1">
+          <button type="button" aria-label="Presiona enter si desea conocer que debes asegurar."
+            aria-expanded="false" class="accordion-trigger boton-acordeon" aria-controls="sect1" >
             <span class="accordion-title">
               Asegurá
               <svg id="campo" xmlns="http://www.w3.org/2000/svg" class="down" width="12" height="9" viewBox="0 0 12 9">
@@ -52,15 +52,18 @@
           <div id="sect1" role="region" aria-labelledby="accordion1id-1" class="accordion-panel animate__animated animate__fadeIn" hidden>
             <div style="width: 100%;">
               <!-- Variable content within section, may include any type of markup or interactive widgets. -->
-              <fieldset>
-                <p class="curso__descripcion">
-                  Cortá los servicios de agua, luz y gas.
-                  Juntá la basura y no la saques.
-                  Juntá elementos sueltos o átalos.
-                  Ponte zapatillas o zapatos de goma.
-                  Tené una radio a pilas cargada.
-
-                </p>
+              <fieldset tabindex="0" id="accordion1id-1">
+                <div class="curso__descripcion">
+                  <p >
+                    Cortá los servicios de agua, luz y gas.
+                    Juntá la basura y no la saques.
+                    Juntá elementos sueltos o átalos.
+                    Ponte zapatillas o zapatos de goma.
+                    Tené una radio a pilas cargada.
+  
+                  </p>
+                </div>
+            
               </fieldset>
             </div>
           </div>
@@ -75,8 +78,8 @@
         <div class="accordion">
 
           <button type="button"
-            aria-label="Presiona enter si desea conocer mas sobre el testimonio de Alejandro Fernandez."
-            aria-expanded="false" class="accordion-trigger boton-acordeon" aria-controls="sect2" id="accordion1id-2">
+            aria-label="Presiona enter si desea conocer que número debes tener en cuenta."
+            aria-expanded="false" class="accordion-trigger boton-acordeon" aria-controls="sect2">
             <span class="accordion-title">
               Establecé
               <svg id="campo" xmlns="http://www.w3.org/2000/svg" class="down" width="12" height="9" viewBox="0 0 12 9">
@@ -88,13 +91,15 @@
           <div id="sect2" role="region" aria-labelledby="accordion1id-2" class="accordion-panel animate__animated animate__fadeIn" hidden>
             <div>
               <!-- Variable content within section, may include any type of markup or interactive widgets. -->
-              <fieldset>
-                <p class="curso__descripcion">
-                  Avisá donde te encuentras.
-                  Fijate zonas altas de la casa o barrio donde acudir.
-                  Agendate los números de emergencia.
-                    
-                </p>
+              <fieldset tabindex="0" id="accordion1id-2">
+                <div class="curso__descripcion">
+                  <p>
+                    Avisá donde te encuentras.
+                    Fijate zonas altas de la casa o barrio donde acudir.
+                    Agendate los números de emergencia.
+                      
+                  </p>
+                </div>
               </fieldset>
             </div>
           </div>
@@ -107,8 +112,8 @@
         <!-- componente 3 -->
         <div class="accordion">
 
-          <button type="button" aria-label="Presiona enter si desea conocer mas sobre el testimonio de Romina Carrozas."
-            aria-expanded="false" class="accordion-trigger boton-acordeon" aria-controls="sect3" id="accordion1id-3">
+          <button type="button" aria-label="Presiona enter si desea conocer que cosas debes resguardar."
+            aria-expanded="false" class="accordion-trigger boton-acordeon" aria-controls="sect3">
             <span class="accordion-title">
               Resguardá
               <svg id="campo" xmlns="http://www.w3.org/2000/svg" class="down" width="12" height="9" viewBox="0 0 12 9">
@@ -120,11 +125,14 @@
           <div id="sect3" role="region" aria-labelledby="accordion1id-3" class="accordion-panel animate__animated animate__fadeIn" hidden>
             <div>
               <!-- Variable content within section, may include any type of markup or interactive widgets. -->
-              <fieldset>
-                <p class="curso__descripcion">
-                  Subí aparatos,  elementos de valor, documentos importantes a un lugar elevado.
-                  Colocá los productos peligrosos o tóxicos bien cerrados a una altura prudente.  
-                </p>
+              <fieldset tabindex="0" id="accordion1id-3">
+                <div class="curso__descripcion">
+                  <p>
+                    Subí aparatos,  elementos de valor, documentos importantes a un lugar elevado.
+                    Colocá los productos peligrosos o tóxicos bien cerrados a una altura prudente.  
+                  </p>
+                </div>
+
               </fieldset>
             </div>
           </div>
@@ -137,8 +145,8 @@
         <!-- componente 4 -->
         <div class="accordion">
 
-          <button type="button" aria-label="Presiona enter si desea conocer mas sobre el testimonio de Silvia Rivas."
-            aria-expanded="false" class="accordion-trigger boton-acordeon" aria-controls="sect4" id="accordion1id-4">
+          <button type="button" aria-label="Presiona enter si desea conocer que debes armar en situaciones de supervivencia."
+            aria-expanded="false" class="accordion-trigger boton-acordeon" aria-controls="sect4">
             <span class="accordion-title">
               Armá
               <svg id="campo" xmlns="http://www.w3.org/2000/svg" class="down" width="12" height="9" viewBox="0 0 12 9">
@@ -150,11 +158,13 @@
           <div id="sect4" role="region" aria-labelledby="accordion1id-4" class="accordion-panel animate__animated animate__fadeIn" hidden>
             <div>
               <!-- Variable content within section, may include any type of markup or interactive widgets. -->
-              <fieldset>
-                <p class="curso__descripcion">
-                  Armá una mochila con tu documento, agua, linterna, kit de primeros auxilios, radio a pilas, celular y cargador. Una muda de ropa y abrigo.
+              <fieldset tabindex="0" id="accordion1id-4">
+                <div class="curso__descripcion">
+                  <p>
+                    Armá una mochila con tu documento, agua, linterna, kit de primeros auxilios, radio a pilas, celular y cargador. Una muda de ropa y abrigo.
 
-                </p>
+                  </p>
+                </div>
               </fieldset>
             </div>
           </div>
@@ -174,7 +184,7 @@
             quedar atrapado. Dejá la heladera abierta para que no flote.
           </p>
           <p>
-            - Si estás en el auto y el agua ya ingresa al habitáculo, conviene salir y buscar refugio.
+            - Si estás en el auto y el agua ya ingresa al vehículo, conviene salir y buscar refugio.
           </p>
         </div>
       </div>

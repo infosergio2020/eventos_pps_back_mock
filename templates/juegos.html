@@ -1,114 +1,138 @@
-  <!-- Contenedor del testimonio -->
+  <!-- Contenedor de juegos -->
   {% extends 'partials/_layout.html' %}
   {% block body %}
-  <!-- Info de galeria de fotos-->
+  <!-- Info de los juegos-->
     <main>
         <div class="container">
             <div class="main-card" style="margin: 10rem auto;">
                 <div class="main-card-header">
+                   <!-- titulo de la pagina -->
                     <div id="afiche-header" class="afiche__head">
                       <h1 id="contenido" tabindex="0" class="centrar-texto">Juegos educativos</h1>
                     </div>
+                    <!-- descripcion antes de interactuar con los juegos -->
                     <div tabindex="0" class="centrar-texto">
                       <p>¡Aprendé jugando! Se dispone de estos juegos educativos sobre las inundaciones, aprender a prepararse ante una emergencia, sobre mantener la ciudad sustentable, entre otros.</p>
                       <p>Seleccionar la imagen del juego para acceder al detalle y poder comenzar a jugar.</p>
                     </div>
-
                 </div>
+                <!-- presentacion de los 6 juegos -->
                 <div class="main-card-body">
-                    <div class="container-juego">
-                             
-                              
-                          
+                    <div class="container-juego">                            
+                              <!-- juego 1 -->
+                              <div class="card"> 
+                                  <img tabindex="0" role="img" class="img-juego img1" src="{{url_for('static', filename = 'img/section5/juegos-tapa/juego1.webp')}}"  alt="Disaster cross." aria-label="Tapa del juego Disaster cross.">
+                                  <div class="intro">
+                                      <h2 tabindex="0">
+                                        Disaster cross
+                                      </h2>    
+                                      <p tabindex="0" class="esconder-detail" style="margin-bottom:1rem">
+                                        Juego educativo en forma de crucigrama para aprender sobre distintas catástrofes. Brinda pistas para completar el crucigrama. Provee distintos niveles de dificultad.                
+                                      </p>
+                                      <div aria-labelledby="diario-2">
+                                          <div class=" verde-4 esconder-detail boton" >
+                                              <a role="button" tabindex="0" aria-label="Jugar Disaster cross." href="#/Disaster-cross" style="color: rgb(255, 255, 255);"> Jugar</a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <!-- juego 2 -->
                               <div class="card" tabindex="0"> 
-                                  <img role="img" class="img-juego img1" src="{{url_for('static', filename = 'img/section5/juegos-tapa/juego2.webp')}}"  alt="mono." aria-label="mono.">
+                                  <img role="img" class="img-juego img1" src="{{url_for('static', filename = 'img/section5/juegos-tapa/juego2.webp')}}"  alt="Limpiar la ciudad." aria-label="Tapa del juego Limpiar la ciudad.">
                                   <div class="intro">
                                       <h2>
-                                        Disaster cross
+                                        Limpiar la ciudad
+                                      </h2>
+                                      <p class="esconder-detail">
+                                        Juego educativo que permite ayudar a la gente de limpieza a distinguir los residuos de la ciudad y recolectarlos para mantener la ciudad limpia.                                 
+                                      </p>
+                                      <div aria-labelledby="diario-2">                             
+                                          <div class="verde-4 esconder-detail boton"  >
+                                              <a role="button" tabindex="0" aria-label="Jugar Limpiar la ciudad." href="/reflexiones-de-los-entrevistados" style="color: rgb(255, 255, 255);" > Jugar</a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <!-- juego 3 -->
+                              <div class="card" tabindex="0"> 
+                                  <img role="img" class="img-juego img1" src="{{url_for('static', filename = 'img/section5/juegos-tapa/juego3.webp')}}"  alt="Rompecabezas NBS." aria-label="Tapa del juego Rompecabezas NBS.">
+                                  <div class="intro">
+                                      <h2>
+                                          Rompecabezas NBS
                                       </h2>
                                       <!-- <p>
                                           Rompecabezas interactivo y accesible para aprender sobre NBS, soluciones basadas en la naturaleza que pueden ayudar a cuidar el ambiente donde vivimos mediante acciones que las personas pueden llevar a cabo.
                                           El usuario tiene que resolver un puzzle. Cuando éste decide empezar, se mezclan las piezas de esa imagen para que el usuario las reconstruya.
                                               
                                       </p> -->
-                                      <p class="esconder-detail" style="margin-bottom:1rem">
-                                        Juego educativo en forma de crucigrama para aprender sobre distintas catástrofes. Brinda pistas para completar el crucigrama. Provee distintos niveles de dificultad.     
-                            
+                                      <p class="esconder-detail">
+                                          Rompecabezas interactivo y accesible para aprender sobre NBS, soluciones basadas en la naturaleza que pueden ayudar a cuidar el ambiente donde vivimos mediante acciones que las personas pueden llevar a cabo.                                            
                                       </p>
-                                      <div aria-labelledby="diario-2">
-                                        <!-- <img src="./img/diarios/Hoy_logo.png" alt=""> -->
-                                        
-                                        <div class=" verde-4 esconder-detail boton" >
-                                            <a href="/reflexiones-de-los-entrevistados" style="color: rgb(255, 255, 255);"> Jugar</a>
+                                      <div  aria-labelledby="diario-2">
+                                        <div class="verde-4 esconder-detail boton"  >
+                                            <a role="button" tabindex="0" aria-label="Jugar Rompecabezas NBS." href="/reflexiones-de-los-entrevistados"style="color: rgb(255, 255, 255);" > Jugar</a>
                                         </div>
                                       </div>
                                   </div>
                               </div>
-            <!-- juego 2 -->
-                            <div class="card" tabindex="0"> 
-                                <img role="img" class="img-juego img1" src="{{url_for('static', filename = 'img/section5/juegos-tapa/juego3.webp')}}"  alt="mono." aria-label="mono.">
+                              <!-- juego 4 -->
+                              <div class="card" tabindex="0"> 
+                                <img role="img" class="img-juego img1" src="{{url_for('static', filename = 'img/section5/juegos-tapa/juego4.webp')}}"  alt="Inundados (Flooded)." aria-label="Tapa del juego Inundados (Flooded).">
                                 <div class="intro">
                                     <h2>
-                                      Limpiar la ciudad
+                                        Inundados (Flooded)
                                     </h2>
-                                    <!-- <p>
-                                        Rompecabezas interactivo y accesible para aprender sobre NBS, soluciones basadas en la naturaleza que pueden ayudar a cuidar el ambiente donde vivimos mediante acciones que las personas pueden llevar a cabo.
-                                        El usuario tiene que resolver un puzzle. Cuando éste decide empezar, se mezclan las piezas de esa imagen para que el usuario las reconstruya.
-                                            
-                                    </p> -->
                                     <p class="esconder-detail">
-                                      Juego educativo que permite ayudar a `la gente de limpieza a distinguir los residuos de la ciudad y recolectarlos para mantener la ciudad limpia.    
-                            
+                                      Es un juego para organizar una urbanización sustentable. Incentiva a mantener una ciudad sustentable, donde se cuiden los árboles, se controle la basura de las casas y desagües.
+                                      Debes tomar decisiones mientras una tormenta se aproxima.                                          
                                     </p>
-                                    <div aria-labelledby="diario-2">
-                                      <!-- <img src="./img/diarios/Hoy_logo.png" alt=""> -->
-                                      
+                                    <div  aria-labelledby="diario-2">
                                       <div class="verde-4 esconder-detail boton"  >
-                                          <a href="/reflexiones-de-los-entrevistados" style="color: rgb(255, 255, 255);" > Jugar</a>
+                                          <a role="button" tabindex="0" aria-label="Jugar Inundados." href="/reflexiones-de-los-entrevistados"style="color: rgb(255, 255, 255);" > Jugar</a>
                                       </div>
                                     </div>
                                 </div>
-                            </div>
-          <!-- juego 3 -->
-                          <div class="card" tabindex="0"> 
-                              <img role="img" class="img-juego img1" src="{{url_for('static', filename = 'img/section5/juegos-tapa/juego1.webp')}}"  alt="mono." aria-label="mono.">
-                              <div class="intro">
-                                  <h2>
-                                      Rompecabezas NBS
-                                  </h2>
-                                  <!-- <p>
-                                      Rompecabezas interactivo y accesible para aprender sobre NBS, soluciones basadas en la naturaleza que pueden ayudar a cuidar el ambiente donde vivimos mediante acciones que las personas pueden llevar a cabo.
-                                      El usuario tiene que resolver un puzzle. Cuando éste decide empezar, se mezclan las piezas de esa imagen para que el usuario las reconstruya.
-                                          
-                                  </p> -->
-                                  <p class="esconder-detail">
-                                      Rompecabezas interactivo y accesible para aprender sobre NBS, soluciones basadas en la naturaleza que pueden ayudar a cuidar el ambiente donde vivimos mediante acciones que las personas pueden llevar a cabo.
-                                          
-                                  </p>
-                                  <div  aria-labelledby="diario-2">
-                                    <!-- <img src="./img/diarios/Hoy_logo.png" alt=""> -->
-                                    
-                                    <div class="verde-4 esconder-detail boton"  >
-                                        <a href="/reflexiones-de-los-entrevistados"style="color: rgb(255, 255, 255);" > Jugar</a>
-                                    </div>
-                                  </div>
                               </div>
-                          </div>
-        
-
+                              <!-- juego 5 -->
+                              <div class="card" tabindex="0"> 
+                                <img role="img" class="img-juego img1" src="{{url_for('static', filename = 'img/section5/juegos-tapa/juego5.webp')}}"  alt="Quiz Aprendiendo a prepararme." aria-label="Tapa del juego Quiz Aprendiendo a prepararme.">
+                                <div class="intro">
+                                    <h2>
+                                        Quiz Aprendiendo a prepararme
+                                    </h2>
+                                    <p class="esconder-detail">
+                                      Es un juego para aprender a prepararte ante una situación de riesgo. Es un quiz con preguntas sobre información importante a tener en cuenta, como cómo armar una mochila de emergencias colocando los objetos necesarios, sobre teléfonos útiles, entre otros.
+                                      Brinda feedback a través de diferentes mensajes sobre lo que es correcto e incorrecto con justificaciones y explicaciones para su comprensión.                                          
+                                    </p>
+                                    <div  aria-labelledby="diario-2">
+                                      <div class="verde-4 esconder-detail boton"  >
+                                          <a  role="button" tabindex="0" aria-label="Jugar Quiz Aprendiendo a prepararme."  href="/reflexiones-de-los-entrevistados"style="color: rgb(255, 255, 255);" > Jugar</a>
+                                      </div>
+                                    </div>
+                                </div>
+                              </div>
+                              <!-- juego 6 -->
+                              <div class="card" tabindex="0"> 
+                                <img role="img" class="img-juego img1" src="{{url_for('static', filename = 'img/section5/juegos-tapa/juego6.webp')}}"  alt=" Quiz Mochila de emergencia (Quiz emergency backpack)." aria-label="Tapa del juego  Quiz Mochila de emergencia (Quiz emergency backpack).">
+                                <div class="intro">
+                                    <h2>
+                                        Quiz Mochila de emergencia (Quiz emergency backpack)
+                                    </h2>
+                                    <p class="esconder-detail">
+                                      Es un juego para aprender a armar una mochila de emergencia que sea útil ante una situación de riesgo. Debes arrastrar los objetos esenciales a la mochila. Si te equivocas, te va a explicar el motivo del error.      
+                                    </p>
+                                    <div  aria-labelledby="diario-2">
+                                      <div class="verde-4 esconder-detail boton"  >
+                                          <a  role="button" tabindex="0" aria-label="Jugar Quiz Mochila de emergencia."  href="/reflexiones-de-los-entrevistados"style="color: rgb(255, 255, 255);" > Jugar</a>
+                                      </div>
+                                    </div>
+                                </div>
+                              </div>
                     </div>
-
                 </div>
-            </div>
-            
+            </div>           
         </div>
         <!-- boton para ir arriba -->
         {% include ('partials/_button.html') %}  
-
     </main>
-    
-                      
-    <!-- script -->
-    <!-- galeria de imagenes -->
-  <!-- FIN Info de la galeria de fotos -->
   {% endblock %}
