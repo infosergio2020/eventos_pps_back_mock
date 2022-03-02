@@ -19,25 +19,41 @@
           <!-- comienzo de las cortinas -->
           
            
-            <section class="aoTable" id="lightgallery" >
-              <div class="aoTableCell">
+            <section class="aoTable">
+              <div class="aoTableCell" id="lightgallery">
                     <!-- <div class="gallery__container altura_img" id="lightgallery"> -->
                         <a
                           role="link"
                           class="img1"
-                          aria-label="imagen de la galería-16 de 19.Presione enter si desea abrir el carrousel de imágenes."
+                          aria-label="imagen de la galería 1 de 19.Presione enter si desea abrir el carrousel de imágenes."
                           alt="img16."
-                          href="{{url_for('static', filename = 'img/section3/fotos-impactantes/16.webp')}}"
+                          href="{{url_for('static', filename = 'img/section3/fotos-impactantes/1.webp')}}"
                           class="vertical"
                         >
                           <img
                             width="50%" height="50%" style="margin-top: -35rem;"
                             alt="img2."
-                            aria-label="imagen de la galería-2 de 7.Presione enter si desea abrir el carrousel de imágenes."
-                            src="{{url_for('static', filename = 'img/section3/fotos-impactantes/16.webp')}}"
+                            aria-label="imagen de la galería 1 de 19.Presione enter si desea abrir el carrousel de imágenes."
+                            src="{{url_for('static', filename = 'img/section3/fotos-impactantes/1.webp')}}"
                           />
                         </a>
                     
+                        {% for photo in impactantes %}
+                        <a
+                          role="link"
+                          aria-label="imagen de la galería {{loop.index}} de {{loop.length}}."
+                          href="{{ url_for('static', filename = photo.image )}}"
+                        >
+                          <img
+                            role="img"
+                            width="50%" height="50%" 
+                            style="margin-top: -35rem;"
+                            alt="foto"
+                            loading="lazy"
+                            src="{{url_for('static', filename = photo.image  )}}"
+                          />
+                        </a>
+                        {% endfor %}
                 </div>
           </section>
           <div class='rnInner_izquierda rnInner_desplazar'>
@@ -59,56 +75,7 @@
             <div class='rnUnit'></div>
   
           </div>
-
-           
-          
-        </div>
-
-          <!-- fin de las cortinas -->
-          
-          <!-- <a
-            role="link"
-            class="img1"
-            aria-label="imagen de la galería-17 de 19.Presione enter si desea abrir el carrousel de imágenes."
-            alt="img17."
-            href="{{url_for('static', filename = 'img/section3/fotos-impactantes/17.webp')}}"
-            class="vertical"
-          >
-            <img
-              width="100%" height="100%"
-              alt="imagen de la galeria"
-              src="{{url_for('static', filename = 'img/section3/fotos-impactantes/17.webp')}}"
-            />
-          </a>
-          <a
-            role="link"
-            class="img1"
-            aria-label="imagen de la galería-18 de 19.Presione enter si desea abrir el carrousel de imágenes."
-            alt="img18."
-            href="{{url_for('static', filename = 'img/section3/fotos-impactantes/18.webp')}}"
-            data-sub-html="<h4>Vista acerca de la vaca totalmente inundado.</h4><p>(foto: Adrian Scandar).</p>"
-          >
-            <img
-              width="100%" height="100%"
-              alt="imagen de la galeria"
-              src="{{url_for('static', filename = 'img/section3/fotos-impactantes/18.webp')}}"
-            />
-          </a>
-          <a
-            role="link"
-            class="img1"
-            aria-label="imagen de la galería-19 de 19.Presione enter si desea abrir el carrousel de imágenes."
-            alt="img19."
-            href="{{url_for('static', filename = 'img/section3/fotos-impactantes/19.webp')}}"
-            data-sub-html="<h4>Vista acerca de la vaca totalmente inundado.</h4><p>(foto: Adrian Scandar).</p>"
-          >
-            <img
-              width="100%" height="100%"
-              alt="imagen de la galeria"
-              src="{{url_for('static', filename = 'img/section3/fotos-impactantes/19.webp')}}"
-            />
-          </a> -->
-        
+        </div>     
       </div>
     </div>
   </div>

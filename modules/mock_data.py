@@ -289,3 +289,29 @@ list_album = {
     #     },
     # ]
 }
+
+
+list_shocking = [
+    # {"image": 'img/section3/fotos-impactantes/1.webp'},
+    {"image": 'img/section3/fotos-impactantes/2.webp'},
+    {"image": 'img/section3/fotos-impactantes/3.webp'},
+    {"image": 'img/section3/fotos-impactantes/4.webp'},
+    {"image": 'img/section3/fotos-impactantes/5.webp'},
+
+    {"image": 'img/section3/fotos-impactantes/6.webp'},
+    {"image": 'img/section3/fotos-impactantes/7.webp'},
+    {"image": 'img/section3/fotos-impactantes/8.webp'},
+    {"image": 'img/section3/fotos-impactantes/9.webp'},
+    {"image": 'img/section3/fotos-impactantes/10.webp'},
+
+    {"image": 'img/section3/fotos-impactantes/11.webp'},
+    {"image": 'img/section3/fotos-impactantes/12.webp'},
+    {"image": 'img/section3/fotos-impactantes/13.webp'},
+    {"image": 'img/section3/fotos-impactantes/14.webp'},
+    {"image": 'img/section3/fotos-impactantes/15.webp'},
+
+    {"image": 'img/section3/fotos-impactantes/16.webp'},
+    {"image": 'img/section3/fotos-impactantes/17.webp'},
+    {"image": 'img/section3/fotos-impactantes/18.webp'},
+    {"image": 'img/section3/fotos-impactantes/19.webp'}
+]

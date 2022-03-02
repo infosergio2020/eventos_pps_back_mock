@@ -1,5 +1,5 @@
 from flask import render_template,request
-from .mock_data import list_album
+from .mock_data import list_album,list_shocking
 
 class CustomRouter:
 
@@ -67,7 +67,7 @@ class CustomRouter:
         return render_template('/diarios.html',flag_1="opcion_1",flag_2=" ")
 
     def render_shocking_photos(self):
-        return render_template('/shocking-photos.html',flag_1="opcion_2",flag_2="opcion_2")
+        return render_template('/shocking-photos.html',flag_1="opcion_2",flag_2="opcion_2", impactantes=list_shocking)
 
     def render_during_flood(self):
         return render_template('/testimonio2.html',flag_1="opcion_4",flag_2="opcion_3")
