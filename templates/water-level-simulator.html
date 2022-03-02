@@ -9,8 +9,15 @@ body %}<!-- Info de la galeria de fotos-->
             Simulador de nivel de agua
           </h1>
         </div>
-        <div class="centrar-texto">
-          <p>Seleccionar la imagen para entrar a la galeria de fotos.</p>
+        <div tabindex="0" class="centrar-texto">
+          <p>
+            Las lluvias del 2 de abril de 2013 superaron el máximo histórico de lluvia diaria en la ciudad de La Plata y alrededores. Según registros de la Estación Observatorio Astronómico, en solo 3 horas de 128,6 mm de agua, cayeron 303,8. Siendo desde las 16:25 a 19:25 el periodo de tiempo. Esto siguió luego hasta llegar a unos 400 mm aproximadamente.
+          </p>
+          <p>
+            El simulador de agua intenta mostrar cómo creció el nivel de agua ingresada en los hogares, mediante una maqueta dentro de un recipiente de vidrio. Incluye placa electrónica, bombas y temporizador.
+          </p>
+          
+          <p>Seleccionar la imágen para entrar a la galería de fotos.</p>
         </div>
         <!-- comienzo de la galería -->
         <div class="gallery__container" id="lightgallery">
@@ -24,7 +31,7 @@ body %}<!-- Info de la galeria de fotos-->
               width="30%"
               height="30%"
               aria-label="imagen de la galería-1 de 7"
-              alt="img1."
+              alt="Maqueta del comedor con el nivel de agua hasta el tope del recipiente."
               src="{{url_for('static', filename = '/img/section2/1.webp')}}"
             />
           </a>
@@ -39,7 +46,7 @@ body %}<!-- Info de la galeria de fotos-->
               width="30%"
               height="30%"
               aria-label="imagen de la galería-2 de 10.Presione enter si desea abrir el carrousel de imágenes."
-              alt="img2."
+              alt="Maqueta del comedor sin agua."
               src="{{url_for('static', filename = '/img/section2/2.webp')}}"
             />
           </a>
@@ -54,7 +61,7 @@ body %}<!-- Info de la galeria de fotos-->
               width="30%"
               height="30%"
               aria-label="imagen de la galería-3 de 10.Presione enter si desea abrir el carrousel de imágenes."
-              alt="img3."
+              alt="Maqueta del comedor con agua por la mitad. Vista lateral."
               src="{{url_for('static', filename = '/img/section2/3.webp')}}"
             />
           </a>
