@@ -1,5 +1,6 @@
 .navegacion__enlace {
-  padding: 0.9rem;
+  /* padding: 0.9rem; */
+  padding: 0.5rem 2.8rem;
   border: none !important;
 }
 .navegacion__enlace--info {
@@ -92,7 +93,7 @@
   border: 2px solid #034575;
   background-color: #eee;
   z-index: 900 !important;
-  left: -23px !important;
+  left: 1px !important;
 }
 .menubar-navigation [role="group"] {
   margin: 0;
