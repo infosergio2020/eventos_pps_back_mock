@@ -43,15 +43,22 @@ list_album = {
             "video":'https://youtu.be/jkVwHcSyOqk'
         }
 
+# https://youtu.be/rXxDaXA8waM
+# https://youtu.be/0XSuSaVGmcg
+# https://youtu.be/5Kh4xmrSM9A
+# https://youtu.be/f3T4WOeeb2Q
+# https://youtu.be/zrW78dlLqTc
+
+
     ],
-    # "gabriela": [
+    "gabriela": [
     #    {
     #         "image":'img/section3/album-gabriela/Foto-1.webp',
     #         "video":''
     #     },
     #    {
     #         "image":'img/section3/album-gabriela/Foto-2.webp',
-    #         "video":''
+    #         "video":'https://www.youtube.com/embed/rXxDaXA8waM'
     #     },
     #    {
     #         "image":'img/section3/album-gabriela/Foto-3.webp',
@@ -73,10 +80,10 @@ list_album = {
     #         "image":'img/section3/album-gabriela/Foto-7.webp',
     #         "video":''
     #     },
-    #    {
-    #         "image":'img/section3/album-gabriela/Foto-8.webp',
-    #         "video":''
-    #     },
+       {
+            "image":'img/section3/album-gabriela/Foto-8.webp',
+            "video":'https://www.youtube.com/embed/5Kh4xmrSM9A'
+        },
     #    {
     #         "image":'img/section3/album-gabriela/Foto-9.webp',
     #         "video":''
@@ -85,10 +92,10 @@ list_album = {
     #         "image":'img/section3/album-gabriela/Foto-10.webp',
     #         "video":''
     #     },
-    #    {
-    #         "image":'img/section3/album-gabriela/Foto-11.webp',
-    #         "video":''
-    #     },
+       {
+            "image":'img/section3/album-gabriela/Foto-11.webp',
+            "video":'https://www.youtube.com/embed/f3T4WOeeb2Q'
+        },
     #    {
     #         "image":'img/section3/album-gabriela/Foto-12.webp',
     #         "video":''
@@ -157,10 +164,10 @@ list_album = {
     #         "image":'img/section3/album-gabriela/Foto-28.webp',
     #         "video":''
     #     },
-    #    {
-    #         "image":'img/section3/album-gabriela/Foto-29.webp',
-    #         "video":''
-    #     },
+       {
+            "image":'img/section3/album-gabriela/Foto-29.webp',
+            "video":'https://www.youtube.com/embed/zrW78dlLqTc'
+        },
     #    {
     #         "image":'img/section3/album-gabriela/Foto-30.webp',
     #         "video":''
@@ -185,11 +192,11 @@ list_album = {
     #         "image":'img/section3/album-gabriela/Foto-35.webp',
     #         "video":''
     #     },
-    #    {
-    #         "image":'img/section3/album-gabriela/Foto-36.webp',
-    #         "video":''
-    #     },
-    # ],
+       {
+            "image":'img/section3/album-gabriela/Foto-36.webp',
+            "video":'https://www.youtube.com/embed/0XSuSaVGmcg'
+        }
+    ],
     "graciela": [
         # {
         #     "image":"img/section3/album-graciela/foto-abcd.webp",
