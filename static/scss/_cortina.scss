@@ -166,3 +166,23 @@
 .rnOuter:hover .aoTableCell {
   color: white;
 }
+
+.cortina__gallery-container img{
+  width: 80%;
+  height: 80%;
+  border-radius: 2rem;
+  border: 2px solid #999999;
+}
+
+@media (min-width:768px) {    
+  .cortina__gallery-container img{
+    width: 40%;
+    height: 40%;
+  }
+}
+
+
+.achicar-cortina{
+  position: absolute;
+  z-index: -1;
+}

@@ -23,18 +23,17 @@
           
            
             <section class="aoTable">
-              <div class="aoTableCell" id="lightgallery">
-                    <!-- <div class="gallery__container altura_img" id="lightgallery"> -->
+              <div class="aoTableCell">
+                    <div class="cortina__gallery-container" id="lightgallery">
                         <a
                           role="link"
-                          class="img1"
                           aria-label="imagen de la galería 1 de 19.Presione enter si desea abrir el carrousel de imágenes."
-                          alt="img16."
+                          alt="img1."
                           href="{{url_for('static', filename = 'img/section3/fotos-impactantes/1.webp')}}"
-                          class="vertical"
+                          
                         >
                           <img
-                            width="50%" height="50%" style="margin-top: -35rem;"
+                            width="100%" height="100%" style="margin-top: -35rem;"
                             alt="img2."
                             aria-label="imagen de la galería 1 de 19.Presione enter si desea abrir el carrousel de imágenes."
                             src="{{url_for('static', filename = 'img/section3/fotos-impactantes/1.webp')}}"
@@ -43,6 +42,7 @@
                     
                         {% for photo in impactantes %}
                         <a
+                          class="achicar-cortina"
                           role="link"
                           aria-label="imagen de la galería {{loop.index}} de {{loop.length}}."
                           href="{{ url_for('static', filename = photo.image )}}"
