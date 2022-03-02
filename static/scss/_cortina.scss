@@ -145,7 +145,10 @@
 // .rnOuter:focus-within,
 // .rnOuter:active,
 // .rnOuter:focus,
-.rnOuter:hover .rnInner_derecha {
+.rnOuter:hover .rnInner_derecha,
+.rnOuter:focus .rnInner_derecha,
+.rnOuter:focus-within .rnInner_derecha
+ {
   transform-origin: -120% top;
   /* espejo */
   transform: scaleX(2);
@@ -153,7 +156,9 @@
 // .rnOuter:focus-within,
 // .rnOuter:active,
 // .rnOuter:focus,
-.rnOuter:hover .rnInner_izquierda {
+.rnOuter:hover .rnInner_izquierda,
+.rnOuter:focus .rnInner_izquierda,
+.rnOuter:focus-within .rnInner_izquierda {
   transform-origin: -120% top;
   transform: scaleX(0);
 }
