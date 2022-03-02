@@ -9,15 +9,21 @@ body %}<!-- Info de la galeria de fotos-->
             Simulador de nivel de agua
           </h1>
         </div>
-        <div class="centrar-texto">
-          <p>Seleccionar la imagen para entrar a la galeria de fotos.</p>
+        <div tabindex="0" class="centrar-texto">
+          <p>
+            Las lluvias del 2 de abril de 2013 superaron el máximo histórico de lluvia diaria en la ciudad de La Plata y alrededores. Según registros de la Estación Observatorio Astronómico, en solo 3 horas de 128,6 mm de agua, cayeron 303,8. Siendo desde las 16:25 a 19:25 el periodo de tiempo. Esto siguió luego hasta llegar a unos <abbr title="cuatrocientos milímetros.">400 mm</abbr> aproximadamente.
+          </p>
+          <p>
+            El simulador de agua intenta mostrar cómo creció el nivel de agua ingresada en los hogares, mediante una maqueta dentro de un recipiente de vidrio. Incluye placa electrónica, bombas y temporizador.
+          </p>
+          
+          <p>Seleccionar la imágen para entrar a la galería de fotos.</p>
         </div>
         <!-- comienzo de la galería -->
         <div class="gallery__container" id="lightgallery">
           <a
             role="link"
             class="img1"
-            alt="Maqueta del comedor con agua"
             href="{{url_for('static', filename = '/img/section2/1-1.webp')}}"
           >
             <img
@@ -40,7 +46,7 @@ body %}<!-- Info de la galeria de fotos-->
               width="30%"
               height="30%"
               aria-label="imagen de la galería-2 de 10.Presione enter si desea abrir el carrousel de imágenes."
-              alt="img2."
+              alt="Maqueta del comedor con agua."
               src="{{url_for('static', filename = '/img/section2/2.webp')}}"
             />
           </a>
@@ -55,7 +61,7 @@ body %}<!-- Info de la galeria de fotos-->
               width="30%"
               height="30%"
               aria-label="imagen de la galería-3 de 10.Presione enter si desea abrir el carrousel de imágenes."
-              alt="img3."
+              alt="Maqueta del comedor con agua. Frontal."
               src="{{url_for('static', filename = '/img/section2/3.webp')}}"
             />
           </a>
@@ -69,7 +75,7 @@ body %}<!-- Info de la galeria de fotos-->
               width="30%"
               height="30%"
               aria-label="imagen de la galería-4 de 10.Presione enter si desea abrir el carrousel de imágenes."
-              alt="img4."
+              alt="Maqueta del comedor con el tanque lleno"
               src="{{url_for('static', filename = '/img/section2/4.webp')}}"
             />
           </a>
@@ -84,7 +90,7 @@ body %}<!-- Info de la galeria de fotos-->
               width="30%"
               height="30%"
               aria-label="imagen de la galería-5 de 10.Presione enter si desea abrir el carrousel de imágenes."
-              alt="img5."
+              alt="Maqueta del comedor con agua vista lateral."
               src="{{url_for('static', filename = '/img/section2/5.webp')}}"
             />
           </a>
@@ -97,7 +103,7 @@ body %}<!-- Info de la galeria de fotos-->
               width="30%"
               height="30%"
               aria-label="imagen de la galería-6 de 10.Presione enter si desea abrir el carrousel de imágenes."
-              alt="img6."
+              alt="Maqueta del comedor sin agua vista frontal."
               src="{{url_for('static', filename = '/img/section2/6.webp')}}"
             />
           </a>
@@ -108,10 +114,49 @@ body %}<!-- Info de la galeria de fotos-->
             <img
               role="img"
               aria-label="imagen de la galería-7 de 10.Presione enter si desea abrir el carrousel de imágenes."
-              alt="img7."
+              alt="Maqueta del comedor sin agua"
               width="30%"
               height="30%"
               src="{{url_for('static', filename = '/img/section2/7.webp')}}"
+            />
+          </a>
+          <a
+            role="link"
+            href="{{url_for('static', filename = '/img/section2/8.webp')}}"
+          >
+            <img
+              role="img"
+              aria-label="imagen de la galería-8 de 10.Presione enter si desea abrir el carrousel de imágenes."
+              alt="Maqueta del comedor sin agua"
+              width="30%"
+              height="30%"
+              src="{{url_for('static', filename = '/img/section2/8.webp')}}"
+            />
+          </a>
+          <a
+            role="link"
+            href="{{url_for('static', filename = '/img/section2/9.webp')}}"
+          >
+            <img
+              role="img"
+              aria-label="imagen de la galería-9 de 10.Presione enter si desea abrir el carrousel de imágenes."
+              alt="Maqueta del comedor con agua vista lateral"
+              width="30%"
+              height="30%"
+              src="{{url_for('static', filename = '/img/section2/9.webp')}}"
+            />
+          </a>
+          <a
+            role="link"
+            href="{{url_for('static', filename = '/img/section2/10.webp')}}"
+          >
+            <img
+              role="img"
+              aria-label="imagen de la galería-10 de 10.Presione enter si desea abrir el carrousel de imágenes."
+              alt="Maqueta del comedor sin agua vista superior"
+              width="30%"
+              height="30%"
+              src="{{url_for('static', filename = '/img/section2/10.webp')}}"
             />
           </a>
                  </div>
