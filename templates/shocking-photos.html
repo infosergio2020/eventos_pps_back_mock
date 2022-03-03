@@ -27,15 +27,15 @@
                     <div class="cortina__gallery-container" id="lightgallery">
                         <a
                           role="link"
-                          aria-label="imagen de la galería 1 de 19.Presione enter si desea abrir el carrousel de imágenes."
-                          alt="img1."
+                          aria-label="imagen de la galería 1 de 18.Presione enter si desea abrir el carrousel de imágenes."
+                          alt="Una vaca en medio de un campo inundado, con agua que le cubre hasta el lomo."
                           href="{{url_for('static', filename = 'img/section3/fotos-impactantes/1.webp')}}"
                           
                         >
                           <img
                             width="100%" height="100%" style="margin-top: -35rem;"
-                            alt="img2."
-                            aria-label="imagen de la galería 1 de 19.Presione enter si desea abrir el carrousel de imágenes."
+                            alt="Una vaca en medio de un campo inundado, con agua que le cubre hasta el lomo."
+                            aria-label="imagen de la galería 1 de 18.Presione enter si desea abrir el carrousel de imágenes."
                             src="{{url_for('static', filename = 'img/section3/fotos-impactantes/1.webp')}}"
                           />
                         </a>
@@ -51,7 +51,7 @@
                             role="img"
                             width="50%" height="50%" 
                             style="margin-top: -35rem;"
-                            alt="foto"
+                            alt="{{ photo.descripcion }}"
                             loading="lazy"
                             src="{{url_for('static', filename = photo.image  )}}"
                           />
