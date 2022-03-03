@@ -1,5 +1,8 @@
 <ul id="init" class="link__skip">
-  <li class="link__skip--item"><a href="#contenido">enlace, presione enter para ir al contenido principal de sitio.</a>
+  <li class="link__skip--item">
+    <a href="#contenido"
+      >enlace, presione enter para ir al contenido principal de sitio.</a
+    >
   </li>
 </ul>
 <!-- <header class="header-container"> -->
@@ -7,13 +10,29 @@
   <div>
     <!-- logo de citadine -->
     <div class="header__img__h1">
-      <a tabindex="0" href="/" aria-label="Presione enter para ir a la pagina principal.">
+      <a
+        tabindex="0"
+        href="/"
+        aria-label="Presione enter para ir a la pagina principal."
+      >
         <div role="banner" class="item__img__h1 txt_white">
-          <img loading="lazy" width="130px" height="130px" class="wh-88" src="{{url_for('static', filename = './img/general/flooded-house.png')}}"
-            alt="Logo de citadine.">
+          <img
+            loading="lazy"
+            width="130px"
+            height="130px"
+            class="wh-88"
+            src="{{url_for('static', filename = './img/general/flooded-house.png')}}"
+            alt="Logo de citadine."
+          />
           <div class="header__left">
-            <div><h1 class="generar-conciencia"> Generar <span>con</span>ciencia </h1></div>
-            <div>Experiencias y conocimientos sobre las inundaciones de La Plata</div>
+            <div>
+              <h1 class="generar-conciencia">
+                Generar <span>con</span>ciencia
+              </h1>
+            </div>
+            <div>
+              Experiencias y conocimientos sobre las inundaciones de La Plata
+            </div>
           </div>
         </div>
       </a>
@@ -26,90 +45,164 @@
 
     <!-- barra de secciones y boton -->
     <div class="header__nav__menu">
-      <button tabindex="0" class="boton__2 verde-4" aria-label="Ingrese al menú de opciones." id="logo">
-        <img loading="lazy" height="42px" width="42px" src="{{url_for('static', filename = 'img/general/menu.svg')}}" alt="Citadine brand">
+      <button
+        tabindex="0"
+        class="boton__2 verde-4"
+        aria-label="Ingrese al menú de opciones."
+        id="logo"
+      >
+        <img
+          loading="lazy"
+          height="42px"
+          width="42px"
+          src="{{url_for('static', filename = 'img/general/menu.svg')}}"
+          alt="Citadine brand"
+        />
       </button>
-      <nav class="header-container-nav-row" id="nav-id" aria-label="Barra de navegación.">
-
-        <ul tabindex="-1" class="menubar-navigation" role="menubar" aria-label="Barra de navegación.">
+      <nav
+        class="header-container-nav-row"
+        id="nav-id"
+        aria-label="Barra de navegación."
+      >
+        <ul
+          tabindex="-1"
+          class="menubar-navigation"
+          role="menubar"
+          aria-label="Barra de navegación."
+        >
           <!-- boton 1 -->
           <li role="none">
-            <a tabindex="0" class="navegacion__enlace" role="menuitem"
-              aria-label="Presione enter para conocer las opciones  de la sección 1." aria-haspopup="true"
-              aria-expanded="false" href="#academics">
-              <img loading="lazy" class="wh-37" src="{{url_for('static', filename = 'img/general/secciones/1.webp')}}" alt="seccion">
+            <a
+              tabindex="0"
+              class="navegacion__enlace"
+              {% if seccion == "s1" -%} id="hereYouAre" {% endif %} 
+              role="menuitem"
+              aria-label="Presione enter para conocer las opciones  de la sección 1."
+              aria-haspopup="true"
+              aria-expanded="false"
+              href="#academics"
+            >
+              <img
+                loading="lazy"
+                class="wh-37"
+                src="{{url_for('static', filename = 'img/general/secciones/1.webp')}}"
+                alt="seccion"
+              />
               <div class="navegacion__enlace--info">
                 <p class="p-10">SECCIÓN 1</p>
-                <svg id="campo" xmlns="http://www.w3.org/2000/svg" class="down wh-12-9">
+                <svg
+                  id="campo"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="down wh-12-9"
+                >
                   <polygon points="1 0, 11 0, 6 8"></polygon>
                 </svg>
               </div>
             </a>
             <ul role="menu" aria-label="1">
               <li role="none">
-                <a tabindex="-1" role="menuitem" href="testimonio1"
-                  aria-label="Estás dentro de las opciones de la sección 1. Presione enter para conocer: Conocé nuestros testimonios: Antes de la inundación.">1-
-                  Conocé nuestros testimonios: Antes de la inundación</a>
+                <a
+                  tabindex="-1"
+                  role="menuitem"
+                  href="testimonio1"
+                  aria-label="Estás dentro de las opciones de la sección 1. Presione enter para conocer: Conocé nuestros testimonios: Antes de la inundación."
+                  >1- Conocé nuestros testimonios: Antes de la inundación</a
+                >
               </li>
               <li role="none">
-                <a tabindex="-1" role="menuitem" href="the-news-of-the-day"
-                  aria-label="Presione enter para conocer: Las noticias del día. ">2-
-                  Las noticias del día
+                <a
+                  tabindex="-1"
+                  role="menuitem"
+                  href="the-news-of-the-day"
+                  aria-label="Presione enter para conocer: Las noticias del día. "
+                  >2- Las noticias del día
                 </a>
               </li>
               <li role="none">
-                <a tabindex="-1" role="menuitem" href="la-ayuda-de-la-radio"
-                  aria-label="Presione enter para conocer: La ayuda de la radio. ">3-
-                  La ayuda de la radio
+                <a
+                  tabindex="-1"
+                  role="menuitem"
+                  href="la-ayuda-de-la-radio"
+                  aria-label="Presione enter para conocer: La ayuda de la radio. "
+                  >3- La ayuda de la radio
                 </a>
               </li>
-
             </ul>
           </li>
           <!-- boton 2 -->
           <li role="none">
-            <a tabindex="0" class="navegacion__enlace" role="menuitem"
-              aria-label="Presione enter para conocer las opciones  de la sección 2." aria-haspopup="true"
-              aria-expanded="false" href="#academics">
-
-              <img loading="lazy" class="wh-37" src="{{url_for('static', filename = 'img/general/secciones/2.webp')}}" alt="seccion">
-
+            <a
+              tabindex="0"
+              class="navegacion__enlace"
+              {% if seccion == "s2" -%} id="hereYouAre" {% endif %} 
+              role="menuitem"
+              aria-label="Presione enter para conocer las opciones  de la sección 2."
+              aria-haspopup="true"
+              aria-expanded="false"
+              href="#academics"
+            >
+              <img
+                loading="lazy"
+                class="wh-37"
+                src="{{url_for('static', filename = 'img/general/secciones/2.webp')}}"
+                alt="seccion"
+              />
 
               <div class="navegacion__enlace--info">
                 <p class="p-10">SECCIÓN 2</p>
-                <svg id="campo" xmlns="http://www.w3.org/2000/svg" class="down wh-12-9">
+                <svg
+                  id="campo"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="down wh-12-9"
+                >
                   <polygon points="1 0, 11 0, 6 8"></polygon>
                 </svg>
               </div>
             </a>
             <ul role="menu" aria-label="2">
               <li role="none">
-                <a role="menuitem" href="interview-map"
-                  aria-label="Estas dentro de las opciones de la sección 2. Presione enter para conocer: Mapa de entrevistas.">1-
-                  Mapa de entrevistas
+                <a
+                  role="menuitem"
+                  href="interview-map"
+                  aria-label="Estas dentro de las opciones de la sección 2. Presione enter para conocer: Mapa de entrevistas."
+                  >1- Mapa de entrevistas
                 </a>
               </li>
               <li role="none">
-                <a role="menuitem" href="water-level-simulator"
-                  aria-label="Presione enter para conocer: Simulador de nivel de agua.">2-
-                  Simulador de nivel de agua
+                <a
+                  role="menuitem"
+                  href="water-level-simulator"
+                  aria-label="Presione enter para conocer: Simulador de nivel de agua."
+                  >2- Simulador de nivel de agua
                 </a>
               </li>
-
             </ul>
           </li>
           <!-- boton 3 -->
           <li role="none">
-            <a class="navegacion__enlace" role="menuitem"
-              aria-label="Presione enter para conocer las opciones de la sección 3." aria-haspopup="true"
-              aria-expanded="false" href="#academics">
-
-              <img loading="lazy" class="wh-37" src="{{url_for('static', filename = 'img/general/secciones/3.webp')}}" alt="seccion">
-
+            <a
+              class="navegacion__enlace"
+              {% if seccion == "s3" -%} id="hereYouAre" {% endif %} 
+              role="menuitem"
+              aria-label="Presione enter para conocer las opciones de la sección 3."
+              aria-haspopup="true"
+              aria-expanded="false"
+              href="#academics"
+            >
+              <img
+                loading="lazy"
+                class="wh-37"
+                src="{{url_for('static', filename = 'img/general/secciones/3.webp')}}"
+                alt="seccion"
+              />
 
               <div class="navegacion__enlace--info">
                 <p class="p-10">SECCIÓN 3</p>
-                <svg id="campo" xmlns="http://www.w3.org/2000/svg" class="down wh-12-9">
+                <svg
+                  id="campo"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="down wh-12-9"
+                >
                   <polygon points="1 0, 11 0, 6 8"></polygon>
                 </svg>
               </div>
@@ -121,129 +214,228 @@
 
             <ul role="menu" aria-label="3">
               <li role="none">
-                <a role="menuitem" href="testimonio2"
-                  aria-label="Presione enter para conocer: Conocé nuestros testimonios: Durante la inundación.">1- Conocé nuestros testimonios: Durante la inundación</a>
+                <a
+                  role="menuitem"
+                  href="testimonio2"
+                  aria-label="Presione enter para conocer: Conocé nuestros testimonios: Durante la inundación."
+                  >1- Conocé nuestros testimonios: Durante la inundación</a
+                >
               </li>
               <li role="none">
-                <a role="menuitem" href="diarios"
-                  aria-label="Estas dentro de las opciones de la sección 3. Presione enter para conocer: Diarios del momento. ">2- Diarios del momento</a>
+                <a
+                  role="menuitem"
+                  href="diarios"
+                  aria-label="Estas dentro de las opciones de la sección 3. Presione enter para conocer: Diarios del momento. "
+                  >2- Diarios del momento</a
+                >
               </li>
               <li role="none">
-                  <a role="menuitem" href="photo-album" aria-label="Presione enter para conocer: Álbum de fotos.">3- Álbum de fotos
-                  </a>
+                <a
+                  role="menuitem"
+                  href="photo-album"
+                  aria-label="Presione enter para conocer: Álbum de fotos."
+                  >3- Álbum de fotos
+                </a>
               </li>
-              <li role="none">              
-                <a role="menuitem" href="shocking-photos"
-                  aria-label="Presione enter para conocer: Fotos impactantes. ">4- Fotos impactantes
+              <li role="none">
+                <a
+                  role="menuitem"
+                  href="shocking-photos"
+                  aria-label="Presione enter para conocer: Fotos impactantes. "
+                  >4- Fotos impactantes
                 </a>
               </li>
             </ul>
           </li>
           <!-- boton 4 -->
           <li role="none">
-            <a class="navegacion__enlace" role="menuitem"
-              aria-label="Presione enter para conocer las opciones de la sección 4." aria-haspopup="true"
-              aria-expanded="false" href="#academics">
-
-              <img loading="lazy" class="wh-37" src="{{url_for('static', filename = 'img/general/secciones/4.webp')}}" alt="seccion">
-
+            <a
+              class="navegacion__enlace"
+              {% if seccion == "s4" -%} id="hereYouAre" {% endif %} 
+              role="menuitem"
+              aria-label="Presione enter para conocer las opciones de la sección 4."
+              aria-haspopup="true"
+              aria-expanded="false"
+              href="#academics"
+            >
+              <img
+                loading="lazy"
+                class="wh-37"
+                src="{{url_for('static', filename = 'img/general/secciones/4.webp')}}"
+                alt="seccion"
+              />
 
               <div class="navegacion__enlace--info">
                 <p class="p-10">SECCIÓN 4</p>
-                <svg id="campo" xmlns="http://www.w3.org/2000/svg" class="down wh-12-9">
+                <svg
+                  id="campo"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="down wh-12-9"
+                >
                   <polygon points="1 0, 11 0, 6 8"></polygon>
                 </svg>
               </div>
             </a>
             <ul role="menu" aria-label="4">
               <li role="none">
-                <a role="menuitem" href="testimonio3"
-                  aria-label="Estas dentro de las opciones de la sección 4. Presione enter para conocer: Conocé nuestros testimonios: Después de la inundación. ">1- Conocé nuestros testimonios: Después de la inundación</a>
+                <a
+                  role="menuitem"
+                  href="testimonio3"
+                  aria-label="Estas dentro de las opciones de la sección 4. Presione enter para conocer: Conocé nuestros testimonios: Después de la inundación. "
+                  >1- Conocé nuestros testimonios: Después de la inundación</a
+                >
               </li>
               <li role="none">
-                <a role="menuitem" href="sandbox" aria-label="Presione enter para conocer: Sandbox.">2- Sandbox</a>
+                <a
+                  role="menuitem"
+                  href="sandbox"
+                  aria-label="Presione enter para conocer: Sandbox."
+                  >2- Sandbox</a
+                >
               </li>
               <li role="none">
-                <a role="menuitem" href="Why-do-we-flood"
-                  aria-label="Presione enter para conocer: Porqué nos inundamos.">3- ¿Por qué nos inundamos?</a>
+                <a
+                  role="menuitem"
+                  href="Why-do-we-flood"
+                  aria-label="Presione enter para conocer: Porqué nos inundamos."
+                  >3- ¿Por qué nos inundamos?</a
+                >
               </li>
-
             </ul>
           </li>
-
           <!-- botone 5 -->
-
           <li role="none">
-            <a class="navegacion__enlace" role="menuitem"
-              aria-label="Presione enter para conocer las opciones de la sección 5." aria-haspopup="true"
-              aria-expanded="false" href="#academics">
-
-              <img loading="lazy" class="wh-37" src="{{url_for('static', filename = 'img/general/secciones/5.webp')}}" alt="seccion">
+            <a
+              class="navegacion__enlace"
+              {% if seccion == "s5" -%} id="hereYouAre" {% endif %} 
+              role="menuitem"
+              aria-label="Presione enter para conocer las opciones de la sección 5."
+              aria-haspopup="true"
+              aria-expanded="false"
+              href="#academics"
+            >
+              <img
+                loading="lazy"
+                class="wh-37"
+                src="{{url_for('static', filename = 'img/general/secciones/5.webp')}}"
+                alt="seccion"
+              />
 
               <div class="navegacion__enlace--info">
                 <p class="p-10">SECCIÓN 5</p>
-                <svg id="campo" xmlns="http://www.w3.org/2000/svg" class="down wh-12-9">
+                <svg
+                  id="campo"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="down wh-12-9"
+                >
                   <polygon points="1 0, 11 0, 6 8"></polygon>
                 </svg>
               </div>
             </a>
             <ul role="menu" aria-label="5">
               <li role="none">
-                <a style="align-items: left;" role="menuitem" href="/recomendacion-como-actuar"
-                  aria-label="Estas dentro de las opciones de la sección 5. Presione enter para conocer: Recomendaciones de cómo actuar. ">1- Recomendaciones de cómo actuar</a>
+                <a
+                  style="align-items: left"
+                  role="menuitem"
+                  href="/recomendacion-como-actuar"
+                  aria-label="Estas dentro de las opciones de la sección 5. Presione enter para conocer: Recomendaciones de cómo actuar. "
+                  >1- Recomendaciones de cómo actuar</a
+                >
               </li>
               <li role="none">
-                <a style="align-items: left;" role="menuitem" href="mochila-inteligente"
-                  aria-label="Presione enter para conocer: Mochila inteligente de supervivencia. ">2- Mochila inteligente de supervivencia
+                <a
+                  style="align-items: left"
+                  role="menuitem"
+                  href="mochila-inteligente"
+                  aria-label="Presione enter para conocer: Mochila inteligente de supervivencia. "
+                  >2- Mochila inteligente de supervivencia
                 </a>
               </li>
               <li role="none">
-                <a style="align-items: left;" role="menuitem" href="dondeir" aria-label="Presione enter para conocer: Dónde ir : Centro de evacuación.">3- Dónde ir- Centros de evacuación 
+                <a
+                  style="align-items: left"
+                  role="menuitem"
+                  href="dondeir"
+                  aria-label="Presione enter para conocer: Dónde ir : Centro de evacuación."
+                  >3- Dónde ir- Centros de evacuación
                 </a>
               </li>
 
               <li role="none">
-                <a style="align-items: left;" role="menuitem" href="/educational-games"
-                  aria-label="Presione enter para conocer: Juegos educativos. ">4- Juegos educativos
+                <a
+                  style="align-items: left"
+                  role="menuitem"
+                  href="/educational-games"
+                  aria-label="Presione enter para conocer: Juegos educativos. "
+                  >4- Juegos educativos
                 </a>
               </li>
             </ul>
           </li>
           <!-- botone 6 -->
-
           <li role="none">
-            <a class="navegacion__enlace" role="menuitem"
-              aria-label="Presione enter para conocer las opciones de la sección 6." aria-haspopup="true"
-              aria-expanded="false" href="#academics">
-
-              <img loading="lazy" class="wh-37" src="{{url_for('static', filename = 'img/general/secciones/6.webp')}}" alt="seccion">
+            <a
+              class="navegacion__enlace"
+              {% if seccion == "s6" -%} id="hereYouAre" {% endif %} 
+              role="menuitem"
+              aria-label="Presione enter para conocer las opciones de la sección 6."
+              aria-haspopup="true"
+              aria-expanded="false"
+              href="#academics"
+            >
+              <img
+                loading="lazy"
+                class="wh-37"
+                src="{{url_for('static', filename = 'img/general/secciones/6.webp')}}"
+                alt="seccion"
+              />
 
               <div class="navegacion__enlace--info">
                 <p class="p-10">SECCIÓN 6</p>
-                <svg id="campo" xmlns="http://www.w3.org/2000/svg" class="down wh-12-9">
+                <svg
+                  id="campo"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="down wh-12-9"
+                >
                   <polygon points="1 0, 11 0, 6 8"></polygon>
                 </svg>
               </div>
             </a>
             <ul role="menu" id="sub-menu-academics">
               <li role="none">
-                <a role="menuitem" href="desastres-naturales"
-                  aria-label="Estas dentro de las opciones de la sección 6. Presione enter para conocer: Desastres naturales. ">1- Desastres naturales.</a>
+                <a
+                  role="menuitem"
+                  href="desastres-naturales"
+                  aria-label="Estas dentro de las opciones de la sección 6. Presione enter para conocer: Desastres naturales. "
+                  >1- Desastres naturales.</a
+                >
               </li>
               <li role="none">
-                <a role="menuitem" href="soluciones-naturales"
-                  aria-label="Presione enter para conocer: Soluciones basadas en la naturaleza.">2- Soluciones basadas en la naturaleza.</a>
+                <a
+                  role="menuitem"
+                  href="soluciones-naturales"
+                  aria-label="Presione enter para conocer: Soluciones basadas en la naturaleza."
+                  >2- Soluciones basadas en la naturaleza.</a
+                >
               </li>
               <li role="none">
                 <!-- polonia alemania chile y republica dominicana
                                     reutilizar la interfaz de los 4 casos -->
-                <a role="menuitem" href="Inundaciones-en-el-exterior"
-                  aria-label="Presione enter para conocer: Inundaciones en el exterior. ">3- Inundaciones en el exterior</a>
+                <a
+                  role="menuitem"
+                  href="Inundaciones-en-el-exterior"
+                  aria-label="Presione enter para conocer: Inundaciones en el exterior. "
+                  >3- Inundaciones en el exterior</a
+                >
               </li>
               <li role="none">
                 <!-- es un afiche de como se ayudaron los vecinos- cosas positivas -->
-                <a role="menuitem" href="Conclusiones-del-evento"
-                  aria-label="Presione enter para conocer: Conclusiones del evento. ">4- Conclusiones del evento</a>
+                <a
+                  role="menuitem"
+                  href="Conclusiones-del-evento"
+                  aria-label="Presione enter para conocer: Conclusiones del evento. "
+                  >4- Conclusiones del evento</a
+                >
               </li>
             </ul>
           </li>
@@ -251,18 +443,28 @@
         </ul>
       </nav>
     </div>
-
   </div>
-
 </header>
 <!-- menu deslizante -->
 <div class="menu-deslizante-realtivo">
   <div id="menuIcono" class="sideBar">
     <div class="sideBar-header">
-      <img loading="lazy" class="boton-close " id="close-sideBar" src="{{url_for('static', filename = './img/general/circle-x.svg')}}"
-        alt="Haga click, o presione enter para cerrar el sidebar.">
+      <img
+        loading="lazy"
+        class="boton-close"
+        id="close-sideBar"
+        src="{{url_for('static', filename = './img/general/circle-x.svg')}}"
+        alt="Haga click, o presione enter para cerrar el sidebar."
+      />
       <div role="img" class="sideBar-img" aria-labelledby="posts-heading">
-        <img class="wh-88" loading="lazy" width="130px" height="130px" src="{{url_for('static', filename = './img/general/flooded-house.png')}}" alt="expo citadine logo">
+        <img
+          class="wh-88"
+          loading="lazy"
+          width="130px"
+          height="130px"
+          src="{{url_for('static', filename = './img/general/flooded-house.png')}}"
+          alt="expo citadine logo"
+        />
         <!-- <a href="/"><img loading="lazy" src="./img/general/menu-deslizante/technical-support.png" alt="expo citadine logo"></a> -->
         <!-- <a href="/"><img loading="lazy" src="./img/general/menu-deslizante/options.png" alt="expo citadine logo"></a> -->
         <!-- <a href="/"><img loading="lazy" src="./img/general/menu-deslizante/choose.png" alt="expo citadine logo"></a> -->
@@ -276,69 +478,176 @@
       <nav>
         <ul class="sidebar-body-ul" role="menubar">
           <!-- NOTA: Las secciones no estan en la vista del PC -->
-          
-          <li tabindex="-1" role="menuitem" >
-            <a id="tab-objetivo" href="objetivo" class="sidebar-link" tabindex="-1"
-              aria-label="Estas dentro del menu deslizante. Haga tab y luego presione enter si decea entrar a objetivo de la exhibición. 1 de 6.">
-              <img loading="lazy" width="42px" height="42px" class="wh-42" src="{{url_for('static', filename = './img/general/menu-deslizante/notes.webp')}}"
-                alt="lenguajes-image">
+
+          <li tabindex="-1" role="menuitem">
+            <a
+              id="tab-objetivo"
+              href="objetivo"
+              class="sidebar-link"
+              tabindex="-1"
+              aria-label="Estas dentro del menu deslizante. Haga tab y luego presione enter si decea entrar a objetivo de la exhibición. 1 de 6."
+            >
+              <img
+                loading="lazy"
+                width="42px"
+                height="42px"
+                class="wh-42"
+                src="{{url_for('static', filename = './img/general/menu-deslizante/notes.webp')}}"
+                alt="lenguajes-image"
+              />
               <p class="no-margin">Objetivo de la exhibición</p>
-              <img loading="lazy" width="42px" height="42px" loading="lazy" class="wh-42" src="{{url_for('static', filename = './img/general/menu-deslizante/arrow.webp')}}"
-                alt="flecha-image">
+              <img
+                loading="lazy"
+                width="42px"
+                height="42px"
+                loading="lazy"
+                class="wh-42"
+                src="{{url_for('static', filename = './img/general/menu-deslizante/arrow.webp')}}"
+                alt="flecha-image"
+              />
             </a>
           </li>
           <li tabindex="-1" role="menuitem">
-            <a id="tab-secciones" href="sections" class="sidebar-link" tabindex="-1"
-              aria-label="Haga tab y luego presione enter  si decea entrar a las secciones de la muestra. 2 de 6.">
-              <img loading="lazy" width="42px" height="42px" class="wh-42" src="{{url_for('static', filename = './img/general/menu-deslizante/secciones.webp')}}"
-                alt="calendario-image">
+            <a
+              id="tab-secciones"
+              href="sections"
+              class="sidebar-link"
+              tabindex="-1"
+              aria-label="Haga tab y luego presione enter  si decea entrar a las secciones de la muestra. 2 de 6."
+            >
+              <img
+                loading="lazy"
+                width="42px"
+                height="42px"
+                class="wh-42"
+                src="{{url_for('static', filename = './img/general/menu-deslizante/secciones.webp')}}"
+                alt="calendario-image"
+              />
               <p class="no-margin">Secciones de la muestra</p>
-              <img loading="lazy" width="42px" height="42px" loading="lazy" class="wh-42" src="{{url_for('static', filename = './img/general/menu-deslizante/arrow.webp')}}"
-                alt="flecha-image">
+              <img
+                loading="lazy"
+                width="42px"
+                height="42px"
+                loading="lazy"
+                class="wh-42"
+                src="{{url_for('static', filename = './img/general/menu-deslizante/arrow.webp')}}"
+                alt="flecha-image"
+              />
             </a>
           </li>
-          <li tabindex="-1" role="menuitem" >
-            <a id="tab-recorrido" href="recorrido" class="sidebar-link" tabindex="-1"
-              aria-label="Haga tab y luego presione enter  si decea entrar a recorrido recomendado. 3 de 6.">
-              <img loading="lazy" width="42px" height="42px" class="wh-42" src="{{url_for('static', filename = './img/general/menu-deslizante/directions.webp')}}"
-                alt="lenguajes-image">
+          <li tabindex="-1" role="menuitem">
+            <a
+              id="tab-recorrido"
+              href="recorrido"
+              class="sidebar-link"
+              tabindex="-1"
+              aria-label="Haga tab y luego presione enter  si decea entrar a recorrido recomendado. 3 de 6."
+            >
+              <img
+                loading="lazy"
+                width="42px"
+                height="42px"
+                class="wh-42"
+                src="{{url_for('static', filename = './img/general/menu-deslizante/directions.webp')}}"
+                alt="lenguajes-image"
+              />
               <p class="no-margin">Recorrido recomendado</p>
-              <img loading="lazy" width="42px" height="42px" loading="lazy" class="wh-42" src="{{url_for('static', filename = './img/general/menu-deslizante/arrow.webp')}}"
-                alt="flecha-image">
+              <img
+                loading="lazy"
+                width="42px"
+                height="42px"
+                loading="lazy"
+                class="wh-42"
+                src="{{url_for('static', filename = './img/general/menu-deslizante/arrow.webp')}}"
+                alt="flecha-image"
+              />
             </a>
           </li>
-          <li tabindex="-1" role="menuitem" >
-            <a id="tab-about" href="about" class="sidebar-link" tabindex="-1"
-              aria-label="Haga tab y luego presione enter  si decea entrar a el proyecto Citadine. 4 de 6.">
-              <img loading="lazy" width="42px" height="42px" class="wh-42" src="{{url_for('static', filename = './img/general/menu-deslizante/Citadine.webp')}}"
-                alt="informacion-image">
+          <li tabindex="-1" role="menuitem">
+            <a
+              id="tab-about"
+              href="about"
+              class="sidebar-link"
+              tabindex="-1"
+              aria-label="Haga tab y luego presione enter  si decea entrar a el proyecto Citadine. 4 de 6."
+            >
+              <img
+                loading="lazy"
+                width="42px"
+                height="42px"
+                class="wh-42"
+                src="{{url_for('static', filename = './img/general/menu-deslizante/Citadine.webp')}}"
+                alt="informacion-image"
+              />
               <p class="no-margin">El proyecto Citadine</p>
               <!--Acá decia Citadine pero esta hablando del evento en si la sección-->
-              <img loading="lazy" width="42px" height="42px" loading="lazy" class="wh-42" src="{{url_for('static', filename = './img/general/menu-deslizante/arrow.webp')}}"
-                alt="flecha-image">
+              <img
+                loading="lazy"
+                width="42px"
+                height="42px"
+                loading="lazy"
+                class="wh-42"
+                src="{{url_for('static', filename = './img/general/menu-deslizante/arrow.webp')}}"
+                alt="flecha-image"
+              />
             </a>
           </li>
           <li tabindex="-1" role="menuitem">
-            <a id="tab-novedades" href="anounce" class="sidebar-link" tabindex="-1"
-              aria-label="Haga tab y luego presione enter  si decea entrar a novedades. 5 de 6.">
-              <img loading="lazy" width="42px" height="42px" class="wh-42" src="{{url_for('static', filename = './img/general/menu-deslizante/calendar.webp')}}"
-                alt="calendario-image">
+            <a
+              id="tab-novedades"
+              href="anounce"
+              class="sidebar-link"
+              tabindex="-1"
+              aria-label="Haga tab y luego presione enter  si decea entrar a novedades. 5 de 6."
+            >
+              <img
+                loading="lazy"
+                width="42px"
+                height="42px"
+                class="wh-42"
+                src="{{url_for('static', filename = './img/general/menu-deslizante/calendar.webp')}}"
+                alt="calendario-image"
+              />
               <p class="no-margin">Novedades</p>
-              <img loading="lazy" width="42px" height="42px" loading="lazy" class="wh-42" src="{{url_for('static', filename = './img/general/menu-deslizante/arrow.webp')}}"
-                alt="flecha-image">
+              <img
+                loading="lazy"
+                width="42px"
+                height="42px"
+                loading="lazy"
+                class="wh-42"
+                src="{{url_for('static', filename = './img/general/menu-deslizante/arrow.webp')}}"
+                alt="flecha-image"
+              />
             </a>
           </li>
           <li tabindex="-1" role="menuitem">
-            <a id="tab-covid" href="covid" class="sidebar-link" tabindex="-1"
-              aria-label="Haga tab y luego presione enter  si decea entrar a Protocolo COVID. 6 de 6.">
-              <img loading="lazy" width="42px" height="42px" class="wh-42" src="{{url_for('static', filename = './img/general/menu-deslizante/virus.webp')}}"
-                alt="virus-image">
+            <a
+              id="tab-covid"
+              href="covid"
+              class="sidebar-link"
+              tabindex="-1"
+              aria-label="Haga tab y luego presione enter  si decea entrar a Protocolo COVID. 6 de 6."
+            >
+              <img
+                loading="lazy"
+                width="42px"
+                height="42px"
+                class="wh-42"
+                src="{{url_for('static', filename = './img/general/menu-deslizante/virus.webp')}}"
+                alt="virus-image"
+              />
               <p class="no-margin">Protocolo COVID</p>
-              <img loading="lazy" width="42px" height="42px" loading="lazy" class="wh-42" src="{{url_for('static', filename = './img/general/menu-deslizante/arrow.webp')}}"
-                alt="flecha-image">
+              <img
+                loading="lazy"
+                width="42px"
+                height="42px"
+                loading="lazy"
+                class="wh-42"
+                src="{{url_for('static', filename = './img/general/menu-deslizante/arrow.webp')}}"
+                alt="flecha-image"
+              />
             </a>
           </li>
-        
         </ul>
       </nav>
     </div>
