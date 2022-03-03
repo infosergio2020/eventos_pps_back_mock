@@ -169,8 +169,7 @@ function custom_popup(titulo, comportamiento, parametro) {
     
     backdrop: `
         rgba(0,0,123,0.4)
-        url("./static/images/cat.gif")
-        
+        url("./static/images/demo-512x512.gif")
         left top
         no-repeat
     `
