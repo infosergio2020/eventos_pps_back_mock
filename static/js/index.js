@@ -1,9 +1,11 @@
 // titulos para los alert de diario y citadine
-const title_dia = 'Estas saliendo de la página <strong>Generar Conciencia</strong> hacia un enlace del diario <strong>El Día</strong>. ¿Desea continuar?';
-const title_hoy = 'Estas saliendo de la página <strong>Generar Conciencia</strong> hacia un enlace del diario <strong>Hoy</strong>. ¿Desea continuar?';
-const title_clarin = 'Estas saliendo de la página <strong>Generar Conciencia</strong> hacia un enlace del diario <strong>Clarín</strong>. ¿Desea continuar?';
-const title_nacion = ' Estas saliendo de la página <strong>Generar Conciencia</strong> hacia un enlace del diario <strong>La Nación</strong>. ¿Desea continuar?';
-const title_citadine = ' Estas saliendo de la página <strong>Generar Conciencia</strong> hacia la página de <strong>Citadine</strong>. ¿Desea continuar?';
+const title_dia = 'El sitio del diario <strong>El Día</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
+const title_hoy = 'El sitio del diario <strong>Hoy</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
+const title_clarin = 'El sitio del diario <strong>Clarín</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
+const title_nacion = ' El sitio del diario <strong>La Nación</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
+const title_citadineVERDE = ' El sitio de Citadine <strong>Catástrofes naturales</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
+const title_citadineAZUL = ' El sitio de Citadine <strong>Soluciones basadas en la naturaleza</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
+
 // enlaces para redireccionar en caso de confirmaicon en el alert
 const CITADINE_VERDE = "http://ifw-raspi.projekt.jade-hs.de/wordpress/nbs/";
 const CITADINE_AZUL = "http://ifw-raspi.projekt.jade-hs.de/wordpress/";
@@ -132,14 +134,14 @@ e = document.getElementsByClassName("citadineAzul");
 if (null != e)
   for (let i = 0; i < e.length; i++) {
     e[i].addEventListener("click", (e) => {
-      custom_popup(title_citadine, abri_website, CITADINE_AZUL);
+      custom_popup(title_citadineAZUL, abri_website, CITADINE_AZUL);
     });
   }
 e = document.getElementsByClassName("citadineVerde");
 if (null != e)
   for (let i = 0; i < e.length; i++) {
     e[i].addEventListener("click", (e) => {
-      custom_popup(title_citadine, abri_website, CITADINE_VERDE);
+      custom_popup(title_citadineVERDE, abri_website, CITADINE_VERDE);
     });
   }
 function custom_popup(titulo, comportamiento, parametro) {
@@ -157,10 +159,10 @@ function custom_popup(titulo, comportamiento, parametro) {
     showCloseButton: !0,
     showDenyButton: !0,
     focusConfirm: !1,
-    confirmButtonText: "Aceptar",
-    denyButtonText: "Cancelar",
-    confirmButtonAriaLabel: "Aceptar.",
-    denyButtonAriaLabel: "Cancelar.",
+    confirmButtonText: "Si.",
+    denyButtonText: "No.",
+    confirmButtonAriaLabel: "Si.",
+    denyButtonAriaLabel: "No.",
     width: "70rem",
     height: "35rem",
     color: '#000',
