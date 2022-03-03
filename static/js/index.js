@@ -3,9 +3,8 @@ const title_dia = 'El sitio del diario <strong>El Día</strong> se abrirá en un
 const title_hoy = 'El sitio del diario <strong>Hoy</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
 const title_clarin = 'El sitio del diario <strong>Clarín</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
 const title_nacion = ' El sitio del diario <strong>La Nación</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
-const title_citadineVERDE = ' El sitio de Citadine <strong>Catástrofes naturales</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
-const title_citadineAZUL = ' El sitio de Citadine <strong>Soluciones basadas en la naturaleza</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
-
+const title_citadineVERDE = ' El sitio de Citadine <strong>Soluciones basadas en la naturaleza</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
+const title_citadineAZUL = ' El sitio de Citadine <strong>Catástrofes naturales</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
 // enlaces para redireccionar en caso de confirmaicon en el alert
 const CITADINE_VERDE = "http://ifw-raspi.projekt.jade-hs.de/wordpress/nbs/";
 const CITADINE_AZUL = "http://ifw-raspi.projekt.jade-hs.de/wordpress/";
