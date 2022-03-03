@@ -18,8 +18,8 @@
       <!-- <span class="tooltiptext">Botón para volver a la página principal.</span> -->
     </div>      
     <div class="go-up">
-      <a role="button" tabindex="0" aria-label="Volver a la página anterior."  alt="Botón para regresar a la barra de navegación." href="#init">
-          <img loading="lazy" height="86px" width="86px" src="{{url_for('static', filename = 'img/general/backArrow.svg')}}"  alt="imagen del botón para regresar a la barra de navegación.">
+      <a role="button" tabindex="0" aria-label="Volver a la página anterior." onclick="history.back()">
+          <img loading="lazy" height="86px" width="86px" src="{{url_for('static', filename = 'img/general/backArrow.svg')}}"  alt="imagen del botón para regresar a la página anterior.">
       </a>
     </div>       
 </div>
