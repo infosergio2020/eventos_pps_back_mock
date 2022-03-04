@@ -164,6 +164,10 @@ def Recorrido():
 def Covid():  
     return rutas.render_covid()
 
+@app.route('/nosotros')
+def Nosotros():  
+    return rutas.render_nosotros()
+
 @app.route('/languaje')
 def Languaje():  
     return rutas.render_languaje()

@@ -13,6 +13,9 @@ class CustomRouter:
 
     def render_announcements(self):
         return render_template('sidebar/anounce.html')
+    
+    def render_nosotros(self):
+        return render_template('sidebar/nosotros.html')
 
     def render_objetivo(self):
         return render_template('sidebar/objetivo.html')

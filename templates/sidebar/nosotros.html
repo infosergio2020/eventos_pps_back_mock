@@ -1,0 +1,53 @@
+  <!-- Contenedor del testimonio -->
+  {% extends 'partials/_layout.html' %}
+  {% block body %}
+  <!-- Info de novedades-->
+    <main>
+        <div class="container">
+            <div class="main-card">
+                <div id="anounce" class="main-card-body" >
+                     <div class="afiche__head">
+                        <h1 id="contenido" tabindex="0">Acerca de nosotros</h1>
+                      </div>
+                      <div class="main-card-img-container line-down">                        
+                        <img tabindex="0" role="img"  aria-label="imagen de una lista." alt="imagen de una lista." class="main-section-icon" src="{{url_for('static', filename = 'img/general/otros/checknotes.webp')}}" height="88px" alt="img 1">
+                        <img tabindex="0" role="img"  aria-label="imagen de una lupa con un check." alt="imagen de una lupa con un check." class="main-section-icon" src="{{url_for('static', filename = 'img/general/otros/lupa.webp')}}" height="88px" alt="img 2">
+                        <img tabindex="0" role="img"  aria-label="imagen de un profesor enseñando." alt="imagen de un profesor enseñando." class="main-section-icon" src="{{url_for('static', filename = 'img/general/otros/learning.webp')}}" height="88px" alt="img 3">
+                    </div>  
+                    <div tabindex="0" class="main-card-info">
+                      
+                        <p>El 2 de abril de 2013, la incesante lluvia sobre la ciudad de La Plata y alrededores marcó un record histórico y provocó la mayor catástrofe sufrida por la ciudad. 
+                            Con 302 mm de lluvia intensa en 3 horas, y 400 en toda la noche, muchas regiones quedaron bajo el agua. Una catástrofe que no sólo se cobró vidas, sino que sumió a la
+                            población en una inestabilidad y peligrosidad extrema en cuestión de horas. 
+                            Si bien la tormenta tuvo un carácter inédito, hay múltiples razones interrelacionadas para la gravedad de la inundación.
+                          </p>
+                        
+                        <p>
+                          El propósito de este evento es como cierre del proyecto Citadine,
+                          realizar una exhibición que trate el tema de la inundación de La
+                          Plata a través de la mirada y experiencia de los testigos y
+                          sobrevivientes. Es un recorrido por sus testimonios,
+                          lo sucedido, lo vivenciado, cómo sobrellevaron tal situación.
+                          Cuenta con 6 secciones cronológicas, con atracciones interactivas
+                          educativas, que harán que el visitante pueda vivenciar desde los
+                          momentos previos a la inundación, hasta los siguientes.
+                          Se considera también el tema de riesgos, cómo prepararse en
+                          este tipo de desastres y cómo actuar, además de observar casos
+                          de catástrofes naturales en otros países.
+                        </p>
+                        <p>
+              
+                          Todo se exhibirá de una manera gráfica y lúdica, mediante juegos y atracciones multimediales.
+                          Contará con un mini cine y un área donde se podrá leer periódicos del momento y ver álbumes
+                          de fotos. Se contará con la visita de sobrevivientes para que los niños puedan hacerles entrevistas.
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+          </div>
+          <!-- boton para ir arriba -->
+          {% include ('partials/_button.html') %}
+    </main>
+
+  {% endblock %}
