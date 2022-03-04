@@ -17,7 +17,7 @@
                     <div class="video__descripcion">
                       <p >
                         Ven a descubrir los centros de encuentro más cercanos al lugar que indiques. Accedé a esta aplicación (mediante el botón jugar) que genera caminos a dichos puntos de evacuación, evitando las zonas inundables.
-                        Considera mapas publicados por la UNLP y los centros de evacuación publicados por la Municipalidad de La Plata. 
+                        Considera mapas publicados por la <abbr title="Universidad Nacional de La Plata.">UNLP</abbr> y los centros de evacuación publicados por la Municipalidad de La Plata. 
       
                       </p>
                     </div>
@@ -26,7 +26,7 @@
                     <!-- 1 imagen -->
                     <div  class="grid__container__2">
                       <div class="grid__image">
-                              <img role="img" width="100%" height="100%" src="{{url_for('static', filename = 'img/afiches/dondeir.webp')}}" aria-label="Imagen de un mapa con caminos." alt="Imagen de un mapa con caminos.">
+                              <img tabindex="0" role="img" width="100%" height="100%" src="{{url_for('static', filename = 'img/afiches/dondeir.webp')}}" aria-label="Imagen de un mapa con caminos." alt="Imagen de un mapa con caminos.">
                               
                                 <small class="contenedor__text" style="width: 50%;">
                                     Foto: Realizado por los estudiantes: Joaquín de Antueno e Iván Mindlin."
@@ -35,8 +35,8 @@
                     </div>
                     
                     <!-- boton jugar-->
-                    <div class="verde-4 boton" style="width: 50%;">
-                      <a href="https://hidden-taiga-68681.herokuapp.com/"style="color: rgb(255, 255, 255);" > Jugar</a>
+                    <div tabindex="0" class="verde-4 boton" style="width: 50%;">
+                      <a role="button" aria-label="Ir a jugar." href="https://hidden-taiga-68681.herokuapp.com/"style="color: rgb(255, 255, 255);" > Jugar</a>
                     </div>
                   
                 </div>
