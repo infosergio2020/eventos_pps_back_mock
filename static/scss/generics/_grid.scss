@@ -40,10 +40,9 @@
 
 
 .grid__image {
-  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  margin: 0 auto;
   align-items: center;
 }
 .grid__image small {
@@ -81,7 +80,7 @@
   text-align: justify;
 }
 .grid__columna {
-  align-items: center;
+  
 }
 .grid__columna h4 {
   text-shadow: 3px 0 0 #202020;
@@ -93,7 +92,7 @@
   display: block;
   padding: 0 1rem;
 }
-@media (min-width: 680px) {
+@media (min-width: 760px) {
   .grid__container__4 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

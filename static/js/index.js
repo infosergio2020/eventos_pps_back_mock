@@ -148,7 +148,8 @@ function custom_popup(titulo, comportamiento, parametro) {
     customClass: {
       confirmButton: 'alert-btn confirm-btn',
       denyButton: 'alert-btn cancel-btn',
-      closeButton: 'cancel-btn'
+      closeButton: 'cancel-btn',
+      popup: 'swal2-pop-style',
     },
     buttonsStyling: false,
 
@@ -162,16 +163,18 @@ function custom_popup(titulo, comportamiento, parametro) {
     denyButtonText: "No.",
     confirmButtonAriaLabel: "Si.",
     denyButtonAriaLabel: "No.",
-    width: "70rem",
-    height: "35rem",
+    // width: "70rem",
+    // height: "35rem",
+    width: "auto",
+    height: "auto",
     color: '#000',
     background: '#FBFFF0 url(./static/images/greeb.jpg) no-repeat left center/contain' ,
     
     backdrop: `
-        rgba(0,0,123,0.4)
-        url("./static/images/demo-512x512.gif")
-        left top
-        no-repeat
+      rgba(0,0,123,0.4)
+      url("./static/images/demo-256x256.gif")
+      left top
+      no-repeat
     `
   }).then((result) => {
     if (result.isConfirmed) {

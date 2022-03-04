@@ -20,3 +20,14 @@
 .cancel-btn{
     background-color: #C6323B!important;
 }
+
+// estilos para ajustar la posicion del popup
+.swal2-pop-style{
+    grid-row: 3 / 4 !important;
+}
+
+@media (min-width:768px) {
+    .swal2-pop-style{
+        grid-row: 2 / 3 !important;
+    }
+}
