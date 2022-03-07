@@ -94,6 +94,28 @@ def evento_update(id):
         data["descripcion"],
         cast(data["fecha"],Date),
         cast(data["hora"],Time))
+        
+        #si se agregar mas areas como actualizacion... 
+        evento_actualizado = Evento.get_by_id(id)
+        # solo si el formulario agregar areas 
+        if 'areas' in data:
+            areas = data["areas"]
+            for area in areas:
+                evento_actualizado.agregar_area(area['nombre'],area['descripcion'])                         
+        # solo si el formulario agregar areas 
+        if 'fotos' in data:
+            fotos = data["fotos"]
+            for foto in fotos:
+                print(foto)
+                evento_actualizado.agregar_foto(foto['titulo'],foto['url'],foto['descripcion'])
+        # solo si el formulario agregar areas 
+        if 'videos' in data:
+            videos = data["videos"]
+            for video in videos:
+                print(video)
+                evento_actualizado.agregar_video(video['titulo'],video['url'],video['descripcion'])    
+
+
         if  result != None:
             return jsonify(result = result.serialize)
         # si es un GET o no se actualizo me voy al form para actualizar
