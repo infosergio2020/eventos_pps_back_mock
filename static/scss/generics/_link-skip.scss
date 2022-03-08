@@ -25,7 +25,17 @@
 .buttons {
   display: flex;
   flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
 }
+
+@media (min-width: 768px) {
+  .buttons {
+    padding: 0 5rem;
+  }
+}
+
 .link__skip--item a:focus-within {
   top: 0;
 }
