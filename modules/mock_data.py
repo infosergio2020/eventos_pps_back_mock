@@ -299,7 +299,7 @@ list_album = {
 
 
 list_shocking = [
-    # {"image": 'img/section3/fotos-impactantes/1.webp'},
+    # {"image": 'img/section3/fotos-impactantes/1.webp'},,
     {"image": 'img/section3/fotos-impactantes/2.webp',
      "descripcion": 'Casillas destruidas por la inundación.'},
     {"image": 'img/section3/fotos-impactantes/3.webp',
@@ -336,7 +336,73 @@ list_shocking = [
     {"image": 'img/section3/fotos-impactantes/17.webp',
      "descripcion": 'Pasillo de una casa con la marca de agua en la pared de más de 1,50 metros.'},
     {"image": 'img/section3/fotos-impactantes/18.webp',
-     "descripcion": 'Esquina de la calle 35 al 1400, todo destruido luego de la inundación.'}
-    # {"image": 'img/section3/fotos-impactantes/19.webp',
-    #  "descripcion": 'Casillas destruidas por la inundación.'}
+     "descripcion": 'Esquina de la calle 35 al 1400, todo destruido luego de la inundación.'},
+   
+    {"image": 'img/section3/fotos-impactantes/19.webp',
+     "descripcion": 'Vista aérea de una calle inundada de vereda a vereda.'},
+
+    {"image": 'img/section3/fotos-impactantes/20.webp',
+     "descripcion": 'Vista aérea de una camioneta de bomberos llevando a una señora en la caja trasera.'},
+   
+    {"image": 'img/section3/fotos-impactantes/21.webp',
+     "descripcion": 'Vista aérea de una avenida inundada con autos y micro varados.'},
+   
+    {"image": 'img/section3/fotos-impactantes/22.webp',
+     "descripcion": 'Todo un campo inundado con caballos intentando salir de dicha zona.'},
+   
+    {"image": 'img/section3/fotos-impactantes/23.webp',
+     "descripcion": 'Vista aérea de un cruce de calles inundadas con una persona cruzando en canoa.'},
+   
+    {"image": 'img/section3/fotos-impactantes/24.webp',
+     "descripcion": 'Personas cruzando una calle inundada en canoa.'},
+   
+    {"image": 'img/section3/fotos-impactantes/25.webp',
+     "descripcion": 'Foto de calle inundada con una persona con el agua por la cintura y un auto con el agua hasta el techo.'},
+   
+    {"image": 'img/section3/fotos-impactantes/26.webp',
+     "descripcion": 'Calle inundada con una persona con el agua hasta la cintura que intenta destapar los desagües y un auto con el agua hasta el techo.'},
+   
+    {"image": 'img/section3/fotos-impactantes/27.webp',
+     "descripcion": 'Auto tapado de agua varado en pleno barrio inundado.'},
+   
+    {"image": 'img/section3/fotos-impactantes/28.webp',
+     "descripcion": 'Autos apilados uno encima del otro arrastrados durante la inundación.'},
+   
+    {"image": 'img/section3/fotos-impactantes/29.webp',
+     "descripcion": 'Personas damnificadas sobre un bote salvavidas llevadas por bomberos.'},
+   
+    {"image": 'img/section3/fotos-impactantes/30.webp',
+     "descripcion": 'Personas cruzando una calle inundada llevando a un perro.'},
+   
+    {"image": 'img/section3/fotos-impactantes/31.webp',
+     "descripcion": 'Personal de bomberos auxiliando a una persona anciana en medio de calle inundada.'},
+   
+    {"image": 'img/section3/fotos-impactantes/32.webp',
+     "descripcion": 'Persona mayor sobre un bote salvavidas llevada por vecinos y personal de la cruz roja.'},
+   
+    {"image": 'img/section3/fotos-impactantes/33.webp',
+     "descripcion": 'Persona mayor llevada a upa por un rescatista.'},
+   
+    {"image": 'img/section3/fotos-impactantes/34.webp',
+     "descripcion": 'Personas damnificadas llevadas en bote salvavidas por rescatistas.'},
+   
+    {"image": 'img/section3/fotos-impactantes/35.webp',
+     "descripcion": 'Vista de la calle inundada de vereda a vereda con autos varados e inundados.'},
+
+        
+    {"image": 'img/section3/fotos-impactantes/36.webp',
+     "descripcion": 'Personas sobre bote salvavidas arrastrada por rescatistas con agua hasta las rodillas. Otras personas sobre el techo de una casa.'},
+   
+    {"image": 'img/section3/fotos-impactantes/37.webp',
+     "descripcion": 'Persona sentada sobre pasto observando el barrio inundado.'},
+   
+    {"image": 'img/section3/fotos-impactantes/38.webp',
+     "descripcion": 'Vista frontal de casa de dos pisos con la marca del agua de inundación por encima del picaporte.'},
+   
+    {"image": 'img/section3/fotos-impactantes/39.webp',
+     "descripcion": 'Sillas y sillón sucios y rotos sobre la vereda para secarlos.'},
+   
+    {"image": 'img/section3/fotos-impactantes/40.webp',
+     "descripcion": 'Vereda llena de cosas y muebles de la casa desparramadas, mojadas y rotas para secarlos.'},
+
 ]
