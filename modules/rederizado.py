@@ -6,6 +6,15 @@ class CustomRouter:
     # index
     def render_index(self):
         return render_template('index.html',flag_1="index",flag_2=" ", seccion="index")
+    # juegos para la pc
+    
+    def render_juegos_pc(self):
+        return render_template('juegos_pc.html')
+
+    def render_header_pc(self):
+        return render_template('_header_pc.html')
+
+        
 
     # secciones del sidebar
     def render_sections(self):

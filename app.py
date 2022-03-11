@@ -38,6 +38,19 @@ def sw():
 def Index():
     return rutas.render_index()
 
+###########################
+# Para la pc
+###########################
+@app.route('/juegos_pc')
+def Juegos_pc():
+    return rutas.render_juegos_pc()
+
+@app.route('/header_pc')
+def Header_pc():
+    return rutas.render_header_pc()
+###########################
+###########################
+
 @app.route('/testimonio1')
 def Testimonio1():
     return rutas.render_before_flood()
