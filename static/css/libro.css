@@ -157,7 +157,7 @@
   text-align: right;
 }
 .margenes {
-  margin-left: 20rem;
+  margin-left: 0;
 }
 .libro-container {
   display: flex;
