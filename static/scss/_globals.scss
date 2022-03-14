@@ -130,6 +130,10 @@ nav {
   width: 42px;
   height: 42px;
 }
+.wh-24 {
+  width: 24px;
+  height: 24px;
+}
 .wh-12-9 {
   width: 12px;
   height: 9px;
@@ -272,4 +276,8 @@ nav {
 .boton a{
   display: block;
   border: 1px solid red;
+}
+
+.no-border{
+  border-radius: 0!important;
 }
