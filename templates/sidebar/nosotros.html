@@ -47,39 +47,40 @@
               
                         
                         </p>
-                        <section class="wrapper-nosotros">
-                          <!-- Row title-nostros -->
-                          <main class="row-nosotros title-nostros">
-                            <ul tabindex="0">
-                              <li>Recursos</li>
-                              <li>Desarrollado por</li>
-                          
-                            </ul>
-                          </main>
-                          <!-- Row 1 - fadeIn -->
-                          {% for columna in nosotros %}
-                          <section class="row-fadeIn-wrapper">
-                            <article class="row-nosotros fadeIn nfl">
-                              <ul tabindex="0">
-                                <li>{{columna.tarea}}</li>
-                                <li>{{columna.participante}}</li>
-                                
-                              </ul>
-                              <ul tabindex="0" class="more-content">
-                                <li>{{columna.profesion}}</li>
-                                
-                  
-                              </ul>
-                            </article>
-                            
-                          </section>
-                          {% endfor %}
-
-
-                  
-                          
-                        </section>
+                        
                     </div>
+                    <section class="wrapper-nosotros">
+                      <!-- Row title-nostros -->
+                      <main class="row-nosotros title-nostros">
+                        <ul tabindex="0">
+                          <li>Recursos</li>
+                          <li>Desarrollado por</li>
+                      
+                        </ul>
+                      </main>
+                      <!-- Row 1 - fadeIn -->
+                      {% for columna in nosotros %}
+                      <section class="row-fadeIn-wrapper">
+                        <article class="row-nosotros fadeIn nfl">
+                          <ul tabindex="0">
+                            <li>{{columna.tarea}}</li>
+                            <li>{{columna.participante}}</li>
+                            
+                          </ul>
+                          <ul tabindex="0" class="more-content">
+                            <li>{{columna.profesion}}</li>
+                            
+              
+                          </ul>
+                        </article>
+                        
+                      </section>
+                      {% endfor %}
+
+
+              
+                      
+                    </section>
 
                 </div>
             </div>
