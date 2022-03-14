@@ -117,6 +117,10 @@ def Diarios():
 @app.route('/Inundaciones-en-el-exterior')
 def Inundacionesenelexterior():
     return rutas.render_inundacion_exterior()
+    
+@app.route('/mapa')
+def Mapa():
+    return rutas.render_mapa()
 
 @app.route('/photo-album')
 def Photoalbum():

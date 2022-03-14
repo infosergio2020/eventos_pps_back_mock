@@ -68,6 +68,9 @@ class CustomRouter:
     def render_entrevista_map(self):
         return render_template('index.html', seccion="index")
 
+    def render_mapa(self):
+        return render_template('/mapa.html')    
+
     def render_agua_simulador(self):
         return render_template('/water-level-simulator.html',flag_1="opcion_2",flag_2="opcion_2", seccion="s2")
 
