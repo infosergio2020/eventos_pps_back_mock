@@ -174,7 +174,7 @@ nav {
   grid-template-columns: repeat(3, 1fr);
 }
 .intro {
-  padding: 1rem;
+  padding: .5rem;
   height: 50%;
   width: 100%;
   box-sizing: border-box;
@@ -244,10 +244,16 @@ nav {
 }
 .esconder-detail {
   font-size: 20px;
-  margin: 20px;
+  margin: 20px 0;
   visibility: hidden;
   opacity: 0;
 }
+
+div[aria-labelledby]{
+  display: flex;
+  justify-content: center;
+}
+
 .card:hover {
   cursor: pointer;
 }
@@ -275,12 +281,9 @@ nav {
 
 .boton a{
   display: block;
-  border: 1px solid red;
+  // border: 1px solid red;
 }
-<<<<<<< HEAD
-=======
 
 .no-border{
   border-radius: 0!important;
 }
->>>>>>> 994da584a13c9a4e21d4128e6c6522b0b1bab585
