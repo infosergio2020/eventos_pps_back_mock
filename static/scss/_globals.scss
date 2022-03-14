@@ -20,6 +20,7 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
+
 p {
   color: #ffffff;
   padding: 0 1rem;
@@ -339,7 +340,7 @@ div[aria-labelledby]{
 }
  .row-nosotros  ul li {
 	 margin: 0;
-	 font-size: 16px;
+	 font-size: 12px;
 	 font-weight: normal;
 	 list-style: none;
 	 display: inline-block;
@@ -349,12 +350,12 @@ div[aria-labelledby]{
 }
  @media only screen and (max-width: 767px) and (min-width: 480px) {
 	 .row-nosotros ul li {
-		 font-size: 13px;
+		 font-size: 19px;
 	}
 }
  @media only screen and (max-width: 479px) {
 	 .row-nosotros ul li {
-		 font-size: 13px;
+		 font-size: 16px;
 	}
 }
  .title-nosotros ul li {
