@@ -299,14 +299,50 @@ list_album = {
     # ]
 }
 
-list_participantes =[
-     {"tarea": 'soy tarea-1',
-    "participante": 'ori',
-    "profesion":'lol-1'},
-         {"tarea": 'soy tarea-2',
-    "participante": 'sergio',
-    "profesion":'lol-2'}
+list_participantes = [
+     {"tarea": 'Mapa accesible con las entrevistas.',
+    "participante": 'Oriana Ailigo, Yanina Tolaba y Sergio Aguilar.',
+    "profesion":'Ingeniería en computación.'},
     
+    {"tarea": 'Simulador de agua.',
+    "participante": 'Emiliano Albarracín y Catalina Parola.',
+    "profesion":'Licenciatura en informática.'},
+
+     {"tarea": 'Mochila de emergencia inteligente condetector RFID.',
+    "participante": 'Emiliano Albarracín, Marcial Manzo y David Gomez.',
+    "profesion":'Licenciatura en informática.'},
+    
+    {"tarea": 'Mochila de emergencia inteligente conreconocedor de imágenes.',
+    "participante": 'Lucia Collivadino y Emiliano Albarracín.',
+    "profesion":'Licenciatura en informática.'},
+
+    {"tarea": '¿Dónde ir? Centro de evacuación.',
+    "participante": 'Joaquín de Antueno e Iván Mindlin.',
+    "profesion":'Licenciatura en informática.'},
+    
+    {"tarea": 'Disaster Cross.',
+    "participante": 'Andrés Marconi, Federico Perroni y Guillermo Villarreal.',
+    "profesion":'Licenciatura en informática.'},
+    
+    {"tarea": 'Limpiar la ciudad.',
+    "participante": 'Ezequiel Carletti, Esteban Debole y Nahuel Di Criscio.',
+    "profesion":'Licenciatura en informática.'},
+    
+    {"tarea": 'Rompecabezas NBS.',
+    "participante": 'Daniel Cesanelli y Francisco Ale.',
+    "profesion":'Licenciatura en informática.'},
+
+    {"tarea": 'Inundados.',
+    "participante": 'Hernán Kleinubing, Lautaro Pastorino y Edith Rocio Castillo Yauri.',
+    "profesion":'Licenciatura en informática.'},
+    
+    {"tarea": 'Juego de la memoria.',
+    "participante": 'Juan Schallibaum.',
+    "profesion":'Licenciatura en informática.'},
+
+    {"tarea": 'Quiz Aprendiendo a prepararme.',
+    "participante": 'Bárbara Corro y Juan Ignacio Torres.',
+    "profesion":'Ingeniería en computación.'}
 ]
 list_shocking = [
 
