@@ -300,9 +300,12 @@ list_album = {
 }
 
 list_participantes =[
-     {"tarea": 'soy tarea',
+     {"tarea": 'soy tarea-1',
     "participante": 'ori',
-    "profesion":'lol'}
+    "profesion":'lol-1'},
+         {"tarea": 'soy tarea-2',
+    "participante": 'sergio',
+    "profesion":'lol-2'}
     
 ]
 list_shocking = [
