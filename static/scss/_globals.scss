@@ -290,7 +290,7 @@ div[aria-labelledby]{
 
 // nosotros
 /* links */
- .nfl a, .mlb a, .nhl a, .pga a {
+ .nfl a, .nf2 a, .nf3 a, .nf4 a {
 	 text-decoration: none;
 	 transition: color 0.2s ease-out;
 }
@@ -417,22 +417,22 @@ div[aria-labelledby]{
  .nfl:hover {
 	 border-left: 5px solid rgba(79, 192, 210, 1);
 }
- .mlb {
+ .nf2 {
 	 border-left: 5px solid rgba(29, 110, 75, 1);
 }
- .mlb:hover {
+ .nf2:hover {
 	 border-left: 5px solid rgba(82, 210, 154, 1);
 }
- .nhl {
+ .nf3 {
 	 border-left: 5px solid rgba(157, 121, 25, 0.7);
 }
- .nhl:hover {
+ .nf3:hover {
 	 border-left: 5px solid rgba(231, 196, 104, 0.7);
 }
- .pga {
+ .nf4 {
 	 border-left: 5px solid rgba(149, 47, 18, 1);
 }
- .pga:hover {
+ .nf4:hover {
 	 border-left: 5px solid rgba(235, 118, 85, 1);
 }
 /* row one - fadeIn */
