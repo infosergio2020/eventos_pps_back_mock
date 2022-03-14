@@ -301,7 +301,10 @@ list_album = {
 
 
 list_shocking = [
-    # {"image": 'img/section3/fotos-impactantes/1.webp'},,
+
+    {"image": 'img/section3/fotos-impactantes/1.webp',
+    "descripcion": 'Una vaca en medio de un campo inundado, con agua que le cubre hasta el lomo.'},
+    
     {"image": 'img/section3/fotos-impactantes/2.webp',
      "descripcion": 'Casillas destruidas por la inundación.'},
     {"image": 'img/section3/fotos-impactantes/3.webp',
@@ -358,8 +361,6 @@ list_shocking = [
     {"image": 'img/section3/fotos-impactantes/24.webp',
      "descripcion": 'Personas cruzando una calle inundada en canoa.'},
    
-    {"image": 'img/section3/fotos-impactantes/25.webp',
-     "descripcion": 'Foto de calle inundada con una persona con el agua por la cintura y un auto con el agua hasta el techo.'},
    
     {"image": 'img/section3/fotos-impactantes/26.webp',
      "descripcion": 'Calle inundada con una persona con el agua hasta la cintura que intenta destapar los desagües y un auto con el agua hasta el techo.'},
