@@ -340,7 +340,7 @@ div[aria-labelledby]{
 }
  .row-nosotros  ul li {
 	 margin: 0;
-	 font-size: 12px;
+	 font-size: 16px;
 	 font-weight: normal;
 	 list-style: none;
 	 display: inline-block;
@@ -350,12 +350,12 @@ div[aria-labelledby]{
 }
  @media only screen and (max-width: 767px) and (min-width: 480px) {
 	 .row-nosotros ul li {
-		 font-size: 19px;
+		 font-size: 12px;
 	}
 }
  @media only screen and (max-width: 479px) {
 	 .row-nosotros ul li {
-		 font-size: 16px;
+		 font-size: 14px;
 	}
 }
  .title-nosotros ul li {
@@ -601,4 +601,3 @@ div[aria-labelledby]{
 		 color: rgba(255, 255, 255, 0.9);
 	}
 }
- 

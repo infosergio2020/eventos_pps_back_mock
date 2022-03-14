@@ -97,12 +97,15 @@
   transform: scale(1.02);
 }
 .button__container {
+  /* position: relative; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
   width: 100%;
 }
+
+
 .hide_btn {
   display: none;
 }
@@ -120,20 +123,24 @@
 .blue__grad-1 {
   background-image: url(./../img/diarios/tapas/EL-DIA.webp);
   background-size: cover;
+  justify-content: flex-end!important;
 }
 .blue__grad-2 {
   background-image: url(./../img/diarios/tapas/Diario-HOY.webp);
   /* background-image: url(./../img/diarios/tapas/portada-EL-DIA.svg); */
+  justify-content: flex-end!important;
   background-size: cover;
 }
 .blue__grad-3 {
   background-image: url(./../img/diarios/tapas/El-Clarin.webp);
   /* background-image: url(./../img/diarios/tapas/portada-EL-DIA.svg); */
+  justify-content: flex-end!important;
   background-size: cover;
 }
 .blue__grad-4 {
   background-image: url(./../img/diarios/tapas/nacion.webp);
   background-size: cover;
+  justify-content: flex-end!important;
 }
 .verde-1 {
   background-color: #0a8025;
