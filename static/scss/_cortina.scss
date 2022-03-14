@@ -1,9 +1,14 @@
 .opacidad{
   position: relative;
+  border-radius: .8rem;
   background-color: #292626;
-  z-index: 9999;
+  z-index: 9;
   width: 100%;
-  padding: 0.002;
+  padding:  .5rem 0;
+}
+
+.opacidad p{
+  margin: 0;
 }
 
 .rnOuter {
