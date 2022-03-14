@@ -333,11 +333,11 @@ div[aria-labelledby]{
 	 position: relative;
 }
 /* lists */
- .row-nosotros ul {
+ .row-nosotros  ul {
 	 margin: -25px;
 	 padding: -1px;
 }
- .row-nosotros ul li {
+ .row-nosotros  ul li {
 	 margin: 0;
 	 font-size: 16px;
 	 font-weight: normal;
@@ -360,11 +360,11 @@ div[aria-labelledby]{
  .title-nosotros ul li {
 	 padding: 15px 13px;
 }
- .row-nosotros ul li {
+ .row-nosotros  ul li {
 	 padding: 5px 10px;
 }
 /* rows */
- .row-nosotros {
+ .row-nosotros  {
 	 padding: 20px 0;
 	 height: 30px;
 	 font-size: 0;
@@ -378,7 +378,7 @@ div[aria-labelledby]{
 .row-nosotros:active,
 .row-nosotros:focus,
  .row-nosotros:hover {
-	 background-color: #1C9355;
+
 	 height: 65px;
 }
  @media only screen and (max-width: 767px) {
