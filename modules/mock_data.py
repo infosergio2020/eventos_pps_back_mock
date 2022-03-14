@@ -299,7 +299,12 @@ list_album = {
     # ]
 }
 
-
+list_participantes =[
+     {"tarea": 'soy tarea',
+    "participante": 'ori',
+    "profesion":'lol'}
+    
+]
 list_shocking = [
 
     {"image": 'img/section3/fotos-impactantes/1.webp',

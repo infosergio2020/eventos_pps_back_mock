@@ -316,7 +316,7 @@ nav {
 	 color: rgba(195, 61, 23, 1);
 }
 /* wrapper */
- .wrapper {
+ .wrapper-nosotros {
 	 width: 100%;
 	 max-width: 1000px;
 	 margin: 20px auto 100px auto;
@@ -327,11 +327,11 @@ nav {
 	 position: relative;
 }
 /* lists */
- .row ul {
-	 margin: -6px;
-	 padding: 0;
+ .row-nosotros ul {
+	 margin: -25px;
+	 padding: -1px;
 }
- .row ul li {
+ .row-nosotros ul li {
 	 margin: 0;
 	 font-size: 16px;
 	 font-weight: normal;
@@ -342,23 +342,23 @@ nav {
 	 box-sizing: border-box;
 }
  @media only screen and (max-width: 767px) and (min-width: 480px) {
-	 .row ul li {
+	 .row-nosotros ul li {
 		 font-size: 13px;
 	}
 }
  @media only screen and (max-width: 479px) {
-	 .row ul li {
+	 .row-nosotros ul li {
 		 font-size: 13px;
 	}
 }
- .title ul li {
+ .title-nosotros ul li {
 	 padding: 15px 13px;
 }
- .row ul li {
+ .row-nosotros ul li {
 	 padding: 5px 10px;
 }
 /* rows */
- .row {
+ .row-nosotros {
 	 padding: 20px 0;
 	 height: 30px;
 	 font-size: 0;
@@ -368,40 +368,40 @@ nav {
 	 border-top: 5px solid rgba(0, 0, 0, 0.1);
 }
 
-.row:focus-within,
-.row:active,
-.row:focus,
- .row:hover {
+.row-nosotros:focus-within,
+.row-nosotros:active,
+.row-nosotros:focus,
+ .row-nosotros:hover {
 	 background-color: #1C9355;
 	 height: 65px;
 }
  @media only screen and (max-width: 767px) {
-	 .row:hover {
+	 .row-nosotros:hover {
 		 height: 85px;
 	}
 }
  @media only screen and (max-width: 359px) {
-	 .row:hover {
+	 .row-nosotros:hover {
 		 height: 105px;
 	}
 }
- .title {
+ .title-nosotros {
 	 padding: 25px 0 5px 0;
-	 height: 45px;
+	 height: 80px;
 	 font-size: 0;
 	 background-color:#05241e;
 	 border-left: 5px solid #0a8025;
 }
-.title:hover,
-.title:focus-within,
-.title:active,
-.title:focus {
-	 height: 45px;
+.title-nosotros:hover,
+.title-nosotros:focus-within,
+.title-nosotros:active,
+.title-nosotros:focus {
+	 height: -45px;
 	 background-color: rgba(255, 255, 255, 0.1);
 	 border-left: 3px solid rgba(255, 255, 255, 0.1);
 }
  @media only screen and (max-width: 767px) {
-	 .title-hide {
+	 .title-nosotros-hide {
 		 display: none;
 	}
 }
@@ -444,7 +444,7 @@ nav {
 .row-fadeIn-wrapper:active,
 .row-fadeIn-wrapper:focus,
  .row-fadeIn-wrapper:hover {
-	 height: 35px;
+	 height: 35px !important;
 }
  @media only screen and (max-width: 767px) {
 	 .row-fadeIn-wrapper:hover {

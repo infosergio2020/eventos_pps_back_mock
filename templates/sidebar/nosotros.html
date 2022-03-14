@@ -47,50 +47,56 @@
               
                         
                         </p>
-                        
+                        <section class="wrapper-nosotros">
+                          <!-- Row title-nostros -->
+                          <main class="row-nosotros title-nostros">
+                            <ul tabindex="0">
+                              <li>Recursos</li>
+                              <li>Desarrollado por</li>
+                          
+                            </ul>
+                          </main>
+                          <!-- Row 1 - fadeIn -->
+                          {% for columa in nosotros%}
+                          <!-- aria-label="imagen de la galería {{loop.index}} de {{loop.length}}."
+                          href="{{ url_for('static', filename = photo.image )}}" -->
+                          <section class="row-fadeIn-wrapper">
+                            <article class="row-nosotros fadeIn nfl">
+                              <ul tabindex="0">
+                                <li>{{columna.tarea}}Mapa accesible con las entrevistas</li>
+                                <li>{{columna.participante}}Oriana Ailigo, Yanina Tolaba y Sergio Aguilar</li>
+                                
+                              </ul>
+                              <ul tabindex="0" class="more-content">
+                                <li>{{columna.profesion}}Ingenieros en computación.</li>
+                                
+                  
+                              </ul>
+                            </article>
+                            
+                          </section>
+                          {% endfor %}
+
+                          <!-- Row 2 - fadeIn -->
+                          <section class="row-fadeIn-wrapper">
+                            <article class="row-nosotros fadeIn mlb">
+                              <ul tabindex="0">
+                                <li> Simulador de agua</li>
+                                <li>Emiliano Albarracín y Catalina Parola</li>
+                                
+                              </ul>
+                              <ul tabindex="0" class="more-content">
+                                <li>Licenciados en informática.</li>
+                                
+                  
+                              </ul>
+                            </article>
+                          </section>
+                  
+                          
+                        </section>
                     </div>
-                    <section class="wrapper">
-                      <!-- Row title -->
-                      <main class="row title">
-                        <ul tabindex="0">
-                          <li>Recursos</li>
-                          <li>Desarrollado por</li>
-                      
-                        </ul>
-                      </main>
-                      <!-- Row 1 - fadeIn -->
-                      <section class="row-fadeIn-wrapper">
-                        <article class="row fadeIn nfl">
-                          <ul tabindex="0">
-                            <li>Mapa accesible con las entrevistas</li>
-                            <li>Oriana Ailigo, Yanina Tolaba y Sergio Aguilar</li>
-                            
-                          </ul>
-                          <ul tabindex="0" class="more-content">
-                            <li>Ingenieros en computación.</li>
-                            
-              
-                          </ul>
-                        </article>
-                      </section>
-                      <!-- Row 2 - fadeIn -->
-                      <section class="row-fadeIn-wrapper">
-                        <article class="row fadeIn mlb">
-                          <ul tabindex="0">
-                            <li>Simulador de agua</li>
-                            <li>Emiliano Albarracín y Catalina Parola</li>
-                            
-                          </ul>
-                          <ul tabindex="0" class="more-content">
-                            <li>Licenciados en informática.</li>
-                            
-              
-                          </ul>
-                        </article>
-                      </section>
-              
-                      
-                    </section>
+
                 </div>
             </div>
           </div>
