@@ -302,47 +302,47 @@ list_album = {
 list_participantes = [
      {"tarea": 'Mapa accesible con las entrevistas.',
     "participante": 'Oriana Ailigo, Yanina Tolaba y Sergio Aguilar.',
-    "profesion":'Ingeniería en computación.'},
+    "profesion":'Estudiantes de Ingeniería en computación.'},
     
     {"tarea": 'Simulador de agua.',
     "participante": 'Emiliano Albarracín y Catalina Parola.',
-    "profesion":'Licenciatura en informática.'},
+    "profesion":'Emilio graduado en Ingeniería Hidraúlica y Catalina graduada en Diseño Industrial.'},
 
      {"tarea": 'Mochila de emergencia inteligente condetector RFID.',
     "participante": 'Emiliano Albarracín, Marcial Manzo y David Gomez.',
-    "profesion":'Licenciatura en informática.'},
+    "profesion":'Estudiantes de Diseño Centrado en el Usuario.'},
     
     {"tarea": 'Mochila de emergencia inteligente conreconocedor de imágenes.',
     "participante": 'Lucia Collivadino y Emiliano Albarracín.',
-    "profesion":'Licenciatura en informática.'},
+    "profesion":'Estudiantes de Diseño Centrado en el Usuario.'},
 
     {"tarea": '¿Dónde ir? Centro de evacuación.',
     "participante": 'Joaquín de Antueno e Iván Mindlin.',
-    "profesion":'Licenciatura en informática.'},
+    "profesion":'Estudiantes de Diseño Centrado en el Usuario.'},
     
     {"tarea": 'Disaster Cross.',
     "participante": 'Andrés Marconi, Federico Perroni y Guillermo Villarreal.',
-    "profesion":'Licenciatura en informática.'},
+    "profesion":'Estudiantes de Diseño Centrado en el Usuario.'},
     
     {"tarea": 'Limpiar la ciudad.',
     "participante": 'Ezequiel Carletti, Esteban Debole y Nahuel Di Criscio.',
-    "profesion":'Licenciatura en informática.'},
+    "profesion":'Estudiantes de Diseño Centrado en el Usuario.'},
     
     {"tarea": 'Rompecabezas NBS.',
     "participante": 'Daniel Cesanelli y Francisco Ale.',
-    "profesion":'Licenciatura en informática.'},
+    "profesion":'Estudiantes de Diseño Centrado en el Usuario.'},
 
     {"tarea": 'Inundados.',
     "participante": 'Hernán Kleinubing, Lautaro Pastorino y Edith Rocio Castillo Yauri.',
-    "profesion":'Licenciatura en informática.'},
+    "profesion":'Estudiantes de Diseño Centrado en el Usuario.'},
     
     {"tarea": 'Juego de la memoria.',
     "participante": 'Juan Schallibaum.',
-    "profesion":'Licenciatura en informática.'},
+    "profesion":'Estudiante de Diseño Centrado en el Usuario.'},
 
     {"tarea": 'Quiz Aprendiendo a prepararme.',
     "participante": 'Bárbara Corro y Juan Ignacio Torres.',
-    "profesion":'Ingeniería en computación.'}
+    "profesion":'Estudiantes de Ingeniería en computación.'}
 ]
 list_shocking = [
 

@@ -1,4 +1,6 @@
 // titulos para los alert de diario y citadine
+const title_mapa = 'El sitio del <strong>Mapa de entrevistados</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
+
 const title_dia = 'El sitio del diario <strong>El Día</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
 const title_hoy = 'El sitio del diario <strong>Hoy</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
 const title_clarin = 'El sitio del diario <strong>Clarín</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
@@ -6,6 +8,7 @@ const title_nacion = ' El sitio del diario <strong>La Nación</strong> se abrir�
 const title_citadineVERDE = ' El sitio de Citadine <strong>Soluciones basadas en la naturaleza</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
 const title_citadineAZUL = ' El sitio de Citadine <strong>Catástrofes naturales</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
 // enlaces para redireccionar en caso de confirmaicon en el alert
+const MAPA = "https://entrevistas-inundacion.netlify.app/index.html";
 const CITADINE_VERDE = "http://ifw-raspi.projekt.jade-hs.de/wordpress/nbs/";
 const CITADINE_AZUL = "http://ifw-raspi.projekt.jade-hs.de/wordpress/";
 const NACION = "https://es.kiosko.net/ar/2013-04-03/np/nacion.html";
@@ -114,7 +117,13 @@ null != e &&
   e.addEventListener("click", (e) => {
     custom_popup(title_dia, abri_website, ELDIA);
   });
-e = document.getElementById("diario-2-2");
+  e = document.getElementById("mapa");
+  null != e &&
+    e.addEventListener("click", (e) => {
+      custom_popup(title_mapa, abri_website, MAPA);
+    });
+  
+  e = document.getElementById("diario-2-2");
 null != e &&
   e.addEventListener("click", (e) => {
     custom_popup(title_hoy, abri_website, HOY);

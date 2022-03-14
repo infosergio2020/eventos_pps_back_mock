@@ -601,3 +601,10 @@ div[aria-labelledby]{
 		 color: rgba(255, 255, 255, 0.9);
 	}
 }
+ 
+// footer
+.footer__centrar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
