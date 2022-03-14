@@ -1,5 +1,5 @@
 from flask import render_template,request
-from .mock_data import list_album,list_shocking
+from .mock_data import list_album,list_shocking, list_participantes
 
 class CustomRouter:
 
@@ -24,7 +24,7 @@ class CustomRouter:
         return render_template('sidebar/anounce.html')
     
     def render_nosotros(self):
-        return render_template('sidebar/nosotros.html')
+        return render_template('sidebar/nosotros.html', nosotros=list_participantes)
 
     def render_objetivo(self):
         return render_template('sidebar/objetivo.html')
