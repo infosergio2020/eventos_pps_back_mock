@@ -306,39 +306,39 @@ list_participantes = [
     
     {"tarea": 'Simulador de agua.',
     "participante": 'Emiliano Albarracín y Catalina Parola.',
-    "profesion":'Estudiantes de Licenciatura en Informática.'},
+    "profesion":'Emilio graduado en Ingeniería Hidraúlica y Catalina graduada en Diseño Industrial.'},
 
      {"tarea": 'Mochila de emergencia inteligente condetector RFID.',
     "participante": 'Emiliano Albarracín, Marcial Manzo y David Gomez.',
-    "profesion":'Estudiantes de Licenciatura en Informática.'},
+    "profesion":'Estudiantes de Diseño Centrado en el Usuario.'},
     
     {"tarea": 'Mochila de emergencia inteligente conreconocedor de imágenes.',
     "participante": 'Lucia Collivadino y Emiliano Albarracín.',
-    "profesion":'Estudiantes de Licenciatura en Informática.'},
+    "profesion":'Estudiantes de Diseño Centrado en el Usuario.'},
 
     {"tarea": '¿Dónde ir? Centro de evacuación.',
     "participante": 'Joaquín de Antueno e Iván Mindlin.',
-    "profesion":'Estudiantes de Licenciatura en Informática.'},
+    "profesion":'Estudiantes de Diseño Centrado en el Usuario.'},
     
     {"tarea": 'Disaster Cross.',
     "participante": 'Andrés Marconi, Federico Perroni y Guillermo Villarreal.',
-    "profesion":'Estudiantes de Licenciatura en Informática.'},
+    "profesion":'Estudiantes de Diseño Centrado en el Usuario.'},
     
     {"tarea": 'Limpiar la ciudad.',
     "participante": 'Ezequiel Carletti, Esteban Debole y Nahuel Di Criscio.',
-    "profesion":'Estudiantes de Licenciatura en Informática.'},
+    "profesion":'Estudiantes de Diseño Centrado en el Usuario.'},
     
     {"tarea": 'Rompecabezas NBS.',
     "participante": 'Daniel Cesanelli y Francisco Ale.',
-    "profesion":'Estudiantes de Licenciatura en Informática.'},
+    "profesion":'Estudiantes de Diseño Centrado en el Usuario.'},
 
     {"tarea": 'Inundados.',
     "participante": 'Hernán Kleinubing, Lautaro Pastorino y Edith Rocio Castillo Yauri.',
-    "profesion":'Estudiantes de Licenciatura en Informática.'},
+    "profesion":'Estudiantes de Diseño Centrado en el Usuario.'},
     
     {"tarea": 'Juego de la memoria.',
     "participante": 'Juan Schallibaum.',
-    "profesion":'Estudiante de Licenciatura en Informática.'},
+    "profesion":'Estudiante de Diseño Centrado en el Usuario.'},
 
     {"tarea": 'Quiz Aprendiendo a prepararme.',
     "participante": 'Bárbara Corro y Juan Ignacio Torres.',
