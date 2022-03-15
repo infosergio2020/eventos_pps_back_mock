@@ -1,6 +1,7 @@
 from flask import render_template,request
 from .mock_data import list_album,list_shocking, list_participantes
 from .mock_data_sections import list_sections
+from .mock_data_recomendaciones import list_recommendations
 
 class CustomRouter:
 
@@ -119,7 +120,7 @@ class CustomRouter:
         return render_template('sections/section-5.html',seccion="s5")
     # subseccion-5
     def render_recomendacion(self):
-        return render_template('/recomendacion-como-actuar.html',flag_1="opcion_4",flag_2="opcion_3",seccion="s5")
+        return render_template('/recomendacion-como-actuar.html',flag_1="opcion_4",flag_2="opcion_3",seccion="s5", recommendations = list_recommendations)
 
     def render_smart_survival(self):
         return render_template('/mochila-inteligente.html',seccion="s5")
