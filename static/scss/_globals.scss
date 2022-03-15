@@ -163,6 +163,18 @@ nav {
   width: calc(6.5em + 1vw);
   height: calc(6.5em + 1vw);
 }
+
+.wh-70p{
+	width: 100%;
+}
+
+@media (min-width:768px) {
+	.wh-70p{
+		height: 70%;
+		width: 70%;
+	}
+}
+
 .contenedor__text {
   word-wrap: break-word;
 }
