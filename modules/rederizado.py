@@ -127,6 +127,9 @@ class CustomRouter:
 
     def render_where_to_go(self):
         return render_template('/dondeir.html',seccion="s5")
+    
+    def render_donde_ir_juegos(self):
+        return render_template('/dondeirjuegos.html',seccion="s5")
 
     def render_educational_games(self):
         return render_template('/juegos.html',seccion="s5")
