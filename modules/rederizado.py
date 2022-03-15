@@ -1,5 +1,6 @@
 from flask import render_template,request
 from .mock_data import list_album,list_shocking, list_participantes
+from .mock_data_sections import list_sections
 
 class CustomRouter:
 
@@ -18,7 +19,7 @@ class CustomRouter:
 
     # secciones del sidebar
     def render_sections(self):
-        return render_template('sidebar/sections.html')
+        return render_template('sidebar/sections.html', info_sections = list_sections)
 
     def render_announcements(self):
         return render_template('sidebar/anounce.html')

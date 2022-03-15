@@ -1,98 +1,37 @@
-  <!-- Contenedor del testimonio -->
-  {% extends 'partials/_layout.html' %}
-  {% block body %}
-  <!-- Info de secciones-->
-    
-    <main>
-        <div class="container">
-            <div id="header" class="main-sections" >
-                <!-- section y los tags en su interior son elementos  que pueden repetirse en un bucle sin necesidad de repetir tags-->
-                <section class="main-section verde-2">
-                    <div class="main-section-img">
-                        <img loading="lazy" class="main-section-icon no-border" src="{{url_for('static', filename = 'img/general/otros/reporter.webp')}}" alt="img 4">
-                    </div>
-                    <div class="main-section-info">
-                      <div id="contenido" tabindex="0">
-                        <h3>Sección 1 - De la lluvia a la inundación
+<!-- Contenedor del testimonio -->
+{% extends 'partials/_layout.html' %} {% block body %}
+<!-- Info de secciones-->
 
-                        </h3>
-                        <p>Momentos antes de la inundación. Conocé 4 casos testimoniales impactantes y las noticias en la TV en ese momento. </p> <!--Moments before the flood. You can know 4 shocking cases and news on the TV at that moment.-->
-                      </div> 
-                        <a role="button" class="boton verde-4" href="/section-1"> Accede a la sección 1</a>
-                    </div>
-                </section>
-                <!-- --------------------------------        ------------------------------             ------------------------- -->
-                <section class="main-section verde-2">
-                    <div class="main-section-img">
-                        <img loading="lazy" class="main-section-icon no-border" src="{{url_for('static', filename = 'img/general/otros/map.webp')}}" alt="img 4">
-                    </div>
-                    <div  class="main-section-info">
-                      <div tabindex="0">
-                        <h3>Sección 2 - Por la vida e integridad física</h3>
-                        <p>El peor momento de la inundación. Accedé a las entrevistas realizadas por zonas inundadas y a un simulador de nivel de agua de inundación.  </p> <!--The worst time of the flood. You can access the testimonies of the 4 cases and a flood simulator.-->
-                      </div>  
-                        <a role="button" class="boton verde-4" href="/section-2"> Accede a la sección 2</a>
-                    </div>
-                </section>
-
-                <section class="main-section verde-2">
-                    <div class="main-section-img">
-                        <img loading="lazy" class="main-section-icon no-border" src="{{url_for('static', filename = 'img/general/otros/flood.png')}}" alt="img 4" >
-                    </div>
-                    <div class="main-section-info">
-                      <div tabindex="0">
-                        <h3>Sección 3 - Sólo escombros y barro</h3>
-                        <p>Accedé a la continuación de los 4 casos testimoniales. Descubrí los diarios del momento, mirá las fotos compartidas por las personas damnificadas.
-                          Y observá un compilado de fotos impactantes de la inundación.
-                        </p> <!--You can look at the most impressive photos and see the photo album shared by the people themselves affected. -->
-                      </div>  
-                        <a role="button" class="boton verde-4" href="/section-3"> Accede a la sección 3</a>
-                    </div>
-                </section>
-
-                <section class="main-section verde-2">
-                    <div class="main-section-img">
-                        <img loading="lazy" class="main-section-icon no-border" src="{{url_for('static', filename = 'img/general/otros/think-out-of-the-box.webp')}}" alt="img 4">
-                    </div>
-                    <div  class="main-section-info">
-                      <div tabindex="0">
-                        <h3>Sección 4 - Lecciones aprendidas</h3>
-                        <p>Conocé como sobrellevaron la inundación los 4 casos testimoniales. Jugá con la Sandbox AR y explora el efecto según el tipo de relieve. Informate sobre los motivos de por qué se inundan estas zonas. </p> <!--You can play with the Sandbox AR to explore the effect according to the type of relief. In addition, you can know more about urban floods and analyze other reasons as to why it floods these areas.-->
-                      </div> 
-                        <a role="button" class="boton verde-4" href="/section-4"> Accede a la sección 4</a>
-                    </div>
-                </section>
-
-                <section class="main-section verde-2">
-                    <div class="main-section-img">
-                        <img loading="lazy" class="main-section-icon no-border" src="{{url_for('static', filename = 'img/general/otros/video-game.webp')}}" alt="img 4">
-                    </div>
-                    <div class="main-section-info">
-                      <div  tabindex="0">
-                        <h3>Sección 5 - Estar preparado</h3>
-                        <p>Prepararse es fundamental. Aprendé recomendaciones de como actuar, preparar una mochila de emergencia, centros de evacuación más cercanos. También podés acceder a juegos educativos realizados por estudiantes de la UNLP. </p> <!--Preparing is the most important. You can play with the smart survival backpack and learn where the shelters near your neighborhood are.-->
-                      </div>  
-                        <a role="button" class="boton verde-4" href="/section-5"> Accede a la sección 5</a>
-                    </div>
-                </section>
-
-                <section class="main-section verde-2">
-                    <div class="main-section-img">
-                        <img loading="lazy" class="main-section-icon no-border" src="{{url_for('static', filename = 'img/general/otros/first-aid-kit.webp')}}" alt="img 4">
-                    </div>
-                    <div class="main-section-info">
-                      <div tabindex="0">
-                        <h3>Sección 6 - Inundaciones en el exterior</h3>
-                        <p>Ingresá a los sitios web de Citadine con entrevistas de otros países y con soluciones basadas en la naturaleza. Conocé más sobre las inundaciones urbanas en el exterior y sobre las conclusiones del evento.   </p>  <!--Access the Citadine site with interviews from other countries. You can also access educational games  made by UNLP students and the 4 shocking cases.-->
-                      </div>  
-                        <a role="button" class="boton verde-4" href="/section-6"> Accede a la sección 6</a>
-                    </div>
-                </section>
-            </div>
+<main>
+  <div class="container">
+    <div id="header" style="padding: 0 1rem;">
+      <!-- section y los tags en su interior son elementos  que pueden repetirse en un bucle sin necesidad de repetir tags-->
+      {% for info in info_sections %}
+      <section class="main-section verde-2">
+        <div class="main-section-img">
+          <img
+            loading="lazy"
+            class="main-section-icon no-border"
+            src="{{url_for('static', filename = info.icon)}}"
+            alt="icono de {{info.title}}"
+          />
+        </div>
+        <div class="main-section-info">
+          <div id="contenido" tabindex="0">
+            <h3>Sección {{loop.index}} - {{ info.title }}</h3>
+            <p>{{ info.description }}</p>
           </div>
-            
-          <!-- boton para ir arriba -->
-          {% include ('partials/_button.html') %}
-    </main>
+          <a role="button" class="boton verde-4" href="/section-1">
+            Accede a la sección {{loop.index}}
+          </a>
+        </div>
+      </section>
+      {% endfor %}
+    </div>
+  </div>
 
-  {% endblock %}
+  <!-- boton para ir arriba -->
+  {% include ('partials/_button.html') %}
+</main>
+
+{% endblock %}
