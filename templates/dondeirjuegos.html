@@ -1,0 +1,177 @@
+<!-- Contenedor de juegos -->
+{% extends 'partials/_layout.html' %}
+{% block body %}
+<!-- Info de los juegos-->
+<main>
+  <div class="container">
+    <div class="main-card" style="margin: 10rem 0; background-color: #004d40; border-radius: 2.8rem;">
+      <div class="main-card-header">
+        <!-- titulo de la pagina -->
+        <div id="afiche-header" class="afiche__head">
+          <h1 id="contenido" tabindex="0" class="centrar-texto">¿Dónde ir?</h1>
+        </div>
+        <!-- descripcion antes de interactuar con los juegos -->
+        <div tabindex="0" class="centrar-texto">
+          <p>¡Aprendé jugando! Se dispone de estos juegos educativos sobre las inundaciones, aprender a prepararse ante
+            una emergencia, sobre mantener la ciudad sustentable, entre otros.</p>
+          <p>Seleccionar la imagen del juego para acceder al detalle y poder comenzar a jugar.</p>
+        </div>
+      </div>
+      <!-- presentacion de los 6 juegos -->
+      <div class="main-card-body">
+        <div class="container-juego">
+          <!-- juego 1 -->
+          <div class="card">
+            <img tabindex="0" role="img" class="img-juego img1"
+              src="{{url_for('static', filename = 'img/section5/dondeir-tapa/dondeir.webp')}}" alt="¿Dónde ir?"
+              aria-label="Tapa del juego ¿Dónde ir?.">
+            <div class="intro">
+              <h2 tabindex="0">
+                ¿Dónde ir?
+              </h2>
+              <p tabindex="0" class="esconder-detail" style="margin-bottom:1rem">
+                Ven a descubrir los centros de encuentro más cercanos al lugar que indiques. Accedé a esta aplicación (mediante el botón jugar) que genera caminos a dichos puntos de evacuación, evitando las zonas inundables.
+                Considera mapas publicados por la <abbr title="Universidad Nacional de La Plata.">UNLP</abbr> y los centros de evacuación publicados por la Municipalidad de La Plata. 
+              </p>
+              <div aria-labelledby="diario-2">
+                <div class=" verde-4 esconder-detail boton">
+                  <a role="button" tabindex="0" aria-label="Jugar ¿Dónde ir?."
+                    href="https://hidden-taiga-68681.herokuapp.com" style="color: rgb(255, 255, 255);"> Jugar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- juego 2 -->
+          <div class="card" tabindex="0">
+            <img role="img" class="img-juego img1"
+              src="{{url_for('static', filename = 'img/section5/dondeir-tapa/evacuAr.webp')}}" alt="EvacuAR."
+              aria-label="Tapa del juego EvacuAR.">
+            <div class="intro">
+              <h2>
+                EvacuAR
+              </h2>
+              <p class="esconder-detail">
+                Juego educativo que permite ayudar a la gente el camino que debe realizar
+                para estar asalvo, entre otras medidas preventivas.
+              </p>
+              <div aria-labelledby="diario-2">
+                <div class="verde-4 esconder-detail boton">
+                  <a role="button" tabindex="0" aria-label="Jugar EvacuAR."
+                    href="https://grupo8.proyecto2021.linti.unlp.edu.ar/" style="color: rgb(255, 255, 255);"> Jugar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- juego 3 -->
+          <div class="card" tabindex="0">
+            <img role="img" class="img-juego img1"
+              src="{{url_for('static', filename = 'img/section5/dondeir-tapa/servicios.webp')}}" alt="Servicios."
+              aria-label="Tapa del juego Servicios.">
+            <div class="intro">
+              <h2>
+                Servicios
+              </h2>
+ 
+              <p class="esconder-detail">
+                Juego de servicios.
+              </p>
+              <div aria-labelledby="diario-2">
+                <div class="verde-4 esconder-detail boton">
+                  <a role="button" tabindex="0" aria-label="Jugar Servicios." href="https://grupo28.proyecto2021.linti.unlp.edu.ar/"
+                    style="color: rgb(255, 255, 255);"> Jugar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- juego 4 -->
+          <div class="card" tabindex="0">
+            <img role="img" class="img-juego img1"
+              src="{{url_for('static', filename = 'img/section5/dondeir-tapa/zonasinundadas.webp')}}" alt="Zonas inundadas."
+              aria-label="Tapa del juego Zonas inundadas.">
+            <div class="intro">
+              <h2>
+                Zonas inundadas
+              </h2>
+              <p class="esconder-detail">
+                Este portal te permitirá conocer las zonas de inundación de la ciudad.  
+              </p>
+              <div aria-labelledby="diario-2">
+                <div class="verde-4 esconder-detail boton">
+                  <a role="button" tabindex="0" aria-label="Jugar Zonas inundadas."
+                    href="https://grupo30.proyecto2021.linti.unlp.edu.ar/"
+                    style="color: rgb(255, 255, 255);"> Jugar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- juego 5 -->
+          <div class="card" tabindex="0">
+            <img role="img" class="img-juego img1"
+              src="{{url_for('static', filename = 'img/section5/dondeir-tapa/municipalidadlaplata.webp')}}" alt=" Juego de Municipalidad de La Plata."
+              aria-label="Tapa del juego Municipalidad de La Plata.">
+            <div class="intro">
+              <h2>
+                Municipalidad de La Plata
+              </h2>
+              <p class="esconder-detail">
+              esto es otro pero de la municipalidad.  
+              </p>
+              <div aria-labelledby="diario-2">
+                <div class="verde-4 esconder-detail boton">
+                  <a role="button" tabindex="0" aria-label="Jugar Municipalidad de La Plata."
+                    href="https://grupo19.proyecto2021.linti.unlp.edu.ar/" style="color: rgb(255, 255, 255);">
+                    Jugar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- juego 7 -->
+          <div class="card" tabindex="0">
+            <img role="img" class="img-juego img1"
+              src="{{url_for('static', filename = 'img/section5/dondeir-tapa/inundacioneslaplata.webp')}}"
+              alt="Inundaciones La Plata." aria-label="Tapa del juego Inundaciones La Plata.">
+            <div class="intro">
+              <h2>
+                Inundaciones La Plata
+              </h2>
+              <p class="esconder-detail">
+                Aquí podrás observar los posibles puntos de encuentro frente a una inundación.
+              </p>
+              <div aria-labelledby="diario-2">
+                <div class="verde-4 esconder-detail boton">
+                  <a role="button" tabindex="0" aria-label="Jugar Inundaciones La Plata."
+                    href="https://grupo7.proyecto2021.linti.unlp.edu.ar/"
+                    style="color: rgb(255, 255, 255);"> Jugar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- juego 8 -->
+          <div class="card" tabindex="0">
+            <img role="img" class="img-juego img1"
+              src="{{url_for('static', filename = 'img/section5/dondeir-tapa/AyudAR.webp')}}"
+              alt=" Ayud-AR."
+              aria-label="Tapa del juego  Ayud-AR.">
+            <div class="intro">
+              <h2>
+                Ayud-AR
+              </h2>
+              <p class="esconder-detail">
+                Prevención de inundaciones.  
+              </p>
+              <div aria-labelledby="diario-2">
+                <div class="verde-4 esconder-detail boton">
+                  <a role="button" tabindex="0" aria-label="Jugar Ayud-AR."
+                    href="https://grupo12.proyecto2021.linti.unlp.edu.ar/" style="color: rgb(255, 255, 255);"> Jugar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- boton para ir arriba -->
+  {% include ('partials/_button.html') %}
+</main>
+{% endblock %}

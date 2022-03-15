@@ -97,6 +97,11 @@ def Recomendacioncomoactuar():
 def Sandbox():
     return rutas.render_sandbox()
 
+@app.route('/dondeirjuegos')
+def Donde_ir_juegos():
+    return rutas.render_donde_ir_juegos()
+
+
 @app.route('/dondeir')
 def Where_to_go():
     return rutas.render_where_to_go()
