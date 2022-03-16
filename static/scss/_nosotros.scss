@@ -1,3 +1,5 @@
+$blue:rgba(79,192,210,1);
+
 table{
     background-color: #00000044;
 }
@@ -46,4 +48,5 @@ tr:hover,tr:focus-within{
         padding-bottom: 40px;
     }
     background-color: #00000086;
+    border-left:3px solid lighten($blue, 10%);
 }
