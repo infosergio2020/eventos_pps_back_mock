@@ -1,4 +1,22 @@
+
+
 .footer_img_container{
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+    justify-items: center;
+    align-items: center;
+    padding: 0 5rem;
+}
+
+@media (min-width:768px) {
+    .footer_img_container{
+        padding: 0 10rem;
+        grid-template-columns: repeat(6, 1fr);
+    }   
+}
+
+.footer_img_container img{
+    width: auto;
+    height: auto;
 }
