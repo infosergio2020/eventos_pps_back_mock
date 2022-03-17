@@ -6,7 +6,7 @@
         <!-- bienvenido -->
         <div class="container__div__card">
     
-          <div>
+          <div style="margin-bottom:10rem;">
             <div class="main-card">
               <div id="contenido" class="main-card-body" aria-label="contenedor de bienvenida">
                 <img role="img" loading="lazy" tabindex="0" aria-labelledby="bienvenido" src="{{url_for('static', filename = './img/portada/Republica_de_los_ninos-scaled.webp')}}" aria-label="image republica de los niños." alt="image republica de los niños." width="100%">
@@ -31,16 +31,6 @@
                 </div>
               </div>
             </div>
-            <div role="button"  class="buttons main-container-boton ">
-              <a class="boton verde-4" href="/sections">INGRESAR A LA MUESTRA</a>
-              <div class="go-up">
-                <a role="button" tabindex="0" aria-label="Regresar a la barra de navegación."  alt="Botón para regresar a la barra de navegación." href="#init">
-                    <img loading="lazy" width="86px" height="86px" src="{{url_for('static', filename = 'img/general/arrow-up.svg')}}"  alt="imagen del botón para regresar a la barra de navegación.">
-                </a>
-              </div>
-  
-            </div>
-            
           </div>
     
           <div>
@@ -62,6 +52,16 @@
                 </div>
               </div>
             </div>
+          </div>
+
+          <div role="button"  class="contenedor-index buttons main-container-boton ">
+            <div class="go-up btn-arriba">
+              <a role="button" tabindex="0" aria-label="Regresar a la barra de navegación."  alt="Botón para regresar a la barra de navegación." href="#init">
+                  <img loading="lazy" width="86px" height="86px" src="{{url_for('static', filename = 'img/general/arrow-up.svg')}}"  alt="imagen del botón para regresar a la barra de navegación.">
+              </a>
+            </div>
+            <a class="boton verde-4" href="/sections">INGRESAR A LA MUESTRA</a>
+            <!-- boton de ir arriba -->
           </div>
         </div>
       

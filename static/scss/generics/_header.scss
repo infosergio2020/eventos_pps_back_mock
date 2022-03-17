@@ -114,6 +114,7 @@
 }
 @media (min-width: 768px) {
   .container__div__card {
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 0.4fr;
     justify-content: space-between;
