@@ -317,8 +317,11 @@ div[aria-labelledby]{
 
 *{line-height: 1.5em !important;}
 
-p{margin-bottom: 2em !important;}
+// p{margin-bottom: 2em !important;}
 
-*{letter-spacing: 0.12em !important;}
+*{letter-spacing: 0.09em !important;}
 
-*{word-spacing: 0.16em !important;}
+@media (min-width: 720px) {
+	*{word-spacing: 0.09em !important;}
+
+}
