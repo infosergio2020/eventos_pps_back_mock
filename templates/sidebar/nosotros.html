@@ -1,104 +1,127 @@
-  <!-- Contenedor del testimonio -->
-  {% extends 'partials/_layout.html' %}
-  {% block body %}
-  <!-- Info de novedades-->
-    <main>
-        <div class="container">
-            <div class="main-card">
-                <div id="anounce" class="main-card-body" >
-                     <div class="afiche__head">
-                        <h1 id="contenido" tabindex="0">Acerca de nosotros</h1>
-                      </div>
-                      <div class="main-card-img-container line-down">                        
-                        <img tabindex="0" role="img"  aria-label="imagen de una lista." alt="imagen de una lista." class="main-section-icon" src="{{url_for('static', filename = 'img/general/otros/checknotes.webp')}}" height="88px" alt="img 1">
-                        <img tabindex="0" role="img"  aria-label="imagen de una lupa con un check." alt="imagen de una lupa con un check." class="main-section-icon" src="{{url_for('static', filename = 'img/general/otros/lupa.webp')}}" height="88px" alt="img 2">
-                        <img tabindex="0" role="img"  aria-label="imagen de un profesor enseñando." alt="imagen de un profesor enseñando." class="main-section-icon" src="{{url_for('static', filename = 'img/general/otros/learning.webp')}}" height="88px" alt="img 3">
-                    </div>  
-                    <div tabindex="0" class="main-card-info">
-                      
-                        <p>
-                          El desarrollo de la exhibición está enmarcado en el proyecto de investigación internacional Citadine a cargo del Profesor Michael Klafft. Basada en Ciencia Ciudadana, la exhibición aborda la inundación de La Plata del 2 de abril de 2013, desde la mirada de los sobrevivientes. Sus entrevistas, sus testimonios son la base fundamental en la que se basa toda la muestra.
-                          <br>
-                        </p>
-                        <ul>
-                          <li>
-                            Las entrevistas estuvieron a cargo de Valeria Rojas, estudiante de Periodismo.
-                          </li>
-                          <li>
-                            La traducción fue realizada por Tannia Cárdenas, estudiante de Ingeniería Electrónica.
-                          </li>
-                          <li>
-                            La interpretación de señas argentinas LSA por Vanessa Nouveliere, estudiante de Psicología.
-                          
-                          </li>
-                          <li>
-                            La supervisión de accesibilidad por Maximiliano Vázquez e Ignacio Lanciotti, estudiantes de Informática.
-                          
-                          </li>
-                        </ul>
-                          <p>
-                          Todo el evento puede ser recorrido virtual como presencialmente. Se tiene aplicación PWA que permite el acceso a toda la exhibición, sus secciones y atracciones. El diseño y desarrollo de la misma estuvo a cargo de Oriana Ailigo, Yanina Tolaba y Sergio Aguilar, estudiantes de Ingeniería en Computación. Además se encargan de la supervisión e instalación de los recursos informáticos de la muestra.
-                          <br>
-                          
-                          Se incluyen recursos y materiales educativos tanto físicos como digitales, atracciones multimediales, de realidad aumentada, juegos educativos como sitios y aplicaciones, para lograr un aprendizaje dinámico y lúdico.
-                          <br>
-                          
-                          Muchos de estos trabajos fueron realizados por estudiantes y graduados de la UNLP.
-                          <br>
-                          
-                          Todas las aplicaciones digitales son accesibles permitiendo la interacción por parte de la mayoría de las personas independientemente de sus condiciones diversas.
-                          
-                         </p>
-                        
-                        <p>
-                          
-                          A continuación se presenta quienes participaron en cada desarrollo:
-                        
-                        </p>
-                        <p>
-              
-                        
-                        </p>
-                        
-                    </div>
-                    <section class="wrapper-nosotros">
-                      <!-- Row title-nostros -->
-                      <main class="row-nosotros title-nostros">
-                        <ul tabindex="0">
-                          <li>Recursos</li>
-                          <li>Desarrollado por</li>
-                      
-                        </ul>
-                      </main>
-                      <!-- Row 1 - fadeIn -->
-                      {% for columna in nosotros %}
-                      <section class="row-fadeIn-wrapper">
-                        <article class="row-nosotros fadeIn nfl">
-                          <ul tabindex="0">
-                            <li>{{columna.tarea}}</li>
-                            <li>{{columna.participante}}</li>
-                            
-                          </ul>
-                          <ul tabindex="0" class="more-content">
-                            <li>{{columna.profesion}}</li>
-                            
-              
-                          </ul>
-                        </article>
-                        
-                      </section>
-                      {% endfor %}
+<!-- Contenedor del testimonio -->
+{% extends 'partials/_layout.html' %} {% block body %}
+<!-- Info de novedades-->
+<main>
+  <div class="container">
+    <div class="main-card">
+      <div id="anounce" class="main-card-body">
+        <div class="afiche__head">
+          <h1 id="contenido" tabindex="0">Acerca de nosotros</h1>
+        </div>
+        <div class="main-card-img-container line-down">
+          <img
+            tabindex="0"
+            role="img"
+            aria-label="imagen de una lista."
+            alt="imagen de una lista."
+            class="main-section-icon"
+            src="{{url_for('static', filename = 'img/general/otros/checknotes.webp')}}"
+            height="88px"
+            alt="img 1"
+          />
+          <img
+            tabindex="0"
+            role="img"
+            aria-label="imagen de una lupa con un check."
+            alt="imagen de una lupa con un check."
+            class="main-section-icon"
+            src="{{url_for('static', filename = 'img/general/otros/lupa.webp')}}"
+            height="88px"
+            alt="img 2"
+          />
+          <img
+            tabindex="0"
+            role="img"
+            aria-label="imagen de un profesor enseñando."
+            alt="imagen de un profesor enseñando."
+            class="main-section-icon"
+            src="{{url_for('static', filename = 'img/general/otros/learning.webp')}}"
+            height="88px"
+            alt="img 3"
+          />
+        </div>
+        <div tabindex="0" class="main-card-info">
+          <p>
+            El desarrollo de la exhibición está enmarcado en el proyecto de
+            investigación internacional Citadine a cargo del Profesor Michael
+            Klafft. Basada en Ciencia Ciudadana, la exhibición aborda la
+            inundación de La Plata del 2 de abril de 2013, desde la mirada de
+            los sobrevivientes. Sus entrevistas, sus testimonios son la base
+            fundamental en la que se basa toda la muestra.
+            <br />
+          </p>
+          <ul>
+            <li>
+              Las entrevistas estuvieron a cargo de Valeria Rojas, estudiante de
+              Periodismo.
+            </li>
+            <li>
+              La traducción fue realizada por Tannia Cárdenas, estudiante de
+              Ingeniería Electrónica.
+            </li>
+            <li>
+              La interpretación de señas argentinas LSA por Vanessa Nouveliere,
+              estudiante de Psicología.
+            </li>
+            <li>
+              La supervisión de accesibilidad por Maximiliano Vázquez e Ignacio
+              Lanciotti, estudiantes de Informática.
+            </li>
+          </ul>
+          <p>
+            Todo el evento puede ser recorrido virtual como presencialmente. Se
+            tiene aplicación PWA que permite el acceso a toda la exhibición, sus
+            secciones y atracciones. El diseño y desarrollo de la misma estuvo a
+            cargo de Oriana Ailigo, Yanina Tolaba y Sergio Aguilar, estudiantes
+            de Ingeniería en Computación. Además se encargan de la supervisión e
+            instalación de los recursos informáticos de la muestra.
+            <br />
 
+            Se incluyen recursos y materiales educativos tanto físicos como
+            digitales, atracciones multimediales, de realidad aumentada, juegos
+            educativos como sitios y aplicaciones, para lograr un aprendizaje
+            dinámico y lúdico.
+            <br />
 
-              
-                      
-                    </section>
+            Muchos de estos trabajos fueron realizados por estudiantes y
+            graduados de la UNLP.
+            <br />
 
-                </div>
-            </div>
-          </div>
-          <!-- boton para ir arriba -->
-          {% include ('partials/_button.html') %}
-    </main>
+            Todas las aplicaciones digitales son accesibles permitiendo la
+            interacción por parte de la mayoría de las personas
+            independientemente de sus condiciones diversas.
+          </p>
 
-  {% endblock %}
+          <p>
+            A continuación se presenta quienes participaron en cada desarrollo:
+          </p>
+          <p></p>
+        </div>
+
+        <!-- Row 1 - fadeIn -->
+        <section class="row-fadeIn-wrapper">
+          <table>
+            <tr>
+              <th>Recursos</th>
+              <th>Desarrollado por</th>
+            </tr>
+          
+          {% for columna in nosotros %}
+
+          <tr tabindex="0" class="fade-row">
+            <td>{{columna.tarea}}</td>
+            <td>{{columna.participante}}</td>
+            <td class="fade-vision">{{columna.profesion}}</td>
+          </tr>
+          
+          {% endfor %}
+        </table>
+        </section>
+      </div>
+    </div>
+  </div>
+  <!-- boton para ir arriba -->
+  {% include ('partials/_button.html') %}
+</main>
+
+{% endblock %}
