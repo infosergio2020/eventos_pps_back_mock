@@ -53,48 +53,19 @@ list_album = {
 
 
     ],
-    "gabriela": [
+    "gabrielaVideos": [
        {
-            "image":'img/section3/album-gabriela/Foto-1.webp',
-            "video":'#',
-            "descripcion": "lol"
-            
-        },
-
-       {
-            "image":'img/section3/album-gabriela/Foto-3.webp',
-            "video":'#',
-            "descripcion": "lol"
-        },
-       {
-            "image":'img/section3/album-gabriela/Foto-4.webp',
-            "video":'#',
-            "descripcion": "lol"
-        },
-       {
+ 
             "image":'img/section3/album-gabriela/Foto-5.webp',
             "video":'https://youtu.be/Pwc7yCXlb7Q'
+            
+        
         },
-       {
-            "image":'img/section3/album-gabriela/Foto-6.webp',
-            "video":'#',
-            "descripcion": "lol"
-        },
-       {
-            "image":'img/section3/album-gabriela/Foto-7.webp',
-            "video":'#',
-            "descripcion": "lol"
-        },
-       {
+        {
             "image":'img/section3/album-gabriela/Foto-8.webp',
             "video":'https://www.youtube.com/embed/VNST0NAtNnA'
         },
-       {
-            "image":'img/section3/album-gabriela/Foto-9.webp',
-            "video":'#',
-            "descripcion": "lol"
-        },
-       {
+          {
             "image":'img/section3/album-gabriela/Foto-10.webp',
             "video":'https://youtu.be/UGbBiylomDw'
         },
@@ -102,12 +73,7 @@ list_album = {
             "image":'img/section3/album-gabriela/Foto-11.webp',
             "video":'https://www.youtube.com/embed/_JKfRpb6FjY'
         },
-       {
-            "image":'img/section3/album-gabriela/Foto-12.webp',
-            "video":'#',
-            "descripcion": "lol"
-        },
-       {
+        {
             "image":'img/section3/album-gabriela/Foto-13.webp',
             "video":'https://youtu.be/uSKd51JzrtY'
         },
@@ -115,26 +81,7 @@ list_album = {
             "image":'img/section3/album-gabriela/Foto-14.webp',
             "video":'https://youtu.be/Oig0c4rmicY'
         },
-       {
-            "image":'img/section3/album-gabriela/Foto-15.webp',
-            "video":'#',
-            "descripcion": "lol"
-        },
-       {
-            "image":'img/section3/album-gabriela/Foto-16.webp',
-            "video":'https://youtu.be/yhrwfPBPzBM'
-        },
-       {
-            "image":'img/section3/album-gabriela/Foto-17.webp',
-            "video":'#',
-            "descripcion": "lol"
-        },
-       {
-            "image":'img/section3/album-gabriela/Foto-18.webp',
-            "video":'#',
-            "descripcion": "lol"
-        },
-       {
+        {
             "image":'img/section3/album-gabriela/Foto-19.webp',
             "video":'https://youtu.be/jwAIlKw90RI'
         },
@@ -146,61 +93,11 @@ list_album = {
             "image":'img/section3/album-gabriela/Foto-21.webp',
             "video":'https://youtu.be/DDU0_1Av44s'
         },
-       {
-            "image":'img/section3/album-gabriela/Foto-22.webp',
-            "video":'#',
-            "descripcion": "lol"
-        },
-       {
-            "image":'img/section3/album-gabriela/Foto-23.webp',
-            "video":'#',
-            "descripcion": "lol"
-        },
-       {
-            "image":'img/section3/album-gabriela/Foto-24.webp',
-            "video":'#',
-            "descripcion": "lol"
-        },
-       {
-            "image":'img/section3/album-gabriela/Foto-25.webp',
-            "video":'#',
-            "descripcion": "lol"
-        },
-       {
-            "image":'img/section3/album-gabriela/Foto-26.webp',
-            "video":'#',
-            "descripcion": "lol"
-        },
-       {
-            "image":'img/section3/album-gabriela/Foto-27.webp',
-            "video":'#',
-            "descripcion": "lol"
-        },
-       {
-            "image":'img/section3/album-gabriela/Foto-28.webp',
-            "video":'#',
-            "descripcion": "lol"
-        },
-       {
+          {
             "image":'img/section3/album-gabriela/Foto-29.webp',
             "video":'https://www.youtube.com/embed/taWeydztJmA'
         },
-       {
-            "image":'img/section3/album-gabriela/Foto-30.webp',
-            "video":'#',
-            "descripcion": "lol"
-        },
-       {
-            "image":'img/section3/album-gabriela/Foto-31.webp',
-            "video":'#',
-            "descripcion": "lol"
-        },
-       {
-            "image":'img/section3/album-gabriela/Foto-32.webp',
-            "video":'#',
-            "descripcion": "lol"
-        },
-       {
+          {
             "image":'img/section3/album-gabriela/Foto-33.webp',
             "video":'https://youtu.be/CDBIaRO6lpw'
         },
@@ -213,7 +110,122 @@ list_album = {
             "image":'img/section3/album-gabriela/Foto-36.webp',
             "video":'https://youtu.be/LLsIx0vcZoA'
         }
+   
+     
     ],
+    "gabrielaFotos": [
+       {
+            "image":'img/section3/album-gabriela/Foto-1.webp',
+            "video":'#',
+            "descripcion": "ventanal_con_agua_escurriendo_entre_las_bisagras."
+        },
+
+       {
+            "image":'img/section3/album-gabriela/Foto-3.webp',
+            "video":'#',
+            "descripcion": "Pasillo_desbordado_de_agua."
+        },
+       {
+            "image":'img/section3/album-gabriela/Foto-4.webp',
+            "video":'#',
+            "descripcion": "Agua_entrando_por_debajo_del_ventanal."
+        },
+        #        {
+        #     "image":'img/section3/album-gabriela/Foto-16.webp',
+        #     "video":'https://youtu.be/yhrwfPBPzBM'
+        # },
+       
+       {
+            "image":'img/section3/album-gabriela/Foto-6.webp',
+            "video":'#',
+            "descripcion": "Patio_inundado."
+        },
+       {
+            "image":'img/section3/album-gabriela/Foto-7.webp',
+            "video":'#',
+            "descripcion": "Marcas_de_agua_en_la_pared_de_la_cochera."
+        },
+       
+       {
+            "image":'img/section3/album-gabriela/Foto-9.webp',
+            "video":'#',
+            "descripcion": "Marcas_de_agua_en_las_rejas_fuera_de_la_casa."
+        },
+     
+       {
+            "image":'img/section3/album-gabriela/Foto-12.webp',
+            "video":'#',
+            "descripcion": "Marcas_de_agua_en_la_cocina."
+        },
+       
+       {
+            "image":'img/section3/album-gabriela/Foto-15.webp',
+            "video":'#',
+            "descripcion": "Marcas_de_agua_en_la_habitación."
+        },
+
+       {
+            "image":'img/section3/album-gabriela/Foto-17.webp',
+            "video":'#',
+            "descripcion": "Vista_desde_adentro_hacia_afuera.Todo_destruido."
+        },
+       {
+            "image":'img/section3/album-gabriela/Foto-18.webp',
+            "video":'#',
+            "descripcion": "Calle_inundada."
+        },
+       
+       {
+            "image":'img/section3/album-gabriela/Foto-22.webp',
+            "video":'#',
+            "descripcion": "autos_movidos_fuera_de_lugar_despúes_de_la_inundación."
+        },
+       {
+            "image":'img/section3/album-gabriela/Foto-23.webp',
+            "video":'#',
+            "descripcion": "Baño_todo_sucio."
+        },
+       {
+            "image":'img/section3/album-gabriela/Foto-24.webp',
+            "video":'#',
+            "descripcion": "Vista_de_casa_destruida_desde_adentro.Con_libros_mojados_y_más_cosas_mojadas."
+        },
+       {
+            "image":'img/section3/album-gabriela/Foto-25.webp',
+            "video":'#',
+            "descripcion": "Zapatos_todos_mojados."
+        },
+       {
+            "image":'img/section3/album-gabriela/Foto-26.webp',
+            "video":'#',
+            "descripcion": "Armario_completamente_mojado."
+        },
+       {
+            "image":'img/section3/album-gabriela/Foto-27.webp',
+            "video":'#',
+            "descripcion": "Armario_de_mujer_mojada."
+        },
+       {
+            "image":'img/section3/album-gabriela/Foto-28.webp',
+            "video":'#',
+            "descripcion": "Mueble_mojado."
+        },
+       {
+            "image":'img/section3/album-gabriela/Foto-30.webp',
+            "video":'#',
+            "descripcion": "Marcas_de_agua_en_la_pared_de_la_cocina."
+        },
+       {
+            "image":'img/section3/album-gabriela/Foto-31.webp',
+            "video":'#',
+            "descripcion": "Piso_de_madera_arruinado_despúes_de_la_inundación."
+        },
+       {
+            "image":'img/section3/album-gabriela/Foto-32.webp',
+            "video":'#',
+            "descripcion": "labarropa_destruida."
+        },
+       ],
     "graciela": [
         # {
         #     "image":"img/section3/album-graciela/foto-abcd.webp",

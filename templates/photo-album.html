@@ -182,17 +182,13 @@
                         />
                       </a>
 
-                      {% for photo in albums['gabriela'] %}
+                      {% for photo in albums['gabrielaFotos'] %}
                       <a
                         class="achicar-img"
                         tabindex="-1"
                         id="img{{loop.index}}"
                         aria-label="Estas dentro del album de Gabriela. Contenido {{loop.index}} de {{loop.length}}."
                         data-lg-size="1280-720"
-                        {% if photo.video != "#" %}
-                        data-src="{{photo.video}}"
-                        data-poster="{{ url_for('static', filename = photo.image )}}"
-                        {% else %}
                         href="{{ url_for('static', filename = photo.image )}}"
                       >
                         <img
@@ -200,13 +196,28 @@
                           loading="lazy"
                           width="50%" height="50%" 
                           style="margin-top: -35rem;"
-                          {% if photo.descripcion %}
-                            alt={{photo.descripcion}}
-                          {% endif %}
+                          alt={{photo.descripcion}}
                           class="img-responsive"
                           src="{{url_for('static', filename = photo.image  )}}"
                         />
-                        {% endif %}
+                       
+                      </a>
+                      {% endfor %}
+
+                      <!-- para los videos -->
+                      {% for photo in albums['gabrielaVideos'] %}
+                      <a
+                        class="achicar-img"
+                        tabindex="-1"
+                        id="img{{loop.index}}"
+                        aria-label="Estas dentro del album de Gabriela. Contenido {{loop.index}} de {{loop.length}}."
+                        data-lg-size="1280-720"
+
+                        data-src="{{photo.video}}"
+                        data-poster="{{ url_for('static', filename = photo.image )}}"
+                        
+                      >
+
                         <img
                           loading="lazy"
 
@@ -215,6 +226,7 @@
                         />
                       </a>
                       {% endfor %}
+                     
                       
                     </div>
                   </div>
