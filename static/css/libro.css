@@ -199,6 +199,9 @@
   justify-content: center;
   cursor: pointer;
 }
+.achicar_mas{
+  width: 65%!important;
+}
 
 .gallery__libro{
   display: flex;
