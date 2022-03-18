@@ -56,17 +56,20 @@ list_album = {
     "gabriela": [
        {
             "image":'img/section3/album-gabriela/Foto-1.webp',
-            "video":'#'
+            "video":'#',
+            "descripcion": "lol"
             
         },
 
        {
             "image":'img/section3/album-gabriela/Foto-3.webp',
-            "video":'#'
+            "video":'#',
+            "descripcion": "lol"
         },
        {
             "image":'img/section3/album-gabriela/Foto-4.webp',
-            "video":'#'
+            "video":'#',
+            "descripcion": "lol"
         },
        {
             "image":'img/section3/album-gabriela/Foto-5.webp',
@@ -74,11 +77,13 @@ list_album = {
         },
        {
             "image":'img/section3/album-gabriela/Foto-6.webp',
-            "video":'#'
+            "video":'#',
+            "descripcion": "lol"
         },
        {
             "image":'img/section3/album-gabriela/Foto-7.webp',
-            "video":'#'
+            "video":'#',
+            "descripcion": "lol"
         },
        {
             "image":'img/section3/album-gabriela/Foto-8.webp',
@@ -86,7 +91,8 @@ list_album = {
         },
        {
             "image":'img/section3/album-gabriela/Foto-9.webp',
-            "video":'#'
+            "video":'#',
+            "descripcion": "lol"
         },
        {
             "image":'img/section3/album-gabriela/Foto-10.webp',
@@ -98,7 +104,8 @@ list_album = {
         },
        {
             "image":'img/section3/album-gabriela/Foto-12.webp',
-            "video":'#'
+            "video":'#',
+            "descripcion": "lol"
         },
        {
             "image":'img/section3/album-gabriela/Foto-13.webp',
@@ -110,7 +117,8 @@ list_album = {
         },
        {
             "image":'img/section3/album-gabriela/Foto-15.webp',
-            "video":'#'
+            "video":'#',
+            "descripcion": "lol"
         },
        {
             "image":'img/section3/album-gabriela/Foto-16.webp',
@@ -118,11 +126,13 @@ list_album = {
         },
        {
             "image":'img/section3/album-gabriela/Foto-17.webp',
-            "video":'#'
+            "video":'#',
+            "descripcion": "lol"
         },
        {
             "image":'img/section3/album-gabriela/Foto-18.webp',
-            "video":'#'
+            "video":'#',
+            "descripcion": "lol"
         },
        {
             "image":'img/section3/album-gabriela/Foto-19.webp',
@@ -138,31 +148,38 @@ list_album = {
         },
        {
             "image":'img/section3/album-gabriela/Foto-22.webp',
-            "video":'#'
+            "video":'#',
+            "descripcion": "lol"
         },
        {
             "image":'img/section3/album-gabriela/Foto-23.webp',
-            "video":'#'
+            "video":'#',
+            "descripcion": "lol"
         },
        {
             "image":'img/section3/album-gabriela/Foto-24.webp',
-            "video":'#'
+            "video":'#',
+            "descripcion": "lol"
         },
        {
             "image":'img/section3/album-gabriela/Foto-25.webp',
-            "video":'#'
+            "video":'#',
+            "descripcion": "lol"
         },
        {
             "image":'img/section3/album-gabriela/Foto-26.webp',
-            "video":'#'
+            "video":'#',
+            "descripcion": "lol"
         },
        {
             "image":'img/section3/album-gabriela/Foto-27.webp',
-            "video":'#'
+            "video":'#',
+            "descripcion": "lol"
         },
        {
             "image":'img/section3/album-gabriela/Foto-28.webp',
-            "video":'#'
+            "video":'#',
+            "descripcion": "lol"
         },
        {
             "image":'img/section3/album-gabriela/Foto-29.webp',
@@ -170,15 +187,18 @@ list_album = {
         },
        {
             "image":'img/section3/album-gabriela/Foto-30.webp',
-            "video":'#'
+            "video":'#',
+            "descripcion": "lol"
         },
        {
             "image":'img/section3/album-gabriela/Foto-31.webp',
-            "video":'#'
+            "video":'#',
+            "descripcion": "lol"
         },
        {
             "image":'img/section3/album-gabriela/Foto-32.webp',
-            "video":'#'
+            "video":'#',
+            "descripcion": "lol"
         },
        {
             "image":'img/section3/album-gabriela/Foto-33.webp',

@@ -194,10 +194,18 @@
                         data-poster="{{ url_for('static', filename = photo.image )}}"
                         {% else %}
                         href="{{ url_for('static', filename = photo.image )}}"
-                        
-
                       >
-                        
+                        <img
+                          role="img"
+                          loading="lazy"
+                          width="50%" height="50%" 
+                          style="margin-top: -35rem;"
+                          {% if photo.descripcion %}
+                            alt={{photo.descripcion}}
+                          {% endif %}
+                          class="img-responsive"
+                          src="{{url_for('static', filename = photo.image  )}}"
+                        />
                         {% endif %}
                         <img
                           loading="lazy"
