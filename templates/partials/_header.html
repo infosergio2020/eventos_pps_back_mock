@@ -16,6 +16,7 @@
         aria-label="Presione enter para ir a la página principal."
       >
         <div role="banner" class="item__img__h1 txt_white">
+          <div class="img-logo-margin">
           <img
             loading="lazy"
             width="130px"
@@ -24,8 +25,9 @@
             src="{{url_for('static', filename = './img/general/flooded-house.png')}}"
             alt="Logo de citadine."
           />
+        </div>
           <div class="header__left">
-            <div>
+            <div class="img-logo-margin">
               <h1 class="generar-conciencia">
                 Generar <span>con</span>ciencia
               </h1>
@@ -36,57 +38,7 @@
           </div>
         </div>
       </a>
-        <!-- traductor de google -->
-      <style type="text/css">
-        .translated-ltr{margin-top: -40px;}
-        .translated-ltr{margin-top: -40px;}
-        .goog-te-banner-frame{ display: none; margin-top: -20px;}
-        .goog-logo-link{
-          display: none !important;
-
-        }
-        .goog-te-gadget .goog-te-combo {
-            margin: 4px 0;
-            background-color:#0a8025;
-            border-radius: 0.5rem;
-            color: #ffffff;
-            font-family: "Source Sans Pro", sans-serif;
-            font-size: calc(0.84em + 1vw); 
-            padding: 2rem;
-        }
-        .goog-te-gadget{
-          color: transparent !important;
-          
-        }
-      </style>  
-      <!-- opcion 1 de traductor -->
-      <!-- <div id="google_translate_element"></div>
         
-      <script type="text/javascript">
-      function googleTranslateElementInit() {
-        new google.translate.TranslateElement({pageLanguage: 'sp', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-      }
-      </script>
-
-      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> -->
-
-      <!-- opcion 2 de traductor -->
-
-      <div id="google_translate_element"></div>
-
-      <script type="text/javascript">
-      function googleTranslateElementInit() {
-        new google.translate.TranslateElement({pageLanguage: 'sp'}, 'google_translate_element');
-      }
-      </script>
-
-      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-      <!-- <small> La muestra contará con 6 áreas o secciones de exhibición, que deben recorrerse en forma secuencial,
-          puesto que aborda la temática en forma cronológica.
-          Además, se analiza la inundación desde la perspectiva de 4 casos diferentes de personas que relatan sus
-          experiencias y lo sucedido antes, durante y después de vivenciarla.
-        </small> -->
     </div>
 
     <!-- barra de secciones y boton -->
@@ -701,7 +653,7 @@
                 width="42px"
                 height="42px"
                 class="wh-42"
-                src="{{url_for('static', filename = './img/general/menu-deslizante/virus.webp')}}"
+                src="{{url_for('static', filename = './img/general/menu-deslizante/nosotros.webp')}}"
                 alt="virus-image"
               />
               <p class="no-margin">Acerca de nosotros</p>
