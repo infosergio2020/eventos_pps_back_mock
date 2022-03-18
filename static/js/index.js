@@ -8,7 +8,7 @@ const title_nacion = ' El sitio del diario <strong>La Nación</strong> se abrir�
 const title_citadineVERDE = ' El sitio de Citadine <strong>Soluciones basadas en la naturaleza</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
 const title_citadineAZUL = ' El sitio de Citadine <strong>Catástrofes naturales</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
 // enlaces para redireccionar en caso de confirmaicon en el alert
-const MAPA = "https://entrevistas-inundacion.netlify.app/index.html";
+const MAPA = "https://mapa-de-entrevistas.netlify.app/index.html";
 const CITADINE_VERDE = "http://ifw-raspi.projekt.jade-hs.de/wordpress/nbs/";
 const CITADINE_AZUL = "http://ifw-raspi.projekt.jade-hs.de/wordpress/";
 const NACION = "https://es.kiosko.net/ar/2013-04-03/np/nacion.html";
