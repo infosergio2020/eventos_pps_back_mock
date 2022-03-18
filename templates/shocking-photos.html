@@ -42,7 +42,7 @@
                           />
                         </a>
                     
-                        { % for photo in impactantes % }
+                        {% for photo in impactantes %}
                         <a
                           class="achicar-cortina"
                           role="link"
@@ -58,7 +58,7 @@
                             src="{{url_for('static', filename = photo.image  )}}"
                           />
                         </a>
-                        { % endfor % }
+                        {% endfor %}
                   </div>
                   <div class="opacidad">
                     <p>

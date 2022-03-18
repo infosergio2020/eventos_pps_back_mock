@@ -87,7 +87,7 @@ class CustomRouter:
         return render_template('/diarios.html',flag_1="opcion_1",flag_2=" ", seccion="s3")
 
     def render_shocking_photos(self):
-        return render_template('/shocking-photos.html',flag_1="opcion_2",flag_2="opcion_2", impactantes=list_shocking, seccion="s3")
+        return render_template('/shocking-photos.html',flag_1="opcion_2",flag_2="opcion_2", impactantes = list_shocking, seccion="s3")
 
     def render_during_flood(self):
         return render_template('/testimonio2.html',flag_1="opcion_4",flag_2="opcion_3", seccion="s3")
