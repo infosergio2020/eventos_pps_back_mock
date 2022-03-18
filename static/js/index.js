@@ -112,17 +112,18 @@ const onkey_tab = (e) => {
         document.getElementById("close-sideBar").blur();
   };
 //  busqueda y asignacion de eventos...
-var e = document.getElementById("diario-1-1");
+
+var e = document.getElementById("mapa");
+null != e &&
+  e.addEventListener("click", (e) => {
+    custom_popup(title_mapa, abri_website, MAPA);
+  });
+
+e = document.getElementById("diario-1-1");
 null != e &&
   e.addEventListener("click", (e) => {
     custom_popup(title_dia, abri_website, ELDIA);
   });
-  e = document.getElementById("mapa");
-  null != e &&
-    e.addEventListener("click", (e) => {
-      custom_popup(title_mapa, abri_website, MAPA);
-    });
-  
   e = document.getElementById("diario-2-2");
 null != e &&
   e.addEventListener("click", (e) => {
@@ -138,6 +139,32 @@ null != e &&
   e.addEventListener("click", (e) => {
     custom_popup(title_nacion, abri_website, NACION);
   });
+
+
+  e = document.getElementById("1-1-1");
+null != e &&
+  e.addEventListener("click", (e) => {
+    custom_popup(title_dia, abri_website, ELDIA);
+  });
+  e = document.getElementById("2-2-2");
+null != e &&
+  e.addEventListener("click", (e) => {
+    custom_popup(title_hoy, abri_website, HOY);
+  });
+e = document.getElementById("3-3-3");
+null != e &&
+  e.addEventListener("click", (e) => {
+    custom_popup(title_clarin, abri_website, CLARIN);
+  });
+e = document.getElementById("4-4-4");
+null != e &&
+  e.addEventListener("click", (e) => {
+    custom_popup(title_nacion, abri_website, NACION);
+  });
+
+
+
+
 e = document.getElementsByClassName("citadineAzul");
 if (null != e)
   for (let i = 0; i < e.length; i++) {
