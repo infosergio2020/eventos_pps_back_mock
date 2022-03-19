@@ -1,4 +1,14 @@
 // titulos para los alert de diario y citadine
+const title_juego1 = 'El sitio del <strong>Disaster cross</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
+const title_juego2 = 'El sitio del <strong>Limpiar la ciudad</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
+const title_juego3 = 'El sitio del <strong>Rompecabezas NBS</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
+const title_juego4 = 'El sitio del <strong>Inundados (Flooded)</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
+const title_juego5 = 'El sitio del <strong>Juego de la memoria</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
+const title_juego6 = 'El sitio del <strong>Quiz Aprendiendo a prepararme</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
+const title_juego7 = 'El sitio del <strong>Quiz Mochila de emergencia (Quiz emergency backpack)</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
+
+const title_dondeir1 = 'El sitio del <strong>¿Dónde ir?-Centros de evacuación</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
+
 const title_mapa = 'El sitio del <strong>Mapa de entrevistados</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
 
 const title_dia = 'El sitio del diario <strong>El Día</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
@@ -8,6 +18,17 @@ const title_nacion = ' El sitio del diario <strong>La Nación</strong> se abrir�
 const title_citadineVERDE = ' El sitio de Citadine <strong>Soluciones basadas en la naturaleza</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
 const title_citadineAZUL = ' El sitio de Citadine <strong>Catástrofes naturales</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
 // enlaces para redireccionar en caso de confirmaicon en el alert
+const JUEGO1="https://disaster-cross.vercel.app/";
+const JUEGO2="https://ecarletti.github.io/deu/dist/";
+const JUEGO3="https://deu-2021.vercel.app/";
+const JUEGO4="C:\Users\Juego\Desktop\juegos-compilados\Inundados.exe";
+const JUEGO5="https://juego-de-memoria-inundaciones.herokuapp.com";
+const JUEGO6="https://barbicorro.github.io/DEU_2021_Corro_Torres/index.html";
+const JUEGO7="https://dux2021.herokuapp.com/";
+
+const DONDEIR1="https://hidden-taiga-68681.herokuapp.com/"
+
+
 const MAPA = "https://mapa-de-entrevistas.netlify.app/index.html";
 const CITADINE_VERDE = "http://ifw-raspi.projekt.jade-hs.de/wordpress/nbs/";
 const CITADINE_AZUL = "http://ifw-raspi.projekt.jade-hs.de/wordpress/";
@@ -113,6 +134,50 @@ const onkey_tab = (e) => {
   };
 //  busqueda y asignacion de eventos...
 
+var e = document.getElementById("dondeir1");
+null != e &&
+  e.addEventListener("click", (e) => {
+    custom_popup(title_dondeir1, abri_website, DONDEIR1);
+  });
+
+
+var e = document.getElementById("juego1");
+null != e &&
+  e.addEventListener("click", (e) => {
+    custom_popup(title_juego1, abri_website, JUEGO1);
+  });
+var e = document.getElementById("juego2");
+null != e &&
+  e.addEventListener("click", (e) => {
+    custom_popup(title_juego2, abri_website, JUEGO2);
+  });
+var e = document.getElementById("juego3");
+null != e &&
+  e.addEventListener("click", (e) => {
+    custom_popup(title_juego3, abri_website, JUEGO3);
+  });
+var e = document.getElementById("juego4");
+null != e &&
+  e.addEventListener("click", (e) => {
+    custom_popup(title_juego4, abri_website, JUEGO4);
+  });
+var e = document.getElementById("juego5");
+null != e &&
+  e.addEventListener("click", (e) => {
+    custom_popup(title_juego5, abri_website, JUEGO5);
+  }); 
+
+var e = document.getElementById("juego6");
+null != e &&
+  e.addEventListener("click", (e) => {
+    custom_popup(title_juego6, abri_website, JUEGO6);
+  }); 
+  
+var e = document.getElementById("juego7");
+null != e &&
+  e.addEventListener("click", (e) => {
+    custom_popup(title_juego7, abri_website, JUEGO7);
+  });   
 var e = document.getElementById("mapa");
 null != e &&
   e.addEventListener("click", (e) => {
