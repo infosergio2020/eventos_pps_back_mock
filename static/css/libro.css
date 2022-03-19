@@ -135,7 +135,7 @@
     0 10px 100px rgba(0, 0, 0, 0.5);
 }
 .card-libro .details {
-  width: 100%;
+  width: 95%;
   position: absolute;
   top: 0;
   box-sizing: border-box;
@@ -193,12 +193,18 @@
   cursor: pointer;
   visibility: hidden;
 }
-.agrandar-img:hover {
-  width: 100%;
+
+
+.agrandar-img img {
   height: 100%;
-  justify-content: center;
-  cursor: pointer;
+  width: 100%;
 }
+
+.agrandar-img:hover {
+  border: 2px solid #00B800;
+  border-radius: 2rem;
+}
+
 .achicar_mas{
   width: 65%!important;
 }
