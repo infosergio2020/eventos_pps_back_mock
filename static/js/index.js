@@ -8,6 +8,13 @@ const title_juego6 = 'El sitio del <strong>Quiz Aprendiendo a prepararme</strong
 const title_juego7 = 'El sitio del <strong>Quiz Mochila de emergencia (Quiz emergency backpack)</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
 
 const title_dondeir1 = 'El sitio del <strong>¿Dónde ir?-Centros de evacuación</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
+const title_dondeir2 = 'El sitio del <strong>Caminos a refugios</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
+const title_dondeir3 = 'El sitio del <strong>EvacuAR</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
+const title_dondeir4 = 'El sitio del <strong>Servicios</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
+const title_dondeir5 = 'El sitio del <strong>Zonas inundadas</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
+const title_dondeir6 = 'El sitio del <strong>Municipalidad de La Plata</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
+const title_dondeir7 = 'El sitio del <strong>Inundaciones La Plata</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
+const title_dondeir8 = 'El sitio del <strong>Ayud-AR</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
 
 const title_mapa = 'El sitio del <strong>Mapa de entrevistados</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
 
@@ -27,7 +34,12 @@ const JUEGO6="https://barbicorro.github.io/DEU_2021_Corro_Torres/index.html";
 const JUEGO7="https://dux2021.herokuapp.com/";
 
 const DONDEIR1="https://hidden-taiga-68681.herokuapp.com/"
-
+const DONDEIR3="https://grupo8.proyecto2021.linti.unlp.edu.ar/"
+const DONDEIR4="https://grupo28.proyecto2021.linti.unlp.edu.ar/"
+const DONDEIR5="https://grupo30.proyecto2021.linti.unlp.edu.ar/"
+const DONDEIR6="https://grupo19.proyecto2021.linti.unlp.edu.ar/"
+const DONDEIR7="https://grupo7.proyecto2021.linti.unlp.edu.ar/"
+const DONDEIR8="https://grupo12.proyecto2021.linti.unlp.edu.ar/"
 
 const MAPA = "https://mapa-de-entrevistas.netlify.app/index.html";
 const CITADINE_VERDE = "http://ifw-raspi.projekt.jade-hs.de/wordpress/nbs/";
@@ -134,12 +146,53 @@ const onkey_tab = (e) => {
   };
 //  busqueda y asignacion de eventos...
 
+var e = document.getElementById("dondeircamino");
+null != e &&
+e.addEventListener("click", (e) => {
+  custom_popup(title_dondeir2, abri_website, DONDEIR1);
+});
+
 var e = document.getElementById("dondeir1");
 null != e &&
-  e.addEventListener("click", (e) => {
-    custom_popup(title_dondeir1, abri_website, DONDEIR1);
-  });
+e.addEventListener("click", (e) => {
+  custom_popup(title_dondeir1, abri_website, DONDEIR1);
+});
 
+var e = document.getElementById("dondeir2");
+null != e &&
+e.addEventListener("click", (e) => {
+  custom_popup(title_dondeir3, abri_website, DONDEIR3);
+});
+
+var e = document.getElementById("dondeir3");
+null != e &&
+e.addEventListener("click", (e) => {
+  custom_popup(title_dondeir4, abri_website, DONDEIR4);
+});
+
+var e = document.getElementById("dondeir4");
+null != e &&
+e.addEventListener("click", (e) => {
+  custom_popup(title_dondeir5, abri_website, DONDEIR5);
+});
+
+var e = document.getElementById("dondeir5");
+null != e &&
+e.addEventListener("click", (e) => {
+  custom_popup(title_dondeir6, abri_website, DONDEIR6);
+});
+
+var e = document.getElementById("dondeir6");
+null != e &&
+e.addEventListener("click", (e) => {
+  custom_popup(title_dondeir7, abri_website, DONDEIR7);
+});
+
+var e = document.getElementById("dondeir7");
+null != e &&
+e.addEventListener("click", (e) => {
+  custom_popup(title_dondeir8, abri_website, DONDEIR8);
+});
 
 var e = document.getElementById("juego1");
 null != e &&

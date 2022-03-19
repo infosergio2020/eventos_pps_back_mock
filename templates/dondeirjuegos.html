@@ -13,7 +13,7 @@
         <!-- descripcion antes de interactuar con los juegos -->
         <div tabindex="0" class="centrar-texto">
           <p>
-            Veni a descubrir los centros de encuentro más cercanos al lugar que indiques. Accedé a esta aplicación (mediante el botón jugar) que genera caminos a dichos puntos de evacuación, evitando las zonas inundables.
+            Veni a descubrir los centros de encuentro más cercanos al lugar que indiques. Accedé a esta aplicación (mediante el botón ir al sitio web) que genera caminos a dichos puntos de evacuación, evitando las zonas inundables.
             Considera mapas publicados por la <abbr title="Universidad Nacional de La Plata.">UNLP</abbr> y los centros de evacuación publicados por la Municipalidad de La Plata. 
           </p>
          
@@ -26,7 +26,7 @@
           <div class="card">
             <img tabindex="0" role="img" class="img-juego img1"
               src="{{url_for('static', filename = 'img/section5/dondeir-tapa/dondeir.webp')}}" alt="¿Dónde ir?"
-              aria-label="Tapa del juego ¿Dónde ir?.">
+              aria-label="Tapa del sitio web caminos a refugios.">
             <div class="intro">
               <h2 tabindex="0">
                 Caminos a refugios.
@@ -36,8 +36,8 @@
               </p>
               <div aria-labelledby="diario-2">
                 <div class=" verde-4 esconder-detail boton">
-                  <a role="button" tabindex="0" aria-label="Jugar ¿Dónde ir?."
-                    href="https://hidden-taiga-68681.herokuapp.com" style="color: rgb(255, 255, 255);"> Jugar</a>
+                  <a role="button" tabindex="0" aria-label="Ir al sitio web caminos a refugios."
+                    id="dondeircamino" style="color: rgb(255, 255, 255);"> Ir al sitio web</a>
                 </div>
               </div>
             </div>
@@ -46,7 +46,7 @@
           <div class="card" tabindex="0">
             <img role="img" class="img-juego img1"
               src="{{url_for('static', filename = 'img/section5/dondeir-tapa/evacuAr.webp')}}" alt="EvacuAR."
-              aria-label="Tapa del juego EvacuAR.">
+              aria-label="Tapa del sitio web EvacuAR.">
             <div class="intro">
               <h2>
                 EvacuAR
@@ -58,8 +58,8 @@
               </p>
               <div aria-labelledby="diario-2">
                 <div class="verde-4 esconder-detail boton">
-                  <a role="button" tabindex="0" aria-label="Jugar EvacuAR."
-                    href="https://grupo8.proyecto2021.linti.unlp.edu.ar/" style="color: rgb(255, 255, 255);"> Jugar</a>
+                  <a role="button" tabindex="0" aria-label="Ir al sitio web EvacuAR."
+                    id="dondeir2" style="color: rgb(255, 255, 255);"> Ir al sitio web</a>
                 </div>
               </div>
             </div>
@@ -68,7 +68,7 @@
           <div class="card" tabindex="0">
             <img role="img" class="img-juego img1"
               src="{{url_for('static', filename = 'img/section5/dondeir-tapa/servicios.webp')}}" alt="Servicios."
-              aria-label="Tapa del juego Servicios.">
+              aria-label="Tapa del sitio web Servicios.">
             <div class="intro">
               <h2>
                 Servicios
@@ -79,8 +79,9 @@
               </p>
               <div aria-labelledby="diario-2">
                 <div class="verde-4 esconder-detail boton">
-                  <a role="button" tabindex="0" aria-label="Jugar Servicios." href="https://grupo28.proyecto2021.linti.unlp.edu.ar/"
-                    style="color: rgb(255, 255, 255);"> Jugar</a>
+                  <a role="button" tabindex="0" aria-label="Ir al sitio web Servicios." 
+                  id="dondeir3"
+                    style="color: rgb(255, 255, 255);"> Ir al sitio web</a>
                 </div>
               </div>
             </div>
@@ -89,7 +90,7 @@
           <div class="card" tabindex="0">
             <img role="img" class="img-juego img1"
               src="{{url_for('static', filename = 'img/section5/dondeir-tapa/zonasinundadas.webp')}}" alt="Zonas inundadas."
-              aria-label="Tapa del juego Zonas inundadas.">
+              aria-label="Tapa del sitio Zonas inundadas.">
             <div class="intro">
               <h2>
                 Zonas inundadas
@@ -99,9 +100,9 @@
               </p>
               <div aria-labelledby="diario-2">
                 <div class="verde-4 esconder-detail boton">
-                  <a role="button" tabindex="0" aria-label="Jugar Zonas inundadas."
-                    href="https://grupo30.proyecto2021.linti.unlp.edu.ar/"
-                    style="color: rgb(255, 255, 255);"> Jugar</a>
+                  <a role="button" tabindex="0" aria-label="Ir al sitio web Zonas inundadas."
+                    id="dondeir4"
+                    style="color: rgb(255, 255, 255);"> Ir al sitio web</a>
                 </div>
               </div>
             </div>
@@ -109,7 +110,7 @@
           <!-- juego 5 -->
           <div class="card" tabindex="0">
             <img role="img" class="img-juego img1"
-              src="{{url_for('static', filename = 'img/section5/dondeir-tapa/municipalidadlaplata.webp')}}" alt=" Juego de Municipalidad de La Plata."
+              src="{{url_for('static', filename = 'img/section5/dondeir-tapa/municipalidadlaplata.webp')}}" alt=" Sitio de Municipalidad de La Plata."
               aria-label="Tapa del juego Municipalidad de La Plata.">
             <div class="intro">
               <h2>
@@ -120,9 +121,9 @@
               </p>
               <div aria-labelledby="diario-2">
                 <div class="verde-4 esconder-detail boton">
-                  <a role="button" tabindex="0" aria-label="Jugar Municipalidad de La Plata."
-                    href="https://grupo19.proyecto2021.linti.unlp.edu.ar/" style="color: rgb(255, 255, 255);">
-                    Jugar</a>
+                  <a role="button" tabindex="0" aria-label="Ir al sitio web Municipalidad de La Plata."
+                    id="dondeir5" style="color: rgb(255, 255, 255);">
+                    Ir al sitio web</a>
                 </div>
               </div>
             </div>
@@ -131,7 +132,7 @@
           <div class="card" tabindex="0">
             <img role="img" class="img-juego img1"
               src="{{url_for('static', filename = 'img/section5/dondeir-tapa/inundacioneslaplata.webp')}}"
-              alt="Inundaciones La Plata." aria-label="Tapa del juego Inundaciones La Plata.">
+              alt="Inundaciones La Plata." aria-label="Tapa del sitio web Inundaciones La Plata.">
             <div class="intro">
               <h2>
                 Inundaciones La Plata
@@ -141,9 +142,9 @@
               </p>
               <div aria-labelledby="diario-2">
                 <div class="verde-4 esconder-detail boton">
-                  <a role="button" tabindex="0" aria-label="Jugar Inundaciones La Plata."
-                    href="https://grupo7.proyecto2021.linti.unlp.edu.ar/"
-                    style="color: rgb(255, 255, 255);"> Jugar</a>
+                  <a role="button" tabindex="0" aria-label="Ir al sitio web Inundaciones La Plata."
+                    id="dondeir6"
+                    style="color: rgb(255, 255, 255);"> Ir al sitio web</a>
                 </div>
               </div>
             </div>
@@ -153,7 +154,7 @@
             <img role="img" class="img-juego img1"
               src="{{url_for('static', filename = 'img/section5/dondeir-tapa/AyudAR.webp')}}"
               alt=" Ayud-AR."
-              aria-label="Tapa del juego  Ayud-AR.">
+              aria-label="Tapa del sitio web Ayud-AR.">
             <div class="intro">
               <h2>
                 Ayud-AR
@@ -163,8 +164,8 @@
               </p>
               <div aria-labelledby="diario-2">
                 <div class="verde-4 esconder-detail boton">
-                  <a role="button" tabindex="0" aria-label="Jugar Ayud-AR."
-                    href="https://grupo12.proyecto2021.linti.unlp.edu.ar/" style="color: rgb(255, 255, 255);"> Jugar</a>
+                  <a role="button" tabindex="0" aria-label="Ir al sitio web Ayud-AR."
+                    id="dondeir7" style="color: rgb(255, 255, 255);"> Ir al sitio web</a>
                 </div>
               </div>
             </div>
