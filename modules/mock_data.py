@@ -292,37 +292,37 @@ list_album = {
         #     "video":''
         # },
         {
-            "image":'img/section3/album-patricia/foto-2.webp',
+            "image":'img/section3/album-patricia/2.jpg',
             "video":'https://youtu.be/JyYGwbc2UTM'
         },
         {
-            "image":'img/section3/album-patricia/foto-3.webp',
+            "image":'img/section3/album-patricia/3.jpg',
             "video":'https://youtu.be/nJusVgZw4e8'
         },
-        {
-            "image":'img/section3/album-patricia/foto-4.webp',
-            "video":'https://youtu.be/ajlTmoChb3s'
-        },
-        {
-            "image":'img/section3/album-patricia/foto-5.webp',
-            "video":'https://youtu.be/99uqTrgTFeg'
-        },
-        {
-            "image":'img/section3/album-patricia/foto-6.webp',
-            "video":'https://youtu.be/KJFovuFs35w'
-        },
-        {
-            "image":'img/section3/album-patricia/foto-7.webp',
-            "video":'https://youtu.be/iwPWI-UNBTA'
-        },
-        {
-            "image":'img/section3/album-patricia/foto-8.webp',
-            "video":'https://youtu.be/z9J2ONpx69g'
-        },
-        {
-            "image":'img/section3/album-patricia/foto-9.webp',
-            "video":'https://youtu.be/NQ-wJL_0rY8'
-        },
+        # {
+        #     "image":'img/section3/album-patricia/foto-4.webp',
+        #     "video":'https://youtu.be/ajlTmoChb3s'
+        # },
+        # {
+        #     "image":'img/section3/album-patricia/foto-5.webp',
+        #     "video":'https://youtu.be/99uqTrgTFeg'
+        # },
+        # {
+        #     "image":'img/section3/album-patricia/foto-6.webp',
+        #     "video":'https://youtu.be/KJFovuFs35w'
+        # },
+        # {
+        #     "image":'img/section3/album-patricia/foto-7.webp',
+        #     "video":'https://youtu.be/iwPWI-UNBTA'
+        # },
+        # {
+        #     "image":'img/section3/album-patricia/foto-8.webp',
+        #     "video":'https://youtu.be/z9J2ONpx69g'
+        # },
+        # {
+        #     "image":'img/section3/album-patricia/foto-9.webp',
+        #     "video":'https://youtu.be/NQ-wJL_0rY8'
+        # },
     ]
 }
 
