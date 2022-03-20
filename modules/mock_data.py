@@ -297,31 +297,31 @@ list_album = {
         },
         {
             "image":'img/section3/album-patricia/foto-3.webp',
-            "video":'https://youtu.be/embed/nJusVgZw4e8'
+            "video":'https://youtu.be/nJusVgZw4e8'
         },
         {
             "image":'img/section3/album-patricia/foto-4.webp',
-            "video":'https://youtu.be/embed/ajlTmoChb3s'
+            "video":'https://youtu.be/ajlTmoChb3s'
         },
         {
             "image":'img/section3/album-patricia/foto-5.webp',
-            "video":'https://youtu.be/embed/99uqTrgTFeg'
+            "video":'https://youtu.be/99uqTrgTFeg'
         },
         {
             "image":'img/section3/album-patricia/foto-6.webp',
-            "video":'https://youtu.be/embed/KJFovuFs35w'
+            "video":'https://youtu.be/KJFovuFs35w'
         },
         {
             "image":'img/section3/album-patricia/foto-7.webp',
-            "video":'https://youtu.be/embed/iwPWI-UNBTA'
+            "video":'https://youtu.be/iwPWI-UNBTA'
         },
         {
             "image":'img/section3/album-patricia/foto-8.webp',
-            "video":'https://youtu.be/embed/z9J2ONpx69g'
+            "video":'https://youtu.be/z9J2ONpx69g'
         },
         {
             "image":'img/section3/album-patricia/foto-9.webp',
-            "video":'https://youtu.be/embed/NQ-wJL_0rY8'
+            "video":'https://youtu.be/NQ-wJL_0rY8'
         },
     ]
 }

@@ -1,29 +1,29 @@
 // titulos para los alert de diario y citadine
-const title_juego1 = 'El sitio del <strong>Disaster cross</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
-const title_juego2 = 'El sitio del <strong>Limpiar la ciudad</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
-const title_juego3 = 'El sitio del <strong>Rompecabezas NBS</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
-const title_juego4 = 'El sitio del <strong>Inundados (Flooded)</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
-const title_juego5 = 'El sitio del <strong>Juego de la memoria</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
-const title_juego6 = 'El sitio del <strong>Quiz Aprendiendo a prepararme</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
-const title_juego7 = 'El sitio del <strong>Quiz Mochila de emergencia (Quiz emergency backpack)</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
+const title_juego1 = 'El sitio web del <strong>Disaster cross</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
+const title_juego2 = 'El sitio web de <strong>Limpiar la ciudad</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
+const title_juego3 = 'El sitio web del <strong>Rompecabezas NBS</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
+const title_juego4 = 'El sitio web de <strong>Inundados (Flooded)</strong> no se encuentra disponible por el momento pero si estás presente en el evento, lo podrás jugar encontrandolo en el escritorio o en la barra de tareas.';
+const title_juego5 = 'El sitio web del <strong>Juego de la memoria</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
+const title_juego6 = 'El sitio web del <strong>Quiz Aprendiendo a prepararme</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
+const title_juego7 = 'El sitio web del <strong>Quiz Mochila de emergencia (Quiz emergency backpack)</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
 
-const title_dondeir1 = 'El sitio del <strong>¿Dónde ir?-Centros de evacuación</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
-const title_dondeir2 = 'El sitio del <strong>Caminos a refugios</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
-const title_dondeir3 = 'El sitio del <strong>EvacuAR</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
-const title_dondeir4 = 'El sitio del <strong>Servicios</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
-const title_dondeir5 = 'El sitio del <strong>Zonas inundadas</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
-const title_dondeir6 = 'El sitio del <strong>Municipalidad de La Plata</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
-const title_dondeir7 = 'El sitio del <strong>Inundaciones La Plata</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
-const title_dondeir8 = 'El sitio del <strong>Ayud-AR</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
+const title_dondeir1 = 'El sitio web de <strong>¿Dónde ir?-Centros de evacuación</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
+const title_dondeir2 = 'El sitio web de <strong>Caminos a refugios</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
+const title_dondeir3 = 'El sitio web de <strong>EvacuAR</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
+const title_dondeir4 = 'El sitio web de <strong>Servicios</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
+const title_dondeir5 = 'El sitio web de <strong>Zonas inundadas</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
+const title_dondeir6 = 'El sitio web de <strong>Municipalidad de La Plata</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
+const title_dondeir7 = 'El sitio web de <strong>Inundaciones La Plata</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
+const title_dondeir8 = 'El sitio web de <strong>Ayud-AR</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
 
-const title_mapa = 'El sitio del <strong>Mapa de entrevistados</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
+const title_mapa = 'El sitio web del <strong>Mapa de entrevistados</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
 
-const title_dia = 'El sitio del diario <strong>El Día</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
-const title_hoy = 'El sitio del diario <strong>Hoy</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
-const title_clarin = 'El sitio del diario <strong>Clarín</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
-const title_nacion = ' El sitio del diario <strong>La Nación</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
-const title_citadineVERDE = ' El sitio de Citadine <strong>Soluciones basadas en la naturaleza</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
-const title_citadineAZUL = ' El sitio de Citadine <strong>Catástrofes naturales</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
+const title_dia = 'El sitio web del diario <strong>El Día</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
+const title_hoy = 'El sitio web del diario <strong>Hoy</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
+const title_clarin = 'El sitio web del diario <strong>Clarín</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
+const title_nacion = ' El sitio web del diario <strong>La Nación</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
+const title_citadineVERDE = ' El sitio web de Citadine <strong>Soluciones basadas en la naturaleza</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
+const title_citadineAZUL = ' El sitio web de Citadine <strong>Catástrofes naturales</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
 // enlaces para redireccionar en caso de confirmaicon en el alert
 const JUEGO1="https://disaster-cross.vercel.app/";
 const JUEGO2="https://ecarletti.github.io/deu/dist/";
