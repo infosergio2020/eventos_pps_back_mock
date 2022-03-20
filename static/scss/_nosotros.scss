@@ -27,6 +27,28 @@ th, td {
     position: relative;
 }
 
+.fade-vision::before{
+    content: " ";
+    height: 1.5px;
+    width: 87%;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+@media (min-width:768px) {
+    .fade-vision::before{
+        content: " ";
+        height: 1.5px;
+        width: 96%;
+        background: #fff;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
+
 .fade-vision{
     border: none!important;
     font-size: 1.3rem;
@@ -34,7 +56,8 @@ th, td {
     left: 30px;
     z-index: 10;
     position: absolute;
-    padding: 0 1rem!important;
+    // padding: 0 1rem!important;
+    padding: 0 1rem 0.9rem 0rem !important;
     opacity: 0;
     // transition: all .4s ease-in-out;
     transition: all 0.2s ease-out;
@@ -45,7 +68,8 @@ tr:hover,tr:focus-within{
         opacity: 1;
     }
     th, td {
-        padding-bottom: 40px;
+        padding-bottom: 60px;
+        border: none;
     }
     background-color: #00000086;
     border-left:3px solid lighten($blue, 10%);
