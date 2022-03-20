@@ -31,14 +31,15 @@
         <div class="margenes">
           <div class="libro-container">
             <!-- libro 1 -->
-            <!-- Album de graciela -->
+            <!-- Album de patricia -->
+
             <div class="card-libro libro1">
               <div class="imgBox">
                 <div class="bark"></div>
 
                 <img
                   class="photo-not-border"
-                  src="{{url_for('static', filename = 'img/section3/tapas/Tapas_mini_Graciela.webp')}}"
+                  src="{{url_for('static', filename = 'img/section3/tapas/Tapas_mini_Patri.webp')}}"
                 />
               </div>
               <div class="details">
@@ -46,30 +47,29 @@
                   <div class="main-card-body">
                     <div class="gallery__libro">
                       <!-- video con su imagen -->
-                      <!-- Album de Graciela  video 1-->
+                      <!-- Album de patricia  video 1-->
                       <a
                         class="box1 agrandar-img"
                         tabindex="1"
                         id="img1"
-                        aria-label="presione enter para conocer las imágenes del álbum de Graciela."
+                        aria-label="presione enter para conocer las imágenes del álbum de Patricia."
                         data-lg-size="1280-720"
-                        data-src="https://www.youtube.com/embed/YYwgxUmH4rM"
-                        data-poster="{{url_for('static', filename = 'img/section3/album-graciela/foto-a.webp')}}"
+                        data-src="https://youtu.be/cPuH09M8CQ4"
+                        data-poster="{{url_for('static', filename = 'img/section3/album-patricia/foto-1.webp')}}"
                       >
                         <img
                           loading="lazy"
                           class="img-responsive"
-                          src="{{url_for('static', filename = 'img/section3/album-graciela/foto-a.webp')}}"
+                          src="{{url_for('static', filename = 'img/section3/album-patricia/foto-1.webp')}}"
                         />
                       </a>
-                      
 
-                      {% for photo in albums['graciela'] %}
+                      {% for photo in albums['patricia'] %}
                       <a
                         class="achicar-img"
                         tabindex="-1"
                         id="img{{loop.index}}"
-                        aria-label="Estás dentro del álbum de Graciela. Contenido {{loop.index}} de {{loop.length}}."
+                        aria-label="Estás dentro del álbum de Patricia. Contenido {{loop.index}} de {{loop.length}}."
                         data-lg-size="1280-720"
                         data-src="{{photo.video}}"
                         data-poster="{{ url_for('static', filename = photo.image )}}"
@@ -86,7 +86,7 @@
                   </div>
                 </div>
                 <p>
-                  Seleccione la imagen para acceder a la galería de fotos del álbum de Graciela.
+                  Seleccione la imagen para acceder a la galería de fotos del álbum de Patricia.
                 </p>
               </div>
             </div>
@@ -237,7 +237,8 @@
               </div>
             </div>
             <!-- libro 4 -->
-            <!-- Album de Patricia -->
+            <!-- Album de Graciela -->
+            
             
             <div class="card-libro libro1">
               <div class="imgBox">
@@ -245,7 +246,7 @@
 
                 <img
                   class="photo-not-border"
-                  src="{{url_for('static', filename = 'img/section3/tapas/Tapas_mini_Patri.webp')}}"
+                  src="{{url_for('static', filename = 'img/section3/tapas/Tapas_mini_Graciela.webp')}}"
                 />
               </div>
               <div class="details">
@@ -253,29 +254,30 @@
                   <div class="main-card-body">
                     <div class="gallery__libro">
                       <!-- video con su imagen -->
-                      <!-- Album de patricia  video 1-->
+                      <!-- Album de Graciela  video 1-->
                       <a
                         class="box1 agrandar-img"
                         tabindex="1"
                         id="img1"
-                        aria-label="presione enter para conocer las imágenes del álbum de Patricia."
+                        aria-label="presione enter para conocer las imágenes del álbum de Graciela."
                         data-lg-size="1280-720"
-                        data-src="https://youtu.be/cPuH09M8CQ4"
-                        data-poster="{{url_for('static', filename = 'img/section3/album-patricia/foto-1.webp')}}"
+                        data-src="https://www.youtube.com/embed/YYwgxUmH4rM"
+                        data-poster="{{url_for('static', filename = 'img/section3/album-graciela/foto-a.webp')}}"
                       >
                         <img
                           loading="lazy"
                           class="img-responsive"
-                          src="{{url_for('static', filename = 'img/section3/album-patricia/foto-1.webp')}}"
+                          src="{{url_for('static', filename = 'img/section3/album-graciela/foto-a.webp')}}"
                         />
                       </a>
+                      
 
-                      {% for photo in albums['patricia'] %}
+                      {% for photo in albums['graciela'] %}
                       <a
                         class="achicar-img"
                         tabindex="-1"
                         id="img{{loop.index}}"
-                        aria-label="Estás dentro del álbum de Patricia. Contenido {{loop.index}} de {{loop.length}}."
+                        aria-label="Estás dentro del álbum de Graciela. Contenido {{loop.index}} de {{loop.length}}."
                         data-lg-size="1280-720"
                         data-src="{{photo.video}}"
                         data-poster="{{ url_for('static', filename = photo.image )}}"
@@ -292,7 +294,7 @@
                   </div>
                 </div>
                 <p>
-                  Seleccione la imagen para acceder a la galería de fotos del álbum de Patricia.
+                  Seleccione la imagen para acceder a la galería de fotos del álbum de Graciela.
                 </p>
               </div>
             </div>
