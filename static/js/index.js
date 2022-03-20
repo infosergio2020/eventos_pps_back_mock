@@ -336,6 +336,13 @@ function custom_popup(titulo, comportamiento, parametro) {
     }
   });
 }
+
+function custom_popup_2(titulo, comportamiento, parametro) {
+  
+}
+
+
+
 function abri_website(url) {
   window.open(url, "_blank");
 }
