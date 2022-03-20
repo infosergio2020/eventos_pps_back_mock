@@ -239,8 +239,65 @@
             <!-- libro 4 -->
             <!-- Album de Patricia -->
             
+            <div class="card-libro libro1">
+              <div class="imgBox">
+                <div class="bark"></div>
 
-            
+                <img
+                  class="photo-not-border"
+                  src="{{url_for('static', filename = 'img/section3/tapas/Tapas_mini_Patri.webp')}}"
+                />
+              </div>
+              <div class="details">
+                <div class="container">
+                  <div class="main-card-body">
+                    <div class="gallery__libro">
+                      <!-- video con su imagen -->
+                      <!-- Album de patricia  video 1-->
+                      <a
+                        class="box1 agrandar-img"
+                        tabindex="1"
+                        id="img1"
+                        aria-label="presione enter para conocer las imágenes del álbum de patricia."
+                        data-lg-size="1280-720"
+                        data-src="https://youtu.be/cPuH09M8CQ4"
+                        data-poster="{{url_for('static', filename = 'img/section3/album-patricia/foto-1.webp')}}"
+                      >
+                        <img
+                          loading="lazy"
+                          class="img-responsive"
+                          src="{{url_for('static', filename = 'img/section3/album-patricia/foto-1.webp')}}"
+                        />
+                      </a>
+
+                      {% for photo in albums['patricia'] %}
+                      <a
+                        class="achicar-img"
+                        tabindex="-1"
+                        id="img{{loop.index}}"
+                        aria-label="Estas dentro del album de Patricia. Contenido {{loop.index}} de {{loop.length}}."
+                        data-lg-size="1280-720"
+                        data-src="{{photo.video}}"
+                        data-poster="{{ url_for('static', filename = photo.image )}}"
+                      >
+                        <img
+                          loading="lazy"
+                          
+                          class="img-responsive"
+                          src="{{url_for('static', filename = photo.image  )}}"
+                        />
+                      </a>
+                      {% endfor %}
+                      
+                    </div>
+                  </div>
+                </div>
+                <p>
+                  Seleccione la imagen para acceder a la galería de fotos del álbum de Patricia.
+                </p>
+              </div>
+            </div>
+
             <!-- libro 5 -->
             <!-- cuaderno de Graciela -->
             <div class="card-libro libro1">
