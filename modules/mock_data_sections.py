@@ -13,7 +13,7 @@ list_sections = [
      },
     #  seccion 3 (fotos impactante,album,testimonios,diarios)
     {
-     "icon":"img/general/otros/flood.png",
+     "icon":"img/general/otros/flood.webp",
      "title": 'Sólo escombros y barro',
      "description": 'Accedé a la continuación de los 4 casos testimoniales. Descubrí los diarios del momento, mirá las fotos compartidas por las personas damnificadas. Y observá un compilado de fotos impactantes de la inundación.',
      },
