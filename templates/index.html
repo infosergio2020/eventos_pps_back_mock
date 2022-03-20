@@ -102,19 +102,12 @@
                               'BASE-width':'500px'
                             });
                             instance.updateHomeScreenConfig({
-                                
                                 bot_avatar_url: "{{url_for('static', filename = 'img/portada/bot.png')}}"
-    
-                                
-                                
                               });
                               // web chat makes an asynchronous request to get need data to render in spanish.
                               instance.updateLocale('es').then(function() {
-                              
                                 instance.render();
                               });
-                              
-                              // instance.render(); 
                               },
                           
                         };
