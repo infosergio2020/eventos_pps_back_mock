@@ -230,13 +230,13 @@ nav {
 }
 .card {
   height: 45rem;
-  width: 95%; 
+  width: 85%; 
   margin: 3.125rem;
   box-shadow: 5px 5px 20px black;
   overflow: hidden;
   position: relative;
 }
-
+ 
 @media (max-width: 932px) {
   .card{
     width: 95%;
