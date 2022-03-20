@@ -2,7 +2,7 @@
 const title_juego1 = 'El sitio web del <strong>Disaster cross</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
 const title_juego2 = 'El sitio web de <strong>Limpiar la ciudad</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
 const title_juego3 = 'El sitio web del <strong>Rompecabezas NBS</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
-const title_juego4 = 'El sitio web de <strong>Inundados (Flooded)</strong> no se encuentra disponible por el momento pero si estás presente en el evento, lo podrás jugar encontrandolo en el escritorio o en la barra de tareas.';
+const title_juego4 = 'El sitio web de <strong>Inundados (Flooded)</strong> no se encuentra disponible por el momento pero si estás presente en el evento, podrás encontrarlo en el escritorio o en la barra de tareas.';
 const title_juego5 = 'El sitio web del <strong>Juego de la memoria</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
 const title_juego6 = 'El sitio web del <strong>Quiz Aprendiendo a prepararme</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
 const title_juego7 = 'El sitio web del <strong>Quiz Mochila de emergencia (Quiz emergency backpack)</strong> se abrirá en una pestaña nueva. ¿Desea continuar?';
@@ -281,7 +281,7 @@ null != e &&
 e = document.getElementById("juego4");
 null != e &&
   e.addEventListener("click", (e) => {
-    custom_popup_2("Oh no!", "de momento no esta disponible el juego de manera online. pero puede descargarlos mediante el siguiente enlace o ir a la barra de tareas y acceder a el solo si esta en el evento.")
+    custom_popup_2("Oh no! \n"+title_juego4 )
 });
 
 
@@ -341,10 +341,9 @@ function custom_popup(titulo, comportamiento, parametro) {
   });
 }
 
-function custom_popup_2(titulo1, descripcion1) {
+function custom_popup_2(titulo1) {
   Swal.fire({
     title: titulo1,
-    text: descripcion1,
     imageUrl: './static/images/ansiedad.png',
     imageWidth: 512,
     imageHeight: 256,
