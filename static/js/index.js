@@ -28,7 +28,7 @@ const title_citadineAZUL = ' El sitio web de Citadine <strong>Catástrofes natur
 const JUEGO1="https://disaster-cross.vercel.app/";
 const JUEGO2="https://ecarletti.github.io/deu/dist/";
 const JUEGO3="https://deu-2021.vercel.app/";
-const JUEGO4="C:\Users\Juego\Desktop\juegos-compilados\Inundados.exe";
+// const JUEGO4="C:\Users\Juego\Desktop\juegos-compilados\Inundados.exe";
 const JUEGO5="https://juego-de-memoria-inundaciones.herokuapp.com";
 const JUEGO6="https://barbicorro.github.io/DEU_2021_Corro_Torres/index.html";
 const JUEGO7="https://dux2021.herokuapp.com/";
@@ -209,11 +209,8 @@ null != e &&
   e.addEventListener("click", (e) => {
     custom_popup(title_juego3, abri_website, JUEGO3);
   });
-var e = document.getElementById("juego4");
-null != e &&
-  e.addEventListener("click", (e) => {
-    custom_popup(title_juego4, abri_website, JUEGO4);
-  });
+
+
 var e = document.getElementById("juego5");
 null != e &&
   e.addEventListener("click", (e) => {
@@ -280,6 +277,13 @@ null != e &&
     custom_popup(title_nacion, abri_website, NACION);
   });
 
+// inundados
+e = document.getElementById("juego4");
+null != e &&
+  e.addEventListener("click", (e) => {
+    custom_popup_2("Oh no!", "de momento no esta disponible el juego de manera online. pero puede descargarlos mediante el siguiente enlace o ir a la barra de tareas y acceder a el solo si esta en el evento.")
+});
+
 
 
 
@@ -337,8 +341,15 @@ function custom_popup(titulo, comportamiento, parametro) {
   });
 }
 
-function custom_popup_2(titulo, comportamiento, parametro) {
-  
+function custom_popup_2(titulo1, descripcion1) {
+  Swal.fire({
+    title: titulo1,
+    text: descripcion1,
+    imageUrl: './static/images/ansiedad.png',
+    imageWidth: 512,
+    imageHeight: 256,
+    imageAlt: 'oh no',
+  })
 }
 
 
