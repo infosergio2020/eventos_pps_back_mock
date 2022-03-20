@@ -349,6 +349,13 @@ function custom_popup_2(titulo1, descripcion1) {
     imageWidth: 512,
     imageHeight: 256,
     imageAlt: 'oh no',
+    
+    backdrop: `
+      rgba(0,0,123,0.4)
+      url("./static/images/demo-142x170.gif")
+      left top
+      no-repeat
+    `
   })
 }
 
