@@ -223,7 +223,7 @@ list_album = {
        {
             "image":'img/section3/album-gabriela/Foto-32.webp',
             "video":'#',
-            "descripcion": "labarropa_destruida."
+            "descripcion": "lavarropa_destruida."
         },
        ],
     "graciela": [
