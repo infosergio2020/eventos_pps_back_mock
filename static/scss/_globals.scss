@@ -1,0 +1,349 @@
+// @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap");
+@import url("./../scss/generics/_funciones.scss");
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* Now 10px = 1rem! */
+  scroll-behavior: smooth;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  @include background-template("../img/general/cruce_de_inundacion_2.webp");
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: calc(0.84em + 1vw); //font responsive
+  color: #ffffff;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+p {
+  color: #ffffff;
+  padding: 0 1rem;
+}
+.p-10 {
+  font-size: calc(0.19em + 1vw);
+}
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-weight: bold;
+  text-align: center;
+}
+h5 {
+  margin: 0;
+  font-weight: bold;
+  font-size: calc(1.8em + 1vw);
+}
+h1 {
+  font-size: calc(1.8em + 1vw);
+}
+h2 {
+  font-size: calc(1.4em + 1vw);
+}
+h3 {
+  font-size: calc(1em + 1vw);
+}
+h4 {
+  font-size: calc(0.8em + 1vw);
+}
+nav ul a {
+  font-size: calc(0.8em + 1vw);
+}
+small,
+.text_small {
+  font-size: calc(0.6em + 1vw);
+}
+@media (min-width: 720px) {
+  nav ul a {
+    font-size: calc(0.08em + 1vw);
+  }
+  small,
+  .text_small {
+    font-size: calc(0.06em + 1vw);
+  }
+}
+img {
+  max-width: 100%;
+  border-radius: 0.5rem;
+  aspect-ratio: attr(width) / attr(height);
+}
+nav {
+  background-color: #003d33;
+}
+.verde__oscuro {
+  background-color: #05241e;
+}
+// utilidades
+.m-cero-auto {
+  margin: 0 auto;
+}
+.no-margin {
+  margin: 0!important;
+}
+.no-padding {
+  padding: 0!important;
+}
+.overflow-y {
+  overflow-y: scroll;
+}
+.line-down {
+  padding-bottom: 2rem;
+  border-bottom: 1px double #000f05;
+}
+
+// utilidades de texto
+.centrar-texto{
+  text-align: center !important; 
+}
+.txt_center {
+  text-align: center !important;
+}
+.txt_justify {
+  text-align: justify !important;
+}
+.txt_left {
+  text-align: left !important;
+}
+.txt_white {
+  color: #ffffff !important;
+}
+.txt-left-sidebar {
+  width: 60%;
+  text-align: start;
+}
+// utilidad de altura
+.h-460 {
+  height: 460px;
+}
+// utilidades de imagen
+.w-90{
+  width: 90%!important;
+}
+
+.wh-42 {
+  width: 42px;
+  height: 42px;
+}
+.wh-24 {
+  width: 24px;
+  height: 24px;
+}
+.wh-12-9 {
+  width: 12px;
+  height: 9px;
+}
+.wh-30 {
+  width: calc(2.5em + 1vw);
+  height: calc(2.5em + 1vw);
+}
+.wh-37 {
+  width: calc(2.9em + 1vw);
+  height: calc(2.9em + 1vw);
+}
+.wh-88 {
+  width: calc(4em + 1vw);
+  height: calc(4em + 1vw);
+}
+.wh-127 {
+  width: calc(5em + 1vw);
+  height: calc(7em + 1vw);
+}
+.wh-127g {
+  height: calc(7em + 1vw);
+}
+
+.wh-256 {
+  width: calc(6.5em + 1vw);
+  height: calc(6.5em + 1vw);
+}
+
+.wh-70p{
+	width: 100%;
+}
+
+@media (min-width:768px) {
+	.wh-70p{
+		height: 70%;
+		width: 70%;
+	}
+}
+
+.contenedor__text {
+  word-wrap: break-word;
+}
+.a-link {
+  color: #2196f3;
+}
+// juegos
+.container-juego {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.intro {
+  padding: .5rem;
+  height: 50%;
+  width: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  background: rgb(27, 27, 27, 0.5);
+  color: white;
+  bottom: -20rem;
+  transition: 0.5s;
+}
+
+.intro h2{
+  font-size: 2.8rem;
+}
+
+
+@media (min-width: 768px){
+  .intro h2{
+    font-size: 2.4rem;
+  }
+  .intro p{
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 931px) and (max-width: 1270px) {
+  .container-juego {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+  .card{
+    width: 30rem;
+    height: 40rem;
+  }
+}
+.img-juego {
+  height: 50rem;
+  width: 50rem;
+  border-radius: 3px;
+}
+.card {
+  height: 45rem;
+  width: 85%; 
+  margin: 3.125rem;
+  box-shadow: 5px 5px 20px black;
+  overflow: hidden;
+  position: relative;
+}
+ 
+@media (max-width: 932px) {
+  .card{
+    width: 95%;
+    height: 55rem;
+  }
+  .container-juego {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+  }
+  .img-juego {
+    height: 55rem;
+    width: 80rem;
+    border-radius: 3px;
+  }
+}
+.verde-4 {
+  border-radius: 0.25em;
+}
+.esconder-detail {
+  font-size: 20px;
+  margin: 20px 0;
+  visibility: hidden;
+  opacity: 0;
+}
+
+div[aria-labelledby]{
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+.card:hover .intro {
+  height: 100%;
+  bottom: 0rem;
+  background: black;
+}
+.card:hover p {
+  opacity: 1;
+  visibility: visible;
+}
+.card:hover .esconder-detail {
+  opacity: 1;
+  visibility: visible;
+}
+.card:hover img {
+  transform: scale(1.1) rotate(-3deg);
+}
+
+#hereYouAre{
+  // border: 4px solid red!important;
+  background-color: #004D40;
+}
+
+.boton a{
+  display: block;
+  // border: 1px solid red;
+}
+
+.no-border{
+  border-radius: 0!important;
+}
+
+
+ 
+// footer
+.footer__centrar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-padding{
+	padding: 3rem 3rem!important;
+}
+
+// texto
+
+*{line-height: 1.5em !important;}
+
+// p{margin-bottom: 2em !important;}
+
+*{letter-spacing: 0.09em !important;}
+
+@media (min-width: 720px) {
+	*{word-spacing: 0.09em !important;}
+
+}
+
+//btn del index arriba
+@media (min-width:768px) {
+  .btn-arriba{
+    position: absolute;
+    right: 2rem;
+  }  
+}
+
+
+.contenedor-index{
+  margin-top: 4rem;
+  bottom: 0rem;
+}
+
+
+.no-list{
+  padding: 0 1rem;
+  padding-inline-start:30px;
+}

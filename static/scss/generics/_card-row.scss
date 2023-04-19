@@ -1,0 +1,29 @@
+.main-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+    border-radius: 1.5rem;
+    margin-top: 2rem;
+}
+.main-section:last-of-type{
+    margin-bottom: 3rem;
+}
+.main-section-img{
+    display: flex;
+    justify-content: center;
+    // flex: 0 0 calc(29% - 1rem);
+    flex: 0 0 calc(31%);
+}
+.main-section-info{
+    flex: 0 0 calc(70% - 1rem);
+}
+.main-section-icon{
+    height:82px; 
+    // background-color: #00695C; 
+    border-radius: 100%; 
+    padding: .5rem;
+}
+.paddin{
+    margin-top: 40rem;
+}

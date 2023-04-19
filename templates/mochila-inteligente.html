@@ -1,0 +1,88 @@
+  <!-- Contenedor del testimonio -->
+  {% extends 'partials/_layout.html' %}
+  {% block body %}
+  <!-- Info del Contenedor del video-->
+  <main>
+   
+        <div class="main-card">
+          <div class="main-card-body">
+            <div id="afiche-header" class="afiche__head">
+              <h1 id="contenido" tabindex="0" class="centrar-texto">Mochila inteligente de supervivencia</h1>
+            </div>
+            <div tabindex="0" aria-label="Reproductor de video" class="contenedor-video">
+                <!-- <div class="px-video-container" id="myvid">
+                    <iframe width="100%" 
+                                height="100%" 
+                                src="https://www.youtube.com/embed/6wSfv4MV8MQ" 
+                                title="YouTube video player" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                    </iframe>
+                </div> -->
+                <!-- detalles del video -->
+                <div  class="video__informacion">
+                    <!-- <h2 tabindex="0" class="no-margin"><span> Detalles del video: </span> </h2> -->
+                    <div  tabindex="0" class="flex__container_dondeir">
+                      <p >
+                        Vení a armar una mochila de emergencia interactuando con una mochila inteligente. Consiste en agregar a una mochila real, tecnología de Internet de las cosas (IoT) para que reaccione mediante vibración, sonido y luces, si un elemento es esencial o no, o sea si es apropiado o no para una situación de emergencias. El boceto de esta propuesta, se muestra en la siguiente imágen.
+                      </p>
+                    </div>
+                    
+                    <div class="grid__columna grid__image mg-bottom">
+                      <div class="grid__image small">
+                          <img tabindex="0" role="img" width="70%" height="70%" loading="lazy" src="{{url_for('static', filename = 'img/afiches/mochila1.webp')}}" aria-label="imagen Circuitos de prueba ( protoboard conectado con leds y una bocina. Todo esto mediante cables), placa arduino y placa sensor RFID)." alt="imagen Circuitos de prueba ( protoboard conectado con leds,una bocina todo esto mediante cables), placa arduino y placa sensor RFID).">
+                    
+                          <small class="contenedor__text">
+                            <p>
+                              Foto: Circuitos de prueba.
+                            </p>
+
+                          </small>
+                      </div>       
+                    </div>
+                      <div  class="flex__container_dondeir">
+                        <p>
+                          Dos mochilas utilizan tecnología RFID para reconocer las etiquetas que tienen los distintos objetos y reaccionar según si son adecuadas o no. Y hay una tercera mochila con reconocimiento de imágenes.
+                        </p>
+                      </div>
+                    
+                    <!-- 3 imagenes -->
+                    <div  class="grid__container__2">
+                    <div class="grid__columna grid__image mg-bottom">
+                      <div class="grid__image small">
+                          <img role="img" width="70%" height="70%" loading="lazy" src="{{url_for('static', filename = 'img/afiches/mochila.webp')}}" aria-label="Esquema demostrativo del funcionamiento." alt="Foto: esquema demostrativo del funcionamiento.">
+                          <small class="contenedor__text">
+                            <p tabindex="0"> Foto: Esquema demostrativo del funcionamiento.</p>
+                          </small>
+                      </div>
+                  </div>
+                  </div>
+                  <div class="grid__container2 no-margin">
+                  <div class="grid__columna grid__image mg-bottom">
+                      <div class="grid__image small">
+                          <img role="img" width="70%" height="70%" loading="lazy" src="{{url_for('static', filename = 'img/afiches/mochila2.webp')}}" aria-label="Mochila con circuitos y un panel de iluminación led de prueba, montado sobre una mochila negra. Vista del interior de la mochila.">
+                          <small class="contenedor__text">
+                            <p tabindex="0" >Foto: Mochila con circuitos de prueba.</p>
+                          </small>
+                      </div>
+                 </div>
+                 <div class="grid__columna grid__image mg-bottom">
+                      <div class="grid__image small">
+                          <img role="img" width="70%" height="70%" loading="lazy" src="{{url_for('static', filename = 'img/afiches/mochila3.webp')}}" aria-label="Mochila de supervivencia armada. vista del exterior de la mochile. Panel de leds visibles en la parte superior de la mochila. " alt="Foto: mochila de supervivencia armada vista del exterior de la mochile, panel de leds visibles en la parte superior de la mochila.">
+                          <small class="contenedor__text">
+                            <p tabindex="0">Foto: Mochila de supervivencia. </p>
+                          </small>
+                      </div>
+                 </div>
+                </div>
+                </div> 
+            </div>
+          </div>
+        </div>
+        <!-- boton para ir arriba -->
+        {% include ('partials/_button.html') %}  
+  </main>
+  
+ <!-- FIN Info del contenedor de video -->
+ {% endblock %}

@@ -1,0 +1,90 @@
+{% extends 'partials/_layout.html' %}
+{% block body %}
+<!-- Info de la ayuda de la radio-->
+  <main>
+    <div class="main-card">
+    <div class="main-card-body">
+    <div id="afiche-header" class="afiche__head">
+      <h1 tabindex="0" class="centrar-texto text-shadow">
+        La ayuda de la Radio.
+      </h1>
+    </div>
+    <!-- primera fila -->
+    <div  class="grid__texto flex__container2">
+      <div class="caja1">
+        <div tabindex="0">
+        <p>
+          La radio a pesar de todo… No había energía eléctrica, no funcionaban los teléfonos, no había comunicaciones, ni
+          televisión… solo una radio a pilas.
+        </p>
+        <p>
+          “El rol de la radio fue muy importante porque permitieron articular los primeros momentos de
+          Ayuda. Fue una voz solidaria, una voz comunicacional y una voz organizativa”.
+          
+          (Héctor Ortiz, FM RAICES).
+        </p>
+        <p>
+          “La gente empezó a usarnos como una manera de contar lo que necesitaba, lo que le pasaba, lo que hacía falta”.
+          (Carlos Cantoni, FM 103.1).
+        </p>
+        <p>
+          “En este contexto
+          la radio la hizo la gente … entre los que donaban y la gente que necesitaba”.
+          (Matías Sáenz, FM Cielo).
+        </p>
+        <p>
+          “Atendíamos a los vecinos desde la radio, venían en reclamo de ayuda… y declararon el lugar como centro
+          operativo”.
+          (Héctor Ortiz, FM Raices).
+        </p>
+      </div>
+      <div tabindex="0">
+        <p>
+          “…se privilegió la parte informativa y se relegó la musical… Fuimos un puente”. (Sebastián Carattoli, FM 92.1).
+        </p>
+        <p>
+          “Levantamos la programación habitual…Teníamos mucha información por el contacto directo que generamos con las
+          organizaciones civiles”.
+          (Juan Salvador Delu, Radio Futura).
+
+        </p>
+      </div>
+      <div  class="grid__container__3">
+      <!-- img 1 -->
+      <div class="grid__columna grid__image mg-bottom">
+        <div  class="grid__image small">
+            <img tabindex="0" width="100%" height="100%" role="img" src="{{url_for('static', filename = 'img/afiches/radio-Imagen1.webp')}}" aria-label="Radio portatil Philco PRM60 AM - FM analógica. 1 de 3." alt="Foto: Radio portatil Philco PRM60 AM - FM analógica. 1 de 3.">
+            <small class="contenedor__text">
+              Foto: Radio portatil Philco PRM60 AM - FM analógica.
+            </small>
+        </div>
+      </div>
+      <!-- img 2 -->
+      <div class="grid__columna grid__image mg-bottom">
+            <div class="grid__image small">
+                <img width="100%" height="100%" tabindex="0" role="img" src="{{url_for('static', filename = 'img/afiches/radio-Imagen2.webp')}}" aria-label="Radio Portatil Winco Dual AM - FM analógica. 2 de 3." alt="Foto: Radio Portatil Winco Dual AM - FM analógica.">
+                <small class="contenedor__text">
+                  Foto: Radio Portatil Winco Dual AM - FM analógica.
+                </small>
+            </div>
+      </div>
+      <!-- img 3 -->
+      <div class="grid__columna grid__image mg-bottom">
+        <div class="grid__image small">
+            <img width="100%" height="100%"  tabindex="0" role="img" src="{{url_for('static', filename = 'img/afiches/radio-Imagen3.webp')}}" aria-label="Radio Portatil Sony Icf-p36 AM - FM analógica. 3 de 3." alt="Foto: Radio Portatil Sony Icf-p36 AM - FM analógica.">
+            <small class="contenedor__text">
+              Foto: Radio Portatil Sony Icf-p36 AM - FM analógica.
+            </small>
+        </div>       
+      </div>
+    </div>
+      <!-- fin de las imagenes -->
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- boton para volver a arriba -->
+    {% include ('partials/_button.html') %}
+  </main>
+
+  {% endblock %}

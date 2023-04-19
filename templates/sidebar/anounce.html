@@ -1,0 +1,65 @@
+  <!-- Contenedor del testimonio -->
+  {% extends 'partials/_layout.html' %}
+  {% block body %}
+  <!-- Info de novedades-->
+    <main>
+        <div class="container">
+            <div class="main-card">
+                <div id="anounce" class="main-card-body" >
+                    
+                                      
+                    
+                      <div class="afiche__head">
+                        <h1 id="contenido" tabindex="0">Novedades</h1>
+                      </div>
+                      <div class="main-card-img-container line-down">
+                        
+                        <img tabindex="0" role="img"  aria-label="imagen de un megáfono." alt="imagen de un megáfono." class="main-section-icon" src="{{url_for('static', filename = 'img/general/otros/novedades1.webp')}}" height="88px" alt="img 1">
+                        <img tabindex="0" role="img"  aria-label="imagen de una libreta." alt="imagen de una libreta." class="main-section-icon" src="{{url_for('static', filename = 'img/general/otros/novedades2.webp')}}" height="88px" alt="img 2">
+                        <img tabindex="0" role="img"  aria-label="imagen de un diario." alt="imagen de un diario." class="main-section-icon" src="{{url_for('static', filename = 'img/general/otros/novedades3.webp')}}" height="88px" alt="img 3">
+                    </div>  
+                    <div tabindex="0" class="main-card-info">
+                    <p>
+                        El sentido de la exhibición es totalmente educativo. Es una propuesta pedagógica con estrategias didácticas, lúdicas e innovativas, para reflexionar sobre la inundación del 2 de abril de 2013, ocurrida en la ciudad de La Plata y alrededores, para que no se olvide y que no se repita. 
+                    </p>
+                    <p>    
+                        Brinda la posibilidad de aprender de las experiencias de sobrevivientes y testigos, de poder escuchar sus voces, relatos, testimonios, cómo lo vivieron, cómo lo sobrellevaron.
+                    
+                    <p> 
+                        Te invitamos a que vengas a visitarnos, descubrir sobre gestión y comunicación de riesgos de inundación basada en ciencia ciudadana.
+                    </p>
+                    <p>
+                        Vas a encontrar un  mapa digital donde se ubican geográficamente  las distintas entrevistas realizadas y conocerás sus testimonios. 
+                    </p>
+                    <p>   
+                        Podrás observar un simulador sobre el nivel de agua ingresado en las casas por causa de la inundación.
+                    </p>
+                    <p>   
+                        Tendrás a disposición álbumes interactivos, con fotos compartidas por las personas entrevistadas, con código QR para escuchar sus relatos.
+                    </p>
+                    <p>
+                        Vení a armar  una mochila de emergencia con los elementos esenciales. Es interactiva, inteligente y tiene distintas reacciones acorde a los objetos que le quieras poner.
+                    </p>
+                    <p>   
+                        Además, hay juegos sobre inundaciones , sobre la gestión de residuos, soluciones basadas en la naturaleza, entre otras propuestas interactivas más.
+                    </p>
+                    <p>   
+                        Los posters informativos  encontrarás QR para poder acceder al audio de los mismos.
+                    </p>
+                    <p>       
+                        Muchos de estos materiales educativos interactivos que se disponen  en el evento, fueron realizados en forma multidisciplinaria. Participaron en la creación y desarrollo estudiantes de la Facultad de Informática, graduados de Ingeniería y Bellas Artes de la UNLP. 
+                    </p>
+                    
+                    <p>   
+                        También está a disposición el simulador de realidad aumentada Sandbox para analizar cómo afecta el relieve en la vertiente de las aguas. UIDET Hidromecánica, Departamento de Hidráulica de la Facultad de Ingeniería, gentilmente nos lo compartió.
+                     </p>
+                   
+                    </div>
+                </div>
+            </div>
+          </div>
+          <!-- boton para ir arriba -->
+          {% include ('partials/_button.html') %}
+    </main>
+
+  {% endblock %}

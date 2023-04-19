@@ -1,0 +1,359 @@
+<!-- Contenedor del testimonio -->
+{% extends 'partials/_layout.html' %} {% block body %}
+<!-- Info de galeria de fotos-->
+<main>
+  <div class="container">
+    <div class="main-card">
+      <div class="main-card-body">
+        <div id="afiche-header" class="afiche__head">
+          <h1 id="contenido" tabindex="0" class="centrar-texto">
+            Álbum de fotos
+          </h1>
+        </div>
+        <div tabindex="0" class="video__descripcion">
+          <p>
+            Las personas entrevistadas compartieron fotos sobre la tragedia del
+            2 de abril. Algunas no tuvieron registro fotográfico, porque era tal
+            la desesperación del momento que no podían sacar fotos. Otras
+            personas, directamente no querían buscar las fotos, porque no podían
+            volverlas a ver otra vez, directamente no pudieron. Les agradecemos
+            mucho a todas, porque sabemos el dolor que implica volver a
+            observarlas y a quienes aún no pueden, lo entendemos profundamente.
+          </p>
+          <p>También se dispone del cuaderno de Graciela, quien anotó desde el 2013 los avances de las obras hidráulicas de la ciudad de La Plata y alrededores.</p>
+          <p>
+            Seleccione cualquiera de los 5 álbumnes y luego toque la foto del
+            álbum para entrar dentro de la galería de fotos y sus explicaciones.
+          </p>
+          
+        </div>
+        <!-- comienzo de la galeria -->
+        <div class="margenes">
+          <div class="libro-container">
+            <!-- libro 1 -->
+            <!-- Album de patricia -->
+
+            <div class="card-libro libro1">
+              <div class="imgBox">
+                <div class="bark"></div>
+
+                <img
+                  class="photo-not-border"
+                  src="{{url_for('static', filename = 'img/section3/tapas/Tapas_mini_Patri.webp')}}"
+                />
+              </div>
+              <div class="details">
+                <div class="container">
+                  <div class="main-card-body">
+                    <div class="gallery__libro">
+                      <!-- video con su imagen -->
+                      <!-- Album de patricia  video 1-->
+                      <a
+                        class="box1 agrandar-img"
+                        tabindex="1"
+                        id="img1"
+                        aria-label="presione enter para conocer las imágenes del álbum de Patricia."
+                        data-lg-size="1280-720"
+                        data-src="https://youtu.be/cPuH09M8CQ4"
+                        data-poster="{{url_for('static', filename = 'img/section3/album-patricia/1.webp')}}"
+                      >
+                        <img
+                          loading="lazy"
+                          class="img-responsive"
+                          src="{{url_for('static', filename = 'img/section3/album-patricia/1.webp')}}"
+                        />
+                      </a>
+
+                      {% for photo in albums['patricia'] %}
+                      <a
+                        class="achicar-img"
+                        tabindex="-1"
+                        id="img{{loop.index}}"
+                        aria-label="Estás dentro del álbum de Patricia. Contenido {{loop.index}} de {{loop.length}}."
+                        data-lg-size="1280-720"
+                        data-src="{{photo.video}}"
+                        data-poster="{{ url_for('static', filename = photo.image )}}"
+                      >
+                        <img
+                          loading="lazy"
+                          class="img-responsive"
+                          src="{{url_for('static', filename = photo.image  )}}"
+                        />
+                      </a>
+                      {% endfor %}
+                      
+                    </div>
+                  </div>
+                </div>
+                <p>
+                  Seleccione la imagen para acceder a la galería de fotos del álbum de Patricia.
+                </p>
+              </div>
+            </div>
+            <!-- libro 2 -->
+            <!-- Album de amina/andrea -->
+            <div class="card-libro libro1">
+              <div class="imgBox">
+                <div class="bark"></div>
+
+                <img
+                  class="photo-not-border"
+                  src="{{url_for('static', filename = 'img/section3/tapas/Tapas_mini_Andrea.webp')}}"
+                />
+              </div>
+              <div class="details">
+                <div class="container">
+                  <div class="main-card-body">
+                    <div class="gallery__libro">
+                      <!-- video con su imagen -->
+                      <!-- Album de amina/andrea  video 1-->
+                      <a
+                        class="box1 agrandar-img"
+                        tabindex="1"
+                        id="img1"
+                        aria-label="presione enter para conocer las imágenes del álbum de Amina y andrea."
+                        data-lg-size="1280-720"
+                        data-src="https://youtu.be/UHvdksGIkSg"
+                        data-poster="{{url_for('static', filename = 'img/section3/album-andrea/foto-1.webp')}}"
+                      >
+                        <img
+                          loading="lazy"
+                          class="img-responsive"
+                          src="{{url_for('static', filename = 'img/section3/album-andrea/foto-1.webp')}}"
+                        />
+                      </a>
+
+                      {% for photo in albums['amina_andrea'] %}
+                      <a
+                        class="achicar-img"
+                        tabindex="-1"
+                        id="img{{loop.index}}"
+                        aria-label="Estás dentro del álbum de Amina y andrea. Contenido {{loop.index}} de {{loop.length}}."
+                        data-lg-size="1280-720"
+                        data-src="{{photo.video}}"
+                        data-poster="{{ url_for('static', filename = photo.image )}}"
+                      >
+                        <img
+                          loading="lazy"
+                          class="img-responsive"
+                          src="{{url_for('static', filename = photo.image  )}}"
+                        />
+                      </a>
+                      {% endfor %}
+                      
+                    </div>
+                  </div>
+                </div>
+                <p>
+                  Seleccione la imagen para acceder a la galería de fotos del álbum de Andrea y Amina.
+                </p>
+              </div>
+            </div>
+            <!-- libro 3 -->
+            <!-- Album de Gabriela -->
+            <div class="card-libro libro1">
+              <div class="imgBox">
+                <div class="bark"></div>
+
+                <img
+                  class="photo-not-border"
+                  src="{{url_for('static', filename = 'img/section3/tapas/Tapas_mini_Gabriela.webp')}}"
+                />
+              </div>
+              <div class="details">
+                <div class="container">
+                  <div class="main-card-body">
+                    <div class="gallery__libro">
+                      <!-- video con su imagen -->
+                      <!-- Album de gabriela  video 1-->
+                      <a
+                        class="box1 agrandar-img"
+                        tabindex="1"
+                        id="img1"
+                        aria-label="presione enter para conocer las imágenes del álbum de gabriela."
+                        data-lg-size="1280-720"
+                        data-src="https://youtu.be/19G84ZXZwJc"
+                        data-poster="{{url_for('static', filename = 'img/section3/album-gabriela/Foto-2.webp')}}"
+                      >
+                        <img
+                          loading="lazy"
+                          class="img-responsive"
+                          src="{{url_for('static', filename = 'img/section3/album-gabriela/Foto-2.webp')}}"
+                        />
+                      </a>
+
+                      {% for photo in albums['gabrielaFotos'] %}
+                      <a
+                        class="achicar-img"
+                        tabindex="-1"
+                        id="img{{loop.index}}"
+                        aria-label="Estás dentro del álbum de Gabriela. Contenido {{loop.index}} de {{loop.length}}."
+                        data-lg-size="1280-720"
+                        href="{{ url_for('static', filename = photo.image )}}"
+                      >
+                        <img
+                          role="img"
+                          loading="lazy"
+                          width="50%" height="50%" 
+                          style="margin-top: -35rem;"
+                          alt={{photo.descripcion}}
+                          class="img-responsive"
+                          src="{{url_for('static', filename = photo.image  )}}"
+                        />
+                       
+                      </a>
+                      {% endfor %}
+
+                      <!-- para los videos -->
+                      {% for photo in albums['gabrielaVideos'] %}
+                      <a
+                        class="achicar-img"
+                        tabindex="-1"
+                        id="img{{loop.index}}"
+                        aria-label="Estás dentro del álbum de Gabriela. Contenido {{loop.index}} de {{loop.length}}."
+                        data-lg-size="1280-720"
+
+                        data-src="{{photo.video}}"
+                        data-poster="{{ url_for('static', filename = photo.image )}}"
+                        
+                      >
+
+                        <img
+                          loading="lazy"
+
+                          class="img-responsive"
+                          src="{{url_for('static', filename = photo.image  )}}"
+                        />
+                      </a>
+                      {% endfor %}
+                     
+                      
+                    </div>
+                  </div>
+                </div>
+                <p>
+                  Seleccione la imagen para acceder a la galería de fotos del álbum de Gabriela.
+                </p>
+              </div>
+            </div>
+            <!-- libro 4 -->
+            <!-- Album de Graciela -->
+            
+            
+            <div class="card-libro libro1">
+              <div class="imgBox">
+                <div class="bark"></div>
+
+                <img
+                  class="photo-not-border"
+                  src="{{url_for('static', filename = 'img/section3/tapas/Tapas_mini_Graciela.webp')}}"
+                />
+              </div>
+              <div class="details">
+                <div class="container">
+                  <div class="main-card-body">
+                    <div class="gallery__libro">
+                      <!-- video con su imagen -->
+                      <!-- Album de Graciela  video 1-->
+                      <a
+                        class="box1 agrandar-img"
+                        tabindex="1"
+                        id="img1"
+                        aria-label="presione enter para conocer las imágenes del álbum de Graciela."
+                        data-lg-size="1280-720"
+                        data-src="https://www.youtube.com/embed/YYwgxUmH4rM"
+                        data-poster="{{url_for('static', filename = 'img/section3/album-graciela/foto-a.webp')}}"
+                      >
+                        <img
+                          loading="lazy"
+                          class="img-responsive"
+                          src="{{url_for('static', filename = 'img/section3/album-graciela/foto-a.webp')}}"
+                        />
+                      </a>
+                      
+
+                      {% for photo in albums['graciela'] %}
+                      <a
+                        class="achicar-img"
+                        tabindex="-1"
+                        id="img{{loop.index}}"
+                        aria-label="Estás dentro del álbum de Graciela. Contenido {{loop.index}} de {{loop.length}}."
+                        data-lg-size="1280-720"
+                        data-src="{{photo.video}}"
+                        data-poster="{{ url_for('static', filename = photo.image )}}"
+                      >
+                        <img
+                          loading="lazy"
+                          class="img-responsive"
+                          src="{{url_for('static', filename = photo.image  )}}"
+                        />
+                      </a>
+                      {% endfor %}
+                      
+                    </div>
+                  </div>
+                </div>
+                <p>
+                  Seleccione la imagen para acceder a la galería de fotos del álbum de Graciela.
+                </p>
+              </div>
+            </div>
+
+            <!-- libro 5 -->
+            <!-- cuaderno de Graciela -->
+            <div class="card-libro libro1">
+                <div class="imgBox">
+                  <div class="bark"></div>
+  
+                  <img
+                    class="photo-not-border"
+                    src="{{url_for('static', filename = 'img/section3/cuaderno-graciela/tapa1.webp')}}"
+                  />
+                </div>
+                <div class="details">
+                  <div class="container">
+                    <div class="main-card-body">
+                      <div class="gallery__libro">
+                        <!-- video con su imagen -->
+                        <!-- cuaderno de Graciela  video 1-->
+                       
+  
+                        {% for photo in albums['graciela_book'] %}
+                        <a
+                          class="box1 agrandar-img achicar_mas"
+                          tabindex="1"
+                          id="img{{loop.index}}"
+                          aria-label="Estás dentro del cuaderno de Graciela. Contenido {{loop.index}} de {{loop.length}}."
+                          data-lg-size="1280-720"
+                          
+                          data-src="{{photo.video}}"
+                          data-poster="{{ url_for('static', filename = photo.image )}}"
+                        >
+                          <img
+                            loading="lazy"
+                            class="img-responsive"
+                            src="{{url_for('static', filename = photo.image  )}}"
+                          />
+                        </a>
+                        {% endfor %}
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <p>
+                    Seleccione la imagen para acceder a la galería de fotos del cuaderno de Graciela.
+                  </p>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- boton para ir arriba -->
+  {% include ('partials/_button.html') %}
+</main>
+
+<!-- script -->
+
+{% endblock %}

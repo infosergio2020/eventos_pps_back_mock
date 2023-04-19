@@ -1,0 +1,107 @@
+{% extends 'partials/_layout.html' %}
+{% block body %}
+<!-- Info de reflexiones de los entrevistados-->
+  <main>
+    <div class="main-card">
+    <div class="main-card-body">
+    <div id="afiche-header" class="afiche__head">
+      <h1 tabindex="0" class="centrar-texto text-shadow"> Reflexiones de las personas entrevistadas.
+      </h1>
+    </div>
+    <div tabindex="0" class="flex__container2">
+      <p>Luego de tanto dolor por las vidas perdidas, daños emocionales, psicológicos, físicos y económicos expresados por los entrevistados, varios aún siguen en proceso de recuperación. A todos les dejó marcas imborrables en su memoria, y muchos rescataron lo siguiente.
+      </p>
+    </div>
+    <!-- primera fila -->
+    <div  class="grid__texto flex__container2">
+        <div tabindex="0" class="caja1"> 
+            <p>
+                “Prestar atención a la naturaleza. Antes de la tormenta vi un montón de rayitas negras sobre la pared del patio. Eran lombrices que subían por el muro”. “….y el tortugo que se movía para todos lados, cuando ya había empezado su invernación” (Gabriela B.).
+            </p>  
+        </div>
+        
+        <div tabindex="0" class="caja2">
+              <img width="50%" height="50%" role="img" src="{{url_for('static', filename = 'img/afiches/memoria2-Imagen1.webp')}}" aria-label="Perfil de Gabriela." alt="Imagen de gabriela.">
+        </div>  
+    </div>
+    <!-- segunda fila -->
+    <div tabindex="0" class="grid__texto flex__container2">
+        <div class="caja2">
+              <img width="50%" height="50%" role="img" aria-label="Imagen de perfil de Azucena." alt="Imagen de Azucena." class="wh-40"  src="{{url_for('static', filename = 'img/afiches/memoria2-Imagen2.webp')}}">
+        </div>  
+        <div class="caja1">
+           <p>
+                “La inundación a mí me cambió y me cambió mucho… me acercó también a lugares que yo nunca había ido… Colaboré después de un 
+                año entero con la Facultad de Hidráulica y aprendí mucho, participando en charlas con los profesores”. (Azucena) 
+          </p>
+        </div>
+    </div>
+    <!-- tercera fila -->
+    <div tabindex="0" class="grid__texto flex__container2">
+      <div class="caja2">
+            <img width="50%" height="50%" role="img" aria-label="Imagen de perfil de Gisela." alt="Imagen de Gisela." src="{{url_for('static', filename = 'img/afiches/memoria2-Imagen3.webp')}}" alt="">
+      </div>  
+      <div class="caja1">
+          <p>
+              “Me vine a vivir a La Plata para estudiar en la facultad. Estudié, me gradué, me casé y tuve a mis hijas aquí.  Gracias a los vecinos, sobreviví con mi beba de meses a las inundaciones. A partir de entonces me sentí realmente una platense. (Gisela)
+          </p>
+      </div>
+    </div>
+
+    <!-- cuarta fila -->
+    <div  class="grid__texto flex__container2">
+        <div tabindex="0" class="grid__texto flex__container3">
+            <!-- columna 1 -->
+            <div class="caja10">
+              <img width="50%" height="50%" role="img" aria-label="Imagen de perfil de Betina." alt="Imagen de Betina." src="{{url_for('static', filename = 'img/afiches/memoria2-Imagen4.webp')}}">
+            </div>  
+            <div class="caja1">
+            <p>
+              “Aprendí que podemos sobrellevar muchas más cosas de las que pensamos que éramos capaces”. (Betina Mc A.)
+            </p>
+            </div>
+        </div>
+
+        <div tabindex="0" class="grid__texto flex__container3">
+            <!-- columna 2 -->
+            <div class="caja10">
+              <img width="50%" height="50%" role="img" aria-label="Imagen de perfil de Nancy." alt="Imagen de Nancy." src="{{url_for('static', filename = 'img/afiches/memoria2-Imagen5.webp')}}">
+            </div>  
+            <div class="caja1">
+                <p>
+                  “Quedó una participación
+                  muy fuerte a nivel de 
+                  Barrio. Nos unimos mucho con los vecinos a partir de ese episodio”. “Transformarlo en algo positivo”. (Nancy)
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- quinta fila -->
+    <div tabindex="0" class="grid__texto flex__container2">
+      <div class="caja1"> 
+          <p>
+            “Que hay que tener amor hacia el prójimo. Y si vos podes dar algo, hay que darlo, no esconderlo o mirar para un costado. Creo que el ser humano está acá para eso. Tenemos que apoyarnos entre nosotros, sino ¿quién lo va hacer?. Nadie. Si vos pensás en vos, yo pienso en mi y el otro en él, cuando necesites algo vas a estar realmente solo. Es así. (Estefanía C.)
+          </p>  
+      </div>
+      
+      <div class="caja2">
+            <img width="50%" height="50%" role="img" aria-label="Imagen de perfil de Estefanía." alt="Imagen de Estefanía." src="{{url_for('static', filename = 'img/afiches/memoria2-Imagen6.webp')}}">
+      </div>  
+    </div>
+    <!-- sexta fila -->
+    <div tabindex="0" class="grid__texto flex__container2">
+      <div class="caja2">
+            <img width="50%" height="50%" role="img" aria-label="Imagen de perfil de Marily." alt="Imagen de Marily ." src="{{url_for('static', filename = 'img/afiches/memoria2-Imagen7.webp')}}">
+      </div>  
+      <div class="caja1">
+          <p>
+            “Nos quedó esa cuestión de aprender sobre las zonas bajas y altas de la ciudad, para dónde baja el agua o para dónde suben las calles.  Incluso a un par de amigos que han tenido la posibilidad de comprar su casa le decíamos fíjate que no esté cerca de un arroyo, la altura del terreno, que el agua no esté desembocando hacia esa cuadra y todo así…”. (Marily D.)
+          </p>
+      </div>
+    </div>
+  </div>
+</div>
+        <!-- boton para volver a arriba -->
+        {% include ('partials/_button_anterior.html') %}
+  {% endblock %}

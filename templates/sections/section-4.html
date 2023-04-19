@@ -1,0 +1,99 @@
+{% extends 'partials/_layout.html' %} {% block body %}
+<!-- Info de seccion 4-->
+<main>
+  <div class="container">
+    <div class="main-card" style="margin: 10rem auto">
+      <div class="main-card-header afiche__head">
+        <h1 id="contenido" tabindex="0">
+          Sección 4 - Lecciones aprendidas.
+        </h1>
+      </div>
+      <div class="main-card-body">
+        <div
+          class="main-card-img-container"
+          aria-label="encabezado con fotos. header with photograph's."
+        >
+          <img
+            src="{{url_for('static', filename = 'img/people/section3-1.webp')}}"
+            class="wh-127g"
+            alt="imágen de los testimonios 1."
+          />
+          <img
+            src="{{url_for('static', filename = 'img/people/section3-2.webp')}}"
+            class="wh-127"
+            alt="imágen de los testimonios 2."
+          />
+          
+        </div>
+        <div class="main-container-boton">
+          <a class="boton verde-4" href="/testimonio3">
+            <div
+              class="boton-info"
+              aria-label="Presione enter si desea acceder a Conoce nuestros testimonios: Después de la inundación."
+            >
+              <p>Conoce nuestros testimonios: Después de la inundación</p>
+              <img
+                src="{{url_for('static', filename = 'img/people/webp/handPointUp.webp')}}"
+                class="wh-88"
+                alt="Botón."
+              />
+            </div>
+          </a>
+        </div>
+
+        <div class="main-card-img-container">
+          <img
+            src="{{url_for('static', filename = 'img/section4/urbanFlood.webp')}}"
+            height="100px"
+            alt="Imágen de casa inundada."
+            class="wh-256"
+          />
+        </div>
+        <div class="main-container-boton">
+          <a class="boton verde-4" href="/Why-do-we-flood">
+            <div
+              class="boton-info"
+              aria-label="Presione enter si desea acceder a ¿Por qué nos inundamos?."
+            >
+              <p>¿Por qué nos inundamos?</p>
+              <img
+                src="{{url_for('static', filename = 'img/people/webp/handPointUp.webp')}}"
+                class="wh-88"
+                alt="Botón."
+              />
+            </div>
+          </a>
+        </div>
+
+        <div class="main-card-img-container">
+          <img
+            src="{{url_for('static', filename = 'img/section4/sandbox.webp')}}"
+            class="wh-256"
+            alt="imagen de una sandbox."
+          />
+        </div>
+
+        <div class="main-container-boton">
+          <a class="boton verde-4" href="/sandbox">
+            <div
+              class="boton-info"
+              aria-label="Presione enter si desea acceder a Sandbox."
+            >
+              <p>Sandbox</p>
+              <img
+                src="{{url_for('static', filename = 'img/people/webp/handPointUp.webp')}}"
+                class="wh-88"
+                alt="Botón."
+              />
+            </div>
+          </a>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <!-- boton para ir arriba -->
+  {% include ('partials/_button.html') %}
+</main>
+
+{% endblock %}

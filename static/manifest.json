@@ -1,0 +1,35 @@
+{
+    "name":"GenerarConciencia PWA",
+    "short_name":"GC PWA",
+    "description": "Informarte sobre los desastres naturales en Polonia, Alemania, Republica Dominicana, Chile y Argentina. Descubre que pasó antes, durante y después de la inundación de la Plata en 2013.",
+    "background_color":"#6dcdb1",
+    "theme_color":"#009879",
+    "display":"standalone",
+    "orientation":"portrait",
+    "Scope":"/",
+    "start_url":"/",
+    "icons":[
+        {
+            "src": "./images/icons/tree-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "./images/icons/tree-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "./images/icons/tree-maskable-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "./images/icons/tree-maskable-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }    
+    ]
+}

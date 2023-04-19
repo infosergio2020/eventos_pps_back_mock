@@ -1,0 +1,51 @@
+  <!-- Contenedor del testimonio -->
+  {% extends 'partials/_layout.html' %}
+  {% block body %}
+  <!-- Info de acerca del evento-->
+
+  <main>
+    <div class="container">
+      <div class="main-card">
+        <div id="about" class="main-card-body">
+          
+            <div class="afiche__head">
+              <h1 id="contenido" tabindex="0">El proyecto Citadine</h1> <!--Aca antes tenia de titulo: Acerca del evento-->
+            </div>
+         
+          <div class="main-card-img-container line-down">
+            <img tabindex="0" role="img"  aria-label="imagen de un niño con una idea." alt="imagen de un niño con una idea." class="main-section-icon" src="{{url_for('static', filename = 'img/general/otros/learn.webp')}}" alt="img 1">
+            <img tabindex="0" role="img"  aria-label="imagen de una lupa." alt="imagen de una lupa." class="main-section-icon" src="{{url_for('static', filename = 'img/general/otros/discovery.webp')}}" alt="img 2">
+            <img tabindex="0" role="img"  aria-label="imagen de un calendario." alt="imagen de un calendario." class="main-section-icon" src="{{url_for('static', filename = 'img/general/otros/joinUs.webp')}}" alt="img 3">
+          </div>
+          <div tabindex="0" class="main-card-info h-460 overflow-y">
+            
+            
+            <p>
+              El proyecto Citadine fue seleccionado en el marco de la iniciativa
+              ERANet-LAC EU-CELAC. de la Unión Europea (UE), América Latina y el
+              Caribe (ALC) que han identificado actividades conjuntas de innovación +
+              e investigación. El proyecto tiene Nro.Referecia: ERANet17/ICT2-0059.
+              3rd Multi-Thematic Joint Call 2017/2018. Su ejecución es de Marzo 2019
+              a Marzo 2022. Salió aprobado sin subsidio por el MinCyT-Ministerio de
+              Ciencia, Tecnología e Innovación Argentina.
+              El mismo consiste en recopilar conocimientos y experiencias de sobrevivientes y testigos sobre
+              desastres naturales, centralizarlos y disponerlos mediante un sitio de consulta para las escuelas
+              primarias y secundarias, como también para la comunicación de riesgos a la sociedad y tomadores de
+              decisiones.
+            </p>
+            <p>
+              En esta exhibición, entra en juego la ciencia ciudadana para la comunicación de riesgos: su objetivo es permitir a las personas comprender una situación mediante testimonios y relatos de testigos y sobrevivientes.
+              La exhibición les guiará a través de las experiencias diferentes de cuatro personas. Se compartirán relatos, testimonios, conocimientos, acciones llevadas a cabo y ciertas recomendaciones para encarar este tipo de inundaciones. 
+              Los elementos interactivos y las diferentes formas de informar y aprender hacen que sea una experiencia entretenida para niños y adultos. También habrá soporte visual y auditivo para que esta exposición sea lo más accesible posible.
+          </p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- boton para ir arriba -->
+    {% include ('partials/_button.html') %}
+  </main>
+
+  {% endblock %}

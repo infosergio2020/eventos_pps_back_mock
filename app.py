@@ -1,178 +1,246 @@
-from flask import Flask, render_template, redirect,jsonify
-from flask import request
-from flask.helpers import flash, url_for
-from flask_mysqldb import MySQL
+# comienzo
+from importlib.resources import path
+from flask import Flask, make_response,send_from_directory
+from entorno import config
+from modules.rederizado import CustomRouter
 
-app= Flask(__name__)
-#mysql connection
-app.config['MYSQL_HOST']='localhost'
-app.config['MYSQL_USER']='root'
-app.config['MYSQL_PASSWORD']=''
-app.config['MYSQL_DB']='evento'
-mysql=MySQL(app)
+# compresion de la app
+from flask_compress import Compress
+# CORS
+from flask_cors import CORS, cross_origin
 
-#necesito una clave secreta para mi sesion
-app.secret_key='mysecretkey'
+# creando la instancia del compresor
+compress = Compress()
+
+# instanciando el controlador que se encarga de renderizar
+rutas = CustomRouter()
+
+##Configuracion del app
+app = Flask(__name__)
+app.config.from_object(config)
+
+CORS(app)
+
+compress.init_app(app)
 
 #colocar las rutas antes de correr el servidor
-# LISTA TODAS LAS AREAS
-@app.route('/listArea')
-def list_area():
-    cur=mysql.connection.cursor()
-    cur.execute('SELECT * FROM areas')
-    areas=cur.fetchall();
-    mysql.connection.commit()
-    return jsonify({"areas":areas})
+@app.route('/sw.js')
+def sw():
+    response=make_response(
+                     send_from_directory(directory='static',path='sw.js'))
+    #change the content header file. Can also omit; flask will handle correctly.
+    response.headers['Content-Type'] = 'application/javascript'
+    return response
 
-# AGREGA AREAS NUEVAS
-@app.route('/addArea', methods=['POST'] )
-def add_area():
-    if request.method=='POST':  
-        nombre=request.json['nomb'] 
-        descripcion=request.json['desc'] 
-        lat_area=request.json['lat'] 
-        lng_area=request.json['lng']
+# ruta para service worker
 
-        cur=mysql.connection.cursor()
-        cur.execute('INSERT INTO areas (nombre,descripcion,longitud,latitud) VALUES (%s,%s,%s,%s)',
-        (nombre,descripcion,lng_area,lat_area))
-        mysql.connection.commit()
-        return jsonify({"message":"se agregó correctamente"})
+@app.route('/')
+def Index():
+    return rutas.render_index()
 
-@app.route('/editArea/<id>',methods=['POST'] )
-def edit_area(id):
-    if request.method=='POST':  
-        nom_area=request.json['nomb'] 
-        des_area=request.json['desc']
-        lat_area=request.json['lat'] 
-        lng_area=request.json['lng']
+###########################
+# Para la pc
+###########################
+@app.route('/juegos_pc')
+def Juegos_pc():
+    return rutas.render_juegos_pc()
 
-        
-        cur=mysql.connection.cursor()
-        cur.execute(""" 
-        UPDATE areas
-        SET nombre=%s,descripcion=%s,longitud=%s,latitud=%s
-        WHERE id = %s
-        """, (nom_area,des_area,lng_area,lat_area,id))
-        mysql.connection.commit()
-    return jsonify({"message":"se actulizo????"})
+@app.route('/header_pc')
+def Header_pc():
+    return rutas.render_header_pc()
+###########################
+###########################
 
+@app.route('/testimonio1')
+def Testimonio1():
+    return rutas.render_before_flood()
 
-@app.route('/deleteArea/<id>')
-def delete_area(id):
-    cur=mysql.connection.cursor()
-    cur.execute('DELETE FROM areas where id = {0}'.format(id))
-    mysql.connection.commit()
-    return jsonify({"message":"e ha eliminado el area","id":id})
+@app.route('/testimonio2')
+def Testimonio2():
+    return rutas.render_during_flood()
 
-# ---------------------------------------------------------------------
-# ---------------------------------FOTOS--------------------------------
-# ----------------------------------------------------------------------
+@app.route('/testimonio3')
+def Testimonio3():
+    return rutas.render_after_flood()
 
+@app.route('/desastres-naturales')
+def Desastres_naturales():
+    return rutas.render_citadine_blue()
 
-# LISTA TODAS LAS AREAS
-@app.route('/listFotos')
-def list_fotos():
-    cur=mysql.connection.cursor()
-    cur.execute('SELECT * FROM foto')
-    fotos=cur.fetchall();
-    mysql.connection.commit()
-    return jsonify({"fotos":fotos})
+@app.route('/soluciones-naturales')
+def Soluciones_naturales():
+    return rutas.render_citadine_green()    
 
-# AGREGA AREAS NUEVAS
-@app.route('/addFoto', methods=['POST'] )
-def add_foto():
-    if request.method=='POST':  
-        url_foto=request.json['url'] 
-        descripcion=request.json['desc'] 
+@app.route('/educational-games')
+def Educational_games():
+    return rutas.render_educational_games()
 
-        cur=mysql.connection.cursor()
-        cur.execute('INSERT INTO foto (url,descripcion) VALUES (%s,%s)',
-        (url_foto,descripcion))
-        mysql.connection.commit()
-        return jsonify({"message":"se agregó correctamente"})
+@app.route('/water-level-simulator')
+def Waterlevelsimulator():
+    return rutas.render_agua_simulador()
 
-@app.route('/editFoto/<id>',methods=['POST'] )
-def edit_foto(id):
-    if request.method=='POST':  
-        url=request.json['url'] 
-        des=request.json['desc']
+@app.route('/the-news-of-the-day')
+@cross_origin()
+def Thenewsoftheday():
+    return rutas.render_noticias_dia()
 
-        
-        cur=mysql.connection.cursor()
-        cur.execute(""" 
-        UPDATE foto
-        SET url=%s,descripcion=%s
-        WHERE id_foto = %s
-        """, (url,des,id))
-        mysql.connection.commit()
-    return jsonify({"message":"se actualizo????"})
+@app.route('/Why-do-we-flood')
+def Whydoweflood():
+    return rutas.render_why_do_we_flood()
+
+@app.route('/recomendacion-como-actuar')
+def Recomendacioncomoactuar():
+    return rutas.render_recomendacion()
 
 
-@app.route('/deleteFoto/<id>')
-def delete_foto(id):
-    cur=mysql.connection.cursor()
-    cur.execute('DELETE FROM foto where id_foto = {0}'.format(id))
-    mysql.connection.commit()
-    return jsonify({"message":"e ha eliminado el foto","id":id})
+@app.route('/sandbox')
+def Sandbox():
+    return rutas.render_sandbox()
+
+@app.route('/dondeirjuegos')
+def Donde_ir_juegos():
+    return rutas.render_donde_ir_juegos()
+
+
+@app.route('/dondeir')
+def Where_to_go():
+    return rutas.render_where_to_go()
+
+@app.route('/shocking-photos')
+def Shockingphotos():
+    return rutas.render_shocking_photos()
+
+
+@app.route('/Conclusiones-del-evento')
+def Conclusionesdelevento():
+    return rutas.render_conclusiones()
+
+@app.route('/diarios')
+def Diarios():
+    return rutas.render_diarios()
+
+@app.route('/Inundaciones-en-el-exterior')
+def Inundacionesenelexterior():
+    return rutas.render_inundacion_exterior()
+    
+@app.route('/mapa')
+def Mapa():
+    return rutas.render_mapa()
+
+@app.route('/photo-album')
+def Photoalbum():
+    return rutas.render_photo_album()
+
+@app.route('/mochila-inteligente')
+def MochilaInteligente():
+    return rutas.render_smart_survival()
+
+######################
+# carpeta sections
+#####################                       
+@app.route('/section-1')
+def Section1():  
+    return rutas.render_section_1()
+
+@app.route('/section-2')
+def Section2():  
+    return rutas.render_section_2()
+
+@app.route('/section-3')
+def Section3():  
+    return rutas.render_section_3()
+
+@app.route('/section-4')
+def Section4():  
+    return rutas.render_section_4()
+
+@app.route('/section-5')
+def Section5():  
+    return rutas.render_section_5()
+
+@app.route('/section-6')
+def Section6():  
+    return rutas.render_section_6()
+
+
+######################
+# carpeta menu-deslizante
+#####################                       
+@app.route('/about')
+def About():  
+    return rutas.render_about()
+
+@app.route('/anounce')
+def Anounce():  
+    return rutas.render_announcements()
+
+@app.route('/objetivo')
+def Objetivo():  
+    return rutas.render_objetivo()
+
+@app.route('/recorrido')
+def Recorrido():  
+    return rutas.render_recorrido()    
+
+@app.route('/covid')
+def Covid():  
+    return rutas.render_covid()
+
+@app.route('/nosotros')
+def Nosotros():  
+    return rutas.render_nosotros()
+
+@app.route('/languaje')
+def Languaje():  
+    return rutas.render_languaje()
+
+@app.route('/sections')
+def Sections():  
+    return rutas.render_sections()
 
 
 
-# ---------------------------------------------------------------------
-# ---------------------------------VIDEOS--------------------------------
-# ----------------------------------------------------------------------
+######################
+# carpeta inundacion-exterior
+#####################
+
+@app.route('/inundacion-exterior')
+def inundacion_exterior():  
+    return rutas.render_inundacion_exterior()
+
+@app.route('/alemania')
+def alemania():  
+    return rutas.render_alemania()
+
+@app.route('/chile')
+def chile():  
+    return rutas.render_chile()
+
+@app.route('/polonia')
+def polonia():  
+    return rutas.render_polonia()
 
 
+######################
+# carpeta conclusion del evento
+#####################       
 
+@app.route('/conclusion-del-evento')
+def conclusion():  
+    return rutas.render_conclusiones()
 
-# LISTA TODAS LAS AREAS
-@app.route('/listVideos')
-def list_videos():
-    cur=mysql.connection.cursor()
-    cur.execute('SELECT * FROM video')
-    videos=cur.fetchall();
-    mysql.connection.commit()
-    return jsonify({"videos":videos})
+@app.route('/la-ayuda-de-la-radio')
+def Radio():  
+    return rutas.render_conclusiones_radio()
 
-# AGREGA AREAS NUEVAS
-@app.route('/addVideo', methods=['POST'] )
-def add_video():
-    if request.method=='POST':  
-        url_video=request.json['url'] 
-        descripcion=request.json['desc'] 
+@app.route('/la-importancia-de-la-solidaridad')
+def Soliradidad():  
+    return rutas.render_conclusiones_solidaridad()
 
-        cur=mysql.connection.cursor()
-        cur.execute('INSERT INTO video (url,descripcion) VALUES (%s,%s)',
-        (url_video,descripcion))
-        mysql.connection.commit()
-        return jsonify({"message":"se agregó correctamente"})
+@app.route('/legado-memoria')
+def Legadomemoria():  
+    return rutas.render_conclusiones_legado_memoria()
 
-@app.route('/editVideo/<id>',methods=['POST'] )
-def edit_video(id):
-    if request.method=='POST':  
-        url=request.json['url'] 
-        des=request.json['desc']
-
-        
-        cur=mysql.connection.cursor()
-        cur.execute(""" 
-        UPDATE video
-        SET url=%s,descripcion=%s
-        WHERE id_video = %s
-        """, (url,des,id))
-        mysql.connection.commit()
-    return jsonify({"message":"se actualizo????"})
-
-
-@app.route('/deleteVideo/<id>')
-def delete_video(id):
-    cur=mysql.connection.cursor()
-    cur.execute('DELETE FROM video where id_video = {0}'.format(id))
-    mysql.connection.commit()
-    return jsonify({"message":"se ha eliminado el foto","id":id})
-
-
-
-
-if __name__=='__main__':
-    app.run(port=4000,debug=True)
+@app.route('/reflexiones-de-los-entrevistados')
+def Reflexiones():  
+    return rutas.render_conclusiones_reflexiones()

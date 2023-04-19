@@ -1,0 +1,125 @@
+{% extends 'partials/_layout.html' %}
+{% block body %}
+    <!-- Info del index-->
+    <main>
+
+        <!-- bienvenido -->
+        <div class="container__div__card">
+    
+          <div style="margin-bottom:10rem;">
+            <div class="main-card">
+              <div id="contenido" class="main-card-body" aria-label="contenedor de bienvenida">
+                <img role="img" loading="lazy" tabindex="0" aria-labelledby="bienvenido" src="{{url_for('static', filename = './img/portada/Republica_de_los_ninos-scaled.webp')}}" aria-label="image republica de los niños." alt="image republica de los niños." width="100%">
+                <div id="bienvenido" class="main-card-info generar_conciencia span">
+                  <div class="text__center">
+                    <h3>
+                      <b>¡Bienvenido a la exhibición Generar <span>CON</span>CIENCIA</b>
+                      <b> Experiencias y conocimientos sobre la Inundación de La Plata!</b>
+                    </h3>
+                  </div>
+    
+                  <p>
+                    Es un evento del proyecto Citadine, Ciencia Ciudadana para la gestión de catástrofes. Aborda la inundación desde la mirada y experiencia de los sobrevivientes y testigos. Cuenta con 6 secciones para recorrer en forma cronológica, con material educativo interactivo, para un aprendizaje entretenido y dinámico.
+    
+                  </p>
+                  <div class="verde__oscuro margin__franja">
+                    <p>CASA DEL NIÑO- República de los niños. Del el 21 al 27 de marzo de 2022, de 14 a 18 horas. Entrada
+                      libre y gratuita.</p>
+    
+                  </div>
+    
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <div>
+            <div class="main-card" style="background-color: #011b17d8;width:95%;">
+              <div class="main-card-body">
+                <img role="img" tabindex="0" aria-labelledby="ayuda" loading="lazy" src="{{url_for('static', filename = 'img/portada/ayuda4.png')}}" aria-label="imagen de un niño pidiendo ayuda."alt="imagen de un niño pidiendo ayuda.">
+                <div id="ayuda" class="no-padding txt_left" style="padding: 0 1rem;">
+                  <h3>¡Ayuda! ¿Qué es este evento?</h3>
+                  <p>
+                    La lluvia caída el 2 de abril de 2013, marcó un récord histórico en la ciudad de La Plata y alrededores, generando daños catastróficos. Consecuencias que se pueden mitigar mediante prevención y una gestión integral del riesgo de inundación. </p>
+                    
+                  <p> En este evento aprenderás mucho sobre esto y sobre los relatos de los sobrevivientes.
+                    Podés consultar quienes somos, si hay juegos, lugar y hora al asistente virtual.
+                  </p>
+
+    <!-- 
+                  <button class="boton verde-4" onclick="$('.tap-target').tapTarget('open')"
+                    aria-label="Presione enter para interactuar con el ">Asistente virtual</button> -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div role="button"  class="contenedor-index buttons main-container-boton ">
+            <div class="go-up btn-arriba">
+              <a role="button" tabindex="0" aria-label="Regresar a la barra de navegación."  alt="Botón para regresar a la barra de navegación." href="#init">
+                  <img loading="lazy" width="86px" height="86px" src="{{url_for('static', filename = 'img/general/arrow-up.svg')}}"  alt="imagen del botón para regresar a la barra de navegación.">
+              </a>
+            </div>
+            <a class="boton verde-4" href="/sections">INGRESAR A LA MUESTRA</a>
+            <!-- boton de ir arriba -->
+          </div>
+        </div>
+      
+        <!-- asistente -->
+              <div>
+                  
+                  <!-- Element Showed -->
+                  <div id="menu" class="fixed-action-btn btn btn-floating" style="bottom: 42px; right: 40px;">
+                    <!-- <a id="menu" class="btn btn-floating btn-large cyan"><i class="material-icons">menu</i></a> -->
+                    <!-- <script src=https://assistant-web.watsonplatform.net/loadWatsonAssistantChat.js></script> -->
+                    <!-- div que contiene el chat -->
+    
+                    <script>
+                      let scale = 0
+    
+                      window.watsonAssistantChatOptions = {
+                          integrationID: "9464e06d-fb26-49af-9416-5b94ef7e3208", // The ID of this integration.
+                          region: "us-south", // The region your integration is hosted in.
+                          serviceInstanceID: "1c9f1756-12f6-44df-b4e0-94e86d7b437d", // The ID of your service instance.
+                          onLoad: function(instance) { 
+              //   BASE-font-size-extra-small: 8px;   se usa en:  -- 
+              //   BASE-font-size-small: 12px;    se usa en:  --  <b>, <div class sugerencias>
+              //   BASE-font-size-med: 14px;    se usa en:  -- li, div
+              //   BASE-font-size-large: 16px;    se usa en:  -- <div header chat> , titulos de sigerencias
+              //   BASE-font-size-xlarge: 20px;   se usa en:  -- i dunno :p
+                            instance.updateCSSVariables({
+                              //font-family
+                              'BASE-z-index': '8000',
+                              
+                              'BASE-font-size-extra-small': `calc( ${.08 + scale}em + 1vw)`,
+                              'BASE-font-size-small': `calc( ${.2 + scale}em + 1vw)`,
+                              'BASE-font-size-med': `calc( ${.4 + scale}em + 1vw)`,
+                              'BASE-font-size-large': `calc( ${.6 + scale}em + 1vw)`,
+                              'BASE-font-size-xlarge': `calc( ${1 + scale}em + 1vw)`,
+    
+                              'BASE-font-family': '"Source Sans Pro", Times, serif',
+                              '$focus': '#ff0000',
+                              'BASE-width':'500px'
+                            });
+                            instance.updateHomeScreenConfig({
+                                bot_avatar_url: "{{url_for('static', filename = 'img/portada/bot.png')}}"
+                              });
+                              // web chat makes an asynchronous request to get need data to render in spanish.
+                              instance.updateLocale('es').then(function() {
+                                instance.render();
+                              });
+                              },
+                          
+                        };
+                      setTimeout(function(){
+                        const t=document.createElement('script');
+                        t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js"
+                        document.head.appendChild(t);
+                      });
+                    </script>
+                  </div>
+    
+    
+      </main>
+    <!-- FIN Info del index -->
+    {% endblock %}

@@ -1,0 +1,68 @@
+  <!-- Contenedor del testimonio -->
+  {% extends 'partials/_layout.html' %}
+  {% block body %}
+  <!-- Info de novedades-->
+    <main>
+        <div class="container">
+            <div class="main-card">
+                <div id="anounce" class="main-card-body" >
+                     <div class="afiche__head">
+                        <h1 id="contenido" tabindex="0">Recorrido recomendado</h1>
+                      </div>
+                      <div class="main-card-img-container line-down">                        
+                        <img tabindex="0" role="img"  aria-label="imagen de un cartel con flechas." alt="imagen de un cartel con flechas." class="main-section-icon" src="{{url_for('static', filename = 'img/general/otros/road.webp')}}" height="88px" alt="img 1">
+                        <img tabindex="0" role="img"  aria-label="imagen de un persona en un mapa." alt="imagen de un persona en un mapa." class="main-section-icon" src="{{url_for('static', filename = 'img/general/otros/point-person.webp')}}" height="88px" alt="img 2">
+                        <img tabindex="0" role="img"  aria-label="imagen de una persona guia." alt="imagen de una persona guia." class="main-section-icon" src="{{url_for('static', filename = 'img/general/otros/person-guide.webp')}}" height="88px" alt="img 3">
+                    </div>  
+                    <div tabindex="0" class="main-card-info">
+                        <p>La exposición trata sobre la inundación de La Plata del 2013, desde la mirada de los sobrevivientes y testigos. Está acompañada por el relato de cuatro personas que vivieron la inundación en carne propia y compartieron sus vivencias y conocimientos. 
+                          Está organizado en forma cronológica en 6 secciones  diferentes en las que se puede explorar y aprender mucho:
+                          
+                          En el siguiente mapa se muestra la disposición de las áreas:
+                        </p>
+                        
+                    </div>
+                    <div class="flex__container16 mg-bot">
+                      <p tabindex="0">
+                         <strong>Sección 1</strong> : De la lluvia a la inundación.
+                          <br>
+                          <strong>Sección 2</strong>: Por la vida y la integridad física.
+                          <br>
+                          <strong>Sección 3</strong>: Solo escombros y barro.
+                          <br>
+                          <strong>Sección 4</strong>: Lecciones aprendidas.
+                          <br>
+                          <strong>Sección 5</strong>: Estar preparados.
+                          <br>
+                          <strong>Sección 6</strong>: Inundaciones en el exterior.
+                      </p>
+                      <div class="infop-img">
+                        <div class="caja16">
+<!-- 
+                          <img  role="img" tabindex="0" src="{{url_for('static', filename = 'img/general/otros/recorrido3.png')}}"  aria-label="Plano de la Casa del Niño. Disposición de las secciones de la muestra y circuito recomendado." alt="Foto: Plano de la Casa del Niño. Disposición de las secciones de la muestra y circuito recomendado." >                       -->
+                          
+                        </div>
+                        <p tabindex="0" target="_blank" class="main-card-info contenedor__text">Foto: 
+                          Plano de la Casa del Niño. Disposición de las secciones de la muestra y circuito recomendado.
+                        </p>
+                          
+                        
+                      </div>
+                      
+                    </div>
+                    <p  tabindex="0" class="main-card-info">Se incluyen juegos educativos y atracciones interactivas para grandes y pequeños. </p>
+                    
+
+                     
+                  
+                    
+                    
+                </div>
+            </div>
+            
+          </div>
+          <!-- boton para ir arriba -->
+          {% include ('partials/_button.html') %}
+    </main>
+
+  {% endblock %}

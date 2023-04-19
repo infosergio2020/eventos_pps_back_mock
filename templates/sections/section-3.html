@@ -1,0 +1,118 @@
+{% extends 'partials/_layout.html' %} {% block body %}
+<!-- Info de seccion 3-->
+<main>
+  <div class="container">
+    <div class="main-card" style="margin: 10rem auto">
+      <div class="main-card-header afiche__head">
+        <h1 id="contenido" tabindex="0">Sección 3 - Sólo escombros y barro.</h1>
+      </div>
+      <div class="main-card-body">
+        <div
+          class="main-card-img-container"
+          aria-label="encabezado con fotos. header with photograph's."
+        >
+          <img
+            src="{{url_for('static', filename = 'img/people/section2-1.webp')}}"
+            class="wh-127g"
+            alt="imágen de los testimonios 1."
+          />
+          <img
+            src="{{url_for('static', filename = 'img/people/section2-2.webp')}}"
+            class="wh-127"
+            alt="imágen de los testimonios 2."
+          />
+         
+        </div>
+        <div class="main-container-boton">
+          <a
+            class="boton verde-4"
+            href="/testimonio2"
+            aria-label="Presione enter si desea acceder a Conoce nuestros testimonios: Durante la inundación."
+          >
+            <div class="boton-info">
+              <p>Conoce nuestros testimonios: Durante la inundación</p>
+              <img
+                src="{{url_for('static', filename = 'img/people/webp/handPointUp.webp')}}"
+                class="wh-88"
+                alt="Botón."
+              />
+            </div>
+          </a>
+        </div>
+
+        <div class="main-card-img-container">
+          <img
+            src="{{url_for('static', filename = 'img/section3/periodico.webp')}}"
+            class="wh-256"
+            alt="imagen de un periódico."
+          />
+        </div>
+        <div class="main-container-boton">
+          <a class="boton verde-4" href="/diarios">
+            <div
+              class="boton-info"
+              aria-label="Presione enter si desea acceder a Diarios del momento."
+            >
+              <p>Diarios del momento</p>
+              <img
+                src="{{url_for('static', filename = 'img/people/webp/handPointUp.webp')}}"
+                class="wh-88"
+                alt="Botón."
+              />
+            </div>
+          </a>
+        </div>
+
+        <div class="main-card-img-container">
+          <img
+            src="{{url_for('static', filename = 'img/section3/shok.webp')}}"
+            class="wh-256"
+            alt="imagen de una foto impactante, desastre despues de la inundacion, poste de direcciones caido, apoyado sobre un poste."
+          />
+        </div>
+        <div class="main-container-boton">
+          <a class="boton verde-4" href="/shocking-photos">
+            <div
+              class="boton-info"
+              aria-label="Presione enter si desea acceder a fotos impactantes."
+            >
+              <p>Fotos impactantes</p>
+              <img
+                src="{{url_for('static', filename = 'img/people/webp/handPointUp.webp')}}"
+                class="wh-88"
+                alt="Botón."
+              />
+            </div>
+          </a>
+        </div>
+
+        <div class="main-card-img-container">
+          <img
+            src="{{url_for('static', filename = 'img/section3/album.webp')}}"
+            class="wh-256"
+            alt="imagen de un album de fotos."
+          />
+        </div>
+        <div class="main-container-boton">
+          <a class="boton verde-4" href="/photo-album">
+            <div
+              class="boton-info"
+              aria-label="Presione enter si desea acceder a álbum de fotos."
+            >
+              <p>Álbum de fotos</p>
+              <img
+                src="{{url_for('static', filename = 'img/people/webp/handPointUp.webp')}}"
+                class="wh-88"
+                alt="Botón."
+              />
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- boton para ir arriba -->
+  {% include ('partials/_button.html') %}
+</main>
+
+{% endblock %}

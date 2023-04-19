@@ -1,0 +1,102 @@
+<!-- Contenedor del testimonio -->
+{% extends 'partials/_layout.html' %} {% block body %}
+<!-- Info de galeria de fotos-->
+<main>
+  <div class="container">
+    <div class="main-card" style="margin: 10rem auto">
+      <div class="main-card-header">
+        <div id="afiche-header" class="afiche__head">
+          <h1 id="contenido" tabindex="0" class="centrar-texto">
+            Fotos impactantes
+          </h1>
+        </div>
+        <div class="centrar-texto" tabindex="0">
+          <p>
+            En esta sección se muestra un compilado de fotos compartidas por los asambleístas de los distintos barrios inundados de la ciudad de La Plata y alrededores. También, se incluyen imágenes de fotógrafos profesionales como Adrián Escándar. También de la Sub Cooperativa de fotógrafos, de fotos impactantes de La Nación, quienes tuvieron la gentileza de colaborar con esta muestra.
+          </p>
+          <p>Seleccionar el telón que contiene la imágen para entrar a la galería de fotos impactantes.</p>
+        </div>
+      </div>
+      <div class="main-card-body">
+        <div tabindex="0" class="rnOuter altura_img" style="margin: 2rem auto"  >
+          <!-- comienzo de las cortinas -->
+          
+           
+            <section class="aoTable">
+              <div class="aoTableCell">
+                    <div class="cortina__gallery-container" id="lightgallery">
+                        <a
+                          role="link"
+                          aria-label="imagen de la galería 1 de 40.Presione enter si desea abrir el carrousel de imágenes."
+                          alt="Foto de calle inundada con una persona con el agua por la cintura y un auto con el agua hasta el techo."
+                     
+                        
+                          href="{{url_for('static', filename = 'img/section3/fotos-impactantes/25.webp')}}"
+                          
+                        >
+                          <img
+                            width="100%" height="100%" style="margin-top: -35rem;"
+                            alt="Foto de calle inundada con una persona con el agua por la cintura y un auto con el agua hasta el techo."
+                            aria-label="imagen de la galería 1 de 40.Presione enter si desea abrir el carrousel de imágenes."
+                            src="{{url_for('static', filename = 'img/section3/fotos-impactantes/25.webp')}}"
+                          />
+                        </a>
+                    
+                        {% for photo in impactantes %}
+                        <a
+                          class="achicar-cortina"
+                          role="link"
+                          aria-label="imagen de la galería {{loop.index}} de {{loop.length}}."
+                          href="{{ url_for('static', filename = photo.image )}}"
+                        >
+                        
+                          <img
+                            role="img"
+                            width="50%" height="50%" 
+                            style="margin-top: -35rem;"
+                            alt="{{ photo.descripcion }}"
+                            loading="lazy"
+                            src="{{url_for('static', filename = photo.image  )}}"
+                          />
+                        </a>
+                        {% endfor %}
+                  </div>
+                  <div class="opacidad">
+                    <p>
+                      Seleccione la imagen para acceder a la galería de fotos impactantes.
+                    </p>
+                  </div>
+                  
+              </div>
+          </section>
+          <div class='rnInner_izquierda rnInner_desplazar'>
+            <!-- desde izquierda -->
+            <div class='rnUnit'></div>
+            <div class='rnUnit'></div>
+            <div class='rnUnit'></div>
+            <div class='rnUnit'></div>
+            <div class='rnUnit'></div>
+  
+      
+          </div>
+          <div class="rnInner_derecha rnInner_desplazar">
+            <!-- desde derecha -->
+            <div class='rnUnit'></div>
+            <div class='rnUnit'></div>
+            <div class='rnUnit'></div>
+            <div class='rnUnit'></div>
+            <div class='rnUnit'></div>
+  
+          </div>
+        </div>     
+      </div>
+    </div>
+  </div>
+  <!-- boton para ir arriba -->
+  {% include ('partials/_button.html') %}
+</main>
+
+<!-- script -->
+<!-- galeria de imagenes -->
+<!-- FIN Info de la galeria de fotos -->
+{% endblock %}

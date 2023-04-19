@@ -1,0 +1,102 @@
+<!-- Contenedor del testimonio -->
+{% extends 'partials/_layout.html' %} {% block body %}
+<!-- Info de recomendaciones de como actuar-->
+<main>
+  <div class="contenedor-testimonio">
+    <div id="afiche-header" class="afiche__head">
+      <h1 id="contenido" class="centrar-texto text-shadow" tabindex="0">
+        Recomendaciones sobre cómo actuar.
+      </h1>
+    </div>
+    <!-- segundo componente -->
+    <div class="flex__container-column">
+      <div class="grid__texto">
+        <div class="flex__container2" tabindex="0">
+          <p>
+            En el Manual del Plan de Reducción del Riesgo por Inundaciones para
+            la Región La Plata, se lista una serie de recomendaciones de cómo
+            actuar frente a inundaciones. Aquí te mostramos algunas:
+          <br>
+             Seleccione los botones verdes para conocerlos.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- tercer componente  -->
+    <div class="grid__container__4">
+      <!-- elemento n -->
+      {% for reco in recommendations %}
+      <div class="grid__image mg-top">
+        <img
+          tabindex="0"
+          aria-label={{reco.imgAriaLabel}}
+          role="img"
+          width="50%"
+          height="50%"
+          src="{{url_for('static', filename = reco.img)}}"
+          alt={{reco.imgAriaLabel}}
+        />
+
+        <!-- componente 1 -->
+        <div class="accordion">
+          <button
+            type="button"
+            aria-label={{reco.btnAriaLabel}}
+            aria-expanded="false"
+            aria-controls="sect{{loop.index}}"
+            aria-labelledby="accordion1id-{{loop.index}}"
+            class="accordion-trigger boton-acordeon verde-4"
+          >
+            <span class="accordion-title">
+              {{reco.btnTitle}}
+              <svg
+                id="campo"
+                xmlns="http://www.w3.org/2000/svg"
+                class="down"
+                fill="#fff"
+                width="12"
+                height="9"
+                viewBox="0 0 12 9"
+              >
+                <polygon points="1 0, 11 0, 6 8"></polygon>
+              </svg>
+            </span>
+          </button>
+
+          <div id="sect{{loop.index}}" role="region" class="accordion-panel" hidden>
+            <div style="width: 100%">
+              <fieldset tabindex="0" id="accordion1id-{{loop.index}}">
+                <div class="curso__descripcion">
+                  <p>{{reco.description}}</p>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <!-- fila 2 -->
+    <div class="flex__container-column">
+      <div class="grid__texto">
+        <div tabindex="0" class="flex__container2">
+          <p>
+            - Si estás en una casa y el agua supera las rodillas, aseguráte de
+            tener una abertura disponible para no quedar atrapado. Dejá la
+            heladera abierta para que no flote.
+          </p>
+          <p>
+            - Si estás en el auto y el agua ya ingresa al vehículo, conviene
+            salir y buscar refugio.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- boton para ir arriba -->
+  {% include ('partials/_button.html') %}
+</main>
+<!-- script -->
+<!-- ver mas del testimonio  -->
+<!-- FIN Info de recomendaciones de como actuar-->
+{% endblock %}

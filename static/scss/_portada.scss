@@ -1,0 +1,125 @@
+.body__portada {
+  color: #fff;
+}
+.header__portada--container {
+  padding: 0 2rem;
+}
+.header__portada {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.header__left {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+.container__portada {
+  background-image: url();
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+.card__portada {
+  padding: 4rem;
+  align-items: center;
+  background-color: #003d33;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 95%;
+}
+.footer__portada {
+  position: relative;
+  background-color: #003d33;
+  margin: 4.8rem 0 0 0;
+}
+@media (max-width: 720px) {
+  .header__left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (min-width: 720px) {
+  .footer__portada {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  .card__portada {
+    width: 45%;
+  }
+}
+.footer__portada--logos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+@media (min-width: 720px) {
+  .footer__portada--logos {
+    display: flex;
+    flex-direction: row;
+  }
+}
+.footer__portada__logo--container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer__portada__info--container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1rem;
+}
+.boton__portada {
+  border-radius: 1rem;
+  padding: 1rem 0;
+  width: 100%;
+  animation: pulso 2s infinite;
+}
+.boton__portada:hover {
+  background-color: #175818a4;
+}
+@keyframes pulso {
+  0% {
+    transform: scale(0.97);
+    box-shadow: 0 0 0 8px #003b32;
+  }
+  50% {
+    transform: scale(0.99);
+    box-shadow: 0 0 0 5px #002b24d8;
+  }
+  70% {
+    transform: scale(1.01);
+    box-shadow: 0 0 0 5px #002b24d8;
+  }
+  80% {
+    transform: scale(0.99);
+    box-shadow: 0 0 0 5px #003b32;
+  }
+  100% {
+    transform: scale(0.97);
+  }
+}
+.margin__franja {
+  margin: 0px -0.99rem;
+  padding: 0.001rem 3rem;
+  border-radius: 1rem;
+}
+@media (min-width: 768px) {
+  .margin__franja {
+    margin: 0px -3rem;
+    padding: 0.001rem 3rem;
+    border-radius: 1rem;
+  }
+}
+.text__center {
+  text-align: center;
+}

@@ -1,0 +1,53 @@
+  <!-- Contenedor del testimonio -->
+  {% extends 'partials/_layout.html' %}
+  {% block body %}
+  <!-- Info del video sandbox-->
+  <main>
+   
+        <div class="main-card">
+          <div class="main-card-body">
+            <div id="afiche-header" class="afiche__head">
+              <h1 id="contenido" tabindex="0" class="centrar-texto">Sandbox</h1>
+            </div>
+            <div tabindex="0" aria-label="Reproductor de video" class="contenedor-video">
+                <div class="px-video-container" id="myvid">
+                    <iframe width="100%" 
+                                height="486px" 
+                                src="https://www.youtube.com/embed/bA4uvkAStPc" 
+                                title="YouTube video player" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                    </iframe>
+                </div>
+                <!-- detalles del video -->
+                <div  class="grid__texto flex__container_dondeir">
+                    <h2 tabindex="0" class="no-margin"><span>
+                      Detalles del video:
+                    </span> </h2>
+                    <div tabindex="0" class="video__descripcion">
+                      <p>
+                        Es un simulador de realidad aumentada desarrollado por un equipo de científicos de la Universidad de California-Davis. Es un software basado en Linux. Es de código abierto.
+                       <br>
+                        Muestra cómo se mueve el agua y se generan zonas inundadas según la ondulación del terreno.
+                        <br>
+                        El sistema enseña conceptos geográficos, geológicos e hidrológicos como la lectura de un mapa topográfico, el significado de las curvas de nivel, las cuencas hidrográficas, las zonas de captación, los diques y mucho más.                    
+                      </p>
+                
+                      <p>
+
+                        El laboratorio <abbr title="Unidad de Investigación, Desarrollo, Extensión y Transferencia Gestión Ambiental.">UIDET</abbr> Hidromecánica del Departamento de Hidráulica, de la Facultad de Ingeniería, gentilmente lo compartió para disponerlo en la exhibición.
+                      </p>
+                    </div>
+                   
+                </div> 
+            </div>
+          </div>
+        </div>
+        <!-- boton para ir arriba -->
+        {% include ('partials/_button.html') %}  
+
+  </main>
+
+  <!-- FIN Info del video sandbox-->
+  {% endblock %}

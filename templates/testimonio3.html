@@ -1,0 +1,382 @@
+<!-- Contenedor del testimonio -->
+{% extends 'partials/_layout.html' %}
+{% block body %}
+<!-- Info del testimonio 3-->
+<main>
+  <div class="contenedor-testimonio">
+
+    <div class="afiche__head">
+      <h1 id="contenido" tabindex="0" class="centrar-texto text-shadow"> Conocé nuestros testimonios: <br> Después de la
+        inundación.</h1>
+    </div>
+
+    <div class="curso">
+      <div class="curso__imagen">
+        <img 
+          width="100%"
+          height="100%"
+          role="img" class="img-testimonio"
+          src="{{url_for('static', filename = 'img/section1/secciones/parte_3/1.webp')}}" alt="Imagen de Amina Suarez">
+      </div>
+
+      <div tabindex="0" class="curso__informacion">
+        <h2 class="no-margin">Amina Suarez</h2>
+
+        <p class="curso__label">Testimonio:
+          <span class="curso__info">Teniendo 12 años en la inundación, nos cuenta cómo lo sobrellevó..</span>
+        </p>
+        <p class="curso__descripcion">
+          “Me tocó armar un bolso rápido, el uniforme e ir a la casa de una compañera, bañarme en la casa de otra amiga,
+          dormir en la casa de otros”.
+          “No recuerdo bien por cuánto tiempo que no estuve en mi casa, cambiando de lugar.
+        </p>
+        <!-- leer mas -->
+
+
+        <div class="accordion">
+
+          <button role="button" tabindex="0" type="button"
+            aria-label="Presiona enter si desea conocer mas sobre el testimonio de Amina Suarez." aria-expanded="false"
+            class="accordion-trigger boton-acordeon" aria-controls="sect1" aria-labelledby="accordion1id">
+            <span class="accordion-title">
+              Conocer más sobre el testimonio de Amina Suarez
+              <svg id="campo" xmlns="http://www.w3.org/2000/svg" class="down" width="12" height="9" viewBox="0 0 12 9">
+                <polygon points="1 0, 11 0, 6 8"></polygon>
+              </svg>
+            </span>
+          </button>
+
+          <div id="sect1" role="region" id="accordion1id" class="accordion-panel" aria-label="boton expandido." hidden>
+            <div>
+              <!-- Variable content within section, may include any type of markup or interactive widgets. -->
+              <fieldset>
+                <div tabindex="0">
+                  <p class="curso__descripcion"> “Recuerdo gente limpiando la calle, porque por más que el agua se haya
+                    ido, había mucha basura, había residuos”.
+                  </p>
+                  <p class="curso__descripcion">
+                    <b>“La calle estaba más negra, con ese tornasolado del petróleo. Las veredas, si eran blancas,
+                      estaban marrones”.</b>
+                  </p>
+                  <p class="curso__descripcion"> “Al otro día llegó gente con donaciones, también con algunos colchones.
+                    Nosotros no las aceptamos porque realmente no la necesitábamos por suerte. Pero hubo gente que le
+                    vino muy bien.”
+                  </p>
+                  <p class="curso__descripcion"> <b>“Algo que sí me quedó muy marcado, fue en las paredes la marca del
+                      agua. Vos pasabas por las calles y todas las casas estaban marcadas, pensabas: ¡Guau! ¡el agua
+                      llegó hasta acá!”</b>
+                  </p>
+
+
+                  <p class="curso__descripcion">
+                    “Hubo varios muertos, el número real no se sabe. En mi barrio no hay muchas casas de dos pisos, la
+                    mayoría de los que habitaban allí eran gente mayor, <b> eran ancianos que tal vez estaban solos y
+                      por alguna confusión o porque no podían físicamente subirse a un mueble o algo, terminaron
+                      ahogándose” </b>, reflexiona Amina.
+                  </p>
+
+                  <p class="curso__descripcion">
+                    “Y ver eso también, lo que le tocó a uno y a otro no”.
+                    “Entonces, uno dice: ¿Por qué a mí? y ¿Por qué a mi vecino no? ¿Por qué?. Ver la experiencia de cada
+                    uno, porque a algunos les entró agua, algunos otros ni se enteraron”. <b> “Sí, ver la diversidad de
+                      un mismo hecho”. </b>
+                  </p>
+
+                  <p class="curso__descripcion">
+                    <b> “La inundación me dejó el ser más precavida, </b> en todo sentido, no solo en el caso de una
+                    inundación, en cualquier catástrofe o problema que se pueda llegar a tener.
+
+                  </p>
+                  <p class="curso__descripcion">
+                    <b> Pensar un poco en las consecuencias que podría llegar a tener y cómo actuar al respecto, o cómo
+                      tomar acción sobre eso y no paralizarse”. “…En todo sentido lo digo”.
+                      “Más que nada eso, poder seguir adelante después de algo así”.</b>
+                  </p>
+
+
+
+                </div>
+
+              </fieldset>
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+      <!--.curso-informacion-->
+    </div>
+    <!--.curso -->
+
+
+
+    <div class="curso">
+      <div class="curso__imagen">
+        <img 
+        width="100%"
+        height="100%"
+          role="img" class="img-testimonio"
+          src="{{url_for('static', filename = 'img/section1/secciones/parte_3/2.webp')}}"
+          alt="Imagen de Alejandro Fernández">
+      </div>
+      <div tabindex="0" class="curso__informacion">
+        <h2 class="no-margin">Alejandro Fernández</h2>
+
+        <p class="curso__label">Testimonio:
+          <span class="curso__info">Lo gratificante de todo esto, a pesar que fue una desgracia terrible, es el
+            agradecimiento de la gente. No podía salir a la calle porque la gente me decía:
+            _Vos me sacaste! _Vos me ayudaste!. ¡Era una cosa…!”.
+            “El mejor regalo era ese. Sí”.
+
+        </p>
+        <p class="curso__descripcion">
+          “La gente que rescataba, la llevaba a mi casa y volvía a salir”.
+          “Yo tengo un garaje largo y tiramos unos colchones”.
+          “Mi mujer con mis hijas, empezaron a secar a la gente, a darle ropa seca, agua caliente, té, café, cosas
+          dulces”.
+
+        </p>
+
+        <!-- leer mas -->
+
+
+        <div class="accordion">
+
+          <button role="button" tabindex="0" type="button"
+            aria-label="Presiona enter si desea conocer mas sobre el testimonio de Alejandro Fernández."
+            aria-expanded="false" class="accordion-trigger boton-acordeon" aria-controls="sect2"
+            aria-labelledby="accordion1id">
+            <span class="accordion-title">
+              Conocer más sobre el testimonio de Alejandro Fernández
+              <svg id="campo" xmlns="http://www.w3.org/2000/svg" class="down" width="12" height="9" viewBox="0 0 12 9">
+                <polygon points="1 0, 11 0, 6 8"></polygon>
+              </svg>
+            </span>
+          </button>
+
+          <div id="sect2" role="region" id="accordion1id" class="accordion-panel" aria-label="boton expandido." hidden>
+            <div>
+              <!-- Variable content within section, may include any type of markup or interactive widgets. -->
+              <fieldset>
+                <div tabindex="0">
+                  <p class="curso__descripcion">
+                    “En uno de los viajes que hacía, la veo a mi mujer sin medias, sin zapatillas.
+                    _¿Qué hacés descalza?, le digo.
+                    _No, me dice. No me queda más nada. Ya dí todo”.
+
+                    “Todo lo que tenía, lo había dado”.
+
+                  </p>
+                  <h3> Y seguir ayudando…</h3>
+                  <p class="curso__descripcion">
+
+
+                    “Después, a la mañana del 3 de abril, cuando ya guardé el bote, porque estaba destrozado, empecé a
+                    conseguir un poco de donaciones de conocidos, agua y ropa”.
+                    “Agarré mi camioneta grande y me paraba en las esquinas. Se la entregaba a la gente”.
+
+
+                  </p>
+
+                  <p class="curso__descripcion">
+                    <b>
+                      “El humilde y el de la otra cuadra que era pudiente, estaban en la misma situación.” “…Eso lo que
+                      cada vez te incentivaba a seguir”.
+                      “Ahí se veía la grandeza humana”.
+                      “Había gente que no se hablaba durante años con el vecino y en ese momento, se ayudaban a subir al
+                      bote”.
+                    </b>
+                  </p>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+
+        </div>
+
+
+
+      </div>
+      <!--.curso-informacion-->
+    </div>
+    <!--.curso -->
+
+    <div class="curso">
+      <div class="curso__imagen">
+        <img 
+          width="100%"
+          height="100%"
+          role="img" class="img-testimonio"
+          src="{{url_for('static', filename = 'img/section1/secciones/parte_3/3.webp')}}"
+          alt="Imagen de Romina Carrozas">
+      </div>
+      <div tabindex="0" class="curso__informacion">
+        <h2 class="no-margin">Romina Carrozas</h2>
+
+        <p class="curso__label">Testimonio:
+          <span class="curso__info">“Tuve que irme a vivir a la casa de mi suegro porque estaba embarazada y mi marido
+            con la pierna quebrada, no podía ayudarme a limpiar.” En la inundación tenía 25 años.</span>
+        </p>
+        <p class="curso__descripcion">
+          “No teníamos ropa, yo estuve dos días con la misma ropa. Me tuve que bañar con agua mineral porque no había
+          agua...”
+        </p>
+
+        <!-- leer mas -->
+
+
+        <div class="accordion">
+
+          <button role="button" tabindex="0" type="button"
+            aria-label="Presiona enter si desea conocer mas sobre el testimonio de Romina Carrozas."
+            aria-expanded="false" class="accordion-trigger boton-acordeon" aria-controls="sect3"
+            aria-labelledby="accordion1id">
+            <span class="accordion-title">
+              Conocer más sobre el testimonio Romina Carrozas
+              <svg id="campo" xmlns="http://www.w3.org/2000/svg" class="down" width="12" height="9" viewBox="0 0 12 9">
+                <polygon points="1 0, 11 0, 6 8"></polygon>
+              </svg>
+            </span>
+          </button>
+
+          <div id="sect3" role="region" id="accordion1id" class="accordion-panel" aria-label="boton expandido." hidden>
+            <div>
+              <!-- Variable content within section, may include any type of markup or interactive widgets. -->
+              <fieldset>
+                <div tabindex="0">
+                  <p class="curso__descripcion">
+                    “Vino una periodista de una radio y me ayudó. Me trajo de todo”. “Cuando venían los camiones, la
+                    gente se mataba. Y no pude conseguir nada para los chicos, porque embarazada… ¿cómo hacía?. No me
+                    iba a poner a pelear por un colchón, no podía.”
+                  </p>
+                  <p class="curso__descripcion">
+                    “¡No sabés lo que era eso de ratas muertas, animales, víboras. Todo revuelto!”, dice Romina.
+                    “Iba todos los días a baldear, a limpiar para sacar el olor a podrido que había”.
+                    “Las paredes todas manchadas y había que limpiarlas varias veces con lavandina”.
+                    “Unos chicos ayudaban a la gente a limpiar”.
+                    “Me ayudaron y me tiraron todo, porque nada servía, inclusive los vestiditos de bautismo de las
+                    nenas que los tenía de recuerdo”.
+                  </p>
+                  <p class="curso__descripcion">
+                    “A los cuatro días vino el basurero a limpiar el zanjón”. “Había un olor a podrido que yo pensé que
+                    era un animal, pero no… ¡era una persona!”, acongojada recuerda Romina.
+                    “Fue un desastre”.
+                  </p>
+                  <p class="curso__descripcion">
+                    “De Berazategui vino un hombre. Me vio limpiando y frenó. _¿Qué necesitás?, me pregunta.
+                    _¿Necesitar?. Necesito todo, porque se me arruinó todo, le digo.
+                    _Bueno, tengo una mueblería, vamos a tratar de venir a traerte un ropero.
+                    _Bueno, le dije. No le creí”.
+                    “A los dos días apareció con dos roperos nuevos. Aún los tengo.”
+                  </p>
+
+                  <p class="curso__descripcion">
+                    “Cuando yo fui a tener familia, mi marido se sacó el yeso y después empezó a trabajar con la yegua y
+                    el carro, que le había dado el amigo que lo sacó en la inundación”.
+                    “Después de a poquito nos fuimos acomodando…”.
+                  </p>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <!--.curso-informacion-->
+    </div>
+    <!--.curso -->
+    <div class="curso">
+      <div class="curso__imagen">
+        <img 
+          width="100%"
+          height="100%"
+          role="img" class="img-testimonio"
+          src="{{url_for('static', filename = 'img/section1/secciones/parte_3/4.webp')}}" alt="Imagen de Silvia Rivas">
+      </div>
+      <div tabindex="0" class="curso__informacion">
+        <h2 class="no-margin">Silvia Rivas</h2>
+
+        <p class="curso__label">Testimonio:
+          <span class="curso__info">“Fue bastante duro volver a insertarme”.
+            “No podía empezar a trabajar porque había perdido todo”. “…Tengo mucha gente amiga que me ayudó. Eso me
+            salvó.” En la inundación tenía 58 años.
+          </span>
+        </p>
+
+        <!-- leer mas -->
+
+
+        <div class="accordion">
+
+          <button role="button" tabindex="0" type="button"
+            aria-label="Presiona enter si desea conocer mas sobre el testimonio de Silvia Rivas." aria-expanded="false"
+            class="accordion-trigger boton-acordeon" aria-controls="sect4" aria-labelledby="accordion1id">
+            <span class="accordion-title">
+              Conocer más sobre el testimonio de Silvia Rivas
+              <svg id="campo" xmlns="http://www.w3.org/2000/svg" class="down" width="12" height="9" viewBox="0 0 12 9">
+                <polygon points="1 0, 11 0, 6 8"></polygon>
+              </svg>
+            </span>
+          </button>
+
+          <div id="sect4" role="region" id="accordion1id" class="accordion-panel" aria-label="boton expandido." hidden>
+            <div>
+              <!-- Variable content within section, may include any type of markup or interactive widgets. -->
+              <fieldset>
+                <div tabindex="0">
+                  <p class="curso__descripcion">
+                    “Grupo de amigas me llevaban ropa, me la lavaban. La que se pudo salvar, se salvó. Y seguimos en la
+                    lucha...”.
+                  </p>
+                  <p class="curso__descripcion">
+
+                    Esa noche… “era todo una pileta, no corría agua para ningún lado. Nos arrimábamos del techo a la
+                    calle y era un estanque, no se movía una gota de agua. Eso era lo que nos extrañaba”.
+                    “No era agua transparente. Era agua con barro, con grasa, con lo que le pidas. Todo lo de las
+                    cloacas. Imaginate estar horas con eso en el cuerpo. Fue horrible”.
+
+
+                  </p>
+                  <p class="curso__descripcion">
+                    “Sí. Era todo barro. El agua había llegado hasta el umbral de la puerta y se perdió todo. Con mucho
+                    sacrificio, se lavó lo que se pudo. Las tres cuartas partes se tiró. Y hubo que de a poquito
+                    reponerse a comprar todo. Porque la verdad que no quedó ni un cepillo de dientes. Nada.”
+                  </p>
+                  <p class="curso__descripcion">
+                    “Nos levantábamos, para limpiar. Llegó un momento que se me habían borrado las huellas digitales de
+                    tanta lavandina”.
+                    “Entre ir a hacer el trámite de que te habías inundado, ir a la salita a darte la vacuna
+                    antitetánica, vivías aturdido. Recién caímos como a los 15 días”.
+                  </p>
+
+                  <h3>“¿Lo que me quedó a mí?”</h3>
+
+                  <p class="curso__descripcion">
+                    “Me quedó un asma, que tengo que estar medicada de por vida. A mi hijo también le quedaron algunas
+                    secuelas”.
+                    “Fuimos a muchas reuniones que se hicieron con los vecinos”.
+                  </p>
+                  <p class="curso__descripcion">
+                    “A mi casa no volví”.
+                    “Porque era a la noche estar ahí y acordarme de la habitación negra y eso me mataba”.
+                    “Y lo superé… pero no allá”. “No fui más allá”.
+                  </p>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <!--.curso-informacion-->
+    </div>
+    <!--.curso -->
+  </div>
+  <!-- boton para ir arriba -->
+  {% include ('partials/_button.html') %}
+</main>
+<!-- FIN Info del testimonio 3 -->
+{% endblock %}

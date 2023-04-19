@@ -1,0 +1,140 @@
+/* --------------------HEADER------------------------ */
+.header-container {
+  background-color: #003d33;
+  color: #ffffff;
+  padding: 0 1rem;
+  text-align: center;
+}
+.header-container-nav-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .header-container-nav-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    display: none;
+  }
+}
+.header-container-nav nav {
+  line-height: 1.2;
+}
+.menu-deslizante-realtivo {
+  position: relative;
+}
+@media (min-width: 768px) {
+  .header-container {
+    padding: 0 3rem;
+  }
+  .header-container-nav {
+    // align-items: center;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 1rem;
+}
+// alinea nav y boton menu hamburguesa
+.header__nav__menu {
+  display: flex;
+  align-items: center;
+}
+.header__nav__menu button {
+  position: absolute;
+  left: 6px;
+  top: 24px;
+  border: 1px solid black;
+  width: fit-content;
+  height: fit-content;
+}
+@media (min-width: 768px) {
+  .header__nav__menu button {
+    position: static;
+  }
+}
+// alinea img y h1
+.header__img__h1 {
+  color: #ffffff;
+  display: block;
+  text-align: justify;
+}
+.header__img__h1 small {
+  width: 50%;
+  text-align: justify;
+}
+.generar_conciencia b span {
+  color: #00b800;
+}
+.header__img__h1 span {
+  color: #00b800;
+}
+.header__img__h4 span {
+  color: #00b800;
+}
+.item__img__h1 {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+@media (max-width: 768px) {
+  .item__img__h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+.margin-left {
+  margin-left: 4rem;
+}
+@media (max-width: 768px) {
+  .header__img__h1 {
+    margin-right: 0rem;
+  }
+}
+@media (min-width: 768px) {
+  .header__img__h1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header-nav-logo {
+    flex: 0 0 calc(8% - 1rem);
+  }
+}
+.container {
+  width: 95%;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .container__div__card {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 0.4fr;
+    justify-content: space-between;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .basis-33 {
+    flex-basis: auto;
+  }
+}
+.generar-conciencia {
+  background-color: #69112d;
+  text-align: start;
+}
+@media (max-width: 400px) {
+  .img-logo-margin{
+    margin-top: 2rem;
+  }
+}

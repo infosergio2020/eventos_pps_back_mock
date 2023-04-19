@@ -1,0 +1,32 @@
+  <!-- Contenedor del testimonio -->
+  {% extends 'partials/_layout.html' %}
+  {% block body %}
+  <!-- Info de lenguaje-->
+    <main>
+        <div class="container">
+            <div class="main-card" style="margin: 10rem auto;">
+                <div id="languaje" class="main-card-body" >
+                  <div class="afiche__head">
+                    <h1 id="contenido" tabindex="0">Idiomas</h1>
+                  </div>
+                    <div class="main-card-img-container line-down">
+                        <img src="{{url_for('static', filename = 'img/general/otros/UK.webp')}}" height="88px" alt="img 1">
+                        <img src="{{url_for('static', filename = 'img/general/otros/spain.webp')}}" height="88px" alt="img 2">
+                    </div>
+                    <div class="main-card-img-container">
+                        <a role="button" tabindex="0" aria-label="Presiona enter para cambiar el idioma a inglés." class="boton verde-4">Inglés</a>
+                        <a role="button" tabindex="0" aria-label="Presiona enter para cambiar el idioma a español." class="boton verde-4">Español</a>
+                    </div>
+                    <div class="main-card-info txt_center">
+                        <p>Haga click en el botón para cambiar /p>
+                        <p>el idioma de la página.</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <!-- boton para ir arriba -->
+          {% include ('partials/_button.html') %}
+    </main>
+
+  {% endblock %}

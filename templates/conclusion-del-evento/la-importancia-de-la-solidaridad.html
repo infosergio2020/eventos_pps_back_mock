@@ -1,0 +1,120 @@
+{% extends 'partials/_layout.html' %}
+{% block body %}
+<!-- Info de la importancia de la solidaridad-->
+    <main>
+      <div class="main-card">
+      <div class="main-card-body">
+        <div id="afiche-header" class="afiche__head">
+          <h1 tabindex="0" class="centrar-texto text-shadow">
+            La importancia de la solidaridad.
+          </h1>
+        </div>
+      
+      <h2 tabindex="0" class="container mg-top">El auxilio inmediato de los vecinos
+      </h2>
+      <!-- primera fila -->
+      <div  class="grid__texto flex__container2">
+        <div tabindex="0" class="caja1">
+          <p >
+            “Creo que lo que más valoro de toda esa época, fue que hubo mucha solidaridad”. “Esa noche yo salía
+            al
+            balcón y nos gritábamos, de balcón en balcón, de ventana en ventana, con los vecinos: ¿Necesitás algo?
+            ¿Querés
+            venirte a mi casa?” “Y luego gente de todos lados, queriendo ayudar y mandando cosas. ¿Te presto esto? ¿Te
+            regalo lo otro? ¿Necesitás comida?”. “Eso fue impresionante”. (María G.)
+          </p>
+        </div>
+
+        <div tabindex="0" class="caja2">
+          <img width="100%" height="100%" role="img" aria-label="Perfil de María. 1 de 5." alt="Imagen de María." src="{{url_for('static', filename = 'img/afiches/solidaridad-Imagen1.webp')}}">
+        </div>
+      </div>
+      <!-- segunda fila -->
+      <div  class="grid__texto flex__container2">
+        <div tabindex="0" class="caja2">
+          <img width="400%" height="340%" role="img"  aria-label="Perfil de Carlos. 2 de 5." alt="Imagen de Carlos." src="{{url_for('static', filename = 'img/afiches/solidaridad-Imagen2.webp')}}">
+        </div>
+        <div class="caja1">
+          <p tabindex="0">
+            “Cuando me enteré que había zonas que se estaban anegando, ahí me empecé  a preocupar. Lo primero que
+            hicimos
+            con mi hijo fue preparar algunas cosas, mochilas con  cuerdas, tijeras y algunos alicates, cosas elementales
+            como para ir a ayudar a la gente”. (Carlos G.)
+          </p>
+        </div>
+      </div>
+      <!-- tercer fila -->
+      <div  class="grid__texto flex__container2">
+        <div class="caja6 grid__image">
+          <img class="w-90" loading="lazy" width="100%" height="100%" role="img" tabindex="0" src="{{url_for('static', filename = 'img/afiches/solidaridad-Imagen3.webp')}}" aria-label="InfoPlatense-nota-tragedia. 3 de 5." alt="Foto: infoPlatense-nota-tragedia.">
+          <small>
+            <p>
+              Fotos: Colectas y donaciones para ayudar a los platenses.
+            </p>
+          </small>
+        </div>
+        <div class="caja1" tabindex="0">
+          <hr>
+          <h3>La Solidaridad del pueblo
+          </h3>
+          <p class="mg-top">
+            La reacción fue inmediata y masiva. Entidades, agrupaciones sociales y miles de voluntarios realizaron
+            colectas.
+            “Todo el país quiere participar –afirma Juan Carr–, empezamos a tener un desborde de generosidad que es
+            conmovedor.”
+          </p>
+
+        </div>
+      </div>
+      <!-- cuarta fila -->
+
+      <div  class="grid__texto flex__container2 mg-top">
+        <div class="caja7">
+          <div tabindex="0">
+              <hr>
+              <h2 class="container mg-top">La unión y participación de la gente
+              </h2>
+              <p>
+                “De la asamblea, rescato que los vecinos a pesar de diferencias de edad, de historias, de pensamiento, de
+                situaciones económicas, a pesar de toda esa diversidad se pudo tener puntos en común, para poder agruparnos
+                alrededor de determinados reclamos. Salir a la calle a pelear por sus derechos”. (Pepe R).
+                La asamblea Parque Castelli a días de la inundación, se organizó en distintas comisiones: de fiscalización
+                de
+                obras, la de comunicación y la de arte, encargada de idear prácticas artísticas.
+              </p>
+          </div>
+          <div class="caja8 grid__image mg-top">
+            <img class="w-90" loading="lazy" width="100%" height="100%" tabindex="0" role="img" aria-label="Asamblea vecinal Parque Castelli. 4 de 5." alt="foto: Asamblea vecinal Parque Castelli." src="{{url_for('static', filename = 'img/afiches/solidaridad-Imagen4.webp')}}">
+            <small> 
+              <p> 
+                Fotos: Asamblea vecinal Parque Castelli.
+              </p>
+            </small>
+          </div>
+        </div>
+      </div>
+      <!-- quinta fila -->
+      <div  class="grid__texto flex__container2 mg-top">
+        <div class="caja7">
+          <p tabindex="0">
+            Cada 2 de abril, las asambleas de vecinos inundados y diferentes organizaciones realizan actos, marchas y
+          múltiples actividades sobre la inundación.
+          La asamblea Parque Castelli a días de la inundación, se organizó en distintas comisiones: de fiscalización de
+          obras, la de comunicación y la de arte, encargada de idear prácticas artísticas.
+
+          </p>
+          <div class="caja8 grid__image mg-top">
+            <img class="w-90" loading="lazy" width="100%" height="100%" role="img" tabindex="0" src="{{url_for('static', filename = 'img/afiches/solidaridad-Imagen5.webp')}}"  aria-label="InfoPlatense-nota-tragedia. 5 de 5." alt="Foto: infoPlatense-nota-tragedia." >
+            <small class="contenedor__text">
+              <p> 
+                Fotos: InfoPlatense-nota-tragedia.
+              </p>
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- boton para volver a arriba -->
+    {% include ('partials/_button_anterior.html') %}
+    {% endblock %}

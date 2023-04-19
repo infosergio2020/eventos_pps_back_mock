@@ -1,0 +1,318 @@
+  <!-- Contenedor de juegos -->
+  {% extends 'partials/_layout_pc.html' %}
+  {% block body %}
+  <!-- Info de los juegos-->
+    <main>
+        <div class="container">
+            <div class="main-card" style="margin: 10rem auto;">
+                <div class="main-card-header">
+                   <!-- titulo de la pagina -->
+                    <div id="afiche-header" class="afiche__head">
+                      <h1 id="contenido" tabindex="0" class="centrar-texto">Juegos educativos</h1>
+                    </div>
+                    <!-- descripcion antes de interactuar con los juegos -->
+                    <div tabindex="0" class="centrar-texto">
+                      <p>¡Aprendé jugando! Se dispone de estos juegos educativos sobre las inundaciones, aprender a prepararse ante una emergencia, sobre mantener la ciudad sustentable, entre otros.</p>
+                      <p>Seleccionar la imagen del juego para acceder al detalle y poder comenzar a jugar.</p>
+                    </div>
+                </div>
+                <!-- presentacion de los 6 juegos -->
+                <div class="main-card-body">
+                    <div class="container-juego">                            
+                              <!-- juego 1 -->
+                              <div class="card"> 
+                                  <img tabindex="0" role="img" class="img-juego img1" src="{{url_for('static', filename = 'img/section5/juegos-tapa/juego1.webp')}}"  alt="Disaster cross." aria-label="Tapa del juego Disaster cross.">
+                                  <div class="intro">
+                                      <h2 tabindex="0">
+                                        Disaster cross
+                                      </h2>    
+                                      <p tabindex="0" class="esconder-detail" style="margin-bottom:1rem">
+                                        Juego educativo en forma de crucigrama para aprender sobre distintas catástrofes. Brinda pistas para completar el crucigrama. Provee distintos niveles de dificultad.                
+                                      </p>
+                                      <div aria-labelledby="diario-2">
+                                          <div class=" verde-4 esconder-detail boton" >
+                                              <a role="button" tabindex="0" aria-label="Jugar Disaster cross." 
+                                              id="juego1" style="color: rgb(255, 255, 255);"> Jugar</a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <!-- juego 2 -->
+                              <div class="card" tabindex="0"> 
+                                  <img role="img" class="img-juego img1" src="{{url_for('static', filename = 'img/section5/juegos-tapa/juego2.webp')}}"  alt="Limpiar la ciudad." aria-label="Tapa del juego Limpiar la ciudad.">
+                                  <div class="intro">
+                                      <h2>
+                                        Limpiar la ciudad
+                                      </h2>
+                                      <p class="esconder-detail">
+                                        Juego educativo que permite ayudar a la gente de limpieza a distinguir los residuos de la ciudad y recolectarlos para mantener la ciudad limpia.                                 
+                                      </p>
+                                      <div aria-labelledby="diario-2">                             
+                                          <div class="verde-4 esconder-detail boton"  >
+                                              <a role="button" tabindex="0" aria-label="Jugar Limpiar la ciudad."
+                                              id="juego2" style="color: rgb(255, 255, 255);" > Jugar</a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <!-- juego 3 -->
+                              <div class="card" tabindex="0"> 
+                                  <img role="img" class="img-juego img1" src="{{url_for('static', filename = 'img/section5/juegos-tapa/juego3.webp')}}"  alt="Rompecabezas NBS." aria-label="Tapa del juego Rompecabezas NBS.">
+                                  <div class="intro">
+                                      <h2>
+                                          Rompecabezas NBS
+                                      </h2>
+                                      <!-- <p>
+                                          Rompecabezas interactivo y accesible para aprender sobre NBS, soluciones basadas en la naturaleza que pueden ayudar a cuidar el ambiente donde vivimos mediante acciones que las personas pueden llevar a cabo.
+                                          El usuario tiene que resolver un puzzle. Cuando éste decide empezar, se mezclan las piezas de esa imagen para que el usuario las reconstruya.
+                                              
+                                      </p> -->
+                                      <p class="esconder-detail">
+                                          Rompecabezas interactivo y accesible para aprender sobre NBS, soluciones basadas en la naturaleza que pueden ayudar a cuidar el medio ambiente.                                            
+                                      </p>
+                                      <div  aria-labelledby="diario-2">
+                                        <div class="verde-4 esconder-detail boton"  >
+                                            <a role="button" tabindex="0" aria-label="Jugar Rompecabezas NBS."
+                                            id="juego3" style="color: rgb(255, 255, 255);" > Jugar</a>
+                                        </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <!-- juego 4 -->
+                              <div class="card" tabindex="0"> 
+                                <img role="img" class="img-juego img1" src="{{url_for('static', filename = 'img/section5/juegos-tapa/juego4.webp')}}"  alt="Inundados (Flooded)." aria-label="Tapa del juego Inundados (Flooded).">
+                                <div class="intro">
+                                    <h2>
+                                        Inundados (Flooded)
+                                    </h2>
+                                    <p class="esconder-detail">
+                                      Es un juego para lograr una ciudad sustentable cuidando los árboles, controlando la basura de las casas y desagües. 
+                                      
+                                      Debes tomar decisiones mientras una tormenta se aproxima.                                          
+                                    </p>
+                                    <div  aria-labelledby="diario-2">
+                                      <div class="verde-4 esconder-detail boton"  >
+                                          <a role="button" tabindex="0" aria-label="Jugar Inundados."
+                                          id="juego4" style="color: rgb(255, 255, 255);" > Jugar</a>
+                                      </div>
+                                    </div>
+                                </div>
+                              </div>
+                             
+                              <!-- juego 5 donde ir usa este puerto: http://localhost:3456/
+                                el github: https://gitlab.com/Pesca1/dux
+                                
+                              no sabemos si funciona
+                              -->
+                              
+                              <!--
+                              <div class="card" tabindex="0"> 
+                                <img role="img" class="img-juego img1" src="{{url_for('static', filename = 'img/section5/juegos-tapa/juego5.webp')}}"  alt=" ¿Dónde ir?-Centros de evacuación." aria-label="Tapa del juego  ¿Dónde ir?-Centros de evacuación.">
+                                <div class="intro">
+                                    <h2>
+                                        ¿Dónde ir?-Centros de evacuación
+                                    </h2>
+                                    <p class="esconder-detail">
+                                      Es un juego para conocer los lugares seguros que se deben visitar en caso de una inundación para estar seguros.       
+                                    </p>
+                                    <div  aria-labelledby="diario-2">
+                                      <div class="verde-4 esconder-detail boton"  >
+                                          <a  role="button" tabindex="0" aria-label="Jugar ¿Dónde ir?-Centros de evacuación."  
+                                          id="dondeir1" style="color: rgb(255, 255, 255);" > Jugar</a>
+                                      </div>
+                                    </div>
+                                </div>
+                              </div> 
+                              -->
+
+                              <!-- juego 6 -->
+                              <div class="card" tabindex="0"> 
+                                <img role="img" class="img-juego img1" src="{{url_for('static', filename = 'img/section5/juegos-tapa/juego6.webp')}}"  alt=" Juego de la memoria." aria-label="Tapa del juego  Juego de la memoria.">
+                                <div class="intro">
+                                    <h2>
+                                      Juego de la memoria
+                                    </h2>
+                                    <p class="esconder-detail">
+                                      Es un juego para encontrar los pares. Debes elegir los que se parezcan.       
+                                    </p>
+                                    <div  aria-labelledby="diario-2">
+                                      <div class="verde-4 esconder-detail boton"  >
+                                          <a  role="button" tabindex="0" aria-label="Jugar Juego de la memoria."
+                                          id="juego5" style="color: rgb(255, 255, 255);" > Jugar</a>
+                                      </div>
+                                    </div>
+                                </div>
+                              </div>
+                               <!-- juego 7 -->
+                               <div class="card" tabindex="0"> 
+                                <img role="img" class="img-juego img1" src="{{url_for('static', filename = 'img/section5/juegos-tapa/juego7.webp')}}"  alt="Quiz Aprendiendo a prepararme." aria-label="Tapa del juego Quiz Aprendiendo a prepararme.">
+                                <div class="intro">
+                                    <h2>
+                                        Quiz Aprendiendo a prepararme
+                                    </h2>
+                                    <p class="esconder-detail">
+                                      Es un juego de preguntas y respuestas para aprender a prepararte ante una situación de riesgo. 
+                                    </p>
+                                    <div  aria-labelledby="diario-2">
+                                      <div class="verde-4 esconder-detail boton"  >
+                                          <a  role="button" tabindex="0" aria-label="Jugar Quiz Aprendiendo a prepararme."  
+                                          id="juego6" style="color: rgb(255, 255, 255);" > Jugar</a>
+                                      </div>
+                                    </div>
+                                </div>
+                              </div>
+                              <!-- juego 8 -->
+                              <div class="card" tabindex="0"> 
+                                <img role="img" class="img-juego img1" src="{{url_for('static', filename = 'img/section5/juegos-tapa/juego8.webp')}}"  alt=" Quiz Mochila de emergencia (Quiz emergency backpack)." aria-label="Tapa del juego  Quiz Mochila de emergencia (Quiz emergency backpack).">
+                                <div class="intro">
+                                    <h2>
+                                        Quiz Mochila de emergencia (Quiz emergency backpack)
+                                    </h2>
+                                    <p class="esconder-detail">
+                                      Es un juego para aprender a armar una mochila de emergencia que sea útil ante una situación de riesgo. Debes arrastrar los objetos esenciales a la mochila.       
+                                    </p>
+                                    <div  aria-labelledby="diario-2">
+                                      <div class="verde-4 esconder-detail boton"  >
+                                          <a  role="button" tabindex="0" aria-label="Jugar Quiz Mochila de emergencia." 
+                                          id="juego7" style="color: rgb(255, 255, 255);" > Jugar</a>
+                                      </div>
+                                    </div>
+                                </div>
+                              </div>
+                              <!-- 
+                                A partir de aca se necesita agregar una descripcion del juego.
+
+                              -->
+                               <!-- juego 9 -->
+                              <div class="card" tabindex="0"> 
+                                <img role="img" class="img-juego img1" src="{{url_for('static', filename = 'img/section5/juegos-tapa/juego9.webp')}}"  alt=" Riesgo de lluvia." aria-label="Tapa del juego Riesgo de lluvia.">
+                                <div class="intro">
+                                    <h2>
+                                        Riesgo de lluvia
+                                    </h2>
+                                    <p class="esconder-detail">
+                                      Es un juego para concientizar a
+                                      la gente sobre las medidas a tomar a la hora de una tormenta con riesgo de
+                                      inundaciones.
+                                      El juego situará al jugador en una casa de familia, minutos antes de que comience a
+                                      llover,
+                                      donde deberá recolectar todos los objetos importantes o
+                                      de valor y ponerlos a salvo para evitar que el agua los arruine, o el desastre sea
+                                      peor.       
+                                    </p>
+                                    <div  aria-labelledby="diario-2">
+                                      <div class="verde-4 esconder-detail boton"  >
+                                          <a  role="button" tabindex="0" aria-label="Jugar Riesgo de lluvia." 
+                                          id="juego8" style="color: rgb(255, 255, 255);" > Jugar</a>
+                                      </div>
+                                    </div>
+                                </div>
+                              </div>
+                              
+                               <!-- juego 10 
+                              GitHub de la aplicación:
+                                  https://github.com/tadeovelis/Pasapalabra-ArroyoMaldonado-TPIntegradorDEU-2022
+
+                                  https://hub.docker.com/r/sperri/pasap
+                                  Para descargar e iniciar la aplicación, simplemente ejecutar:
+                                  $ docker pull sperri/pasap
+                                  $ docker run -p 3500:3000 sperri/pasap
+
+                              -->
+                              <div class="card" tabindex="0"> 
+                                <img role="img" class="img-juego img1" src="{{url_for('static', filename = 'img/section5/juegos-tapa/juego10.webp')}}"  alt=" Pasapalabras del Arroyo Maldonado." aria-label="Tapa del juego Pasapalabras del Arroyo Maldonado.">
+                                <div class="intro">
+                                    <h2>
+                                      El Pasapalabras del Arroyo Maldonado
+                                    </h2>
+                                    <p class="esconder-detail">
+                                      Es un juego basado en el formato del programa de televisión "Pasapalabras", enfocado a temas relacionados a las inundaciones, lluvias, fenómenos naturales asociados, recomendaciones y consejos sobre cómo actuar ante estas situaciones.       
+                                    </p>
+                                    <div  aria-labelledby="diario-2">
+                                      <div class="verde-4 esconder-detail boton"  >
+                                          <a  role="button" tabindex="0" aria-label="Jugar Pasapalabras del Arroyo Maldonado." 
+                                          id="juego9" style="color: rgb(255, 255, 255);" > Jugar</a>
+                                      </div>
+                                    </div>
+                                </div>
+                              </div>
+
+                              <!-- juego 11  se debera hacer de manera local.  
+                               0 YA SE LE AGREGO SI ES LOCAL
+                                https://gitlab.com/LauAria/puzzleapp blautiaria123@hotmail.com Aria 
+                              se elimina este juego de rompexabexas porque no se encuentran los archivos.
+                              -->
+                              
+                              
+                              <!-- juego 12  
+                              el crucigrama yany lo arreglo-->
+                              
+                              <div class="card" tabindex="0"> 
+                                <img role="img" class="img-juego img1" src="{{url_for('static', filename = 'img/section5/juegos-tapa/juego12.webp')}}"  alt=" Crucigrama Arroyo Maldonado." aria-label="Tapa del juego Crucigrama Arroyo Maldonado.">
+                                <div class="intro">
+                                    <h2>
+                                      Crucigrama Arroyo Maldonado
+                                    </h2>
+                                    <p class="esconder-detail">
+                                      Es un juego que te enseña acerca del arroyo Maldonado y como fue
+                                      afectado por la inundación mediante un crucigrama.
+                                    </p>
+                                    <div  aria-labelledby="diario-2">
+                                      <div class="verde-4 esconder-detail boton"  >
+                                          <a  role="button" tabindex="0" aria-label="Jugar Crucigrama Arroyo Maldonado." 
+                                          id="juego10" style="color: rgb(255, 255, 255);" > Jugar</a>
+                                      </div>
+                                    </div>
+                                </div>
+                              </div>
+                            
+                              
+                              
+                              <!-- juego 13   tenemos la url al juego yuju 
+                                https://deu-grupo-1.vercel.app/intro
+                                   https://github.com/cololaborde/grupo_1 -->
+
+                                   <div class="card" tabindex="0"> 
+                                    <img role="img" class="img-juego img1" src="{{url_for('static', filename = 'img/section5/juegos-tapa/juego13.webp')}}"  alt=" Flooded Quiz." aria-label="Tapa del juego Flooded Quiz.">
+                                    <div class="intro">
+                                        <h2>
+                                          Juego de Flooded Quiz
+                                        </h2>
+                                        <p class="esconder-detail">
+                                          Es un juego que consiste en una serie de preguntas referentes a la temática de inundaciones.
+                                        </p>
+                                        <div  aria-labelledby="diario-2">
+                                          <div class="verde-4 esconder-detail boton"  >
+                                              <a  role="button" tabindex="0" aria-label="Jugar Flooded Quiz." 
+                                              id="juego12" style="color: rgb(255, 255, 255);" > Jugar</a>
+                                          </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                     <!-- juego 14    ya tenemos su url siiI!
+                                      https://app-inundaciones-deu.vercel.app/
+                                   https://github.com/cololaborde/grupo_1 -->
+                                   <div class="card" tabindex="0"> 
+                                    <img role="img" class="img-juego img1" src="{{url_for('static', filename = 'img/section5/juegos-tapa/juego14.png')}}"  alt=" Simulación inundaciones La Plata." aria-label="Tapa del juego Simulación inundaciones La Plata.">
+                                    <div class="intro">
+                                        <h2>
+                                          Juego de Simulación inundaciones La Plata
+                                        </h2>
+                                        <p class="esconder-detail">
+                                          Es un juego que simula una posible inundación en la ciudad, marcandole el caudal de agua.
+                                        </p>
+                                        <div  aria-labelledby="diario-2">
+                                          <div class="verde-4 esconder-detail boton"  >
+                                              <a  role="button" tabindex="0" aria-label="Jugar Simulación inundaciones La Plata." 
+                                              id="juego13" style="color: rgb(255, 255, 255);" > Jugar</a>
+                                          </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                    </div>
+                </div>
+            </div>           
+        </div>
+
+    </main>
+  {% endblock %}

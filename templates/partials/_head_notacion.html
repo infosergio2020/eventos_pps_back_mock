@@ -1,0 +1,75 @@
+
+<head>
+    <title>Generar conciencia</title>
+    <meta name="description" content="Informarte sobre los desastres naturales en Polonia, Alemania, Republica Dominicana, Chile y Argentina. Descubre que pasó antes, durante y después de la inundación de la Plata en 2013.">
+    <meta name="description" content="Inundación de la Plata en 2013.">
+    <meta name="description" content="La Plata en 2013, inundación, desastre ambiental, republica de los niños.">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <!-- color e icono IOS -->
+    <meta name="theme-color" content="#003D33"/>
+    <!-- LIKN'S -->
+    <link rel="apple-touch-icon" href="{{url_for('static', filename = './img/general/flooded-house.png')}}">
+    <!--Responsive Meta Tag-->
+    <link rel="shortcut icon" href="{{url_for('static', filename = './images/icons/favicon.ico')}}" type="image/x-icon">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <!-- APARTIR DE ACA SE VA ARMAR LA DISTRIBUCION DE LINKS Y SCRIPTS -->
+  
+    <!-- ESTILOS GENERALES (ESTAN EN TODAS LAS PAGINAS) -->
+
+    <link rel="manifest" href="{{url_for('static', filename = './manifest.json')}}">
+
+    <link rel="preload" href="{{url_for('static', filename = './css/normalize.css')}}" as="style">
+    <link rel="stylesheet" href="{{url_for('static', filename = './css/normalize.css')}}">
+  
+    <link rel="preload" href="{{url_for('static', filename = './css/main.css')}}" as="style">
+    <link rel="stylesheet" href="{{url_for('static', filename = './css/main.css')}}">
+    
+    <link rel="preload" href="{{url_for('static', filename = './css/lixtbox.css')}}" as="style">
+    <link rel="stylesheet" href="{{url_for('static', filename = './css/lixtbox.css')}}">
+
+    <!-- index.html -->
+    {% if flag_1 == "index" %}
+    <link rel="preload" href="{{url_for('static', filename = './css/chat.css')}}" as="style">
+    <link rel="stylesheet" href="{{url_for('static', filename = './css/chat.css')}}">  
+    {% endif %}
+
+    <!-- diario.html / Conclusiones-del-evento.html & Inundaciones-en-el-exterior.html-->
+    {% if flag_1 == "opcion_1" %}
+    <link rel="preload" href="{{url_for('static', filename = './css/diario.css')}}" as="style">
+    <link rel="stylesheet" href="{{url_for('static', filename = './css/diario.css')}}"> 
+    {% endif %}
+
+    <!-- photo-album.html / shocking-photos & water-level-simulator.html use this-->
+    {% if flag_1 == "opcion_2" %}
+    <link rel="preload" href="{{url_for('static', filename = './css/lightgallery-bundle.min.css')}}" as="style">
+    <link rel="stylesheet" href="{{url_for('static', filename = './css/lightgallery-bundle.min.css')}}">    
+    {% endif %}
+    
+
+    <!-- photo-album.html -->
+    {% if flag_3 == "opcion_3" %}
+    <link rel="preload" href="{{url_for('static', filename = './css/libro.css')}}" as="style">
+    <link rel="stylesheet" href="{{url_for('static', filename = './css/libro.css')}}">    
+    {% endif %}
+
+    <!-- recomendacion-como-actuar.html / testimonio123 -->
+    {% if flag_1 == "opcion_4" %}
+    <link rel="preload" href="{{url_for('static', filename = './css/testimonios.css')}}" as="style">
+    <link rel="stylesheet" href="{{url_for('static', filename = './css/testimonios.css')}}">
+
+    <link rel="preload" href="{{url_for('static', filename = './css/minAcordeon.css')}}" as="style">
+    <link rel="stylesheet" href="{{url_for('static', filename = './css/minAcordeon.css')}}">
+    {% endif %}
+
+    <!--diario.html / Conclusiones-del-evento.html & Inundaciones-en-el-exterior.html -->
+    {% if flag_1 == "opcion_5" %}
+    <link rel="preload" href="{{url_for('static', filename = './css/diario.css')}}" as="style">
+    <link rel="stylesheet" href="{{url_for('static', filename = './css/diario.css')}}">    
+    {% endif %}
+
+  </head>

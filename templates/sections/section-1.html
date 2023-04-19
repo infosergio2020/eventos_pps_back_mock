@@ -1,0 +1,56 @@
+{% extends 'partials/_layout.html' %}
+{% block body %}
+<!-- Info de seccion 1-->
+    <main>
+        <div class="container">
+            <div class="main-card" style="margin: 10rem auto;">
+                <div class="main-card-header afiche__head">
+                    <h1 id="contenido" tabindex="0">Sección 1 - De la lluvia a la inundación.</h1>
+                </div>
+                <div class="main-card-body">
+                    <div class="main-card-img-container">
+                        <img class="wh-127g" src="{{url_for('static', filename = 'img/people/section1-1.webp')}}" alt="imágen de los testimonios 1.">
+                        <img class="wh-127" src="{{url_for('static', filename = 'img/people/section1-2.webp')}}" alt="imágen de los testimonios 2.">
+                    </div>
+                    
+                    <div class="main-container-boton">
+                        <a class="boton verde-4" href="/testimonio1">
+                            <div class="boton-info" aria-label="Presione enter si desea acceder a Conoce nuestros testimonios: Antes de la inundación.">
+                                <p>Conoce nuestros testimonios: Antes de la inundación</p> <img class="wh-37" src="{{url_for('static', filename = 'img/people/webp/handPointUp.webp')}}" alt="botón.">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="main-card-img-container">
+                        <!-- <img src="{{url_for('static', filename = 'img/section1/section1-niña.webp')}}" alt="imagen de una niña."> -->
+                        <img class="wh-256" src="{{url_for('static', filename = 'img/section1/section1-tv.webp')}}" alt="imágen de una tele.">
+                    </div>
+                    
+                    <div class="main-container-boton">
+                        <a class="boton verde-4" href="/the-news-of-the-day">
+                            <div class="boton-info" aria-label="Presione enter si desea acceder a las noticias del día.">
+                                <p>Las noticias del día</p> <img class="wh-37" src="{{url_for('static', filename = 'img/people/webp/handPointUp.webp')}}" alt="botón.">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="main-card-img-container">
+                        <img class="wh-256" src="{{url_for('static', filename = 'img/afiches/radio-Imagen2.webp')}}" aria-label="Foto: Radio Portatil Winco Dual AM - FM analógica." alt="Foto: Radio Portatil Winco Dual AM - FM analógica.">
+                        <!-- <img src="{{url_for('static', filename = 'img/afiches/radio-y-niño.webp')}}" aria-label="Foto: Un niño escuchando la radio." alt="Foto: Un niño escuchando la radio."> -->
+        
+                    </div>
+                    
+                    <div class="main-container-boton">
+                        <a class="boton verde-4" href="la-ayuda-de-la-radio">
+                            <div class="boton-info" aria-label="Presione enter si desea acceder a la ayuda de la radio.">
+                                <p>La ayuda de la radio</p> <img class="wh-37" src="{{url_for('static', filename = 'img/people/webp/handPointUp.webp')}}" alt="botón.">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <!-- boton para ir arriba -->
+        {% include ('partials/_button.html') %}
+    </main>
+
+{% endblock %}

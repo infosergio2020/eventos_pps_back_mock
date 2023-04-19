@@ -1,0 +1,62 @@
+  <!-- Contenedor del testimonio -->
+  {% extends 'partials/_layout.html' %}
+  {% block body %}
+  <!-- Info de covid-->
+    <main>
+        <div class="container">
+            <div class="main-card">
+                <div id="covid" class="main-card-body" >
+                    
+                    
+                    <div class="afiche__head">
+                      <h1 id="contenido" tabindex="0">Protocolo Covid</h1>
+                    </div> 
+                    <div class="main-card-img-container line-down">
+                        
+                      <img tabindex="0" role="img" class="main-section-icon" src="{{url_for('static', filename = 'img/general/otros/covid1.webp')}}" height="88px" aria-label="imagen de labarse las manos." alt="imagen de labarse las manos.">
+                      <img tabindex="0" role="img" class="main-section-icon" src="{{url_for('static', filename = 'img/general/otros/covid2.webp')}}" height="88px" aria-label="imagen de barbijo." alt="imagen de barbijo.">
+                      <img tabindex="0" role="img" class="main-section-icon" src="{{url_for('static', filename = 'img/general/otros/covid3.webp')}}" height="88px" aria-label="imagen de colocarse alcohol." alt="imagen de colocarse alcohol.">
+                    </div>                   
+                    <div class="main-card-info" tabindex="0">
+                    <p>
+                      Luego de finalizado el aislamiento obligatorio debido a la pandemia de COVID-19, se habilita el acceso al evento a todo el público con el uso obligatorio del barbijo, respetando las medidas sanitarias preventivas adoptadas por la República de los Niños.
+                      <br>
+                      Cumpliremos con el siguiente protocolo sanitario:
+                      <br>
+                      <ul>
+                        
+                          <li>
+                            Uso obligatorio de barbijo que cubra nariz y boca.
+                          </li>
+                          <li>
+                            Sanitización de manos en el ingreso y dispensers de alcohol en gel durante la visita.
+                      
+                          </li>
+                          <li>
+                            Reducción de la capacidad máxima de visitantes simultáneos.
+                          </li>
+                          <li>
+                            Distanciamiento social de 1,5 metros entre personas o grupos familiares.
+                     
+                          </li>
+                          <li>
+                            Ventilación de ambientes.
+                          </li>
+                      </ul>
+                      
+                      Los posters y afiches tienen código QR para escuchar su contenido, por lo que podés traer tus auriculares a la muestra.
+                      <br>
+                      Les agradecemos la atención y los/las esperamos en la exhibición.
+
+
+                    </p>
+                    
+                    </div>
+                </div>
+            </div>
+          </div>
+          <!-- boton para ir arriba -->
+          {% include ('partials/_button.html') %}
+    </main>
+
+  {% endblock %}

@@ -1,0 +1,37 @@
+<!-- Contenedor del testimonio -->
+{% extends 'partials/_layout.html' %} {% block body %}
+<!-- Info de secciones-->
+
+<main>
+  <div class="container">
+    <div id="header" style="padding: 0 1rem;">
+      <!-- section y los tags en su interior son elementos  que pueden repetirse en un bucle sin necesidad de repetir tags-->
+      {% for info in info_sections %}
+      <section class="main-section verde-2">
+        <div class="main-section-img">
+          <img
+            loading="lazy"
+            class="main-section-icon no-border"
+            src="{{url_for('static', filename = info.icon)}}"
+            alt="icono de {{info.title}}"
+          />
+        </div>
+        <div class="main-section-info">
+          <div id="contenido" tabindex="0">
+            <h3>Sección {{loop.index}} - {{ info.title }}</h3>
+            <p>{{ info.description }}</p>
+          </div>
+          <a role="button" class="boton verde-4" href="/section-{{loop.index}}">
+            Accede a la sección {{loop.index}}
+          </a>
+        </div>
+      </section>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- boton para ir arriba -->
+  {% include ('partials/_button.html') %}
+</main>
+
+{% endblock %}
